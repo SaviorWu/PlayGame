@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		48801757236E5E5F91ADDA6C /* Pods_PlayGame_PlayGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630474CEB889A3D602F68679 /* Pods_PlayGame_PlayGameUITests.framework */; };
+		84117BEF2549465200B68891 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84117BEE2549465200B68891 /* BaseTableViewController.m */; };
+		84117BFB25494D7300B68891 /* UITableViewCell+loadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84117BFA25494D7300B68891 /* UITableViewCell+loadCell.m */; };
+		84117C0D2549763400B68891 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84117C0B2549763400B68891 /* HomeViewController.m */; };
+		84117C0E2549763400B68891 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84117C0C2549763400B68891 /* HomeViewController.xib */; };
+		84117C182549765100B68891 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84117C162549765100B68891 /* MyViewController.m */; };
+		84117C192549765100B68891 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84117C172549765100B68891 /* MyViewController.xib */; };
 		8436C75425490CD600194E27 /* JTShareData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C73225490CD600194E27 /* JTShareData.m */; };
 		8436C75525490CD600194E27 /* JTUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C73325490CD600194E27 /* JTUserModel.m */; };
 		8436C75A25490CD600194E27 /* JTNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C73925490CD600194E27 /* JTNetwork.m */; };
@@ -33,10 +39,6 @@
 		8436C7E725490D6500194E27 /* UIImage+RCImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C7B725490D6500194E27 /* UIImage+RCImage.m */; };
 		8436C7E825490D6500194E27 /* UIImage+TOO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C7BD25490D6500194E27 /* UIImage+TOO.m */; };
 		8436C7E925490D6500194E27 /* UINavigationBar+handle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C7C025490D6500194E27 /* UINavigationBar+handle.m */; };
-		8436C8632549381900194E27 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C8612549381900194E27 /* MyViewController.m */; };
-		8436C8642549381900194E27 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8436C8622549381900194E27 /* MyViewController.xib */; };
-		8436C86B2549382D00194E27 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C8692549382D00194E27 /* HomeViewController.m */; };
-		8436C86C2549382D00194E27 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8436C86A2549382D00194E27 /* HomeViewController.xib */; };
 		8436C8722549397F00194E27 /* UITabBar+badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C8702549397F00194E27 /* UITabBar+badge.m */; };
 		8436C878254939DC00194E27 /* JTTabBarBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C877254939DC00194E27 /* JTTabBarBtn.m */; };
 		84B252202549080600887B01 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B2521F2549080600887B01 /* AppDelegate.m */; };
@@ -72,6 +74,16 @@
 		3169BC3BE14B78666A449DAA /* Pods-PlayGame-PlayGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayGame-PlayGameUITests.release.xcconfig"; path = "Target Support Files/Pods-PlayGame-PlayGameUITests/Pods-PlayGame-PlayGameUITests.release.xcconfig"; sourceTree = "<group>"; };
 		550CB93084C72ED72B5D9D7B /* Pods_PlayGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		630474CEB889A3D602F68679 /* Pods_PlayGame_PlayGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayGame_PlayGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84117BED2549465200B68891 /* BaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		84117BEE2549465200B68891 /* BaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		84117BF925494D7300B68891 /* UITableViewCell+loadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+loadCell.h"; sourceTree = "<group>"; };
+		84117BFA25494D7300B68891 /* UITableViewCell+loadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+loadCell.m"; sourceTree = "<group>"; };
+		84117C0A2549763400B68891 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		84117C0B2549763400B68891 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		84117C0C2549763400B68891 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		84117C152549765100B68891 /* MyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		84117C162549765100B68891 /* MyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		84117C172549765100B68891 /* MyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
 		8436C73225490CD600194E27 /* JTShareData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTShareData.m; sourceTree = "<group>"; };
 		8436C73325490CD600194E27 /* JTUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTUserModel.m; sourceTree = "<group>"; };
 		8436C73525490CD600194E27 /* JTBaseReqModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTBaseReqModel.h; sourceTree = "<group>"; };
@@ -124,12 +136,6 @@
 		8436C7D025490D6500194E27 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
 		8436C7FC25490F6000194E27 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		8436C7FD25490F6000194E27 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		8436C8602549381900194E27 /* MyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
-		8436C8612549381900194E27 /* MyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
-		8436C8622549381900194E27 /* MyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
-		8436C8682549382D00194E27 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		8436C8692549382D00194E27 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		8436C86A2549382D00194E27 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		8436C8702549397F00194E27 /* UITabBar+badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+badge.m"; sourceTree = "<group>"; };
 		8436C8712549397F00194E27 /* UITabBar+badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+badge.h"; sourceTree = "<group>"; };
 		8436C876254939DC00194E27 /* JTTabBarBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTabBarBtn.h; sourceTree = "<group>"; };
@@ -234,6 +240,8 @@
 			children = (
 				8436C77D25490D3000194E27 /* BaseController.h */,
 				8436C78325490D3000194E27 /* BaseController.m */,
+				84117BED2549465200B68891 /* BaseTableViewController.h */,
+				84117BEE2549465200B68891 /* BaseTableViewController.m */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -277,6 +285,8 @@
 				8436C79925490D6500194E27 /* UIView+tool.m */,
 				8436C7AE25490D6500194E27 /* UIViewController+HUD.h */,
 				8436C79325490D6500194E27 /* UIViewController+HUD.m */,
+				84117BF925494D7300B68891 /* UITableViewCell+loadCell.h */,
+				84117BFA25494D7300B68891 /* UITableViewCell+loadCell.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -305,9 +315,9 @@
 		8436C84E25491BDB00194E27 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				8436C8682549382D00194E27 /* HomeViewController.h */,
-				8436C8692549382D00194E27 /* HomeViewController.m */,
-				8436C86A2549382D00194E27 /* HomeViewController.xib */,
+				84117C0A2549763400B68891 /* HomeViewController.h */,
+				84117C0B2549763400B68891 /* HomeViewController.m */,
+				84117C0C2549763400B68891 /* HomeViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -315,9 +325,9 @@
 		8436C84F25491BDF00194E27 /* My */ = {
 			isa = PBXGroup;
 			children = (
-				8436C8602549381900194E27 /* MyViewController.h */,
-				8436C8612549381900194E27 /* MyViewController.m */,
-				8436C8622549381900194E27 /* MyViewController.xib */,
+				84117C152549765100B68891 /* MyViewController.h */,
+				84117C162549765100B68891 /* MyViewController.m */,
+				84117C172549765100B68891 /* MyViewController.xib */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -509,9 +519,9 @@
 			files = (
 				84B2522E2549080700887B01 /* LaunchScreen.storyboard in Resources */,
 				84B2522B2549080700887B01 /* Assets.xcassets in Resources */,
-				8436C86C2549382D00194E27 /* HomeViewController.xib in Resources */,
-				8436C8642549381900194E27 /* MyViewController.xib in Resources */,
 				84B252292549080600887B01 /* Main.storyboard in Resources */,
+				84117C0E2549763400B68891 /* HomeViewController.xib in Resources */,
+				84117C192549765100B68891 /* MyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +652,7 @@
 				8436C7D125490D6500194E27 /* UIViewController+HUD.m in Sources */,
 				8436C77425490D2000194E27 /* JTBaseTabBarController.m in Sources */,
 				8436C75A25490CD600194E27 /* JTNetwork.m in Sources */,
+				84117BFB25494D7300B68891 /* UITableViewCell+loadCell.m in Sources */,
 				8436C7E625490D6500194E27 /* UIColor+Extension.m in Sources */,
 				84B252262549080600887B01 /* ViewController.m in Sources */,
 				8436C7D725490D6500194E27 /* UIButton+LargeArea.m in Sources */,
@@ -650,8 +661,8 @@
 				8436C7D525490D6500194E27 /* UIView+PubicColor.m in Sources */,
 				8436C7E525490D6500194E27 /* UIImage+TOOL.m in Sources */,
 				8436C8722549397F00194E27 /* UITabBar+badge.m in Sources */,
+				84117C182549765100B68891 /* MyViewController.m in Sources */,
 				8436C75425490CD600194E27 /* JTShareData.m in Sources */,
-				8436C8632549381900194E27 /* MyViewController.m in Sources */,
 				8436C7DB25490D6500194E27 /* NSData+Base65EnCode.m in Sources */,
 				8436C7DA25490D6500194E27 /* UIView+Frame.m in Sources */,
 				84B252202549080600887B01 /* AppDelegate.m in Sources */,
@@ -663,10 +674,11 @@
 				8436C7E725490D6500194E27 /* UIImage+RCImage.m in Sources */,
 				8436C878254939DC00194E27 /* JTTabBarBtn.m in Sources */,
 				8436C7D625490D6500194E27 /* UIView+tool.m in Sources */,
+				84117C0D2549763400B68891 /* HomeViewController.m in Sources */,
 				8436C7D925490D6500194E27 /* UITextView+Placeholder.m in Sources */,
-				8436C86B2549382D00194E27 /* HomeViewController.m in Sources */,
 				8436C7D425490D6500194E27 /* UIButton+countDown.m in Sources */,
 				8436C7E825490D6500194E27 /* UIImage+TOO.m in Sources */,
+				84117BEF2549465200B68891 /* BaseTableViewController.m in Sources */,
 				8436C7DC25490D6500194E27 /* NSString+Tool.m in Sources */,
 				84B252312549080700887B01 /* main.m in Sources */,
 				8436C75525490CD600194E27 /* JTUserModel.m in Sources */,

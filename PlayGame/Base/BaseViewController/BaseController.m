@@ -8,15 +8,36 @@
 
 #import "BaseController.h"
 #import "UIColor+Extension.h"
+#import "UIButton+LargeArea.h"
+
+#define STATUS_BAR_HEIGHT (IS_IPHONE_X == YES?44.0f:20.0f)
+#define NAVIGATION_HEIGHT 44.0f
+#define IS_IPHONE_X [self isIphoneX]
+
 @interface BaseController ()<UIGestureRecognizerDelegate>
 @property (nonatomic, assign)BOOL isCanUseSideBack;  // 手势是否启动
+@property (nonatomic, strong) UIButton* btnBack;
 @end
 
 @implementation BaseController
 
 #pragma mark  life Cycle
+
+- (void)hiddenBackBtn:(BOOL)bHidden{
+    self.btnBack.hidden = bHidden;
+}
+
+- (BOOL)isIphoneX{
+    if (@available(iOS 11.0, *)) {
+        UIWindow * window = [[[UIApplication sharedApplication] delegate] window];
+        if (window.safeAreaInsets.bottom > 0.0) return YES;
+        else return NO;
+    }
+    else return NO;
+}
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    self.navagationBarHiden = YES;
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navition"] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:[UIImage new]];
     [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
@@ -25,6 +46,27 @@
     self.navigationController.navigationBar.tintColor =self.navagationBarTextColor?:[UIColor hexColor:@"#000000"];
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:self.navagationBarTextColor?:[UIColor hexColor:@"#000000"],NSForegroundColorAttributeName,nil];
     [self.navigationController.navigationBar setTitleTextAttributes:attributes];
+}
+
+- (void)addNavigationView{
+    self.vwNavigation = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, NAVIGATION_HEIGHT + STATUS_BAR_HEIGHT)];
+    self.vwNavigation.backgroundColor = UIColor.whiteColor;
+    self.vwNavigation.alpha = 0.3;
+    UILabel* lbTitle = [[UILabel alloc] initWithFrame:CGRectZero];
+    lbTitle.text = self.title;
+    [lbTitle sizeToFit];
+    lbTitle.bottom = self.vwNavigation.bottom - 11.f;
+    lbTitle.centerX = SCREEN_WIDTH/2.f;
+    lbTitle.textColor = [UIColor whiteColor];
+    
+    self.btnBack = [[UIButton alloc] initWithFrame:CGRectMake(16, 0, 10, 18)];
+    [self.btnBack setEnlargeEdgeWithTop:10 right:20 bottom:10 left:20];
+    [self.btnBack setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+    [self.btnBack addTarget:self action:@selector(clickBack) forControlEvents:UIControlEventTouchUpInside];
+    self.btnBack.centerY = lbTitle.centerY;
+    [self.vwNavigation addSubview:self.btnBack];
+    [self.vwNavigation addSubview:lbTitle];
+    [self.view addSubview:self.vwNavigation];
 }
 
 - (void)viewDidLoad {
@@ -42,7 +84,7 @@
     
     self.edgesForExtendedLayout = UIRectEdgeTop;
     self.automaticallyAdjustsScrollViewInsets = NO;
-    
+    [self addNavigationView];
 }
 
 #pragma mark methods

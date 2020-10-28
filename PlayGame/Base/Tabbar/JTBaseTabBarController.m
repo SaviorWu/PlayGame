@@ -32,10 +32,10 @@
     self.delegate = self;
 }
 
-- (void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    [self setTabBarItems];
-}
+//- (void)viewWillLayoutSubviews {
+//    [super viewWillLayoutSubviews];
+//    [self setTabBarItems];
+//}
 
 - (void)setControllers {
     
@@ -82,24 +82,6 @@
             [[UIImage imageNamed:@"homeDiss"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
             obj.tabBarItem.selectedImage =
             [[UIImage imageNamed:@"homeSelected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//        } else if ([obj isKindOfClass:[JTExhcangeController class]]) {
-//            obj.tabBarItem.title = kLocalizedString(@"Exchange");
-//            obj.tabBarItem.image =
-//            [[UIImage imageNamed:@"exchangDiss"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//            obj.tabBarItem.selectedImage = [[UIImage imageNamed:@"exchangSelected"]
-//                                            imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//        } else if ([obj isKindOfClass:[JTContactListController class]]) {
-//            obj.tabBarItem.title = kLocalizedString(@"Contact");
-//            obj.tabBarItem.image =
-//            [[UIImage imageNamed:@"contactsDiss"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//            obj.tabBarItem.selectedImage =
-//            [[UIImage imageNamed:@"contactsSelected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//        } else if ([obj isKindOfClass:[JTChatListViewController class]]) {
-//            obj.tabBarItem.title = kLocalizedString(@"Chat");
-//            obj.tabBarItem.image =
-//            [[UIImage imageNamed:@"chatDiss"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-//            obj.tabBarItem.selectedImage =
-//            [[UIImage imageNamed:@"chatSelect"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         } else if ([obj isKindOfClass:[MyViewController class]]) {
             obj.tabBarItem.title = kLocalizedString(@"Me");
             obj.tabBarItem.image =

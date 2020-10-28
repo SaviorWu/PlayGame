@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseController : UIViewController
-
+@property (nonatomic, strong) UIView* vwNavigation;
 //navagationbar是否隐藏 默认为不隐藏navagationbar
 @property (nonatomic,assign)BOOL navagationBarHiden;
 //导航栏字体颜色
@@ -22,5 +22,7 @@
 - (void)pop;
 - (void)popToRoot;
 
+- (void)hiddenBackBtn:(BOOL)bHidden;
+- (void)addNavigationView;
 
 @end
