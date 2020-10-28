@@ -1,18 +1,18 @@
 //
-//  JTBaseController.m
+//  BaseController.m
 //  CNUKwallet
 //
 //  Created by 黄焕林 on 2018/9/6.
 //  Copyright © 2018年 黄焕林. All rights reserved.
 //
 
-#import "JTBaseController.h"
+#import "BaseController.h"
 #import "UIColor+Extension.h"
-@interface JTBaseController ()<UIGestureRecognizerDelegate>
+@interface BaseController ()<UIGestureRecognizerDelegate>
 @property (nonatomic, assign)BOOL isCanUseSideBack;  // 手势是否启动
 @end
 
-@implementation JTBaseController
+@implementation BaseController
 
 #pragma mark  life Cycle
 - (void)viewWillAppear:(BOOL)animated {
@@ -36,7 +36,7 @@
     backButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [backButton setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
     backButton.imageEdgeInsets = UIEdgeInsetsMake(0, -16, 0, 0);
-    [backButton addTarget:self action:@selector(goBackPage) forControlEvents:UIControlEventTouchUpInside];
+    [backButton addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem * leftItem = [[UIBarButtonItem alloc]initWithCustomView:backButton];
     self.navigationItem.leftBarButtonItem = leftItem;
     
@@ -47,60 +47,29 @@
 
 #pragma mark methods
 
-- (void)goBackPage{
-    [self popAnimated:YES];
+- (void)goBack{
+    [self pop];
 }
 
-- (void)pushPage:(UIViewController *)viewController Animated:(BOOL)animated {
+- (void)push:(UIViewController *)viewController {
     if (self.navigationController) {
-        [self.navigationController pushViewController:viewController animated:animated];
+        [self.navigationController pushViewController:viewController animated:YES];
     }
 }
 
-- (void)popAnimated:(BOOL)animated{
+- (void)pop{
     if (self.navigationController&&self.navigationController.viewControllers.count>1) {
-        [self.navigationController popViewControllerAnimated:animated];
+        [self.navigationController popViewControllerAnimated:YES];
     }
     
 }
 
-- (void)popToRootAnimated:(BOOL)animated{
+- (void)popToRoot{
     if (self.navigationController&&self.navigationController.viewControllers.count>1) {
-        [self.navigationController popToRootViewControllerAnimated:animated];
+        [self.navigationController popToRootViewControllerAnimated:YES];
     }
 }
 
-- (void)callPhone:(NSString *)phone{
-    NSMutableString * str=[[NSMutableString alloc] initWithFormat:@"tel:%@",phone];
-    UIWebView * callWebview = [[UIWebView alloc] init];
-    [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
-    [self.view addSubview:callWebview];
-}
-
-//关闭ios右滑返回
--(void)cancelSideBack{
-    self.isCanUseSideBack = NO;
-    
-    if([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        self.navigationController.interactivePopGestureRecognizer.delegate = self;
-    }
-}
-
-
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer*)gestureRecognizer {
-    return self.isCanUseSideBack;
-}
-
-/*
- 开启ios右滑返回
- */
-- (void)startSideBack {
-    self.isCanUseSideBack=YES;
-    
-    if([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        self.navigationController.interactivePopGestureRecognizer.delegate = nil;
-    }
-}
 
 #pragma mark Setter or Getter
 
@@ -108,12 +77,6 @@
     _navagationBarHiden = navagationBarHiden;
     [self.navigationController setNavigationBarHidden:navagationBarHiden animated:YES];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 
 @end

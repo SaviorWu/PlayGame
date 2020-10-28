@@ -14,7 +14,7 @@
 		8436C76225490CD600194E27 /* JTBaseReqModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C74C25490CD600194E27 /* JTBaseReqModel.m */; };
 		8436C77125490D2000194E27 /* JTBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C76725490D2000194E27 /* JTBaseNavigationController.m */; };
 		8436C77425490D2000194E27 /* JTBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C76F25490D2000194E27 /* JTBaseTabBarController.m */; };
-		8436C78A25490D3000194E27 /* JTBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C78325490D3000194E27 /* JTBaseController.m */; };
+		8436C78A25490D3000194E27 /* BaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C78325490D3000194E27 /* BaseController.m */; };
 		8436C7D125490D6500194E27 /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C79325490D6500194E27 /* UIViewController+HUD.m */; };
 		8436C7D425490D6500194E27 /* UIButton+countDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C79725490D6500194E27 /* UIButton+countDown.m */; };
 		8436C7D525490D6500194E27 /* UIView+PubicColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C79825490D6500194E27 /* UIView+PubicColor.m */; };
@@ -34,7 +34,6 @@
 		8436C7E825490D6500194E27 /* UIImage+TOO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C7BD25490D6500194E27 /* UIImage+TOO.m */; };
 		8436C7E925490D6500194E27 /* UINavigationBar+handle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C7C025490D6500194E27 /* UINavigationBar+handle.m */; };
 		84B252202549080600887B01 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B2521F2549080600887B01 /* AppDelegate.m */; };
-		84B252232549080600887B01 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B252222549080600887B01 /* SceneDelegate.m */; };
 		84B252262549080600887B01 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B252252549080600887B01 /* ViewController.m */; };
 		84B252292549080600887B01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B252272549080600887B01 /* Main.storyboard */; };
 		84B2522B2549080700887B01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B2522A2549080700887B01 /* Assets.xcassets */; };
@@ -79,8 +78,8 @@
 		8436C76925490D2000194E27 /* JTBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTBaseTabBarController.h; sourceTree = "<group>"; };
 		8436C76C25490D2000194E27 /* JTBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTBaseNavigationController.h; sourceTree = "<group>"; };
 		8436C76F25490D2000194E27 /* JTBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTBaseTabBarController.m; sourceTree = "<group>"; };
-		8436C77D25490D3000194E27 /* JTBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTBaseController.h; sourceTree = "<group>"; };
-		8436C78325490D3000194E27 /* JTBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTBaseController.m; sourceTree = "<group>"; };
+		8436C77D25490D3000194E27 /* BaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseController.h; sourceTree = "<group>"; };
+		8436C78325490D3000194E27 /* BaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseController.m; sourceTree = "<group>"; };
 		8436C79125490D6500194E27 /* UIColor+RCColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RCColor.h"; sourceTree = "<group>"; };
 		8436C79225490D6500194E27 /* NSDictionary+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+extension.h"; sourceTree = "<group>"; };
 		8436C79325490D6500194E27 /* UIViewController+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
@@ -122,8 +121,6 @@
 		84B2521B2549080600887B01 /* PlayGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B2521E2549080600887B01 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84B2521F2549080600887B01 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		84B252212549080600887B01 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		84B252222549080600887B01 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		84B252242549080600887B01 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		84B252252549080600887B01 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		84B252282549080600887B01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -212,13 +209,13 @@
 			path = Tabbar;
 			sourceTree = "<group>";
 		};
-		8436C77925490D3000194E27 /* BaseViewControllers */ = {
+		8436C77925490D3000194E27 /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8436C77D25490D3000194E27 /* JTBaseController.h */,
-				8436C78325490D3000194E27 /* JTBaseController.m */,
+				8436C77D25490D3000194E27 /* BaseController.h */,
+				8436C78325490D3000194E27 /* BaseController.m */,
 			);
-			path = BaseViewControllers;
+			path = BaseViewController;
 			sourceTree = "<group>";
 		};
 		8436C79025490D6500194E27 /* Categories */ = {
@@ -268,11 +265,42 @@
 			isa = PBXGroup;
 			children = (
 				8436C79025490D6500194E27 /* Categories */,
-				8436C77925490D3000194E27 /* BaseViewControllers */,
+				8436C77925490D3000194E27 /* BaseViewController */,
 				8436C76625490D2000194E27 /* Tabbar */,
 				8436C72C25490CD600194E27 /* NetWork */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		8436C84D25491BCC00194E27 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				8436C85025491BF000194E27 /* Chat */,
+				8436C84F25491BDF00194E27 /* My */,
+				8436C84E25491BDB00194E27 /* Home */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		8436C84E25491BDB00194E27 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8436C84F25491BDF00194E27 /* My */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		8436C85025491BF000194E27 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		84B252122549080600887B01 = {
@@ -300,11 +328,10 @@
 		84B2521D2549080600887B01 /* PlayGame */ = {
 			isa = PBXGroup;
 			children = (
+				8436C84D25491BCC00194E27 /* Business */,
 				8436C84625491A8D00194E27 /* Base */,
 				84B2521E2549080600887B01 /* AppDelegate.h */,
 				84B2521F2549080600887B01 /* AppDelegate.m */,
-				84B252212549080600887B01 /* SceneDelegate.h */,
-				84B252222549080600887B01 /* SceneDelegate.m */,
 				8436C7FC25490F6000194E27 /* Macro.h */,
 				8436C7FD25490F6000194E27 /* PrefixHeader.pch */,
 				84B252242549080600887B01 /* ViewController.h */,
@@ -600,7 +627,7 @@
 				84B252202549080600887B01 /* AppDelegate.m in Sources */,
 				8436C7E325490D6500194E27 /* UIColor+RCColor.m in Sources */,
 				8436C7E925490D6500194E27 /* UINavigationBar+handle.m in Sources */,
-				8436C78A25490D3000194E27 /* JTBaseController.m in Sources */,
+				8436C78A25490D3000194E27 /* BaseController.m in Sources */,
 				8436C7E225490D6500194E27 /* NSDictionary+extension.m in Sources */,
 				8436C76225490CD600194E27 /* JTBaseReqModel.m in Sources */,
 				8436C7E725490D6500194E27 /* UIImage+RCImage.m in Sources */,
@@ -612,7 +639,6 @@
 				84B252312549080700887B01 /* main.m in Sources */,
 				8436C75525490CD600194E27 /* JTUserModel.m in Sources */,
 				8436C7E425490D6500194E27 /* UIView+baseExtra.m in Sources */,
-				84B252232549080600887B01 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
