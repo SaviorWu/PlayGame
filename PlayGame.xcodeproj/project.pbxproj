@@ -33,6 +33,12 @@
 		8436C7E725490D6500194E27 /* UIImage+RCImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C7B725490D6500194E27 /* UIImage+RCImage.m */; };
 		8436C7E825490D6500194E27 /* UIImage+TOO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C7BD25490D6500194E27 /* UIImage+TOO.m */; };
 		8436C7E925490D6500194E27 /* UINavigationBar+handle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C7C025490D6500194E27 /* UINavigationBar+handle.m */; };
+		8436C8632549381900194E27 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C8612549381900194E27 /* MyViewController.m */; };
+		8436C8642549381900194E27 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8436C8622549381900194E27 /* MyViewController.xib */; };
+		8436C86B2549382D00194E27 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C8692549382D00194E27 /* HomeViewController.m */; };
+		8436C86C2549382D00194E27 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8436C86A2549382D00194E27 /* HomeViewController.xib */; };
+		8436C8722549397F00194E27 /* UITabBar+badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C8702549397F00194E27 /* UITabBar+badge.m */; };
+		8436C878254939DC00194E27 /* JTTabBarBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C877254939DC00194E27 /* JTTabBarBtn.m */; };
 		84B252202549080600887B01 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B2521F2549080600887B01 /* AppDelegate.m */; };
 		84B252262549080600887B01 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B252252549080600887B01 /* ViewController.m */; };
 		84B252292549080600887B01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B252272549080600887B01 /* Main.storyboard */; };
@@ -118,6 +124,16 @@
 		8436C7D025490D6500194E27 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
 		8436C7FC25490F6000194E27 /* Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		8436C7FD25490F6000194E27 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		8436C8602549381900194E27 /* MyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		8436C8612549381900194E27 /* MyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		8436C8622549381900194E27 /* MyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
+		8436C8682549382D00194E27 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		8436C8692549382D00194E27 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		8436C86A2549382D00194E27 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		8436C8702549397F00194E27 /* UITabBar+badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+badge.m"; sourceTree = "<group>"; };
+		8436C8712549397F00194E27 /* UITabBar+badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+badge.h"; sourceTree = "<group>"; };
+		8436C876254939DC00194E27 /* JTTabBarBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTabBarBtn.h; sourceTree = "<group>"; };
+		8436C877254939DC00194E27 /* JTTabBarBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTabBarBtn.m; sourceTree = "<group>"; };
 		84B2521B2549080600887B01 /* PlayGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B2521E2549080600887B01 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84B2521F2549080600887B01 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -201,10 +217,14 @@
 		8436C76625490D2000194E27 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
+				8436C876254939DC00194E27 /* JTTabBarBtn.h */,
+				8436C877254939DC00194E27 /* JTTabBarBtn.m */,
 				8436C76C25490D2000194E27 /* JTBaseNavigationController.h */,
 				8436C76725490D2000194E27 /* JTBaseNavigationController.m */,
 				8436C76925490D2000194E27 /* JTBaseTabBarController.h */,
 				8436C76F25490D2000194E27 /* JTBaseTabBarController.m */,
+				8436C8712549397F00194E27 /* UITabBar+badge.h */,
+				8436C8702549397F00194E27 /* UITabBar+badge.m */,
 			);
 			path = Tabbar;
 			sourceTree = "<group>";
@@ -285,6 +305,9 @@
 		8436C84E25491BDB00194E27 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8436C8682549382D00194E27 /* HomeViewController.h */,
+				8436C8692549382D00194E27 /* HomeViewController.m */,
+				8436C86A2549382D00194E27 /* HomeViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -292,6 +315,9 @@
 		8436C84F25491BDF00194E27 /* My */ = {
 			isa = PBXGroup;
 			children = (
+				8436C8602549381900194E27 /* MyViewController.h */,
+				8436C8612549381900194E27 /* MyViewController.m */,
+				8436C8622549381900194E27 /* MyViewController.xib */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -483,6 +509,8 @@
 			files = (
 				84B2522E2549080700887B01 /* LaunchScreen.storyboard in Resources */,
 				84B2522B2549080700887B01 /* Assets.xcassets in Resources */,
+				8436C86C2549382D00194E27 /* HomeViewController.xib in Resources */,
+				8436C8642549381900194E27 /* MyViewController.xib in Resources */,
 				84B252292549080600887B01 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,7 +649,9 @@
 				8436C77125490D2000194E27 /* JTBaseNavigationController.m in Sources */,
 				8436C7D525490D6500194E27 /* UIView+PubicColor.m in Sources */,
 				8436C7E525490D6500194E27 /* UIImage+TOOL.m in Sources */,
+				8436C8722549397F00194E27 /* UITabBar+badge.m in Sources */,
 				8436C75425490CD600194E27 /* JTShareData.m in Sources */,
+				8436C8632549381900194E27 /* MyViewController.m in Sources */,
 				8436C7DB25490D6500194E27 /* NSData+Base65EnCode.m in Sources */,
 				8436C7DA25490D6500194E27 /* UIView+Frame.m in Sources */,
 				84B252202549080600887B01 /* AppDelegate.m in Sources */,
@@ -631,8 +661,10 @@
 				8436C7E225490D6500194E27 /* NSDictionary+extension.m in Sources */,
 				8436C76225490CD600194E27 /* JTBaseReqModel.m in Sources */,
 				8436C7E725490D6500194E27 /* UIImage+RCImage.m in Sources */,
+				8436C878254939DC00194E27 /* JTTabBarBtn.m in Sources */,
 				8436C7D625490D6500194E27 /* UIView+tool.m in Sources */,
 				8436C7D925490D6500194E27 /* UITextView+Placeholder.m in Sources */,
+				8436C86B2549382D00194E27 /* HomeViewController.m in Sources */,
 				8436C7D425490D6500194E27 /* UIButton+countDown.m in Sources */,
 				8436C7E825490D6500194E27 /* UIImage+TOO.m in Sources */,
 				8436C7DC25490D6500194E27 /* NSString+Tool.m in Sources */,

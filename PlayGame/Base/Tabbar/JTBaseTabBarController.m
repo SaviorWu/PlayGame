@@ -7,7 +7,9 @@
 //
 
 #import "JTBaseTabBarController.h"
-
+#import "UITabBar+badge.h"
+#import "HomeViewController.h"
+#import "MyViewController.h"
 @interface JTBaseTabBarController ()
 
 @end
@@ -36,12 +38,10 @@
 }
 
 - (void)setControllers {
-    //    JTHomeController *homeVC = [[JTHomeController alloc] init];
-    //    JTExhcangeController *exchangeVC = [[JTExhcangeController alloc] init];
-    //    JTChatListViewController *chatVC = [[JTChatListViewController alloc] init];
-    //    JTContactListController *contactVC = [[JTContactListController alloc] init];
-    //    JTMeController *meVC = [[JTMeController alloc] init];
-    //    self.viewControllers = @[ homeVC, exchangeVC,chatVC,contactVC,meVC];
+    
+    HomeViewController *homeVC = [[HomeViewController alloc] init];
+    MyViewController *myVC = [[MyViewController alloc] init];
+    self.viewControllers = @[ homeVC, myVC];
 }
 
 
@@ -74,45 +74,45 @@
         tabBarAppearance.shadowColor = [UIColor clearColor];
         [tabBar setStandardAppearance:tabBarAppearance];
     }
-    //    [self.viewControllers
-    //        enumerateObjectsUsingBlock:^(__kindof UIViewController *_Nonnull obj, NSUInteger idx, BOOL *_Nonnull stop) {
-    //            if ([obj isKindOfClass:[JTHomeController class]]) {
-    //                obj.tabBarItem.title = kLocalizedString(@"Home");
-    //                obj.tabBarItem.image =
-    //                    [[UIImage imageNamed:@"homeDiss"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    //                obj.tabBarItem.selectedImage =
-    //                    [[UIImage imageNamed:@"homeSelected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    //            } else if ([obj isKindOfClass:[JTExhcangeController class]]) {
-    //                obj.tabBarItem.title = kLocalizedString(@"Exchange");
-    //                obj.tabBarItem.image =
-    //                    [[UIImage imageNamed:@"exchangDiss"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    //                obj.tabBarItem.selectedImage = [[UIImage imageNamed:@"exchangSelected"]
-    //                    imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    //            } else if ([obj isKindOfClass:[JTContactListController class]]) {
-    //                obj.tabBarItem.title = kLocalizedString(@"Contact");
-    //                obj.tabBarItem.image =
-    //                    [[UIImage imageNamed:@"contactsDiss"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    //                obj.tabBarItem.selectedImage =
-    //                    [[UIImage imageNamed:@"contactsSelected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    //            } else if ([obj isKindOfClass:[JTChatListViewController class]]) {
-    //                obj.tabBarItem.title = kLocalizedString(@"Chat");
-    //                obj.tabBarItem.image =
-    //                    [[UIImage imageNamed:@"chatDiss"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    //                obj.tabBarItem.selectedImage =
-    //                    [[UIImage imageNamed:@"chatSelect"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    //            } else if ([obj isKindOfClass:[JTMeController class]]) {
-    //                obj.tabBarItem.title = kLocalizedString(@"Me");
-    //                obj.tabBarItem.image =
-    //                    [[UIImage imageNamed:@"me_inactive"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    //                obj.tabBarItem.selectedImage =
-    //                    [[UIImage imageNamed:@"meCliek"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    //            }
-    //
-    //            else {
-    //                NSLog(@"Unknown TabBarController");
-    //            }
-    //            [obj.tabBarController.tabBar bringBadgeToFrontOnItemIndex:(int)idx];
-    //        }];
+    [self.viewControllers
+     enumerateObjectsUsingBlock:^(__kindof UIViewController *_Nonnull obj, NSUInteger idx, BOOL *_Nonnull stop) {
+        if ([obj isKindOfClass:[HomeViewController class]]) {
+            obj.tabBarItem.title = kLocalizedString(@"Home");
+            obj.tabBarItem.image =
+            [[UIImage imageNamed:@"homeDiss"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            obj.tabBarItem.selectedImage =
+            [[UIImage imageNamed:@"homeSelected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//        } else if ([obj isKindOfClass:[JTExhcangeController class]]) {
+//            obj.tabBarItem.title = kLocalizedString(@"Exchange");
+//            obj.tabBarItem.image =
+//            [[UIImage imageNamed:@"exchangDiss"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//            obj.tabBarItem.selectedImage = [[UIImage imageNamed:@"exchangSelected"]
+//                                            imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//        } else if ([obj isKindOfClass:[JTContactListController class]]) {
+//            obj.tabBarItem.title = kLocalizedString(@"Contact");
+//            obj.tabBarItem.image =
+//            [[UIImage imageNamed:@"contactsDiss"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//            obj.tabBarItem.selectedImage =
+//            [[UIImage imageNamed:@"contactsSelected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//        } else if ([obj isKindOfClass:[JTChatListViewController class]]) {
+//            obj.tabBarItem.title = kLocalizedString(@"Chat");
+//            obj.tabBarItem.image =
+//            [[UIImage imageNamed:@"chatDiss"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//            obj.tabBarItem.selectedImage =
+//            [[UIImage imageNamed:@"chatSelect"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        } else if ([obj isKindOfClass:[MyViewController class]]) {
+            obj.tabBarItem.title = kLocalizedString(@"Me");
+            obj.tabBarItem.image =
+            [[UIImage imageNamed:@"me_inactive"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            obj.tabBarItem.selectedImage =
+            [[UIImage imageNamed:@"meCliek"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        }
+        
+        else {
+            NSLog(@"Unknown TabBarController");
+        }
+        [obj.tabBarController.tabBar bringBadgeToFrontOnItemIndex:(int)idx];
+    }];
 }
 
 - (void)tabBarController:(UITabBarController *)tabBarController

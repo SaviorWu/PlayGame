@@ -6,7 +6,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "JTBaseTabBarController.h"
+#import "JTBaseNavigationController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,6 +17,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    JTBaseTabBarController *tabbar = [[JTBaseTabBarController alloc] init];
+    JTBaseNavigationController *rootNavi =
+    [[JTBaseNavigationController alloc] initWithRootViewController:tabbar];
+    [MYAPP window].rootViewController = rootNavi;
     return YES;
 }
 
