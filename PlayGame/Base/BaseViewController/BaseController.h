@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseController : UIViewController
+@property (nonatomic, strong) NSString* naviTitle;
 @property (nonatomic, strong) UIView* vwNavigation;
 //navagationbar是否隐藏 默认为不隐藏navagationbar
 @property (nonatomic,assign)BOOL navagationBarHiden;
@@ -24,5 +25,5 @@
 
 - (void)hiddenBackBtn:(BOOL)bHidden;
 - (void)addNavigationView;
-
+- (void)hiddenNavigation;
 @end

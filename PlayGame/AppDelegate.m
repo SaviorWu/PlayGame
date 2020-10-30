@@ -8,6 +8,7 @@
 #import "AppDelegate.h"
 #import "JTBaseTabBarController.h"
 #import "JTBaseNavigationController.h"
+#import "LoginVC.h"
 @interface AppDelegate ()
 
 @end
@@ -17,10 +18,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    JTBaseTabBarController *tabbar = [[JTBaseTabBarController alloc] init];
-    JTBaseNavigationController *rootNavi =
-    [[JTBaseNavigationController alloc] initWithRootViewController:tabbar];
-    [MYAPP window].rootViewController = rootNavi;
+    LoginVC* logVC = [[LoginVC alloc] init];
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:logVC];
+    [MYAPP window].rootViewController = nav;
+    
+//    JTBaseTabBarController *tabbar = [[JTBaseTabBarController alloc] init];
+//    JTBaseNavigationController *rootNavi =
+//    [[JTBaseNavigationController alloc] initWithRootViewController:tabbar];
+//    [MYAPP window].rootViewController = rootNavi;
     return YES;
 }
 

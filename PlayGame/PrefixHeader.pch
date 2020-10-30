@@ -31,7 +31,8 @@
 
 #import "UIColor+Extension.h"
 #import "UIView+PubicColor.h"
-
-
+#import "UIBaseModel.h"
+#import "UITableView+loadCell.h"
+#import "NSObject+setProperty.h"
 
 #endif /* PrefixHeader_pch */

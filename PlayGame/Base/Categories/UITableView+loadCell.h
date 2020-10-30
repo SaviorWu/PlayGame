@@ -7,11 +7,13 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^success) (id value);
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UITableView(LoadCell)
 - (void)registCell:(NSString*)cellName;
-- (void)reloadCell:(NSString*)cellName;
+- (UITableViewCell*)reloadCell:(NSString*)cellName withModel:(UIBaseModel*)model withBlock:(__nullable success)block;
+
 @end
 
 NS_ASSUME_NONNULL_END

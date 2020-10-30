@@ -35,6 +35,10 @@
     }
     else return NO;
 }
+- (void)clickBack
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.navagationBarHiden = YES;
@@ -51,15 +55,18 @@
 - (void)addNavigationView{
     self.vwNavigation = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, NAVIGATION_HEIGHT + STATUS_BAR_HEIGHT)];
     self.vwNavigation.backgroundColor = UIColor.whiteColor;
-    self.vwNavigation.alpha = 0.3;
+    self.vwNavigation.alpha = 1;
+    if (self.naviTitle.length == 0) {
+        self.naviTitle = @" ";
+    }
     UILabel* lbTitle = [[UILabel alloc] initWithFrame:CGRectZero];
-    lbTitle.text = self.title;
+    lbTitle.text = self.naviTitle;
     [lbTitle sizeToFit];
     lbTitle.bottom = self.vwNavigation.bottom - 11.f;
     lbTitle.centerX = SCREEN_WIDTH/2.f;
     lbTitle.textColor = [UIColor whiteColor];
     
-    self.btnBack = [[UIButton alloc] initWithFrame:CGRectMake(16, 0, 10, 18)];
+    self.btnBack = [[UIButton alloc] initWithFrame:CGRectMake(16, 0, 15, 15)];
     [self.btnBack setEnlargeEdgeWithTop:10 right:20 bottom:10 left:20];
     [self.btnBack setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
     [self.btnBack addTarget:self action:@selector(clickBack) forControlEvents:UIControlEventTouchUpInside];
@@ -68,7 +75,9 @@
     [self.vwNavigation addSubview:lbTitle];
     [self.view addSubview:self.vwNavigation];
 }
-
+- (void)hiddenNavigation{
+    self.vwNavigation.height = 0;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSString *stringClass = NSStringFromClass(self.class);

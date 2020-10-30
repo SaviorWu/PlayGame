@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		48801757236E5E5F91ADDA6C /* Pods_PlayGame_PlayGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630474CEB889A3D602F68679 /* Pods_PlayGame_PlayGameUITests.framework */; };
 		84117BEF2549465200B68891 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84117BEE2549465200B68891 /* BaseTableViewController.m */; };
-		84117BFB25494D7300B68891 /* UITableViewCell+loadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84117BFA25494D7300B68891 /* UITableViewCell+loadCell.m */; };
+		84117BFB25494D7300B68891 /* UITableView+loadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84117BFA25494D7300B68891 /* UITableView+loadCell.m */; };
 		84117C0D2549763400B68891 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84117C0B2549763400B68891 /* HomeViewController.m */; };
 		84117C0E2549763400B68891 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84117C0C2549763400B68891 /* HomeViewController.xib */; };
 		84117C182549765100B68891 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84117C162549765100B68891 /* MyViewController.m */; };
@@ -41,6 +41,13 @@
 		8436C7E925490D6500194E27 /* UINavigationBar+handle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C7C025490D6500194E27 /* UINavigationBar+handle.m */; };
 		8436C8722549397F00194E27 /* UITabBar+badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C8702549397F00194E27 /* UITabBar+badge.m */; };
 		8436C878254939DC00194E27 /* JTTabBarBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C877254939DC00194E27 /* JTTabBarBtn.m */; };
+		843D36D6254A4ED400FDCD5D /* UIBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 843D36D5254A4ED400FDCD5D /* UIBaseModel.m */; };
+		8450EB67254BE42600B54365 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450EB66254BE42600B54365 /* LoginVC.m */; };
+		8450EB6F254BE83500B54365 /* UITipsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450EB6D254BE83500B54365 /* UITipsCell.m */; };
+		8450EB70254BE83500B54365 /* UITipsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8450EB6E254BE83500B54365 /* UITipsCell.xib */; };
+		8450EB79254BEBDB00B54365 /* UISpaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450EB77254BEBDB00B54365 /* UISpaceCell.m */; };
+		8450EB7A254BEBDB00B54365 /* UISpaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8450EB78254BEBDB00B54365 /* UISpaceCell.xib */; };
+		8450EB92254BF68200B54365 /* NSObject+setProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450EB91254BF68200B54365 /* NSObject+setProperty.m */; };
 		84B252202549080600887B01 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B2521F2549080600887B01 /* AppDelegate.m */; };
 		84B252262549080600887B01 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B252252549080600887B01 /* ViewController.m */; };
 		84B252292549080600887B01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B252272549080600887B01 /* Main.storyboard */; };
@@ -76,8 +83,8 @@
 		630474CEB889A3D602F68679 /* Pods_PlayGame_PlayGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayGame_PlayGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84117BED2549465200B68891 /* BaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
 		84117BEE2549465200B68891 /* BaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
-		84117BF925494D7300B68891 /* UITableViewCell+loadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+loadCell.h"; sourceTree = "<group>"; };
-		84117BFA25494D7300B68891 /* UITableViewCell+loadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+loadCell.m"; sourceTree = "<group>"; };
+		84117BF925494D7300B68891 /* UITableView+loadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+loadCell.h"; sourceTree = "<group>"; };
+		84117BFA25494D7300B68891 /* UITableView+loadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+loadCell.m"; sourceTree = "<group>"; };
 		84117C0A2549763400B68891 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		84117C0B2549763400B68891 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		84117C0C2549763400B68891 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
@@ -140,6 +147,18 @@
 		8436C8712549397F00194E27 /* UITabBar+badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+badge.h"; sourceTree = "<group>"; };
 		8436C876254939DC00194E27 /* JTTabBarBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTTabBarBtn.h; sourceTree = "<group>"; };
 		8436C877254939DC00194E27 /* JTTabBarBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTabBarBtn.m; sourceTree = "<group>"; };
+		843D36D4254A4ED400FDCD5D /* UIBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIBaseModel.h; sourceTree = "<group>"; };
+		843D36D5254A4ED400FDCD5D /* UIBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIBaseModel.m; sourceTree = "<group>"; };
+		8450EB65254BE42600B54365 /* LoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		8450EB66254BE42600B54365 /* LoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		8450EB6C254BE83500B54365 /* UITipsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITipsCell.h; sourceTree = "<group>"; };
+		8450EB6D254BE83500B54365 /* UITipsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITipsCell.m; sourceTree = "<group>"; };
+		8450EB6E254BE83500B54365 /* UITipsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UITipsCell.xib; sourceTree = "<group>"; };
+		8450EB76254BEBDB00B54365 /* UISpaceCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UISpaceCell.h; sourceTree = "<group>"; };
+		8450EB77254BEBDB00B54365 /* UISpaceCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UISpaceCell.m; sourceTree = "<group>"; };
+		8450EB78254BEBDB00B54365 /* UISpaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UISpaceCell.xib; sourceTree = "<group>"; };
+		8450EB90254BF68200B54365 /* NSObject+setProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+setProperty.h"; sourceTree = "<group>"; };
+		8450EB91254BF68200B54365 /* NSObject+setProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+setProperty.m"; sourceTree = "<group>"; };
 		84B2521B2549080600887B01 /* PlayGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B2521E2549080600887B01 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84B2521F2549080600887B01 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -285,8 +304,10 @@
 				8436C79925490D6500194E27 /* UIView+tool.m */,
 				8436C7AE25490D6500194E27 /* UIViewController+HUD.h */,
 				8436C79325490D6500194E27 /* UIViewController+HUD.m */,
-				84117BF925494D7300B68891 /* UITableViewCell+loadCell.h */,
-				84117BFA25494D7300B68891 /* UITableViewCell+loadCell.m */,
+				84117BF925494D7300B68891 /* UITableView+loadCell.h */,
+				84117BFA25494D7300B68891 /* UITableView+loadCell.m */,
+				8450EB90254BF68200B54365 /* NSObject+setProperty.h */,
+				8450EB91254BF68200B54365 /* NSObject+setProperty.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -294,6 +315,8 @@
 		8436C84625491A8D00194E27 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				8450EB6B254BE81500B54365 /* UIBaseView */,
+				843D36D3254A4EA700FDCD5D /* UIBaseModel */,
 				8436C79025490D6500194E27 /* Categories */,
 				8436C77925490D3000194E27 /* BaseViewController */,
 				8436C76625490D2000194E27 /* Tabbar */,
@@ -305,6 +328,7 @@
 		8436C84D25491BCC00194E27 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				843D36D2254A4E8B00FDCD5D /* Regist&Login&Forget */,
 				8436C85025491BF000194E27 /* Chat */,
 				8436C84F25491BDF00194E27 /* My */,
 				8436C84E25491BDB00194E27 /* Home */,
@@ -337,6 +361,53 @@
 			children = (
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		843D36D2254A4E8B00FDCD5D /* Regist&Login&Forget */ = {
+			isa = PBXGroup;
+			children = (
+				8450EB65254BE42600B54365 /* LoginVC.h */,
+				8450EB66254BE42600B54365 /* LoginVC.m */,
+			);
+			path = "Regist&Login&Forget";
+			sourceTree = "<group>";
+		};
+		843D36D3254A4EA700FDCD5D /* UIBaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				843D36D4254A4ED400FDCD5D /* UIBaseModel.h */,
+				843D36D5254A4ED400FDCD5D /* UIBaseModel.m */,
+			);
+			path = UIBaseModel;
+			sourceTree = "<group>";
+		};
+		8450EB6B254BE81500B54365 /* UIBaseView */ = {
+			isa = PBXGroup;
+			children = (
+				8450EB75254BEBC600B54365 /* UITipsCell */,
+				8450EB74254BEBBE00B54365 /* UISpaceCell */,
+			);
+			path = UIBaseView;
+			sourceTree = "<group>";
+		};
+		8450EB74254BEBBE00B54365 /* UISpaceCell */ = {
+			isa = PBXGroup;
+			children = (
+				8450EB76254BEBDB00B54365 /* UISpaceCell.h */,
+				8450EB77254BEBDB00B54365 /* UISpaceCell.m */,
+				8450EB78254BEBDB00B54365 /* UISpaceCell.xib */,
+			);
+			path = UISpaceCell;
+			sourceTree = "<group>";
+		};
+		8450EB75254BEBC600B54365 /* UITipsCell */ = {
+			isa = PBXGroup;
+			children = (
+				8450EB6C254BE83500B54365 /* UITipsCell.h */,
+				8450EB6D254BE83500B54365 /* UITipsCell.m */,
+				8450EB6E254BE83500B54365 /* UITipsCell.xib */,
+			);
+			path = UITipsCell;
 			sourceTree = "<group>";
 		};
 		84B252122549080600887B01 = {
@@ -517,7 +588,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8450EB7A254BEBDB00B54365 /* UISpaceCell.xib in Resources */,
 				84B2522E2549080700887B01 /* LaunchScreen.storyboard in Resources */,
+				8450EB70254BE83500B54365 /* UITipsCell.xib in Resources */,
 				84B2522B2549080700887B01 /* Assets.xcassets in Resources */,
 				84B252292549080600887B01 /* Main.storyboard in Resources */,
 				84117C0E2549763400B68891 /* HomeViewController.xib in Resources */,
@@ -649,15 +722,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8450EB6F254BE83500B54365 /* UITipsCell.m in Sources */,
 				8436C7D125490D6500194E27 /* UIViewController+HUD.m in Sources */,
 				8436C77425490D2000194E27 /* JTBaseTabBarController.m in Sources */,
+				8450EB67254BE42600B54365 /* LoginVC.m in Sources */,
 				8436C75A25490CD600194E27 /* JTNetwork.m in Sources */,
-				84117BFB25494D7300B68891 /* UITableViewCell+loadCell.m in Sources */,
+				84117BFB25494D7300B68891 /* UITableView+loadCell.m in Sources */,
 				8436C7E625490D6500194E27 /* UIColor+Extension.m in Sources */,
 				84B252262549080600887B01 /* ViewController.m in Sources */,
 				8436C7D725490D6500194E27 /* UIButton+LargeArea.m in Sources */,
 				8436C7DE25490D6500194E27 /* UIImage+GIF.m in Sources */,
 				8436C77125490D2000194E27 /* JTBaseNavigationController.m in Sources */,
+				8450EB92254BF68200B54365 /* NSObject+setProperty.m in Sources */,
 				8436C7D525490D6500194E27 /* UIView+PubicColor.m in Sources */,
 				8436C7E525490D6500194E27 /* UIImage+TOOL.m in Sources */,
 				8436C8722549397F00194E27 /* UITabBar+badge.m in Sources */,
@@ -673,10 +749,12 @@
 				8436C76225490CD600194E27 /* JTBaseReqModel.m in Sources */,
 				8436C7E725490D6500194E27 /* UIImage+RCImage.m in Sources */,
 				8436C878254939DC00194E27 /* JTTabBarBtn.m in Sources */,
+				8450EB79254BEBDB00B54365 /* UISpaceCell.m in Sources */,
 				8436C7D625490D6500194E27 /* UIView+tool.m in Sources */,
 				84117C0D2549763400B68891 /* HomeViewController.m in Sources */,
 				8436C7D925490D6500194E27 /* UITextView+Placeholder.m in Sources */,
 				8436C7D425490D6500194E27 /* UIButton+countDown.m in Sources */,
+				843D36D6254A4ED400FDCD5D /* UIBaseModel.m in Sources */,
 				8436C7E825490D6500194E27 /* UIImage+TOO.m in Sources */,
 				84117BEF2549465200B68891 /* BaseTableViewController.m in Sources */,
 				8436C7DC25490D6500194E27 /* NSString+Tool.m in Sources */,

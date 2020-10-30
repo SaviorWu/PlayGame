@@ -77,20 +77,18 @@
     [self.viewControllers
      enumerateObjectsUsingBlock:^(__kindof UIViewController *_Nonnull obj, NSUInteger idx, BOOL *_Nonnull stop) {
         if ([obj isKindOfClass:[HomeViewController class]]) {
-            obj.tabBarItem.title = kLocalizedString(@"Home");
+            obj.tabBarItem.title = @"Home";
             obj.tabBarItem.image =
             [[UIImage imageNamed:@"homeDiss"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
             obj.tabBarItem.selectedImage =
             [[UIImage imageNamed:@"homeSelected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         } else if ([obj isKindOfClass:[MyViewController class]]) {
-            obj.tabBarItem.title = kLocalizedString(@"Me");
+            obj.tabBarItem.title = @"Me";
             obj.tabBarItem.image =
             [[UIImage imageNamed:@"me_inactive"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
             obj.tabBarItem.selectedImage =
             [[UIImage imageNamed:@"meCliek"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        }
-        
-        else {
+        }else {
             NSLog(@"Unknown TabBarController");
         }
         [obj.tabBarController.tabBar bringBadgeToFrontOnItemIndex:(int)idx];

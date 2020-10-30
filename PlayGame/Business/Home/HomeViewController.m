@@ -16,8 +16,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.navagationBarHiden = YES;
+//    self.navagationBarHiden = YES;
     self.view.backgroundColor = UIColor.yellowColor;
+    [self hiddenNavigation];
 }
 
 /*

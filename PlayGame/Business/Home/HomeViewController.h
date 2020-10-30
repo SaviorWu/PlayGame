@@ -5,11 +5,11 @@
 //  Created by admin on 2020/10/28.
 //
 
-#import "BaseController.h"
-
+//#import "BaseController.h"
+#import "BaseTableViewController.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HomeViewController : BaseController
+@interface HomeViewController : BaseTableViewController
 
 @end
 

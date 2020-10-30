@@ -22,17 +22,28 @@
     self.tableView = [[UITableView alloc] init];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.separatorStyle = NO;
     
     [self.view addSubview:self.tableView];
+    [self registCell];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        UIEdgeInsets padding = UIEdgeInsetsMake(0, 0, 0, 0);
+        UIEdgeInsets padding = UIEdgeInsetsMake(self.vwNavigation.height, 0, 0, 0);
         [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.view).with.insets(padding);
         }];
     }];
     
     self.dataArray = [[NSMutableArray alloc] init];
-    [self addRefreshLoading];
+    
+}
+- (void)hiddenNavigation{
+    [super hiddenNavigation];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        UIEdgeInsets padding = UIEdgeInsetsMake(0, 0, 0, 0);
+        [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.view).with.insets(padding);
+        }];
+    }];
 }
 - (void)addRefreshLoading{
     
@@ -63,6 +74,9 @@
 - (void)loadData
 {
     
+}
+- (void)registCell{
+    [self.tableView registCell:@"UITipsCell"];
 }
 /*
 #pragma mark - Navigation

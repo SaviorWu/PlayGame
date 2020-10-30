@@ -6,15 +6,16 @@
 //
 
 #import "BaseController.h"
-#import "UITableViewCell+loadCell.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseTableViewController : BaseController<UITableViewDelegate, UITableViewDataSource>
 
 - (void)loadData;
 - (void)reloadTableView;
+- (void)addRefreshLoading;
 
-@property (nonatomic, copy) UITableView* tableView;
+@property (nonatomic, strong) UITableView* tableView;
 @property (nonatomic, strong) NSMutableArray* dataArray;
 @property (nonatomic, assign) NSInteger pageIndex;
 @property (nonatomic, assign) NSInteger pageSize;
