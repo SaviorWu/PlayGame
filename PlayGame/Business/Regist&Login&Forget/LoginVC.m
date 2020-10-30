@@ -25,10 +25,10 @@
 - (void)loadUI{
     [self.tableView registCell:@"UISpaceCell"];
     [self.tableView registCell:@"UITipsCell"];
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{@"type":UISpaceType,
-                                                         @"cellHeight":150.0}]];
+    [self.dataArray addObject:[UIBaseModel initWithDic:@{@"type":@(UISpaceType),
+                                                         @"cellHeight":@(150.0)}]];
     [self.dataArray addObject:[UIBaseModel initWithDic:@{@"name":@"登录",
-                                                         @"type":UITipsType}]];
+                                                         @"type":@(UITipsType)}]];
     [self.tableView reloadData];
 }
 
