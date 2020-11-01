@@ -58,6 +58,16 @@
 		84B252462549080700887B01 /* PlayGameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B252452549080700887B01 /* PlayGameUITests.m */; };
 		B5118B33738333ABFC0D685F /* Pods_PlayGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 550CB93084C72ED72B5D9D7B /* Pods_PlayGame.framework */; };
 		F2C89941ABFB46E8507B0179 /* Pods_PlayGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21A60257652AC206112EB6E /* Pods_PlayGameTests.framework */; };
+		F681E204254D0F04009FDDF6 /* UITextFiledCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F681E202254D0F04009FDDF6 /* UITextFiledCell.m */; };
+		F681E205254D0F04009FDDF6 /* UITextFiledCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F681E203254D0F04009FDDF6 /* UITextFiledCell.xib */; };
+		F681E210254D1EE5009FDDF6 /* UIVerificationCodeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F681E20E254D1EE5009FDDF6 /* UIVerificationCodeCell.m */; };
+		F681E211254D1EE5009FDDF6 /* UIVerificationCodeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F681E20F254D1EE5009FDDF6 /* UIVerificationCodeCell.xib */; };
+		F6A1073B254ED47C00A2D1B0 /* UIConfirnBtnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A10739254ED47C00A2D1B0 /* UIConfirnBtnCell.m */; };
+		F6A1073C254ED47C00A2D1B0 /* UIConfirnBtnCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A1073A254ED47C00A2D1B0 /* UIConfirnBtnCell.xib */; };
+		F6A10747254ED7FB00A2D1B0 /* UIForgetRegistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A10745254ED7FB00A2D1B0 /* UIForgetRegistCell.m */; };
+		F6A10748254ED7FB00A2D1B0 /* UIForgetRegistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A10746254ED7FB00A2D1B0 /* UIForgetRegistCell.xib */; };
+		F6A10750254EDDA300A2D1B0 /* UILabelButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A1074E254EDDA300A2D1B0 /* UILabelButtonCell.m */; };
+		F6A10751254EDDA300A2D1B0 /* UILabelButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A1074F254EDDA300A2D1B0 /* UILabelButtonCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +190,21 @@
 		E66D4F02D6901F59B310E621 /* Pods-PlayGame-PlayGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayGame-PlayGameUITests.debug.xcconfig"; path = "Target Support Files/Pods-PlayGame-PlayGameUITests/Pods-PlayGame-PlayGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EDCD17FB8A761B3CC77E0582 /* Pods-PlayGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayGame.debug.xcconfig"; path = "Target Support Files/Pods-PlayGame/Pods-PlayGame.debug.xcconfig"; sourceTree = "<group>"; };
 		F21A60257652AC206112EB6E /* Pods_PlayGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F681E201254D0F04009FDDF6 /* UITextFiledCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextFiledCell.h; sourceTree = "<group>"; };
+		F681E202254D0F04009FDDF6 /* UITextFiledCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextFiledCell.m; sourceTree = "<group>"; };
+		F681E203254D0F04009FDDF6 /* UITextFiledCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UITextFiledCell.xib; sourceTree = "<group>"; };
+		F681E20D254D1EE5009FDDF6 /* UIVerificationCodeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIVerificationCodeCell.h; sourceTree = "<group>"; };
+		F681E20E254D1EE5009FDDF6 /* UIVerificationCodeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIVerificationCodeCell.m; sourceTree = "<group>"; };
+		F681E20F254D1EE5009FDDF6 /* UIVerificationCodeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIVerificationCodeCell.xib; sourceTree = "<group>"; };
+		F6A10738254ED47C00A2D1B0 /* UIConfirnBtnCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIConfirnBtnCell.h; sourceTree = "<group>"; };
+		F6A10739254ED47C00A2D1B0 /* UIConfirnBtnCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIConfirnBtnCell.m; sourceTree = "<group>"; };
+		F6A1073A254ED47C00A2D1B0 /* UIConfirnBtnCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIConfirnBtnCell.xib; sourceTree = "<group>"; };
+		F6A10744254ED7FB00A2D1B0 /* UIForgetRegistCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIForgetRegistCell.h; sourceTree = "<group>"; };
+		F6A10745254ED7FB00A2D1B0 /* UIForgetRegistCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIForgetRegistCell.m; sourceTree = "<group>"; };
+		F6A10746254ED7FB00A2D1B0 /* UIForgetRegistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIForgetRegistCell.xib; sourceTree = "<group>"; };
+		F6A1074D254EDDA300A2D1B0 /* UILabelButtonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILabelButtonCell.h; sourceTree = "<group>"; };
+		F6A1074E254EDDA300A2D1B0 /* UILabelButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILabelButtonCell.m; sourceTree = "<group>"; };
+		F6A1074F254EDDA300A2D1B0 /* UILabelButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UILabelButtonCell.xib; sourceTree = "<group>"; };
 		F77AC95FAA126A31DE1BB569 /* Pods-PlayGameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayGameTests.release.xcconfig"; path = "Target Support Files/Pods-PlayGameTests/Pods-PlayGameTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -329,7 +354,6 @@
 			isa = PBXGroup;
 			children = (
 				843D36D2254A4E8B00FDCD5D /* Regist&Login&Forget */,
-				8436C85025491BF000194E27 /* Chat */,
 				8436C84F25491BDF00194E27 /* My */,
 				8436C84E25491BDB00194E27 /* Home */,
 			);
@@ -356,13 +380,6 @@
 			path = My;
 			sourceTree = "<group>";
 		};
-		8436C85025491BF000194E27 /* Chat */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Chat;
-			sourceTree = "<group>";
-		};
 		843D36D2254A4E8B00FDCD5D /* Regist&Login&Forget */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +401,11 @@
 		8450EB6B254BE81500B54365 /* UIBaseView */ = {
 			isa = PBXGroup;
 			children = (
+				F6A1074C254EDD8600A2D1B0 /* UILabelButtonCell */,
+				F6A10743254ED7DB00A2D1B0 /* UIForgetRegistCell */,
+				F6A10737254ED45A00A2D1B0 /* UIConfirnBtnCell */,
+				F681E20C254D1E99009FDDF6 /* UIVerificationCodeCell */,
+				F681E200254D0EE2009FDDF6 /* UITextFiledCell */,
 				8450EB75254BEBC600B54365 /* UITipsCell */,
 				8450EB74254BEBBE00B54365 /* UISpaceCell */,
 			);
@@ -478,6 +500,56 @@
 				F21A60257652AC206112EB6E /* Pods_PlayGameTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F681E200254D0EE2009FDDF6 /* UITextFiledCell */ = {
+			isa = PBXGroup;
+			children = (
+				F681E201254D0F04009FDDF6 /* UITextFiledCell.h */,
+				F681E202254D0F04009FDDF6 /* UITextFiledCell.m */,
+				F681E203254D0F04009FDDF6 /* UITextFiledCell.xib */,
+			);
+			path = UITextFiledCell;
+			sourceTree = "<group>";
+		};
+		F681E20C254D1E99009FDDF6 /* UIVerificationCodeCell */ = {
+			isa = PBXGroup;
+			children = (
+				F681E20D254D1EE5009FDDF6 /* UIVerificationCodeCell.h */,
+				F681E20E254D1EE5009FDDF6 /* UIVerificationCodeCell.m */,
+				F681E20F254D1EE5009FDDF6 /* UIVerificationCodeCell.xib */,
+			);
+			path = UIVerificationCodeCell;
+			sourceTree = "<group>";
+		};
+		F6A10737254ED45A00A2D1B0 /* UIConfirnBtnCell */ = {
+			isa = PBXGroup;
+			children = (
+				F6A10738254ED47C00A2D1B0 /* UIConfirnBtnCell.h */,
+				F6A10739254ED47C00A2D1B0 /* UIConfirnBtnCell.m */,
+				F6A1073A254ED47C00A2D1B0 /* UIConfirnBtnCell.xib */,
+			);
+			path = UIConfirnBtnCell;
+			sourceTree = "<group>";
+		};
+		F6A10743254ED7DB00A2D1B0 /* UIForgetRegistCell */ = {
+			isa = PBXGroup;
+			children = (
+				F6A10744254ED7FB00A2D1B0 /* UIForgetRegistCell.h */,
+				F6A10745254ED7FB00A2D1B0 /* UIForgetRegistCell.m */,
+				F6A10746254ED7FB00A2D1B0 /* UIForgetRegistCell.xib */,
+			);
+			path = UIForgetRegistCell;
+			sourceTree = "<group>";
+		};
+		F6A1074C254EDD8600A2D1B0 /* UILabelButtonCell */ = {
+			isa = PBXGroup;
+			children = (
+				F6A1074D254EDDA300A2D1B0 /* UILabelButtonCell.h */,
+				F6A1074E254EDDA300A2D1B0 /* UILabelButtonCell.m */,
+				F6A1074F254EDDA300A2D1B0 /* UILabelButtonCell.xib */,
+			);
+			path = UILabelButtonCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -590,10 +662,15 @@
 			files = (
 				8450EB7A254BEBDB00B54365 /* UISpaceCell.xib in Resources */,
 				84B2522E2549080700887B01 /* LaunchScreen.storyboard in Resources */,
+				F6A1073C254ED47C00A2D1B0 /* UIConfirnBtnCell.xib in Resources */,
 				8450EB70254BE83500B54365 /* UITipsCell.xib in Resources */,
+				F6A10751254EDDA300A2D1B0 /* UILabelButtonCell.xib in Resources */,
+				F681E205254D0F04009FDDF6 /* UITextFiledCell.xib in Resources */,
 				84B2522B2549080700887B01 /* Assets.xcassets in Resources */,
+				F681E211254D1EE5009FDDF6 /* UIVerificationCodeCell.xib in Resources */,
 				84B252292549080600887B01 /* Main.storyboard in Resources */,
 				84117C0E2549763400B68891 /* HomeViewController.xib in Resources */,
+				F6A10748254ED7FB00A2D1B0 /* UIForgetRegistCell.xib in Resources */,
 				84117C192549765100B68891 /* MyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -722,6 +799,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F681E210254D1EE5009FDDF6 /* UIVerificationCodeCell.m in Sources */,
 				8450EB6F254BE83500B54365 /* UITipsCell.m in Sources */,
 				8436C7D125490D6500194E27 /* UIViewController+HUD.m in Sources */,
 				8436C77425490D2000194E27 /* JTBaseTabBarController.m in Sources */,
@@ -729,6 +807,7 @@
 				8436C75A25490CD600194E27 /* JTNetwork.m in Sources */,
 				84117BFB25494D7300B68891 /* UITableView+loadCell.m in Sources */,
 				8436C7E625490D6500194E27 /* UIColor+Extension.m in Sources */,
+				F6A1073B254ED47C00A2D1B0 /* UIConfirnBtnCell.m in Sources */,
 				84B252262549080600887B01 /* ViewController.m in Sources */,
 				8436C7D725490D6500194E27 /* UIButton+LargeArea.m in Sources */,
 				8436C7DE25490D6500194E27 /* UIImage+GIF.m in Sources */,
@@ -741,6 +820,8 @@
 				8436C75425490CD600194E27 /* JTShareData.m in Sources */,
 				8436C7DB25490D6500194E27 /* NSData+Base65EnCode.m in Sources */,
 				8436C7DA25490D6500194E27 /* UIView+Frame.m in Sources */,
+				F6A10747254ED7FB00A2D1B0 /* UIForgetRegistCell.m in Sources */,
+				F681E204254D0F04009FDDF6 /* UITextFiledCell.m in Sources */,
 				84B252202549080600887B01 /* AppDelegate.m in Sources */,
 				8436C7E325490D6500194E27 /* UIColor+RCColor.m in Sources */,
 				8436C7E925490D6500194E27 /* UINavigationBar+handle.m in Sources */,
@@ -750,6 +831,7 @@
 				8436C7E725490D6500194E27 /* UIImage+RCImage.m in Sources */,
 				8436C878254939DC00194E27 /* JTTabBarBtn.m in Sources */,
 				8450EB79254BEBDB00B54365 /* UISpaceCell.m in Sources */,
+				F6A10750254EDDA300A2D1B0 /* UILabelButtonCell.m in Sources */,
 				8436C7D625490D6500194E27 /* UIView+tool.m in Sources */,
 				84117C0D2549763400B68891 /* HomeViewController.m in Sources */,
 				8436C7D925490D6500194E27 /* UITextView+Placeholder.m in Sources */,

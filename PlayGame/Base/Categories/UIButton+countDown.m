@@ -25,17 +25,17 @@
         if (timeOut <= 0) {
             dispatch_source_cancel(_timer);
             dispatch_async(dispatch_get_main_queue(), ^{
-                weakSelf.backgroundColor = mColor;
-                [weakSelf setTitle:title forState:UIControlStateNormal];
+//                weakSelf.backgroundColor = color;
+                [weakSelf setTitle:@"获取验证码" forState:UIControlStateNormal];
                 weakSelf.userInteractionEnabled = YES;
-                [weakSelf setTitleColor:BASECOLOR forState:0];
+//                [weakSelf setTitleColor:color forState:UIControlStateNormal];
             });
         } else {
             int allTime = (int)timeLine + 1;
             int seconds = timeOut % allTime;
             NSString *timeStr = [NSString stringWithFormat:@"%@(%0.2ds)",title,seconds];
             dispatch_async(dispatch_get_main_queue(), ^{
-                weakSelf.backgroundColor = color;
+//                weakSelf.backgroundColor = color;
                 [weakSelf setTitle:[NSString stringWithFormat:@"%@%@",timeStr,subTitle] forState:UIControlStateNormal];
                 weakSelf.userInteractionEnabled = NO;
             });

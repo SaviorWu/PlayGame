@@ -18,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self configIQKeyboard];
+    
     LoginVC* logVC = [[LoginVC alloc] init];
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:logVC];
     [MYAPP window].rootViewController = nav;
@@ -28,6 +30,16 @@
 //    [MYAPP window].rootViewController = rootNavi;
     return YES;
 }
-
+- (void)configIQKeyboard
+{
+    IQKeyboardManager *keyboardManager = [IQKeyboardManager sharedManager];
+    keyboardManager.enable = YES;
+    keyboardManager.shouldResignOnTouchOutside = YES;
+    keyboardManager.toolbarManageBehaviour = IQAutoToolbarBySubviews;
+    keyboardManager.enableAutoToolbar = NO;
+    keyboardManager.placeholderFont = [UIFont boldSystemFontOfSize:17];
+    keyboardManager.keyboardDistanceFromTextField = 150.0f;
+    [keyboardManager.toolbarPreviousNextAllowedClasses addObject:[UIScrollView class]];
+}
 
 @end

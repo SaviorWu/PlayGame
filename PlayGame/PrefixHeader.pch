@@ -35,4 +35,6 @@
 #import "UITableView+loadCell.h"
 #import "NSObject+setProperty.h"
 
+typedef void(^success) (id _Nullable value);
+
 #endif /* PrefixHeader_pch */

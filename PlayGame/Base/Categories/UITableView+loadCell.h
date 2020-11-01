@@ -6,8 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
+typedef void(^success) (id _Nullable value);
 
-typedef void(^success) (id value);
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UITableView(LoadCell)

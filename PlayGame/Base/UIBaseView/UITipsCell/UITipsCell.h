@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UITipsCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *lbTips;
 //@property (nonatomic, strong) cellBlock block;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintLeading;
 - (void)setModel:(UIBaseModel*)model;
 @end
 
