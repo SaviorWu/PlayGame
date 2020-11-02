@@ -166,7 +166,7 @@ typedef enum
 
 //把字符串转成Base64编码
 
-- (NSString *)base64EncodeString:(NSString *)string;
++ (NSString *)base64EncodeString:(NSString *)string;
 
 //字符串解码
 - (NSString *)stringEncodeBase64:(NSString *)base6;

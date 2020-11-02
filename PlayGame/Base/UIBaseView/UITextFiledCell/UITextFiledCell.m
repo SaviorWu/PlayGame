@@ -12,6 +12,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.textFiled.delegate = self;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -29,11 +30,33 @@
     if (model.keyboardType){
         self.textFiled.keyboardType = [model.keyboardType intValue];
     }
+    if ([model.mark isEqualToString:@"1"]) {
+        self.textFiled.secureTextEntry = YES;
+    }
     if (model.leading) {
         self.leading.constant = [model.leading floatValue];
     }
     if (model.trading) {
         self.trailing.constant = [model.trading floatValue];
     }
+}
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    if (self.block) {
+        self.block(textField.text);
+    }
+}
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    if ([[[textField textInputMode] primaryLanguage] isEqualToString:@"emoji"] || ![[textField textInputMode] primaryLanguage]) {
+        return NO;
+    }
+    if ([NSString isNineKeyBoard:string]){
+        //判断键盘是不是九宫格键盘
+            return YES;
+    }else{
+        if ([NSString stringContainsEmoji:string] == YES){
+            return NO;
+        }
+    }
+    return YES;
 }
 @end

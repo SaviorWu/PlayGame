@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 #define BM_backColor @"backColor"
 #define BM_cellHeight @"cellHeight"
 #define BM_type @"type"
+#define BM_mark @"mark"
 #define BM_leading @"leading"
 #define BM_trading @"trading"
 #define BM_top @"top"
@@ -59,6 +60,7 @@ typedef enum _UIType {
 @property (nonatomic, strong) NSNumber* bottom;
 
 @property (nonatomic, strong) NSNumber* keyboardType;
+@property (nonatomic, strong) id mark;
 @property (nonatomic, strong) NSMutableArray* dataArray;
 @end
 

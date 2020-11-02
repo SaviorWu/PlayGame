@@ -9,11 +9,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIVerificationCodeCell : UITableViewCell
+@interface UIVerificationCodeCell : UITableViewCell<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *textFiled;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leading;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *trailing;
 @property (weak, nonatomic) IBOutlet UIButton *btnVerification;
+@property (nonatomic, strong) success block;
 @end
 
 NS_ASSUME_NONNULL_END

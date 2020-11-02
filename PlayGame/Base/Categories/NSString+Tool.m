@@ -507,7 +507,7 @@
 }
 //把字符串转成Base64编码
 
-- (NSString *)base64EncodeString:(NSString *)string
++ (NSString *)base64EncodeString:(NSString *)string
 
 {
     NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];

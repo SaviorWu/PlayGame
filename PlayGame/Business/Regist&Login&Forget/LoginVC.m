@@ -29,7 +29,7 @@
     [self.tableView registCell:@"UIForgetRegistCell"];
     [self.tableView registCell:@"UILabelButtonCell"];
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
-                                                         BM_cellHeight:@(110)}]];
+                                                         BM_cellHeight:@(80)}]];
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_title:@"登录",
                                                          BM_titleSize:@(20),
                                                          BM_leading:@(20),
@@ -46,6 +46,7 @@
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"请输入密码",
                                                          BM_leading:@(20),
                                                          BM_trading:@(20),
+                                                         BM_mark:@"1",
                                                          BM_KeyBoardType:@(UIKeyboardTypeASCIICapable),
                                                          BM_type:@(UIFiledType)}]];
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
@@ -64,6 +65,7 @@
                                                          BM_backColor:[UIColor colorWithHex:0x00AAFE],
                                                          BM_titleColor:UIColor.whiteColor,
                                                          BM_cellHeight:@(50),
+                                                         BM_mark:[[self.reqParam allKeys] count] == 3?@"1":@"0",
                                                          BM_type:@(UIConfirnBtnType)}]];
     
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
@@ -105,12 +107,27 @@
     }else if([model.type  isEqual: @(UITipsType)]){
         return [tableView reloadCell:@"UITipsCell" withModel:model withBlock:nil];
     }else if([model.type  isEqual: @(UIFiledType)]){
-        return [tableView reloadCell:@"UITextFiledCell" withModel:model withBlock:nil];
+        return [tableView reloadCell:@"UITextFiledCell" withModel:model withBlock:^(id  _Nullable value) {
+            NSLog(@"UITextFiledCell = %@ row = %ld", value,(long)indexPath.row);
+            if (indexPath.row == 3) {
+                [self.reqParam setObject:value forKey:@"mobile"];
+            }else if(indexPath.row == 5){
+                [self.reqParam setObject:[NSString base64EncodeString:value] forKey:@"password"];
+            }
+            [self.tableView reloadData];
+        }];
     }else if([model.type  isEqual: @(UIVerificationType)]){
-        return [tableView reloadCell:@"UIVerificationCodeCell" withModel:model withBlock:nil];
+        return [tableView reloadCell:@"UIVerificationCodeCell" withModel:model withBlock:^(id  _Nullable value) {
+            NSLog(@"UIVerificationCodeCell = %@ row = %ld", value,(long)indexPath.row);
+            [self.reqParam setObject:value forKey:@"verify"];
+            [self.tableView reloadData];
+        }];
     }else if([model.type isEqual:@(UIConfirnBtnType)]){
         return [tableView reloadCell:@"UIConfirnBtnCell" withModel:model withBlock:^(id  _Nullable value) {
             NSLog(@"点击登录");
+            [JTNetwork requestGetWithParam:self.reqParam url:@"/ping/mei/dl" callback:^(JTBaseReqModel *model) {
+                NSLog(@"model = %@",model);
+            }];
         }];
     }else if([model.type isEqual:@(UIForgetRegistType)]){
         return [tableView reloadCell:@"UIForgetRegistCell" withModel:model withBlock:^(id  _Nullable value) {

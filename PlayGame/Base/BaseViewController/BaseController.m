@@ -23,6 +23,8 @@
 
 #pragma mark  life Cycle
 
+
+
 - (void)hiddenBackBtn:(BOOL)bHidden{
     self.btnBack.hidden = bHidden;
 }
@@ -94,6 +96,7 @@
     self.edgesForExtendedLayout = UIRectEdgeTop;
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self addNavigationView];
+    self.reqParam = [[NSMutableDictionary alloc] init];
 }
 
 #pragma mark methods

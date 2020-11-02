@@ -12,6 +12,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.textFiled.delegate = self;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -40,5 +41,26 @@
     NSLog(@"click btn");
     [self.btnVerification startWithTime:60 title:@"" countDownTitle:@"" mainColor:UIColor.whiteColor countColor:UIColor.blueColor];
 }
-
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    if (self.block) {
+        self.block(textField.text);
+    }
+}
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    if ([[[textField textInputMode] primaryLanguage] isEqualToString:@"emoji"] || ![[textField textInputMode] primaryLanguage]) {
+        return NO;
+    }
+    if ([NSString isNineKeyBoard:string]){
+        //判断键盘是不是九宫格键盘
+            return YES;
+    }else{
+        if ([NSString stringContainsEmoji:string] == YES){
+            return NO;
+        }
+    }
+    if (textField.text.length > 5) {
+        return NO;
+    }
+    return YES;
+}
 @end
