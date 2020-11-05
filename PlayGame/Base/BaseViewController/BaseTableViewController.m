@@ -29,12 +29,12 @@
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         UIEdgeInsets padding = UIEdgeInsetsMake(self.vwNavigation.height, 0, 0, 0);
         [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.view).with.insets(padding);
+            make.edges.equalTo(self.view).with.insets(padding).priority(999);
         }];
     }];
     
     self.dataArray = [[NSMutableArray alloc] init];
-    
+    [self loadUI];
 }
 - (void)hiddenNavigation{
     [super hiddenNavigation];
@@ -75,8 +75,19 @@
 {
     
 }
+- (void)loadUI{
+    NSLog(@"子类未重写\"loadUI\"方法设置界面");
+    assert(1);
+}
 - (void)registCell{
+    [self.tableView registCell:@"UISpaceCell"];
     [self.tableView registCell:@"UITipsCell"];
+    [self.tableView registCell:@"UITextFiledCell"];
+    [self.tableView registCell:@"UIVerificationCodeCell"];
+    [self.tableView registCell:@"UIConfirnBtnCell"];
+    [self.tableView registCell:@"UIForgetRegistCell"];
+    [self.tableView registCell:@"UILabelButtonCell"];
+    [self.tableView registCell:@"UILineCell"];
 }
 /*
 #pragma mark - Navigation
@@ -89,7 +100,16 @@
 */
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    return [[UITableViewCell alloc] init];
+    UIBaseModel* model = self.dataArray[indexPath.row];
+    if ([model.type  isEqual: @(UISpaceType)]) {
+        return [tableView reloadCell:@"UISpaceCell" withModel:model withBlock:nil];
+    }else if([model.type  isEqual: @(UILineType)]){
+        return [tableView reloadCell:@"UILineCell" withModel:model withBlock:nil];
+    }else if([model.type  isEqual: @(UITipsType)]){
+        return [tableView reloadCell:@"UITipsCell" withModel:model withBlock:nil];
+    }else{
+        return [[UITableViewCell alloc] init];
+    }
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

@@ -12,6 +12,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+//    self.lbTitle.backgroundColor = [UIColor yellowColor];
+//    self.button.backgroundColor = [UIColor greenColor];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

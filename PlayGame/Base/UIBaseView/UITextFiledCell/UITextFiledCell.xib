@@ -25,30 +25,13 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ztz-L3-qez">
-                        <rect key="frame" x="0.0" y="49" width="320" height="1"/>
-                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="1" id="194-oF-7Qt"/>
-                        </constraints>
-                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="aLW-Xe-URA" secondAttribute="bottom" constant="1" id="5RV-EZ-vUi"/>
                     <constraint firstItem="aLW-Xe-URA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="5q1-t9-CeN"/>
-                    <constraint firstAttribute="bottom" secondItem="ztz-L3-qez" secondAttribute="bottom" id="C3K-xH-kvw"/>
-                    <constraint firstItem="ztz-L3-qez" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="HMB-WL-TKR"/>
-                    <constraint firstItem="ztz-L3-qez" firstAttribute="centerX" secondItem="aLW-Xe-URA" secondAttribute="centerX" id="Heq-7S-xSM"/>
-                    <constraint firstAttribute="trailing" secondItem="ztz-L3-qez" secondAttribute="trailing" id="MoB-zK-xVQ"/>
                     <constraint firstItem="aLW-Xe-URA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ara-3A-pqU"/>
                     <constraint firstAttribute="trailing" secondItem="aLW-Xe-URA" secondAttribute="trailing" id="k7T-Yc-eSV"/>
-                    <constraint firstItem="ztz-L3-qez" firstAttribute="width" secondItem="aLW-Xe-URA" secondAttribute="width" id="uC0-Mj-nxR"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="HMB-WL-TKR"/>
-                        <exclude reference="MoB-zK-xVQ"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>

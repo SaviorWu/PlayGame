@@ -1,50 +1,33 @@
 //
-//  LoginVC.m
+//  ForgetVC.m
 //  PlayGame
 //
-//  Created by admin on 2020/10/30.
+//  Created by admin on 2020/11/5.
 //
 
-#import "LoginVC.h"
 #import "ForgetVC.h"
-@interface LoginVC ()
+
+@interface ForgetVC ()
 
 @end
 
-@implementation LoginVC
+@implementation ForgetVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self hiddenNavigation];
+    self.naviTitle = @"忘记密码";
+    [self addNavigationView];
 }
-
 - (void)loadUI{
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
-                                                         BM_cellHeight:@(80)}]];
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_title:@"登录",
-                                                         BM_titleSize:@(20),
-                                                         BM_leading:@(20),
-                                                         BM_type:@(UITipsType)}]];
+                                                         BM_cellHeight:@(64)}]];
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
                                                          BM_cellHeight:@(20)}]];
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"请输入手机号",
                                                          BM_leading:@(20),
                                                          BM_trading:@(20),
                                                          BM_KeyBoardType:@(UIKeyboardTypePhonePad),
-                                                         BM_type:@(UIFiledType)}]];
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
-                                                         BM_leading:@(20),
-                                                         BM_trading:@(20)}]];
-    
-    
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
-                                                         BM_cellHeight:@(10)}]];
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"请输入密码",
-                                                         BM_leading:@(20),
-                                                         BM_trading:@(20),
-                                                         BM_mark:@"1",
-                                                         BM_KeyBoardType:@(UIKeyboardTypeASCIICapable),
                                                          BM_type:@(UIFiledType)}]];
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
                                                          BM_leading:@(20),
@@ -59,10 +42,23 @@
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
                                                          BM_leading:@(20),
                                                          BM_trading:@(20)}]];
+    
+    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
+                                                         BM_cellHeight:@(10)}]];
+    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"请输入新密码",
+                                                         BM_leading:@(20),
+                                                         BM_trading:@(20),
+                                                         BM_mark:@"1",
+                                                         BM_KeyBoardType:@(UIKeyboardTypeASCIICapable),
+                                                         BM_type:@(UIFiledType)}]];
+    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
+                                                         BM_leading:@(20),
+                                                         BM_trading:@(20)}]];
+    
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
                                                          BM_cellHeight:@(64)}]];
     
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_title:@"登录",
+    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_title:@"重置密码",
                                                          BM_leading:@(20),
                                                          BM_trading:@(20),
                                                          BM_backColor:[UIColor colorWithHex:0x00AAFE],
@@ -70,29 +66,9 @@
                                                          BM_cellHeight:@(50),
                                                          BM_type:@(UIConfirnBtnType)}]];
     
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
-                                                         BM_cellHeight:@(8)}]];
-    
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_title:@"点击注册",
-                                                         BM_subTitle:@"忘记密码",
-                                                         BM_cellHeight:@(50),
-                                                         BM_type:@(UIForgetRegistType)}]];
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
-                                                         BM_cellHeight:@(50)}]];
-    
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_title:@"登录注册即同意",
-                                                         BM_titleSize:@(12),
-                                                         BM_subTitle:@"《用户协议和隐私政策》",
-                                                         BM_subTitleSize:@(12),
-                                                         BM_cellHeight:@(50),
-                                                         BM_leading:@(0.24*SCREEN_WIDTH),
-                                                         BM_trading:@(0.15*SCREEN_WIDTH),
-                                                         BM_Width:@(SCREEN_WIDTH - 0.23*SCREEN_WIDTH - 0.375*SCREEN_WIDTH),
-                                                         BM_type:@(UILabelButtonType)}]];
     
     [self.tableView reloadData];
 }
-
 /*
 #pragma mark - Navigation
 
@@ -107,9 +83,9 @@
     if([model.type  isEqual: @(UIFiledType)]){
         return [tableView reloadCell:@"UITextFiledCell" withModel:model withBlock:^(id  _Nullable value) {
             NSLog(@"UITextFiledCell = %@ row = %ld", value,(long)indexPath.row);
-            if (indexPath.row == 3) {
+            if (indexPath.row == 1) {
                 [self.reqParam setObject:value forKey:@"mobile"];
-            }else if(indexPath.row == 6){
+            }else if(indexPath.row == 5){
                 [self.reqParam setObject:[NSString base64EncodeString:value] forKey:@"password"];
             }
         }];
@@ -136,23 +112,8 @@
                 NSLog(@"model = %@",model);
             }];
         }];
-    }else if([model.type isEqual:@(UIForgetRegistType)]){
-        return [tableView reloadCell:@"UIForgetRegistCell" withModel:model withBlock:^(id  _Nullable value) {
-            NSLog(@"%@", value);
-            if ([value intValue] == 1) {
-                
-            }else if([value intValue] == 2){
-                ForgetVC* vc = [[ForgetVC alloc] init];
-                [self.navigationController pushViewController:vc animated:YES];
-            }
-        }];
-    }else if([model.type isEqual:@(UILabelButtonType)]){
-        return [tableView reloadCell:@"UILabelButtonCell" withModel:model withBlock:^(id  _Nullable value) {
-            NSLog(@"点击按钮");
-        }];
     }else{
         return [super tableView:tableView cellForRowAtIndexPath:indexPath];
     }
 }
-
 @end

@@ -13,17 +13,10 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="UIVerificationCodeCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0G0-T4-fn2">
-                        <rect key="frame" x="0.0" y="49" width="320" height="1"/>
-                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="1" id="VBb-ym-Rg6"/>
-                        </constraints>
-                    </view>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EVy-18-OEt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <constraints>
@@ -45,15 +38,19 @@
                     </button>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="EVy-18-OEt" secondAttribute="bottom" id="H58-RD-NYO"/>
+                    <constraint firstItem="GSI-0V-z0l" firstAttribute="bottom" secondItem="EVy-18-OEt" secondAttribute="bottom" id="I5c-AI-lU7"/>
                     <constraint firstAttribute="trailing" secondItem="EVy-18-OEt" secondAttribute="trailing" id="IFq-jl-gKn"/>
-                    <constraint firstItem="0G0-T4-fn2" firstAttribute="width" secondItem="EVy-18-OEt" secondAttribute="width" id="N8V-NU-On7"/>
-                    <constraint firstItem="0G0-T4-fn2" firstAttribute="centerX" secondItem="EVy-18-OEt" secondAttribute="centerX" id="OFJ-H8-vzd"/>
                     <constraint firstItem="EVy-18-OEt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="OJj-Up-Rh9"/>
-                    <constraint firstAttribute="bottom" secondItem="0G0-T4-fn2" secondAttribute="bottom" id="SEF-l2-M2D"/>
-                    <constraint firstItem="0G0-T4-fn2" firstAttribute="top" secondItem="GSI-0V-z0l" secondAttribute="bottom" id="bLz-Vr-Fua"/>
+                    <constraint firstAttribute="bottom" secondItem="GSI-0V-z0l" secondAttribute="bottom" constant="1" id="Z3m-bR-cOg"/>
                     <constraint firstItem="EVy-18-OEt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fVr-j8-HEF"/>
                     <constraint firstItem="GSI-0V-z0l" firstAttribute="trailing" secondItem="EVy-18-OEt" secondAttribute="trailing" id="o9E-ly-8Rp"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Z3m-bR-cOg"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>

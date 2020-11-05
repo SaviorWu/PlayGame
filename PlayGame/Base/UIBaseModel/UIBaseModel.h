@@ -26,8 +26,10 @@ NS_ASSUME_NONNULL_BEGIN
 #define BM_dataArray @"dataArray"
 #define BM_KeyBoardType @"keyboardType"
 #define BM_Width @"width"
+#define BM_TextField @"textField"
 typedef enum _UIType {
     UITitleType  = 1,
+    UILineType,
     UITextType,
     UIFiledType,
     UISwitchType,

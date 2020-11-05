@@ -21,7 +21,6 @@
 }
 - (IBAction)clickBtn:(id)sender {
     if (self.block) {
-        [self.button becomeFirstResponder];
         self.block(@(1));
     }
 }
@@ -48,11 +47,7 @@
     if (model.titleSize) {
         self.button.titleLabel.font = [UIFont systemFontOfSize:model.titleSize.floatValue];
     }
-    if ([model.mark isEqualToString:@"1"]) {
-        self.button.userInteractionEnabled = YES;
-    }else{
-        self.button.userInteractionEnabled = NO;
-    }
+    
     self.button.layer.masksToBounds = YES;
     self.button.layer.cornerRadius = 25;
 }

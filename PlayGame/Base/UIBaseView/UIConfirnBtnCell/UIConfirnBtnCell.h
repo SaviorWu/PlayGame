@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leading;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *trailing;
 @property (nonatomic, strong) success block;
+@property (nonatomic, strong) UIBaseModel* dataModel;
 @end
 
 NS_ASSUME_NONNULL_END

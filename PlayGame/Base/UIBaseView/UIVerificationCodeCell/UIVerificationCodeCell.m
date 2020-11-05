@@ -39,11 +39,14 @@
 }
 - (IBAction)clickBtn:(id)sender {
     NSLog(@"click btn");
+    if (self.block) {
+        self.block(@{@"code":@(1),@"data":@""});
+    }
     [self.btnVerification startWithTime:60 title:@"" countDownTitle:@"" mainColor:UIColor.whiteColor countColor:UIColor.blueColor];
 }
 - (void)textFieldDidEndEditing:(UITextField *)textField{
     if (self.block) {
-        self.block(textField.text);
+        self.block(@{@"code":@(2),@"data":textField.text});
     }
 }
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {

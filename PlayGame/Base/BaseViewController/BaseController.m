@@ -66,7 +66,7 @@
     [lbTitle sizeToFit];
     lbTitle.bottom = self.vwNavigation.bottom - 11.f;
     lbTitle.centerX = SCREEN_WIDTH/2.f;
-    lbTitle.textColor = [UIColor whiteColor];
+    lbTitle.textColor = [UIColor blackColor];
     
     self.btnBack = [[UIButton alloc] initWithFrame:CGRectMake(16, 0, 15, 15)];
     [self.btnBack setEnlargeEdgeWithTop:10 right:20 bottom:10 left:20];
@@ -75,6 +75,10 @@
     self.btnBack.centerY = lbTitle.centerY;
     [self.vwNavigation addSubview:self.btnBack];
     [self.vwNavigation addSubview:lbTitle];
+    
+    UIView* line = [[UIView alloc] initWithFrame:CGRectMake(0,self.vwNavigation.height , SCREEN_WIDTH, 1)];
+    line.backgroundColor = [UIColor colorWithHex:0xf0f0f0];
+    [self.vwNavigation addSubview:line];
     [self.view addSubview:self.vwNavigation];
 }
 - (void)hiddenNavigation{

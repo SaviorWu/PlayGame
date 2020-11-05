@@ -42,6 +42,9 @@
 		8436C8722549397F00194E27 /* UITabBar+badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C8702549397F00194E27 /* UITabBar+badge.m */; };
 		8436C878254939DC00194E27 /* JTTabBarBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C877254939DC00194E27 /* JTTabBarBtn.m */; };
 		843D36D6254A4ED400FDCD5D /* UIBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 843D36D5254A4ED400FDCD5D /* UIBaseModel.m */; };
+		8445CE2A2553D51D00FE01A3 /* ForgetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445CE292553D51D00FE01A3 /* ForgetVC.m */; };
+		8445CE322553D92400FE01A3 /* UILineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445CE302553D92400FE01A3 /* UILineCell.m */; };
+		8445CE332553D92400FE01A3 /* UILineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8445CE312553D92400FE01A3 /* UILineCell.xib */; };
 		8450EB67254BE42600B54365 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450EB66254BE42600B54365 /* LoginVC.m */; };
 		8450EB6F254BE83500B54365 /* UITipsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450EB6D254BE83500B54365 /* UITipsCell.m */; };
 		8450EB70254BE83500B54365 /* UITipsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8450EB6E254BE83500B54365 /* UITipsCell.xib */; };
@@ -159,6 +162,11 @@
 		8436C877254939DC00194E27 /* JTTabBarBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTabBarBtn.m; sourceTree = "<group>"; };
 		843D36D4254A4ED400FDCD5D /* UIBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIBaseModel.h; sourceTree = "<group>"; };
 		843D36D5254A4ED400FDCD5D /* UIBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIBaseModel.m; sourceTree = "<group>"; };
+		8445CE282553D51D00FE01A3 /* ForgetVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetVC.h; sourceTree = "<group>"; };
+		8445CE292553D51D00FE01A3 /* ForgetVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetVC.m; sourceTree = "<group>"; };
+		8445CE2F2553D92400FE01A3 /* UILineCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILineCell.h; sourceTree = "<group>"; };
+		8445CE302553D92400FE01A3 /* UILineCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILineCell.m; sourceTree = "<group>"; };
+		8445CE312553D92400FE01A3 /* UILineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UILineCell.xib; sourceTree = "<group>"; };
 		8450EB65254BE42600B54365 /* LoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
 		8450EB66254BE42600B54365 /* LoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		8450EB6C254BE83500B54365 /* UITipsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITipsCell.h; sourceTree = "<group>"; };
@@ -385,6 +393,8 @@
 			children = (
 				8450EB65254BE42600B54365 /* LoginVC.h */,
 				8450EB66254BE42600B54365 /* LoginVC.m */,
+				8445CE282553D51D00FE01A3 /* ForgetVC.h */,
+				8445CE292553D51D00FE01A3 /* ForgetVC.m */,
 			);
 			path = "Regist&Login&Forget";
 			sourceTree = "<group>";
@@ -398,9 +408,20 @@
 			path = UIBaseModel;
 			sourceTree = "<group>";
 		};
+		8445CE2E2553D90B00FE01A3 /* UILineCell */ = {
+			isa = PBXGroup;
+			children = (
+				8445CE2F2553D92400FE01A3 /* UILineCell.h */,
+				8445CE302553D92400FE01A3 /* UILineCell.m */,
+				8445CE312553D92400FE01A3 /* UILineCell.xib */,
+			);
+			path = UILineCell;
+			sourceTree = "<group>";
+		};
 		8450EB6B254BE81500B54365 /* UIBaseView */ = {
 			isa = PBXGroup;
 			children = (
+				8445CE2E2553D90B00FE01A3 /* UILineCell */,
 				F6A1074C254EDD8600A2D1B0 /* UILabelButtonCell */,
 				F6A10743254ED7DB00A2D1B0 /* UIForgetRegistCell */,
 				F6A10737254ED45A00A2D1B0 /* UIConfirnBtnCell */,
@@ -666,6 +687,7 @@
 				8450EB70254BE83500B54365 /* UITipsCell.xib in Resources */,
 				F6A10751254EDDA300A2D1B0 /* UILabelButtonCell.xib in Resources */,
 				F681E205254D0F04009FDDF6 /* UITextFiledCell.xib in Resources */,
+				8445CE332553D92400FE01A3 /* UILineCell.xib in Resources */,
 				84B2522B2549080700887B01 /* Assets.xcassets in Resources */,
 				F681E211254D1EE5009FDDF6 /* UIVerificationCodeCell.xib in Resources */,
 				84B252292549080600887B01 /* Main.storyboard in Resources */,
@@ -810,6 +832,7 @@
 				F6A1073B254ED47C00A2D1B0 /* UIConfirnBtnCell.m in Sources */,
 				84B252262549080600887B01 /* ViewController.m in Sources */,
 				8436C7D725490D6500194E27 /* UIButton+LargeArea.m in Sources */,
+				8445CE322553D92400FE01A3 /* UILineCell.m in Sources */,
 				8436C7DE25490D6500194E27 /* UIImage+GIF.m in Sources */,
 				8436C77125490D2000194E27 /* JTBaseNavigationController.m in Sources */,
 				8450EB92254BF68200B54365 /* NSObject+setProperty.m in Sources */,
@@ -841,6 +864,7 @@
 				84117BEF2549465200B68891 /* BaseTableViewController.m in Sources */,
 				8436C7DC25490D6500194E27 /* NSString+Tool.m in Sources */,
 				84B252312549080700887B01 /* main.m in Sources */,
+				8445CE2A2553D51D00FE01A3 /* ForgetVC.m in Sources */,
 				8436C75525490CD600194E27 /* JTUserModel.m in Sources */,
 				8436C7E425490D6500194E27 /* UIView+baseExtra.m in Sources */,
 			);

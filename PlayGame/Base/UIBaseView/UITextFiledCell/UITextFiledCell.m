@@ -40,6 +40,10 @@
         self.trailing.constant = [model.trading floatValue];
     }
 }
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    
+}
 - (void)textFieldDidEndEditing:(UITextField *)textField{
     if (self.block) {
         self.block(textField.text);
