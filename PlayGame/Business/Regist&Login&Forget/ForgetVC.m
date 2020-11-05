@@ -83,9 +83,9 @@
     if([model.type  isEqual: @(UIFiledType)]){
         return [tableView reloadCell:@"UITextFiledCell" withModel:model withBlock:^(id  _Nullable value) {
             NSLog(@"UITextFiledCell = %@ row = %ld", value,(long)indexPath.row);
-            if (indexPath.row == 1) {
+            if (indexPath.row == 2) {
                 [self.reqParam setObject:value forKey:@"mobile"];
-            }else if(indexPath.row == 5){
+            }else if(indexPath.row == 8){
                 [self.reqParam setObject:[NSString base64EncodeString:value] forKey:@"password"];
             }
         }];
@@ -93,8 +93,12 @@
         return [tableView reloadCell:@"UIVerificationCodeCell" withModel:model withBlock:^(id  _Nullable value) {
             NSLog(@"UIVerificationCodeCell = %@ row = %ld", value,(long)indexPath.row);
             if ([value[@"code"] intValue] == 1) {
-                [JTNetwork requestGetWithParam:@{@"mobile":self.reqParam[@"mobile"],@"type":@"login"} url:@"/ping/mei/yzm" callback:^(JTBaseReqModel *model) {
+                [JTNetwork requestGetWithParam:@{@"mobile":self.reqParam[@"mobile"],@"type":@"forget"} url:@"/ping/mei/yzm" callback:^(JTBaseReqModel *model) {
                     NSLog(@"%@", model);
+                    [self showHint:model.xx];
+                    if (model.zt == 1){
+                        [self.navigationController popViewControllerAnimated:YES];
+                    }
                 }];
             }else{
                 [self.reqParam setObject:value[@"data"] forKey:@"verify"];
@@ -108,7 +112,7 @@
                 [self showHint:@"请填写完所有信息"];
                 return;
             }
-            [JTNetwork requestGetWithParam:self.reqParam url:@"/ping/mei/dl" callback:^(JTBaseReqModel *model) {
+            [JTNetwork requestGetWithParam:self.reqParam url:@"/ping/mei/zhmm" callback:^(JTBaseReqModel *model) {
                 NSLog(@"model = %@",model);
             }];
         }];

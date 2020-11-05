@@ -134,6 +134,11 @@
             }
             [JTNetwork requestGetWithParam:self.reqParam url:@"/ping/mei/dl" callback:^(JTBaseReqModel *model) {
                 NSLog(@"model = %@",model);
+                if (model.zt != 1) {
+                    [self showHint:model.xx];
+                }else{
+                    
+                }
             }];
         }];
     }else if([model.type isEqual:@(UIForgetRegistType)]){

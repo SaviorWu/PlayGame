@@ -45,6 +45,8 @@
 		8445CE2A2553D51D00FE01A3 /* ForgetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445CE292553D51D00FE01A3 /* ForgetVC.m */; };
 		8445CE322553D92400FE01A3 /* UILineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445CE302553D92400FE01A3 /* UILineCell.m */; };
 		8445CE332553D92400FE01A3 /* UILineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8445CE312553D92400FE01A3 /* UILineCell.xib */; };
+		8445CE3B2554036A00FE01A3 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445CE3A2554036A00FE01A3 /* UserModel.m */; };
+		8445CE442554043200FE01A3 /* UserModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445CE432554043200FE01A3 /* UserModelManager.m */; };
 		8450EB67254BE42600B54365 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450EB66254BE42600B54365 /* LoginVC.m */; };
 		8450EB6F254BE83500B54365 /* UITipsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450EB6D254BE83500B54365 /* UITipsCell.m */; };
 		8450EB70254BE83500B54365 /* UITipsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8450EB6E254BE83500B54365 /* UITipsCell.xib */; };
@@ -167,6 +169,10 @@
 		8445CE2F2553D92400FE01A3 /* UILineCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILineCell.h; sourceTree = "<group>"; };
 		8445CE302553D92400FE01A3 /* UILineCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILineCell.m; sourceTree = "<group>"; };
 		8445CE312553D92400FE01A3 /* UILineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UILineCell.xib; sourceTree = "<group>"; };
+		8445CE392554036A00FE01A3 /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		8445CE3A2554036A00FE01A3 /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		8445CE422554043200FE01A3 /* UserModelManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModelManager.h; sourceTree = "<group>"; };
+		8445CE432554043200FE01A3 /* UserModelManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModelManager.m; sourceTree = "<group>"; };
 		8450EB65254BE42600B54365 /* LoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
 		8450EB66254BE42600B54365 /* LoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		8450EB6C254BE83500B54365 /* UITipsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITipsCell.h; sourceTree = "<group>"; };
@@ -418,6 +424,17 @@
 			path = UILineCell;
 			sourceTree = "<group>";
 		};
+		8445CE382554034800FE01A3 /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				8445CE392554036A00FE01A3 /* UserModel.h */,
+				8445CE3A2554036A00FE01A3 /* UserModel.m */,
+				8445CE422554043200FE01A3 /* UserModelManager.h */,
+				8445CE432554043200FE01A3 /* UserModelManager.m */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
 		8450EB6B254BE81500B54365 /* UIBaseView */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,6 +495,7 @@
 		84B2521D2549080600887B01 /* PlayGame */ = {
 			isa = PBXGroup;
 			children = (
+				8445CE382554034800FE01A3 /* BaseModel */,
 				8436C84D25491BCC00194E27 /* Business */,
 				8436C84625491A8D00194E27 /* Base */,
 				84B2521E2549080600887B01 /* AppDelegate.h */,
@@ -825,6 +843,7 @@
 				8450EB6F254BE83500B54365 /* UITipsCell.m in Sources */,
 				8436C7D125490D6500194E27 /* UIViewController+HUD.m in Sources */,
 				8436C77425490D2000194E27 /* JTBaseTabBarController.m in Sources */,
+				8445CE3B2554036A00FE01A3 /* UserModel.m in Sources */,
 				8450EB67254BE42600B54365 /* LoginVC.m in Sources */,
 				8436C75A25490CD600194E27 /* JTNetwork.m in Sources */,
 				84117BFB25494D7300B68891 /* UITableView+loadCell.m in Sources */,
@@ -844,6 +863,7 @@
 				8436C7DB25490D6500194E27 /* NSData+Base65EnCode.m in Sources */,
 				8436C7DA25490D6500194E27 /* UIView+Frame.m in Sources */,
 				F6A10747254ED7FB00A2D1B0 /* UIForgetRegistCell.m in Sources */,
+				8445CE442554043200FE01A3 /* UserModelManager.m in Sources */,
 				F681E204254D0F04009FDDF6 /* UITextFiledCell.m in Sources */,
 				84B252202549080600887B01 /* AppDelegate.m in Sources */,
 				8436C7E325490D6500194E27 /* UIColor+RCColor.m in Sources */,
