@@ -2,14 +2,14 @@
 //  MyViewController.h
 //  PlayGame
 //
-//  Created by admin on 2020/10/28.
+//  Created by admin on 2020/11/6.
 //
 
-#import "BaseController.h"
+#import "BaseTableViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MyViewController : BaseController
+@interface MyViewController : BaseTableViewController
 
 @end
 

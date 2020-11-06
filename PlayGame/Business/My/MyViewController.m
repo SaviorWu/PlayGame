@@ -2,7 +2,7 @@
 //  MyViewController.m
 //  PlayGame
 //
-//  Created by admin on 2020/10/28.
+//  Created by admin on 2020/11/6.
 //
 
 #import "MyViewController.h"
@@ -15,9 +15,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    self.view.backgroundColor = UIColor.greenColor;
-//    [self hiddenNavigation];
+    // Do any additional setup after loading the view.
+    [self hiddenNavigation];
 }
 
 /*

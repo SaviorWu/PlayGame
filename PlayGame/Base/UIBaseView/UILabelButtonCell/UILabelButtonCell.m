@@ -30,8 +30,26 @@
     if (model.title) {
         self.lbTitle.text = model.title;
     }
+    if (model.titleAlignment) {
+        if ([model.titleAlignment intValue] == 0) {
+            self.lbTitle.textAlignment = NSTextAlignmentLeft;
+        }else if([model.titleAlignment intValue] == 1){
+            self.lbTitle.textAlignment = NSTextAlignmentCenter;
+        }else{
+            self.lbTitle.textAlignment = NSTextAlignmentRight;
+        }
+    }
     if (model.subTitle) {
         [self.button setTitle:model.subTitle forState:UIControlStateNormal];
+    }
+    if (model.subAlignment) {
+        if ([model.subAlignment intValue] == 0) {
+            [self.button setContentHorizontalAlignment:(UIControlContentHorizontalAlignmentLeft)];
+        }else if([model.subAlignment intValue] == 1){
+            [self.button setContentHorizontalAlignment:(UIControlContentHorizontalAlignmentCenter)];
+        }else{
+            [self.button setContentHorizontalAlignment:(UIControlContentHorizontalAlignmentRight)];
+        }
     }
     if (model.leading) {
         self.lbLeading.constant = model.leading.floatValue;

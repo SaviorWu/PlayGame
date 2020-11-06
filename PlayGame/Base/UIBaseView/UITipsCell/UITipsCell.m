@@ -26,7 +26,13 @@
 //}
 - (void)setModel:(UIBaseModel*)model
 {
-    self.lbTips.text = model.title;
+    if (model.mark) {
+        NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:[model.title  dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,NSFontAttributeName:[UIFont systemFontOfSize:15.0f] } documentAttributes:nil error:nil];
+        self.lbTips.attributedText = attrStr;//用于显示
+    }else{
+        self.lbTips.text = model.title;
+    }
+    
     if (model.titleSize != 0) {
         self.lbTips.font = [UIFont systemFontOfSize:[model.titleSize intValue]];
     }else{
@@ -40,5 +46,6 @@
     if (model.leading) {
         self.constraintLeading.constant = [model.leading floatValue];
     }
+    
 }
 @end

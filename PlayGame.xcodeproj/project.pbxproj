@@ -10,10 +10,6 @@
 		48801757236E5E5F91ADDA6C /* Pods_PlayGame_PlayGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630474CEB889A3D602F68679 /* Pods_PlayGame_PlayGameUITests.framework */; };
 		84117BEF2549465200B68891 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84117BEE2549465200B68891 /* BaseTableViewController.m */; };
 		84117BFB25494D7300B68891 /* UITableView+loadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84117BFA25494D7300B68891 /* UITableView+loadCell.m */; };
-		84117C0D2549763400B68891 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84117C0B2549763400B68891 /* HomeViewController.m */; };
-		84117C0E2549763400B68891 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84117C0C2549763400B68891 /* HomeViewController.xib */; };
-		84117C182549765100B68891 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84117C162549765100B68891 /* MyViewController.m */; };
-		84117C192549765100B68891 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84117C172549765100B68891 /* MyViewController.xib */; };
 		8436C75425490CD600194E27 /* JTShareData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C73225490CD600194E27 /* JTShareData.m */; };
 		8436C75525490CD600194E27 /* JTUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C73325490CD600194E27 /* JTUserModel.m */; };
 		8436C75A25490CD600194E27 /* JTNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C73925490CD600194E27 /* JTNetwork.m */; };
@@ -61,6 +57,12 @@
 		84B252312549080700887B01 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B252302549080700887B01 /* main.m */; };
 		84B2523B2549080700887B01 /* PlayGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B2523A2549080700887B01 /* PlayGameTests.m */; };
 		84B252462549080700887B01 /* PlayGameUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B252452549080700887B01 /* PlayGameUITests.m */; };
+		84C768AD2554F0EB00E08149 /* RegistVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C768AC2554F0EB00E08149 /* RegistVC.m */; };
+		84C768B3255514C000E08149 /* ProtocolVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C768B2255514C000E08149 /* ProtocolVC.m */; };
+		84C768BC25553D8500E08149 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C768BB25553D8500E08149 /* MyViewController.m */; };
+		84C768C525553D9500E08149 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C768C425553D9500E08149 /* HomeViewController.m */; };
+		84C768CD25553E2400E08149 /* UIImageLabelSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C768CB25553E2400E08149 /* UIImageLabelSelectCell.m */; };
+		84C768CE25553E2400E08149 /* UIImageLabelSelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C768CC25553E2400E08149 /* UIImageLabelSelectCell.xib */; };
 		B5118B33738333ABFC0D685F /* Pods_PlayGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 550CB93084C72ED72B5D9D7B /* Pods_PlayGame.framework */; };
 		F2C89941ABFB46E8507B0179 /* Pods_PlayGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21A60257652AC206112EB6E /* Pods_PlayGameTests.framework */; };
 		F681E204254D0F04009FDDF6 /* UITextFiledCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F681E202254D0F04009FDDF6 /* UITextFiledCell.m */; };
@@ -100,12 +102,6 @@
 		84117BEE2549465200B68891 /* BaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
 		84117BF925494D7300B68891 /* UITableView+loadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+loadCell.h"; sourceTree = "<group>"; };
 		84117BFA25494D7300B68891 /* UITableView+loadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+loadCell.m"; sourceTree = "<group>"; };
-		84117C0A2549763400B68891 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		84117C0B2549763400B68891 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		84117C0C2549763400B68891 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		84117C152549765100B68891 /* MyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
-		84117C162549765100B68891 /* MyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
-		84117C172549765100B68891 /* MyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
 		8436C73225490CD600194E27 /* JTShareData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTShareData.m; sourceTree = "<group>"; };
 		8436C73325490CD600194E27 /* JTUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTUserModel.m; sourceTree = "<group>"; };
 		8436C73525490CD600194E27 /* JTBaseReqModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTBaseReqModel.h; sourceTree = "<group>"; };
@@ -199,6 +195,17 @@
 		84B252412549080700887B01 /* PlayGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B252452549080700887B01 /* PlayGameUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayGameUITests.m; sourceTree = "<group>"; };
 		84B252472549080700887B01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84C768AB2554F0EB00E08149 /* RegistVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistVC.h; sourceTree = "<group>"; };
+		84C768AC2554F0EB00E08149 /* RegistVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistVC.m; sourceTree = "<group>"; };
+		84C768B1255514C000E08149 /* ProtocolVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProtocolVC.h; sourceTree = "<group>"; };
+		84C768B2255514C000E08149 /* ProtocolVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProtocolVC.m; sourceTree = "<group>"; };
+		84C768BA25553D8500E08149 /* MyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		84C768BB25553D8500E08149 /* MyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		84C768C325553D9500E08149 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		84C768C425553D9500E08149 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		84C768CA25553E2400E08149 /* UIImageLabelSelectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIImageLabelSelectCell.h; sourceTree = "<group>"; };
+		84C768CB25553E2400E08149 /* UIImageLabelSelectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIImageLabelSelectCell.m; sourceTree = "<group>"; };
+		84C768CC25553E2400E08149 /* UIImageLabelSelectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIImageLabelSelectCell.xib; sourceTree = "<group>"; };
 		85E727548D9F435274513ACD /* Pods-PlayGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayGame.release.xcconfig"; path = "Target Support Files/Pods-PlayGame/Pods-PlayGame.release.xcconfig"; sourceTree = "<group>"; };
 		8777D8CDD4C3DD1D27C4A887 /* Pods-PlayGameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayGameTests.debug.xcconfig"; path = "Target Support Files/Pods-PlayGameTests/Pods-PlayGameTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E66D4F02D6901F59B310E621 /* Pods-PlayGame-PlayGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayGame-PlayGameUITests.debug.xcconfig"; path = "Target Support Files/Pods-PlayGame-PlayGameUITests/Pods-PlayGame-PlayGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -377,9 +384,8 @@
 		8436C84E25491BDB00194E27 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				84117C0A2549763400B68891 /* HomeViewController.h */,
-				84117C0B2549763400B68891 /* HomeViewController.m */,
-				84117C0C2549763400B68891 /* HomeViewController.xib */,
+				84C768C325553D9500E08149 /* HomeViewController.h */,
+				84C768C425553D9500E08149 /* HomeViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -387,9 +393,8 @@
 		8436C84F25491BDF00194E27 /* My */ = {
 			isa = PBXGroup;
 			children = (
-				84117C152549765100B68891 /* MyViewController.h */,
-				84117C162549765100B68891 /* MyViewController.m */,
-				84117C172549765100B68891 /* MyViewController.xib */,
+				84C768BA25553D8500E08149 /* MyViewController.h */,
+				84C768BB25553D8500E08149 /* MyViewController.m */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -401,6 +406,10 @@
 				8450EB66254BE42600B54365 /* LoginVC.m */,
 				8445CE282553D51D00FE01A3 /* ForgetVC.h */,
 				8445CE292553D51D00FE01A3 /* ForgetVC.m */,
+				84C768AB2554F0EB00E08149 /* RegistVC.h */,
+				84C768AC2554F0EB00E08149 /* RegistVC.m */,
+				84C768B1255514C000E08149 /* ProtocolVC.h */,
+				84C768B2255514C000E08149 /* ProtocolVC.m */,
 			);
 			path = "Regist&Login&Forget";
 			sourceTree = "<group>";
@@ -438,6 +447,7 @@
 		8450EB6B254BE81500B54365 /* UIBaseView */ = {
 			isa = PBXGroup;
 			children = (
+				84C768C925553DF600E08149 /* UIImageLabelSelectCell */,
 				8445CE2E2553D90B00FE01A3 /* UILineCell */,
 				F6A1074C254EDD8600A2D1B0 /* UILabelButtonCell */,
 				F6A10743254ED7DB00A2D1B0 /* UIForgetRegistCell */,
@@ -529,6 +539,16 @@
 				84B252472549080700887B01 /* Info.plist */,
 			);
 			path = PlayGameUITests;
+			sourceTree = "<group>";
+		};
+		84C768C925553DF600E08149 /* UIImageLabelSelectCell */ = {
+			isa = PBXGroup;
+			children = (
+				84C768CA25553E2400E08149 /* UIImageLabelSelectCell.h */,
+				84C768CB25553E2400E08149 /* UIImageLabelSelectCell.m */,
+				84C768CC25553E2400E08149 /* UIImageLabelSelectCell.xib */,
+			);
+			path = UIImageLabelSelectCell;
 			sourceTree = "<group>";
 		};
 		E114ED1C345EC61D7B2FBBF3 /* Frameworks */ = {
@@ -707,11 +727,10 @@
 				F681E205254D0F04009FDDF6 /* UITextFiledCell.xib in Resources */,
 				8445CE332553D92400FE01A3 /* UILineCell.xib in Resources */,
 				84B2522B2549080700887B01 /* Assets.xcassets in Resources */,
+				84C768CE25553E2400E08149 /* UIImageLabelSelectCell.xib in Resources */,
 				F681E211254D1EE5009FDDF6 /* UIVerificationCodeCell.xib in Resources */,
 				84B252292549080600887B01 /* Main.storyboard in Resources */,
-				84117C0E2549763400B68891 /* HomeViewController.xib in Resources */,
 				F6A10748254ED7FB00A2D1B0 /* UIForgetRegistCell.xib in Resources */,
-				84117C192549765100B68891 /* MyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -842,6 +861,7 @@
 				F681E210254D1EE5009FDDF6 /* UIVerificationCodeCell.m in Sources */,
 				8450EB6F254BE83500B54365 /* UITipsCell.m in Sources */,
 				8436C7D125490D6500194E27 /* UIViewController+HUD.m in Sources */,
+				84C768C525553D9500E08149 /* HomeViewController.m in Sources */,
 				8436C77425490D2000194E27 /* JTBaseTabBarController.m in Sources */,
 				8445CE3B2554036A00FE01A3 /* UserModel.m in Sources */,
 				8450EB67254BE42600B54365 /* LoginVC.m in Sources */,
@@ -858,9 +878,9 @@
 				8436C7D525490D6500194E27 /* UIView+PubicColor.m in Sources */,
 				8436C7E525490D6500194E27 /* UIImage+TOOL.m in Sources */,
 				8436C8722549397F00194E27 /* UITabBar+badge.m in Sources */,
-				84117C182549765100B68891 /* MyViewController.m in Sources */,
 				8436C75425490CD600194E27 /* JTShareData.m in Sources */,
 				8436C7DB25490D6500194E27 /* NSData+Base65EnCode.m in Sources */,
+				84C768B3255514C000E08149 /* ProtocolVC.m in Sources */,
 				8436C7DA25490D6500194E27 /* UIView+Frame.m in Sources */,
 				F6A10747254ED7FB00A2D1B0 /* UIForgetRegistCell.m in Sources */,
 				8445CE442554043200FE01A3 /* UserModelManager.m in Sources */,
@@ -874,18 +894,20 @@
 				8436C7E725490D6500194E27 /* UIImage+RCImage.m in Sources */,
 				8436C878254939DC00194E27 /* JTTabBarBtn.m in Sources */,
 				8450EB79254BEBDB00B54365 /* UISpaceCell.m in Sources */,
+				84C768CD25553E2400E08149 /* UIImageLabelSelectCell.m in Sources */,
 				F6A10750254EDDA300A2D1B0 /* UILabelButtonCell.m in Sources */,
 				8436C7D625490D6500194E27 /* UIView+tool.m in Sources */,
-				84117C0D2549763400B68891 /* HomeViewController.m in Sources */,
 				8436C7D925490D6500194E27 /* UITextView+Placeholder.m in Sources */,
 				8436C7D425490D6500194E27 /* UIButton+countDown.m in Sources */,
 				843D36D6254A4ED400FDCD5D /* UIBaseModel.m in Sources */,
 				8436C7E825490D6500194E27 /* UIImage+TOO.m in Sources */,
 				84117BEF2549465200B68891 /* BaseTableViewController.m in Sources */,
 				8436C7DC25490D6500194E27 /* NSString+Tool.m in Sources */,
+				84C768BC25553D8500E08149 /* MyViewController.m in Sources */,
 				84B252312549080700887B01 /* main.m in Sources */,
 				8445CE2A2553D51D00FE01A3 /* ForgetVC.m in Sources */,
 				8436C75525490CD600194E27 /* JTUserModel.m in Sources */,
+				84C768AD2554F0EB00E08149 /* RegistVC.m in Sources */,
 				8436C7E425490D6500194E27 /* UIView+baseExtra.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,7 +21,7 @@
 }
 - (void)loadUI{
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
-                                                         BM_cellHeight:@(64)}]];
+                                                         BM_cellHeight:@(1)}]];
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
                                                          BM_cellHeight:@(20)}]];
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"请输入手机号",
@@ -91,8 +91,8 @@
         }];
     }else if([model.type  isEqual: @(UIVerificationType)]){
         return [tableView reloadCell:@"UIVerificationCodeCell" withModel:model withBlock:^(id  _Nullable value) {
-            NSLog(@"UIVerificationCodeCell = %@ row = %ld", value,(long)indexPath.row);
             if ([value[@"code"] intValue] == 1) {
+                [self.tableView reloadData];
                 [JTNetwork requestGetWithParam:@{@"mobile":self.reqParam[@"mobile"],@"type":@"forget"} url:@"/ping/mei/yzm" callback:^(JTBaseReqModel *model) {
                     NSLog(@"%@", model);
                     [self showHint:model.xx];

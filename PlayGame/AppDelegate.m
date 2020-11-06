@@ -20,14 +20,18 @@
     // Override point for customization after application launch.
     [self configIQKeyboard];
     
-    LoginVC* logVC = [[LoginVC alloc] init];
-    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:logVC];
-    [MYAPP window].rootViewController = nav;
-    
-//    JTBaseTabBarController *tabbar = [[JTBaseTabBarController alloc] init];
-//    JTBaseNavigationController *rootNavi =
-//    [[JTBaseNavigationController alloc] initWithRootViewController:tabbar];
-//    [MYAPP window].rootViewController = rootNavi;
+    NSUserDefaults* userdefault = [NSUserDefaults standardUserDefaults];
+    NSString* token = [userdefault objectForKey:@"token"];
+    if (token == nil) {
+        LoginVC* logVC = [[LoginVC alloc] init];
+        UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:logVC];
+        [MYAPP window].rootViewController = nav;
+    }else{
+        [UserModelManager shareInstance].userModel.token = token;
+        JTBaseTabBarController *tabbar = [[JTBaseTabBarController alloc] init];
+        JTBaseNavigationController *rootNavi = [[JTBaseNavigationController alloc] initWithRootViewController:tabbar];
+        [MYAPP window].rootViewController = rootNavi;
+    }
     return YES;
 }
 - (void)configIQKeyboard

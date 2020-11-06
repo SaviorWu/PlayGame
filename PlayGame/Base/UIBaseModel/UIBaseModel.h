@@ -27,6 +27,8 @@ NS_ASSUME_NONNULL_BEGIN
 #define BM_KeyBoardType @"keyboardType"
 #define BM_Width @"width"
 #define BM_TextField @"textField"
+#define BM_SubAlignment @"subAlignment"
+#define BM_TitleAlignment @"titleAlignment"
 typedef enum _UIType {
     UITitleType  = 1,
     UILineType,
@@ -38,7 +40,8 @@ typedef enum _UIType {
     UIVerificationType,
     UIConfirnBtnType,
     UIForgetRegistType,
-    UILabelButtonType
+    UILabelButtonType,
+    UIImageLabelSelectType
 } UIType;
 
 
@@ -46,9 +49,15 @@ typedef enum _UIType {
 + (instancetype)initWithDic:(NSDictionary*)dic;
 @property (nonatomic, strong) NSString* title;
 @property (nonatomic, strong) NSNumber* titleSize;
+//    NSTextAlignmentLeft      = 0,    // Visually left aligned
+//    NSTextAlignmentCenter    = 1,    // Visually centered
+//    NSTextAlignmentRight     = 2,    // Visually right aligned
+@property (nonatomic, strong) NSNumber* titleAlignment; // 0-left 1-center 2-right
 @property (nonatomic, strong) UIColor* titleColor;
 @property (nonatomic, strong) NSString* subTitle;
 @property (nonatomic, strong) NSNumber* subTitleSize;
+@property (nonatomic, strong) NSNumber* subAlignment; // 0-left 1-center 2-right
+
 @property (nonatomic, strong) UIColor* subTitleColor;
 
 @property (nonatomic, strong) UIColor* backColor;

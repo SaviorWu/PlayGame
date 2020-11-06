@@ -7,6 +7,11 @@
 
 #import "LoginVC.h"
 #import "ForgetVC.h"
+#import "UserModel.h"
+#import "RegistVC.h"
+#import "ProtocolVC.h"
+#import "JTBaseTabBarController.h"
+#import "JTBaseNavigationController.h"
 @interface LoginVC ()
 
 @end
@@ -85,9 +90,11 @@
                                                          BM_subTitle:@"《用户协议和隐私政策》",
                                                          BM_subTitleSize:@(12),
                                                          BM_cellHeight:@(50),
-                                                         BM_leading:@(0.24*SCREEN_WIDTH),
-                                                         BM_trading:@(0.15*SCREEN_WIDTH),
-                                                         BM_Width:@(SCREEN_WIDTH - 0.23*SCREEN_WIDTH - 0.375*SCREEN_WIDTH),
+                                                         BM_leading:@(20),
+                                                         BM_trading:@(20),
+                                                         BM_Width:@(200),
+                                                         BM_TitleAlignment:@(2),
+                                                         BM_SubAlignment:@(0),
                                                          BM_type:@(UILabelButtonType)}]];
     
     [self.tableView reloadData];
@@ -117,8 +124,11 @@
         return [tableView reloadCell:@"UIVerificationCodeCell" withModel:model withBlock:^(id  _Nullable value) {
             NSLog(@"UIVerificationCodeCell = %@ row = %ld", value,(long)indexPath.row);
             if ([value[@"code"] intValue] == 1) {
+                [self.tableView reloadData];
                 [JTNetwork requestGetWithParam:@{@"mobile":self.reqParam[@"mobile"],@"type":@"login"} url:@"/ping/mei/yzm" callback:^(JTBaseReqModel *model) {
-                    NSLog(@"%@", model);
+                    if (model.zt != 1) {
+                        [self showHint:model.xx];
+                    }
                 }];
             }else{
                 [self.reqParam setObject:value[@"data"] forKey:@"verify"];
@@ -128,24 +138,28 @@
         return [tableView reloadCell:@"UIConfirnBtnCell" withModel:model withBlock:^(id  _Nullable value) {
             NSLog(@"点击登录");
             [self.tableView reloadData];
-            if ([[self.reqParam allKeys] count] != 3) {
-                [self showHint:@"请填写完所有信息"];
-                return;
-            }
+            [self showHudInView:self.view];
             [JTNetwork requestGetWithParam:self.reqParam url:@"/ping/mei/dl" callback:^(JTBaseReqModel *model) {
                 NSLog(@"model = %@",model);
                 if (model.zt != 1) {
                     [self showHint:model.xx];
                 }else{
-                    
+                    UserModel* um = [UserModel mj_objectWithKeyValues:model.sj[@"info"]];
+                    um.token = model.sj[@"token"];
+                    [UserModelManager shareInstance].userModel = um;
+                    JTBaseTabBarController *tabbar = [[JTBaseTabBarController alloc] init];
+                    JTBaseNavigationController *rootNavi = [[JTBaseNavigationController alloc] initWithRootViewController:tabbar];
+                    [MYAPP window].rootViewController = rootNavi;
                 }
+                [self hideAllHud];
             }];
         }];
     }else if([model.type isEqual:@(UIForgetRegistType)]){
         return [tableView reloadCell:@"UIForgetRegistCell" withModel:model withBlock:^(id  _Nullable value) {
             NSLog(@"%@", value);
             if ([value intValue] == 1) {
-                
+                RegistVC* vc = [[RegistVC alloc] init];
+                [self.navigationController pushViewController:vc animated:YES];
             }else if([value intValue] == 2){
                 ForgetVC* vc = [[ForgetVC alloc] init];
                 [self.navigationController pushViewController:vc animated:YES];
@@ -154,6 +168,8 @@
     }else if([model.type isEqual:@(UILabelButtonType)]){
         return [tableView reloadCell:@"UILabelButtonCell" withModel:model withBlock:^(id  _Nullable value) {
             NSLog(@"点击按钮");
+            ProtocolVC* vc = [[ProtocolVC alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
         }];
     }else{
         return [super tableView:tableView cellForRowAtIndexPath:indexPath];

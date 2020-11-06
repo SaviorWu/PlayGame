@@ -74,13 +74,35 @@
     }];
 }
 
++(UIViewController*)getTopVC{
+    UIWindow *window = [UIApplication sharedApplication].windows[0];
+    
+    UIViewController* currentViewController = window.rootViewController;
+
+    BOOL runLoopFind = YES;
+    while (runLoopFind) {
+        if (currentViewController.presentedViewController) {
+            currentViewController = currentViewController.presentedViewController;
+        } else {
+            if ([currentViewController isKindOfClass:[UINavigationController class]]) {
+                currentViewController = ((UINavigationController *)currentViewController).visibleViewController;
+            } else if ([currentViewController isKindOfClass:[UITabBarController class]]) {
+                currentViewController = ((UITabBarController* )currentViewController).selectedViewController;
+            } else {
+                break;
+            }
+        }
+    }
+    
+    return currentViewController;
+}
+
 + (void)requestGetWithParam:(NSDictionary *)param url:(NSString *)url callback:(networkComplateBlock)callback {
     [[JTNetwork manager] addHeader:param];
     NSString *urlString = [NSString stringWithFormat:@"%@%@",SERVER_URL,url];
     NSLog(@"url=%@",urlString);
     NSLog(@"param=%@",param);
     [[JTNetwork manager].manager GET:urlString parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
         JTBaseReqModel *model = [JTBaseReqModel mj_objectWithKeyValues:responseObject];
         if (callback) {
             callback(model);

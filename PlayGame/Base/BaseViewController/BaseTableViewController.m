@@ -88,6 +88,7 @@
     [self.tableView registCell:@"UIForgetRegistCell"];
     [self.tableView registCell:@"UILabelButtonCell"];
     [self.tableView registCell:@"UILineCell"];
+    [self.tableView registCell:@"UIImageLabelSelectCell"];
 }
 /*
 #pragma mark - Navigation
