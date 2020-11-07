@@ -30,6 +30,7 @@
     [self setControllers];
     [self setTabBarItems];
     self.delegate = self;
+    
 }
 
 //- (void)viewWillLayoutSubviews {
@@ -63,9 +64,9 @@
     
     // 去掉黑线
     UITabBar *tabBar = [UITabBar appearance];
-    [tabBar setBackgroundColor:[UIColor whiteColor]];
-    [tabBar setBackgroundImage:[UIImage new]];
-    [tabBar setShadowImage:[UIImage new]];
+    [tabBar setBackgroundColor:[UIColor lightGrayColor]];
+//    [tabBar setBackgroundImage:[UIImage new]];
+//    [tabBar setShadowImage:[UIImage new]];
     
     if (@available(iOS 13.0, *)){
         UITabBarAppearance* tabBarAppearance = [[UITabBarAppearance alloc] init];

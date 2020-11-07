@@ -27,7 +27,9 @@
         UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:logVC];
         [MYAPP window].rootViewController = nav;
     }else{
+        NSString* uid = [userdefault objectForKey:@"uid"];
         [UserModelManager shareInstance].userModel.token = token;
+        [UserModelManager shareInstance].userModel.uid = uid;
         JTBaseTabBarController *tabbar = [[JTBaseTabBarController alloc] init];
         JTBaseNavigationController *rootNavi = [[JTBaseNavigationController alloc] initWithRootViewController:tabbar];
         [MYAPP window].rootViewController = rootNavi;

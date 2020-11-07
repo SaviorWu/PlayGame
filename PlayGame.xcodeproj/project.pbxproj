@@ -49,6 +49,9 @@
 		8450EB79254BEBDB00B54365 /* UISpaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450EB77254BEBDB00B54365 /* UISpaceCell.m */; };
 		8450EB7A254BEBDB00B54365 /* UISpaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8450EB78254BEBDB00B54365 /* UISpaceCell.xib */; };
 		8450EB92254BF68200B54365 /* NSObject+setProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450EB91254BF68200B54365 /* NSObject+setProperty.m */; };
+		846F3EC72556726500FC5E71 /* MyHeadNameIDCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846F3EC52556726500FC5E71 /* MyHeadNameIDCell.m */; };
+		846F3EC82556726500FC5E71 /* MyHeadNameIDCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846F3EC62556726500FC5E71 /* MyHeadNameIDCell.xib */; };
+		846F3ED1255675F300FC5E71 /* UIImageView+loading.m in Sources */ = {isa = PBXBuildFile; fileRef = 846F3ED0255675F300FC5E71 /* UIImageView+loading.m */; };
 		84B252202549080600887B01 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B2521F2549080600887B01 /* AppDelegate.m */; };
 		84B252262549080600887B01 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B252252549080600887B01 /* ViewController.m */; };
 		84B252292549080600887B01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B252272549080600887B01 /* Main.storyboard */; };
@@ -179,6 +182,11 @@
 		8450EB78254BEBDB00B54365 /* UISpaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UISpaceCell.xib; sourceTree = "<group>"; };
 		8450EB90254BF68200B54365 /* NSObject+setProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+setProperty.h"; sourceTree = "<group>"; };
 		8450EB91254BF68200B54365 /* NSObject+setProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+setProperty.m"; sourceTree = "<group>"; };
+		846F3EC42556726500FC5E71 /* MyHeadNameIDCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyHeadNameIDCell.h; sourceTree = "<group>"; };
+		846F3EC52556726500FC5E71 /* MyHeadNameIDCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyHeadNameIDCell.m; sourceTree = "<group>"; };
+		846F3EC62556726500FC5E71 /* MyHeadNameIDCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyHeadNameIDCell.xib; sourceTree = "<group>"; };
+		846F3ECF255675F300FC5E71 /* UIImageView+loading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+loading.h"; sourceTree = "<group>"; };
+		846F3ED0255675F300FC5E71 /* UIImageView+loading.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+loading.m"; sourceTree = "<group>"; };
 		84B2521B2549080600887B01 /* PlayGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B2521E2549080600887B01 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84B2521F2549080600887B01 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -354,6 +362,8 @@
 				84117BFA25494D7300B68891 /* UITableView+loadCell.m */,
 				8450EB90254BF68200B54365 /* NSObject+setProperty.h */,
 				8450EB91254BF68200B54365 /* NSObject+setProperty.m */,
+				846F3ECF255675F300FC5E71 /* UIImageView+loading.h */,
+				846F3ED0255675F300FC5E71 /* UIImageView+loading.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -393,8 +403,8 @@
 		8436C84F25491BDF00194E27 /* My */ = {
 			isa = PBXGroup;
 			children = (
-				84C768BA25553D8500E08149 /* MyViewController.h */,
-				84C768BB25553D8500E08149 /* MyViewController.m */,
+				846F3EC32556722A00FC5E71 /* Controller */,
+				846F3EC22556722400FC5E71 /* View */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -478,6 +488,25 @@
 				8450EB6E254BE83500B54365 /* UITipsCell.xib */,
 			);
 			path = UITipsCell;
+			sourceTree = "<group>";
+		};
+		846F3EC22556722400FC5E71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				846F3EC42556726500FC5E71 /* MyHeadNameIDCell.h */,
+				846F3EC52556726500FC5E71 /* MyHeadNameIDCell.m */,
+				846F3EC62556726500FC5E71 /* MyHeadNameIDCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		846F3EC32556722A00FC5E71 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84C768BA25553D8500E08149 /* MyViewController.h */,
+				84C768BB25553D8500E08149 /* MyViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		84B252122549080600887B01 = {
@@ -725,6 +754,7 @@
 				8450EB70254BE83500B54365 /* UITipsCell.xib in Resources */,
 				F6A10751254EDDA300A2D1B0 /* UILabelButtonCell.xib in Resources */,
 				F681E205254D0F04009FDDF6 /* UITextFiledCell.xib in Resources */,
+				846F3EC82556726500FC5E71 /* MyHeadNameIDCell.xib in Resources */,
 				8445CE332553D92400FE01A3 /* UILineCell.xib in Resources */,
 				84B2522B2549080700887B01 /* Assets.xcassets in Resources */,
 				84C768CE25553E2400E08149 /* UIImageLabelSelectCell.xib in Resources */,
@@ -866,6 +896,7 @@
 				8445CE3B2554036A00FE01A3 /* UserModel.m in Sources */,
 				8450EB67254BE42600B54365 /* LoginVC.m in Sources */,
 				8436C75A25490CD600194E27 /* JTNetwork.m in Sources */,
+				846F3ED1255675F300FC5E71 /* UIImageView+loading.m in Sources */,
 				84117BFB25494D7300B68891 /* UITableView+loadCell.m in Sources */,
 				8436C7E625490D6500194E27 /* UIColor+Extension.m in Sources */,
 				F6A1073B254ED47C00A2D1B0 /* UIConfirnBtnCell.m in Sources */,
@@ -889,6 +920,7 @@
 				8436C7E325490D6500194E27 /* UIColor+RCColor.m in Sources */,
 				8436C7E925490D6500194E27 /* UINavigationBar+handle.m in Sources */,
 				8436C78A25490D3000194E27 /* BaseController.m in Sources */,
+				846F3EC72556726500FC5E71 /* MyHeadNameIDCell.m in Sources */,
 				8436C7E225490D6500194E27 /* NSDictionary+extension.m in Sources */,
 				8436C76225490CD600194E27 /* JTBaseReqModel.m in Sources */,
 				8436C7E725490D6500194E27 /* UIImage+RCImage.m in Sources */,

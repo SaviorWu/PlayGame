@@ -41,7 +41,8 @@ typedef enum _UIType {
     UIConfirnBtnType,
     UIForgetRegistType,
     UILabelButtonType,
-    UIImageLabelSelectType
+    UIImageLabelSelectType,
+    UIMyHeadNameIDType
 } UIType;
 
 

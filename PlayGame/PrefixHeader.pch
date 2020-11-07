@@ -34,6 +34,7 @@
 #import "UIBaseModel.h"
 #import "UITableView+loadCell.h"
 #import "NSObject+setProperty.h"
+#import "UIImageView+loading.h"
 
 #import "UserModelManager.h"
 typedef void(^success) (id _Nullable value);

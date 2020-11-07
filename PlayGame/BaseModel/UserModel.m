@@ -17,4 +17,13 @@
         [userdefault synchronize];
     });
 }
+- (void)setUid:(NSString *)uid{
+    _uid = uid;
+    static dispatch_once_t disUid;
+    dispatch_once(&disUid,^ {
+        NSUserDefaults* userdefault = [NSUserDefaults standardUserDefaults];
+        [userdefault setObject:uid forKey:@"uid"];
+        [userdefault synchronize];
+    });
+}
 @end

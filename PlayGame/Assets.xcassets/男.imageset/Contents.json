@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "chose1frm_pic1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "男@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

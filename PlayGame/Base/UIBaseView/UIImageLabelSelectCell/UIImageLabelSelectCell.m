@@ -30,7 +30,7 @@
     if (model.subTitleSize) {
         self.lbContent.font = [UIFont systemFontOfSize:model.subTitleSize.floatValue];
     }
-    if (model.mark) {
+    if (model.mark && [model.mark intValue] == 1) {
         self.imgSelect.hidden = NO;
     }else{
         self.imgSelect.hidden = YES;

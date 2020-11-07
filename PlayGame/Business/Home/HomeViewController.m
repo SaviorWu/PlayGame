@@ -8,30 +8,54 @@
 #import "HomeViewController.h"
 
 @interface HomeViewController ()
-
+@property (nonatomic, assign) NSInteger selectGame;
+@property (nonatomic, assign) NSInteger selectSex;
 @end
 
 @implementation HomeViewController
 
+- (void)addRightBtn{
+    UIButton *right = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 80, 0, 80, 40)];
+    [right addTarget:self action:@selector(clickBegin) forControlEvents:UIControlEventTouchUpInside];
+    [right setTitle:@"开始匹配" forState:UIControlStateNormal];
+    right.titleLabel.font = [UIFont systemFontOfSize:14];
+    [right setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+    [self.vwNavigation addSubview:right];
+    right.centerY = self.vwNavigation.centerY + 10;
+}
+- (void)clickBegin{
+    NSLog(@"开始匹配");
+    if (self.selectGame == -1) {
+        [self showHint:@"请选择想玩的游戏"];
+    }else if(self.selectSex == -1){
+        [self showHint:@"请选择玩家性别"];
+    }else{
+        [self showHint:@"开始匹配"];
+    }
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.naviTitle = @"快速匹配玩家";
+    self.selectGame = -1;
+    self.selectSex = -1;
     [self addNavigationView];
     [self hiddenBackBtn:YES];
+    [self addRightBtn];
+    
 }
 - (void)loadUI{
-    
+    [self.dataArray removeAllObjects];
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"选择你想玩的游戏",
-                                                         BM_title:@"chose1frm_pic1",
-                                                         BM_cellHeight:@(60),
-                                                         BM_leading:@(10),
+                                                         BM_title:@"chose",
+                                                         BM_cellHeight:@(50),
                                                          BM_backColor:[UIColor colorWithHex:0xf8f8f8],
                                                          BM_type:@(UIImageLabelSelectType)}]];
     
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"英雄联盟",
                                                          BM_title:@"yxlm",
                                                          BM_cellHeight:@(50),
+                                                         BM_mark:self.selectGame == 1?@"1":@"0",
                                                          BM_type:@(UIImageLabelSelectType)}]];
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
                                                          BM_leading:@(20),
@@ -40,6 +64,7 @@
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"王者荣耀",
                                                          BM_title:@"wzry",
                                                          BM_cellHeight:@(50),
+                                                         BM_mark:self.selectGame == 2?@"1":@"0",
                                                          BM_type:@(UIImageLabelSelectType)}]];
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
                                                          BM_leading:@(20),
@@ -48,6 +73,7 @@
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"绝地求生",
                                                          BM_title:@"jdqs",
                                                          BM_cellHeight:@(50),
+                                                         BM_mark:self.selectGame == 3?@"1":@"0",
                                                          BM_type:@(UIImageLabelSelectType)}]];
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
                                                          BM_leading:@(20),
@@ -56,6 +82,7 @@
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"吃鸡战场",
                                                          BM_title:@"cj",
                                                          BM_cellHeight:@(50),
+                                                         BM_mark:self.selectGame == 4?@"1":@"0",
                                                          BM_type:@(UIImageLabelSelectType)}]];
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
                                                          BM_leading:@(20),
@@ -64,6 +91,33 @@
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"小游戏",
                                                          BM_title:@"yx",
                                                          BM_cellHeight:@(50),
+                                                         BM_mark:self.selectGame == 5?@"1":@"0",
+                                                         BM_type:@(UIImageLabelSelectType)}]];
+    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
+                                                         BM_leading:@(20),
+                                                         BM_trading:@(20)}]];
+    
+    
+    
+    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"选择玩家性别",
+                                                         BM_title:@"xingbie",
+                                                         BM_cellHeight:@(50),
+                                                         BM_backColor:[UIColor colorWithHex:0xf8f8f8],
+                                                         BM_type:@(UIImageLabelSelectType)}]];
+    
+    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"男生",
+                                                         BM_title:@"男",
+                                                         BM_cellHeight:@(50),
+                                                         BM_mark:self.selectSex == 1?@"1":@"0",
+                                                         BM_type:@(UIImageLabelSelectType)}]];
+    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
+                                                         BM_leading:@(20),
+                                                         BM_trading:@(20)}]];
+    
+    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"女生",
+                                                         BM_title:@"女",
+                                                         BM_cellHeight:@(50),
+                                                         BM_mark:self.selectSex == 2?@"1":@"0",
                                                          BM_type:@(UIImageLabelSelectType)}]];
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
                                                          BM_leading:@(20),
@@ -90,5 +144,23 @@
         return [super tableView:tableView cellForRowAtIndexPath:indexPath];
     }
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 1) {
+        self.selectGame = 1;
+    }else if (indexPath.row == 3) {
+        self.selectGame = 2;
+    }else if (indexPath.row == 5) {
+        self.selectGame = 3;
+    }else if (indexPath.row == 7) {
+        self.selectGame = 4;
+    }else if (indexPath.row == 9) {
+        self.selectGame = 5;
+    }else if (indexPath.row == 12) {
+        self.selectSex = 1;
+    }else if (indexPath.row == 14){
+        self.selectSex = 2;
+    }
+    [self loadUI];
+}
 @end
