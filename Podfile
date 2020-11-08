@@ -12,6 +12,7 @@ target 'PlayGame' do
   pod 'Hyphenate'
   pod 'FLAnimatedImage'
   
+  pod 'MBProgressHUD', '~> 1.1.0'
   pod 'IQKeyboardManager'
   pod 'Masonry'
   pod 'MJExtension'
