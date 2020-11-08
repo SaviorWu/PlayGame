@@ -22,6 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self hiddenNavigation];
+    self.tableView.backgroundColor = UIColor.whiteColor;
 }
 
 - (void)loadUI{

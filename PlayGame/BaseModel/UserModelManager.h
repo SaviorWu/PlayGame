@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UserModelManager : NSObject
 @property (nonatomic, strong) UserModel* userModel;
 + (UserModelManager*)shareInstance;
++ (void)userLogout;
 @end
 
 NS_ASSUME_NONNULL_END

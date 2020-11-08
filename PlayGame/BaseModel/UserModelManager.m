@@ -6,7 +6,7 @@
 //
 
 #import "UserModelManager.h"
-
+#import "LoginVC.h"
 @implementation UserModelManager
 + (UserModelManager*)shareInstance{
     static UserModelManager* sharedInstance;
@@ -21,5 +21,10 @@
     NSUserDefaults* userdefault = [NSUserDefaults standardUserDefaults];
     [userdefault removeObjectForKey:@"token"];
     [userdefault removeObjectForKey:@"ID"];
+    [UserModelManager shareInstance].userModel.uid = @"";
+    [UserModelManager shareInstance].userModel.token = @"";
+    LoginVC* logVC = [[LoginVC alloc] init];
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:logVC];
+    [MYAPP window].rootViewController = nav;
 }
 @end

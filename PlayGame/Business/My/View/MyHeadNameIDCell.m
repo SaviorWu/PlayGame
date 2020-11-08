@@ -12,6 +12,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.imgHead.layer.masksToBounds = YES;
+    self.imgHead.layer.cornerRadius = 30;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -30,6 +32,9 @@
         [self.imgHead LoadImage:model.mark withHoderImage:[UIImage imageNamed:@"默认头像"] successBlock:^(UIImage * _Nonnull retImage) {
             NSLog(@"头像加载完成");
         }];
+    }
+    if (model.backColor) {
+        self.contentView.backgroundColor = model.backColor;
     }
 }
 @end

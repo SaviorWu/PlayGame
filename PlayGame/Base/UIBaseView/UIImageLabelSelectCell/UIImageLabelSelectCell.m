@@ -35,6 +35,9 @@
     }else{
         self.imgSelect.hidden = YES;
     }
+    if (model.subAlignment && [model.subAlignment intValue] == 1) {
+        [self.imgSelect setImage:[UIImage imageNamed:@"右箭头"]];
+    }
     if (model.cellHeight) {
         CGFloat value = model.cellHeight.floatValue - 16.f;
         if (value > 0) {

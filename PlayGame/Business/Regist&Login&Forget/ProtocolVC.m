@@ -20,20 +20,32 @@
     [self addNavigationView];
 }
 - (void)loadUI{
-    [self showHudInView:self.view];
-    [JTNetwork requestGetWithParam:@{} url:@"/ping/mei/xy" callback:^(JTBaseReqModel *model) {
-        if (model.zt  == 1) {
-            [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
-                                                                 BM_cellHeight:@(20)}]];
-            [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_title:model.sj,
-                                                                 BM_titleSize:@(14),
-                                                                 BM_leading:@(20),
-                                                                 BM_mark:@"1",// 显示网页内容
-                                                                 BM_type:@(UITipsType)}]];
-            [self.tableView reloadData];
-        }
-        [self hideAllHud];
-    }];
+    if (self.content.length == 0) {
+        [self showHudInView:self.view];
+        [JTNetwork requestGetWithParam:@{} url:@"/ping/mei/xy" callback:^(JTBaseReqModel *model) {
+            if (model.zt  == 1) {
+                [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
+                                                                     BM_cellHeight:@(20)}]];
+                [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_title:model.sj,
+                                                                     BM_titleSize:@(14),
+                                                                     BM_leading:@(20),
+                                                                     BM_mark:@"1",// 显示网页内容
+                                                                     BM_type:@(UITipsType)}]];
+                [self.tableView reloadData];
+            }
+            [self hideAllHud];
+        }];
+    }else{
+        [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
+                                                             BM_cellHeight:@(20)}]];
+        [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_title:self.content,
+                                                             BM_titleSize:@(14),
+                                                             BM_leading:@(20),
+                                                             BM_mark:@"1",// 显示网页内容
+                                                             BM_type:@(UITipsType)}]];
+        [self.tableView reloadData];
+    }
+    
 }
 /*
 #pragma mark - Navigation

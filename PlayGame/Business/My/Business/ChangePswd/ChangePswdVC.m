@@ -1,22 +1,22 @@
 //
-//  ForgetVC.m
+//  ChangePswdVC.m
 //  PlayGame
 //
-//  Created by admin on 2020/11/5.
+//  Created by FriendWu on 2020/11/8.
 //
 
-#import "ForgetVC.h"
+#import "ChangePswdVC.h"
 
-@interface ForgetVC ()
+@interface ChangePswdVC ()
 
 @end
 
-@implementation ForgetVC
+@implementation ChangePswdVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.naviTitle = @"忘记密码";
+    self.naviTitle = @"修改登录密码";
     [self addNavigationView];
 }
 - (void)loadUI{
@@ -69,6 +69,7 @@
     
     [self.tableView reloadData];
 }
+
 /*
 #pragma mark - Navigation
 
@@ -93,12 +94,9 @@
         return [tableView reloadCell:@"UIVerificationCodeCell" withModel:model withBlock:^(id  _Nullable value) {
             if ([value[@"code"] intValue] == 1) {
                 [self.tableView reloadData];
-                [JTNetwork requestGetWithParam:@{@"mobile":self.reqParam[@"mobile"],@"type":@"forget"} url:@"/ping/mei/yzm" callback:^(JTBaseReqModel *model) {
+                [JTNetwork requestGetWithParam:@{@"mobile":self.reqParam[@"mobile"],@"type":@"resetverify",@"token":[UserModelManager shareInstance].userModel.token} url:@"/ping/mei/yzm" callback:^(JTBaseReqModel *model) {
                     NSLog(@"%@", model);
-                    
-                    if (model.zt != 1){
-                        [self showHint:model.xx];
-                    }
+                    [self showHint:model.xx];
                 }];
             }else{
                 [self.reqParam setObject:value[@"data"] forKey:@"verify"];
@@ -112,7 +110,7 @@
                 NSLog(@"model = %@",model);
                 [self showHint:model.xx];
                 if (model.zt == 1) {
-                    [self.navigationController popViewControllerAnimated:YES];
+                    [UserModelManager userLogout];
                 }
             }];
         }];

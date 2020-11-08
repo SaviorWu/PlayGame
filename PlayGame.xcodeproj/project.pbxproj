@@ -68,6 +68,9 @@
 		84C768CE25553E2400E08149 /* UIImageLabelSelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C768CC25553E2400E08149 /* UIImageLabelSelectCell.xib */; };
 		B5118B33738333ABFC0D685F /* Pods_PlayGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 550CB93084C72ED72B5D9D7B /* Pods_PlayGame.framework */; };
 		F2C89941ABFB46E8507B0179 /* Pods_PlayGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21A60257652AC206112EB6E /* Pods_PlayGameTests.framework */; };
+		F63125FC2557C4FD000162B1 /* SetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F63125FB2557C4FD000162B1 /* SetVC.m */; };
+		F63126082557C708000162B1 /* ChangePswdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F63126072557C708000162B1 /* ChangePswdVC.m */; };
+		F63126112557C712000162B1 /* HelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F63126102557C712000162B1 /* HelpVC.m */; };
 		F681E204254D0F04009FDDF6 /* UITextFiledCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F681E202254D0F04009FDDF6 /* UITextFiledCell.m */; };
 		F681E205254D0F04009FDDF6 /* UITextFiledCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F681E203254D0F04009FDDF6 /* UITextFiledCell.xib */; };
 		F681E210254D1EE5009FDDF6 /* UIVerificationCodeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F681E20E254D1EE5009FDDF6 /* UIVerificationCodeCell.m */; };
@@ -219,6 +222,12 @@
 		E66D4F02D6901F59B310E621 /* Pods-PlayGame-PlayGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayGame-PlayGameUITests.debug.xcconfig"; path = "Target Support Files/Pods-PlayGame-PlayGameUITests/Pods-PlayGame-PlayGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EDCD17FB8A761B3CC77E0582 /* Pods-PlayGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayGame.debug.xcconfig"; path = "Target Support Files/Pods-PlayGame/Pods-PlayGame.debug.xcconfig"; sourceTree = "<group>"; };
 		F21A60257652AC206112EB6E /* Pods_PlayGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F63125FA2557C4FD000162B1 /* SetVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetVC.h; sourceTree = "<group>"; };
+		F63125FB2557C4FD000162B1 /* SetVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetVC.m; sourceTree = "<group>"; };
+		F63126062557C708000162B1 /* ChangePswdVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangePswdVC.h; sourceTree = "<group>"; };
+		F63126072557C708000162B1 /* ChangePswdVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangePswdVC.m; sourceTree = "<group>"; };
+		F631260F2557C712000162B1 /* HelpVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelpVC.h; sourceTree = "<group>"; };
+		F63126102557C712000162B1 /* HelpVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelpVC.m; sourceTree = "<group>"; };
 		F681E201254D0F04009FDDF6 /* UITextFiledCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextFiledCell.h; sourceTree = "<group>"; };
 		F681E202254D0F04009FDDF6 /* UITextFiledCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextFiledCell.m; sourceTree = "<group>"; };
 		F681E203254D0F04009FDDF6 /* UITextFiledCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UITextFiledCell.xib; sourceTree = "<group>"; };
@@ -403,6 +412,8 @@
 		8436C84F25491BDF00194E27 /* My */ = {
 			isa = PBXGroup;
 			children = (
+				F63126032557C6F0000162B1 /* Business */,
+				F63125F92557C4EF000162B1 /* Set */,
 				846F3EC32556722A00FC5E71 /* Controller */,
 				846F3EC22556722400FC5E71 /* View */,
 			);
@@ -588,6 +599,42 @@
 				F21A60257652AC206112EB6E /* Pods_PlayGameTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F63125F92557C4EF000162B1 /* Set */ = {
+			isa = PBXGroup;
+			children = (
+				F63125FA2557C4FD000162B1 /* SetVC.h */,
+				F63125FB2557C4FD000162B1 /* SetVC.m */,
+			);
+			path = Set;
+			sourceTree = "<group>";
+		};
+		F63126032557C6F0000162B1 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				F63126052557C6FB000162B1 /* Help */,
+				F63126042557C6F6000162B1 /* ChangePswd */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		F63126042557C6F6000162B1 /* ChangePswd */ = {
+			isa = PBXGroup;
+			children = (
+				F63126062557C708000162B1 /* ChangePswdVC.h */,
+				F63126072557C708000162B1 /* ChangePswdVC.m */,
+			);
+			path = ChangePswd;
+			sourceTree = "<group>";
+		};
+		F63126052557C6FB000162B1 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				F631260F2557C712000162B1 /* HelpVC.h */,
+				F63126102557C712000162B1 /* HelpVC.m */,
+			);
+			path = Help;
 			sourceTree = "<group>";
 		};
 		F681E200254D0EE2009FDDF6 /* UITextFiledCell */ = {
@@ -891,6 +938,7 @@
 				F681E210254D1EE5009FDDF6 /* UIVerificationCodeCell.m in Sources */,
 				8450EB6F254BE83500B54365 /* UITipsCell.m in Sources */,
 				8436C7D125490D6500194E27 /* UIViewController+HUD.m in Sources */,
+				F63125FC2557C4FD000162B1 /* SetVC.m in Sources */,
 				84C768C525553D9500E08149 /* HomeViewController.m in Sources */,
 				8436C77425490D2000194E27 /* JTBaseTabBarController.m in Sources */,
 				8445CE3B2554036A00FE01A3 /* UserModel.m in Sources */,
@@ -908,6 +956,7 @@
 				8450EB92254BF68200B54365 /* NSObject+setProperty.m in Sources */,
 				8436C7D525490D6500194E27 /* UIView+PubicColor.m in Sources */,
 				8436C7E525490D6500194E27 /* UIImage+TOOL.m in Sources */,
+				F63126112557C712000162B1 /* HelpVC.m in Sources */,
 				8436C8722549397F00194E27 /* UITabBar+badge.m in Sources */,
 				8436C75425490CD600194E27 /* JTShareData.m in Sources */,
 				8436C7DB25490D6500194E27 /* NSData+Base65EnCode.m in Sources */,
@@ -923,6 +972,7 @@
 				846F3EC72556726500FC5E71 /* MyHeadNameIDCell.m in Sources */,
 				8436C7E225490D6500194E27 /* NSDictionary+extension.m in Sources */,
 				8436C76225490CD600194E27 /* JTBaseReqModel.m in Sources */,
+				F63126082557C708000162B1 /* ChangePswdVC.m in Sources */,
 				8436C7E725490D6500194E27 /* UIImage+RCImage.m in Sources */,
 				8436C878254939DC00194E27 /* JTTabBarBtn.m in Sources */,
 				8450EB79254BEBDB00B54365 /* UISpaceCell.m in Sources */,

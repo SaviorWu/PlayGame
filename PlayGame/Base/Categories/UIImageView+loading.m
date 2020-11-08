@@ -14,7 +14,7 @@
         hoderImage = [UIImage imageNamed:@"img_default"];
 
     UIImage *placeholderImage = hoderImage;
-    NSURL *picUrl =  [NSURL URLWithString:url];
+    NSURL *picUrl =  [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",SERVER_URL,url]];
     [self sd_setImageWithURL:picUrl
             placeholderImage:placeholderImage
                    completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL)
