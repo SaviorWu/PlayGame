@@ -7,8 +7,11 @@ target 'PlayGame' do
 
   # Pods for PlayGame
   pod 'MJRefresh'
-  pod 'SDWebImage'
-  pod 'MBProgressHUD'
+  pod 'SDWebImage', '~> 4.0'
+  pod 'SDWebImage/GIF'
+  pod 'Hyphenate'
+  pod 'FLAnimatedImage'
+  
   pod 'IQKeyboardManager'
   pod 'Masonry'
   pod 'MJExtension'

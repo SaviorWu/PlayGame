@@ -10,6 +10,7 @@
 #import "UITabBar+badge.h"
 #import "HomeViewController.h"
 #import "MyViewController.h"
+#import "MessageViewController.h"
 @interface JTBaseTabBarController ()
 
 @end
@@ -42,7 +43,8 @@
     
     HomeViewController *homeVC = [[HomeViewController alloc] init];
     MyViewController *myVC = [[MyViewController alloc] init];
-    self.viewControllers = @[ homeVC, myVC];
+    MessageViewController* vc = [[MessageViewController alloc] init];
+    self.viewControllers = @[ homeVC, vc,myVC];
 }
 
 
@@ -89,6 +91,12 @@
             [[UIImage imageNamed:@"me_inactive"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
             obj.tabBarItem.selectedImage =
             [[UIImage imageNamed:@"meCliek"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        }else if ([obj isKindOfClass:[MessageViewController class]]) {
+            obj.tabBarItem.title = @"message";
+            obj.tabBarItem.image =
+            [[UIImage imageNamed:@"消息"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            obj.tabBarItem.selectedImage =
+            [[UIImage imageNamed:@"消息选择"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         }else {
             NSLog(@"Unknown TabBarController");
         }
