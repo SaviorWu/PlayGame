@@ -102,7 +102,10 @@
     [self.contentView addSubview:_avatarView];
     if (self.direction == EMMessageDirectionSend) {
 //        _avatarView.image = [UIImage imageNamed:@"user_avatar_me"];
-        [_avatarView LoadImage:[UserInfo shareInstance].userModel.header PlaceholderImageName:@"user_avatar_me"];
+//        [_avatarView LoadImage:[UserInfo shareInstance].userModel.header PlaceholderImageName:];
+        [_avatarView LoadImage:[UserModelManager shareInstance].userModel.header withHoderImage:[UIImage imageNamed:@"user_avatar_me"] successBlock:^(UIImage * _Nonnull retImage) {
+        
+        }];
         [_avatarView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self.contentView).offset(15);
             make.right.equalTo(self.contentView).offset(-10);
@@ -258,7 +261,10 @@
             }
         }
         
-        [self.avatarView LoadImage:header PlaceholderImageName:@"user_avatar_blue"];
+//        [self.avatarView LoadImage:header PlaceholderImageName:@"user_avatar_blue"];
+        [self.avatarView LoadImage:header withHoderImage:[UIImage imageNamed:@"user_avatar_blue"] successBlock:^(UIImage * _Nonnull retImage) {
+            
+        }];
         if (model.type == EMMessageBodyTypeVoice) {
             BOOL hide = NO;
             NSNumber* ret = [model.emModel.ext objectForKey:@"Voice_Played"];

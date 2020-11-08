@@ -37,6 +37,10 @@
 #import "UIImageView+loading.h"
 
 #import "UserModelManager.h"
+
+
+#import <Hyphenate/Hyphenate.h> // 包含实时音视频功能 SDK 的头文件
+#import "EMHeaders.h" // UI 头文件
 typedef void(^success) (id _Nullable value);
 
 #endif /* PrefixHeader_pch */

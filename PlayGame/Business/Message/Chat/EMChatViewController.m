@@ -26,7 +26,7 @@
 #import "EMLocationViewController.h"
 #import "EMMsgTranspondViewController.h"
 #import "EMAtGroupMembersViewController.h"
-#import "SubmitOrderViewController.h"
+
 @interface EMChatViewController ()<UIScrollViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, EMMultiDevicesDelegate, EMChatManagerDelegate, EMGroupManagerDelegate, EMChatroomManagerDelegate, EMChatBarDelegate, EMMessageCellDelegate, EMChatBarEmoticonViewDelegate, EMChatBarRecordAudioViewDelegate,EMMoreFunctionViewDelegate,EMReadReceiptMsgDelegate,UIDocumentInteractionControllerDelegate>
 
 @property (nonatomic, strong) dispatch_queue_t msgQueue;
@@ -103,38 +103,7 @@
     }else if(self.godID.length == 0){
         [self showHint:@"大神id异常" delay:1.3];
     }else{
-        [self showHudInView:self.view];
-        [NetworkRequest GET:@"/app/order/orderInit"
-                 parameters:@{@"token":[UserInfo shareInstance].userModel.token,
-                              @"id":self.gameID,
-                              @"type":@"user",
-                              @"gid":self.godID
-                 } success:^(NetWorkResponseModel * _Nullable responseModel) {
-            [self hideAllHudFromSuperView:self.view];
-
-            UserModel* user = [UserModel modelWithJSON:responseModel.data[@"user"]];
-            NSArray* gList = responseModel.data[@"games"];
-            NSMutableArray* gamesList = [[NSMutableArray alloc] init];
-            for (NSDictionary* dic in gList) {
-                GamesModel* games = [GamesModel modelWithJSON:dic];
-                [gamesList addObject:games];
-            }
-            
-            GamemyModel* gamemy = [GamemyModel modelWithJSON:responseModel.data[@"gamemy"]];
-            SubmitOrderViewController* vc = [[SubmitOrderViewController alloc] init];
-            vc.gameID = self.gameID;
-            vc.gameList = gamesList;
-            vc.gamemy = gamemy;
-            vc.user = user;
-            vc.godID = self.godID;
-            [self.navigationController pushViewController:vc];
-        } failure:^(NSError * _Nullable error, NetWorkResponseModel * _Nullable responseModel) {
-            [self hideAllHudFromSuperView:self.view];
-            if ([responseModel.code integerValue] == -2) {
-                [self showHint:@"账号在其他设备登录"];
-                [UserInfo userLogout];
-            }
-        }];
+        
     }
 }
 - (void)addBuyOrder
@@ -142,7 +111,7 @@
     
     self.buyOrder = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 60, 10, 60, 40)];
 //    self.buyOrder.backgroundColor = [UIColor yellowColor];
-    self.buyOrder.centerY = self.btnBack.centerY;
+//    self.buyOrder.centerY = self.btnBack.centerY;
     [self.buyOrder addTarget:self action:@selector(clickBuyOrder) forControlEvents:UIControlEventTouchUpInside];
     [self.buyOrder setTitle:@"下单" forState:UIControlStateNormal];
     self.buyOrder.titleLabel.font = [UIFont systemFontOfSize:15];
@@ -799,10 +768,9 @@
         [self _showCustomTransferFileAlertView];
         return;
     }
-    
-    [self showHud:@"下载原图..."];
+    [self showHint:@"下载原图..."];
     [[EMClient sharedClient].chatManager downloadMessageAttachment:aCell.model.emModel progress:nil completion:^(EMMessage *message, EMError *error) {
-        [weakself hideHud];
+        [weakself  hideAllHud];
         if (error) {
             [EMAlertController showErrorAlert:@"下载原图失败"];
         } else {
@@ -902,9 +870,9 @@
         return;
     }
     
-    [self showHud:@"下载语音..."];
+    [self showHint:@"下载语音..."];
     [[EMClient sharedClient].chatManager downloadMessageAttachment:aCell.model.emModel progress:nil completion:^(EMMessage *message, EMError *error) {
-        [weakself hideHud];
+        [weakself hideAllHud];
         if (error) {
             [EMAlertController showErrorAlert:@"下载语音失败"];
         } else {
@@ -950,10 +918,10 @@
     if (isCustomDownload) {
         [self _showCustomTransferFileAlertView];
     } else {
-        [self showHud:@"下载视频..."];
+        [self showHint:@"下载视频..."];
         __weak typeof(self) weakself = self;
         [[EMClient sharedClient].chatManager downloadMessageAttachment:aCell.model.emModel progress:nil completion:^(EMMessage *message, EMError *error) {
-            [weakself hideHud];
+            [weakself hideAllHud];
             if (error) {
                 [EMAlertController showErrorAlert:@"下载视频失败"];
             } else {
@@ -991,7 +959,7 @@
     }
     
     [[EMClient sharedClient].chatManager downloadMessageAttachment:aCell.model.emModel progress:nil completion:^(EMMessage *message, EMError *error) {
-        [weakself hideHud];
+        [weakself hideAllHud];
         if (error) {
             [EMAlertController showErrorAlert:@"下载文件失败"];
         } else {
@@ -1444,9 +1412,9 @@
 - (void)_joinChatroom
 {
     __weak typeof(self) weakself = self;
-    [self showHud:@"加入聊天室..."];
+    [self showHint:@"加入聊天室..."];
     [[EMClient sharedClient].roomManager joinChatroom:self.conversationModel.emModel.conversationId completion:^(EMChatroom *aChatroom, EMError *aError) {
-        [weakself hideHud];
+        [weakself hideAllHud];
         if (aError) {
             [EMAlertController showErrorAlert:@"加入聊天室失败"];
             [weakself.navigationController popViewControllerAnimated:YES];

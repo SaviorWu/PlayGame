@@ -152,7 +152,7 @@
                     JTBaseNavigationController *rootNavi = [[JTBaseNavigationController alloc] initWithRootViewController:tabbar];
                     [MYAPP window].rootViewController = rootNavi;
                 }
-                [self hideAllHud];
+                [self  hideAllHud];
             }];
         }];
     }else if([model.type isEqual:@(UIForgetRegistType)]){

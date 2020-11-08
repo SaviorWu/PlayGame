@@ -363,7 +363,7 @@
         
         dispatch_async(dispatch_get_main_queue(), ^{
             if (aIsShowHUD) {
-                [weakself hideHud];
+                [weakself hideAllHud];
             }
             
             [weakself tableViewDidFinishTriggerHeader:YES reload:NO];

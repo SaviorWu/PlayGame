@@ -128,13 +128,13 @@
                              isShowHUD:(BOOL)aIsShowHUD
 {
     if (aIsShowHUD) {
-        [self showHud:@"获取群组成员..."];
+        [self showHint:@"获取群组成员..."];
     }
     
     __weak typeof(self) weakself = self;
     void (^errorBlock)(EMError *aError) = ^(EMError *aError) {
         if (aIsShowHUD) {
-            [weakself hideHud];
+            [weakself hideAllHud];
         }
         [weakself tableViewDidFinishTriggerHeader:aIsHeader reload:NO];
         [EMAlertController showErrorAlert:aError.errorDescription];
@@ -148,7 +148,7 @@
             }
             
             if (aIsShowHUD) {
-                [weakself hideHud];
+                [weakself hideAllHud];
             }
             weakself.cursor = aResult.cursor;
             [weakself.dataArray addObjectsFromArray:aResult.list];

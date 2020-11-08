@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "BaseController.h"
 //带加载、刷新的Controller(包含UITableView)
-@interface EMRefreshViewController : BaseViewController<UITableViewDelegate, UITableViewDataSource>
+@interface EMRefreshViewController : BaseController<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView* tableView;
 @property (strong, nonatomic) UIView *defaultFooterView;

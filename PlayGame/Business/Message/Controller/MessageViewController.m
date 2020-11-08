@@ -53,7 +53,7 @@
     [self hiddenBackBtn:YES];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    [self.tableView LoadCell:@"MessageListCell"];
+    [self.tableView registCell:@"MessageListCell"];
     self.arrayList = [[NSMutableArray alloc] init];
     
     [[EMClient sharedClient].chatManager addDelegate:self delegateQueue:nil];
@@ -99,7 +99,7 @@
 - (void)_loadAllConversationsFromDBWithIsShowHud:(BOOL)aIsShowHUD
 {
     if (aIsShowHUD) {
-        [self showHud:@"加载会话列表..."];
+        [self showHint:@"加载会话列表..."];
     }
 
     __weak typeof(self) weakself = self;
@@ -129,7 +129,7 @@
 
         dispatch_async(dispatch_get_main_queue(), ^{
             if (aIsShowHUD) {
-                [weakself hideHud];
+                [weakself hideAllHud];
             }
 
             [weakself.tableView.mj_header endRefreshing];
@@ -174,7 +174,7 @@
 }
 */
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    MessageListCell *cell = [tableView reUseCell:@"MessageListCell"];
+    MessageListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessageListCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell setModel:self.arrayList[indexPath.row]];
     return cell;
@@ -201,33 +201,30 @@
     }
     [self showHudInView:self.view];
     NSLog(@"chartUid = %@",chartUid);
-    [NetworkRequest GET:[NSString stringWithFormat:@"/app/msg/jiazaizl/uid/%@",chartUid]
-             parameters:@{}
-                success:^(NetWorkResponseModel * _Nullable responseModel) {
+    [JTNetwork requestGetWithParam:@{@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/ping/mei/ds" callback:^(JTBaseReqModel *baseModel) {
         [self hideAllHudFromSuperView:self.view];
-        NSString* gameID = @"";
-        if ([[responseModel.data allKeys] containsObject:@"game"]) {
-            if([[responseModel.data[@"game"] allKeys] containsObject:@"game_id"]){
-                gameID = [NSString stringWithFormat:@"%@",responseModel.data[@"game"][@"game_id"]];
+        if (baseModel.zt == -2) {
+                    [self showHint:@"账号在其他设备登录"];
+                    [UserModelManager userLogout];
+        }else{
+            NSString* gameID = @"";
+            if ([[baseModel.sj allKeys] containsObject:@"game"]) {
+                if([[baseModel.sj[@"game"] allKeys] containsObject:@"game_id"]){
+                    gameID = [NSString stringWithFormat:@"%@",baseModel.sj[@"game"][@"game_id"]];
+                }
             }
-        }
-        if (gameID.length == 0) {
-            [self showHint:@"大神信息错误" delay:1.3];
-            return;
-        }
-        
-        EMChatViewController *vc = [[EMChatViewController alloc] initWithCoversationModel:self.arrayList[indexPath.row]];
-        vc.vcTitle = nickname.length == 0?@" ":nickname;
-        vc.direction = (NSInteger)model.emModel.latestMessage.direction;
-        vc.header = header;
-        vc.gameID = gameID;
-        vc.godID = chartUid;
-        [self.navigationController pushViewController:vc];
-    } failure:^(NSError * _Nullable error, NetWorkResponseModel * _Nullable responseModel) {
-        [self hideAllHudFromSuperView:self.view];
-        if ([responseModel.code integerValue] == -2) {
-            [self showHint:@"账号在其他设备登录"];
-            [UserInfo userLogout];
+            if (gameID.length == 0) {
+                [self showHint:@"大神信息错误" delay:1.3];
+                return;
+            }
+            
+            EMChatViewController *vc = [[EMChatViewController alloc] initWithCoversationModel:self.arrayList[indexPath.row]];
+            vc.vcTitle = nickname.length == 0?@" ":nickname;
+            vc.direction = (NSInteger)model.emModel.latestMessage.direction;
+            vc.header = header;
+            vc.gameID = gameID;
+            vc.godID = chartUid;
+            [self.navigationController pushViewController:vc animated:YES];
         }
     }];
     

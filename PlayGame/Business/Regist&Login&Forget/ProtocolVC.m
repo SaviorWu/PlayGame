@@ -33,7 +33,7 @@
                                                                      BM_type:@(UITipsType)}]];
                 [self.tableView reloadData];
             }
-            [self hideAllHud];
+            [self  hideAllHud];
         }];
     }else{
         [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),

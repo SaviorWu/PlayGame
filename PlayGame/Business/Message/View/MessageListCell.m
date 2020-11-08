@@ -17,7 +17,7 @@ static int kConversation_AtAll = 2;
     // Initialization code
     self.imgHeader.layer.masksToBounds = YES;
     self.imgHeader.layer.cornerRadius = 20;
-    self.imgHeader.layer.borderColor = [[UIColor colorWithRGB:0xe0e0e0] CGColor];
+    self.imgHeader.layer.borderColor = [[UIColor colorWithHex:0xe0e0e0] CGColor];
     self.imgHeader.layer.borderWidth = 1;
 }
 - (NSAttributedString *)_getDetailWithModel:(EMConversation *)aConversation
@@ -112,7 +112,9 @@ static int kConversation_AtAll = 2;
         header = model.emModel.ext[@"toOrignalHead"];
         nickname = model.emModel.ext[@"toName"];
     }
-    [self.imgHeader LoadImage:header PlaceholderImageName:@"user_avatar_blue"];
+    [self.imgHeader LoadImage:header withHoderImage:[UIImage imageNamed:@"user_avatar_blue"] successBlock:^(UIImage * _Nonnull retImage) {
+        
+    }];
     self.lbNickName.text = nickname.length == 0?model.name:nickname;
     self.lbTime.text = [self _getTimeWithModel:model.emModel];
     self.lbMessage.attributedText = [self _getDetailWithModel:model.emModel];

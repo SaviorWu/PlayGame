@@ -98,12 +98,12 @@
         }
     }
     
-    [self showHud:@"正在定位..."];
+    [self showHint:@"正在定位..."];
 }
 
 - (void)_moveToLocation:(CLLocationCoordinate2D)locationCoordinate
 {
-    [self hideHud];
+    [self hideAllHud];
     
     self.locationCoordinate = locationCoordinate;
     float zoomLevel = 0.01;
@@ -132,7 +132,7 @@
 
 - (void)mapView:(MKMapView *)mapView didFailToLocateUserWithError:(NSError *)error
 {
-    [self hideHud];
+    [self hideAllHud];
     if (error.code == 0) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:[error.userInfo objectForKey:NSLocalizedRecoverySuggestionErrorKey] delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alertView show];
