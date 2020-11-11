@@ -1476,9 +1476,9 @@
 		F63127012557CE5E000162B1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F63127042557CE5E000162B1 /* MessageViewController.h */,
 				F63127022557CE5E000162B1 /* MessageViewController.m */,
 				F63127032557CE5E000162B1 /* MessageViewController.xib */,
-				F63127042557CE5E000162B1 /* MessageViewController.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
