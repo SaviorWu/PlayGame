@@ -98,9 +98,9 @@
 }
 - (void)_loadAllConversationsFromDBWithIsShowHud:(BOOL)aIsShowHUD
 {
-    if (aIsShowHUD) {
-        [self showHint:@"加载会话列表..."];
-    }
+//    if (aIsShowHUD) {
+//        [self showHint:@"加载会话列表..."];
+//    }
 
     __weak typeof(self) weakself = self;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -204,8 +204,8 @@
     [JTNetwork requestGetWithParam:@{@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/ping/mei/ds" callback:^(JTBaseReqModel *baseModel) {
         [self hideAllHudFromSuperView:self.view];
         if (baseModel.zt == -2) {
-                    [self showHint:@"账号在其他设备登录"];
-                    [UserModelManager userLogout];
+            [self showHint:@"账号在其他设备登录"];
+            [UserModelManager userLogout];
         }else{
             NSString* gameID = @"";
             if ([[baseModel.sj allKeys] containsObject:@"id"]) {

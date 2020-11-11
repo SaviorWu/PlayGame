@@ -12,7 +12,6 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <MobileCoreServices/MobileCoreServices.h>
 #import "EMChatViewController.h"
-#import "OrderInitModel.h"
 #import "EMImageBrowser.h"
 #import "EMDateHelper.h"
 #import "EMAudioPlayerHelper.h"

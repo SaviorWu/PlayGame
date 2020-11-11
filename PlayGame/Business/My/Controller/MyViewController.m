@@ -20,6 +20,7 @@
     [self.tableView registCell:@"MyHeadNameIDCell"];
 }
 - (void)loadUI{
+    [self showHudInView:self.view];
     [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/ping/mei/grzx" callback:^(JTBaseReqModel *model) {
         
         [UserModelManager shareInstance].userModel.money = model.sj[@"userdata"][@"money"];
@@ -49,8 +50,8 @@
                                                              BM_leading:@(20),
                                                              BM_trading:@(20)}]];
         
-        
         [self.tableView reloadData];
+        [self hideAllHud];
     }];
     
 }

@@ -291,7 +291,6 @@
 		F63128902557CE5F000162B1 /* EMRemindManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F63127AF2557CE5E000162B1 /* EMRemindManager.m */; };
 		F63128912557CE5F000162B1 /* EMConversationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F63127B12557CE5E000162B1 /* EMConversationsViewController.m */; };
 		F63128922557CE5F000162B1 /* EMConversationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F63127B22557CE5E000162B1 /* EMConversationCell.m */; };
-		F631289F2557CE9E000162B1 /* OrderInitModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F631289E2557CE9E000162B1 /* OrderInitModel.m */; };
 		F681E204254D0F04009FDDF6 /* UITextFiledCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F681E202254D0F04009FDDF6 /* UITextFiledCell.m */; };
 		F681E205254D0F04009FDDF6 /* UITextFiledCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F681E203254D0F04009FDDF6 /* UITextFiledCell.xib */; };
 		F681E210254D1EE5009FDDF6 /* UIVerificationCodeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F681E20E254D1EE5009FDDF6 /* UIVerificationCodeCell.m */; };
@@ -766,8 +765,6 @@
 		F63127B22557CE5E000162B1 /* EMConversationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMConversationCell.m; sourceTree = "<group>"; };
 		F63127B32557CE5E000162B1 /* EMConversationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMConversationsViewController.h; sourceTree = "<group>"; };
 		F63127B42557CE5E000162B1 /* EMConversationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMConversationCell.h; sourceTree = "<group>"; };
-		F631289D2557CE9E000162B1 /* OrderInitModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderInitModel.h; sourceTree = "<group>"; };
-		F631289E2557CE9E000162B1 /* OrderInitModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderInitModel.m; sourceTree = "<group>"; };
 		F681E201254D0F04009FDDF6 /* UITextFiledCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextFiledCell.h; sourceTree = "<group>"; };
 		F681E202254D0F04009FDDF6 /* UITextFiledCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextFiledCell.m; sourceTree = "<group>"; };
 		F681E203254D0F04009FDDF6 /* UITextFiledCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UITextFiledCell.xib; sourceTree = "<group>"; };
@@ -1182,7 +1179,6 @@
 		F631264F2557CE5D000162B1 /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				F631289C2557CE9E000162B1 /* Model */,
 				F63126502557CE5D000162B1 /* Chat */,
 				F63127012557CE5E000162B1 /* Controller */,
 				F63127052557CE5E000162B1 /* View */,
@@ -1808,15 +1804,6 @@
 			path = Conversation;
 			sourceTree = "<group>";
 		};
-		F631289C2557CE9E000162B1 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F631289D2557CE9E000162B1 /* OrderInitModel.h */,
-				F631289E2557CE9E000162B1 /* OrderInitModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		F681E200254D0EE2009FDDF6 /* UITextFiledCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -2288,7 +2275,6 @@
 				F631287E2557CE5F000162B1 /* EMTextFieldViewController.m in Sources */,
 				8436C7D725490D6500194E27 /* UIButton+LargeArea.m in Sources */,
 				F63128902557CE5F000162B1 /* EMRemindManager.m in Sources */,
-				F631289F2557CE9E000162B1 /* OrderInitModel.m in Sources */,
 				8445CE322553D92400FE01A3 /* UILineCell.m in Sources */,
 				8436C7DE25490D6500194E27 /* UIImage+GIF.m in Sources */,
 				8436C77125490D2000194E27 /* JTBaseNavigationController.m in Sources */,
