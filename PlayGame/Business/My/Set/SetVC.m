@@ -34,15 +34,15 @@
                                                          BM_leading:@(20),
                                                          BM_trading:@(20)}]];
     
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"帮助中心",
-                                                         BM_cellHeight:@(50),
-                                                         BM_SubAlignment:@(1),
-                                                         BM_leading:@(-20),
-                                                         BM_mark:@"1",
-                                                         BM_type:@(UIImageLabelSelectType)}]];
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
-                                                         BM_leading:@(20),
-                                                         BM_trading:@(20)}]];
+//    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"帮助中心",
+//                                                         BM_cellHeight:@(50),
+//                                                         BM_SubAlignment:@(1),
+//                                                         BM_leading:@(-20),
+//                                                         BM_mark:@"1",
+//                                                         BM_type:@(UIImageLabelSelectType)}]];
+//    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
+//                                                         BM_leading:@(20),
+//                                                         BM_trading:@(20)}]];
     
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
                                                          BM_cellHeight:@(64)}]];
