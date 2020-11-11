@@ -66,7 +66,6 @@
 		84C768C525553D9500E08149 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C768C425553D9500E08149 /* HomeViewController.m */; };
 		84C768CD25553E2400E08149 /* UIImageLabelSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C768CB25553E2400E08149 /* UIImageLabelSelectCell.m */; };
 		84C768CE25553E2400E08149 /* UIImageLabelSelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C768CC25553E2400E08149 /* UIImageLabelSelectCell.xib */; };
-		B5118B33738333ABFC0D685F /* Pods_PlayGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 550CB93084C72ED72B5D9D7B /* Pods_PlayGame.framework */; };
 		F2C89941ABFB46E8507B0179 /* Pods_PlayGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21A60257652AC206112EB6E /* Pods_PlayGameTests.framework */; };
 		F63125FC2557C4FD000162B1 /* SetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F63125FB2557C4FD000162B1 /* SetVC.m */; };
 		F63126082557C708000162B1 /* ChangePswdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F63126072557C708000162B1 /* ChangePswdVC.m */; };
@@ -794,7 +793,6 @@
 			files = (
 				F631285D2557CE5F000162B1 /* libopencore-amrwb.a in Frameworks */,
 				F631285E2557CE5F000162B1 /* libopencore-amrnb.a in Frameworks */,
-				B5118B33738333ABFC0D685F /* Pods_PlayGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1197,20 +1195,20 @@
 		F63126502557CE5D000162B1 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				F63126512557CE5D000162B1 /* EMMessageModel.h */,
-				F63126522557CE5D000162B1 /* EMChatViewController.h */,
-				F63126532557CE5D000162B1 /* EMLocationViewController.h */,
-				F63126542557CE5D000162B1 /* EMAtGroupMembersViewController.h */,
 				F63126552557CE5D000162B1 /* ChatBar */,
-				F63126B72557CE5D000162B1 /* MessageCell */,
-				F63126F02557CE5E000162B1 /* EMMsgTranspondViewController.h */,
-				F63126F12557CE5E000162B1 /* EMLocationViewController.m */,
 				F63126F22557CE5E000162B1 /* ChatImgs */,
-				F63126F82557CE5E000162B1 /* EMChatViewController.m */,
-				F63126F92557CE5E000162B1 /* EMMessageModel.m */,
+				F63126542557CE5D000162B1 /* EMAtGroupMembersViewController.h */,
 				F63126FA2557CE5E000162B1 /* EMAtGroupMembersViewController.m */,
-				F63126FB2557CE5E000162B1 /* Helper */,
+				F63126522557CE5D000162B1 /* EMChatViewController.h */,
+				F63126F82557CE5E000162B1 /* EMChatViewController.m */,
+				F63126532557CE5D000162B1 /* EMLocationViewController.h */,
+				F63126F12557CE5E000162B1 /* EMLocationViewController.m */,
+				F63126512557CE5D000162B1 /* EMMessageModel.h */,
+				F63126F92557CE5E000162B1 /* EMMessageModel.m */,
+				F63126F02557CE5E000162B1 /* EMMsgTranspondViewController.h */,
 				F63127002557CE5E000162B1 /* EMMsgTranspondViewController.m */,
+				F63126FB2557CE5E000162B1 /* Helper */,
+				F63126B72557CE5D000162B1 /* MessageCell */,
 			);
 			path = Chat;
 			sourceTree = "<group>";

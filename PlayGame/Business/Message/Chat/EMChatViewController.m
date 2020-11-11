@@ -126,9 +126,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = self.vcTitle;
+    self.naviTitle = self.vcTitle;
     [self addNavigationView];
-    [self addBuyOrder];
+//    [self addBuyOrder];
     self.msgQueue = dispatch_queue_create("emmessage.com", NULL);
     self.msgTimelTag = -1;
     [self _setupChatSubviews];

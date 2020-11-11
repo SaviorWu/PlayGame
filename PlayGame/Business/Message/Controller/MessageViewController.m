@@ -42,13 +42,13 @@
     [self _loadAllConversationsFromDBWithIsShowHud:NO];
     [self.tableView reloadData];
 }
-//- (void)dealloc{
-//    [[EMClient sharedClient].chatManager removeDelegate:self];
-//}
+- (void)dealloc{
+    [[EMClient sharedClient].chatManager removeDelegate:self];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title = @"消息";
+    self.naviTitle = @"消息";
     [self addNavigationView];
     [self hiddenBackBtn:YES];
     self.tableView.delegate = self;
@@ -208,13 +208,10 @@
                     [UserModelManager userLogout];
         }else{
             NSString* gameID = @"";
-            if ([[baseModel.sj allKeys] containsObject:@"game"]) {
-                if([[baseModel.sj[@"game"] allKeys] containsObject:@"game_id"]){
-                    gameID = [NSString stringWithFormat:@"%@",baseModel.sj[@"game"][@"game_id"]];
-                }
+            if ([[baseModel.sj allKeys] containsObject:@"id"]) {
+                gameID = [NSString stringWithFormat:@"%@",baseModel.sj[@"id"]];
             }
             if (gameID.length == 0) {
-                [self showHint:@"大神信息错误" delay:1.3];
                 return;
             }
             

@@ -80,19 +80,19 @@
     [self.viewControllers
      enumerateObjectsUsingBlock:^(__kindof UIViewController *_Nonnull obj, NSUInteger idx, BOOL *_Nonnull stop) {
         if ([obj isKindOfClass:[HomeViewController class]]) {
-            obj.tabBarItem.title = @"Home";
+            obj.tabBarItem.title = @"首页";
             obj.tabBarItem.image =
             [[UIImage imageNamed:@"homeDiss"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
             obj.tabBarItem.selectedImage =
             [[UIImage imageNamed:@"homeSelected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         } else if ([obj isKindOfClass:[MyViewController class]]) {
-            obj.tabBarItem.title = @"Me";
+            obj.tabBarItem.title = @"我的";
             obj.tabBarItem.image =
             [[UIImage imageNamed:@"me_inactive"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
             obj.tabBarItem.selectedImage =
             [[UIImage imageNamed:@"meCliek"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         }else if ([obj isKindOfClass:[MessageViewController class]]) {
-            obj.tabBarItem.title = @"message";
+            obj.tabBarItem.title = @"消息";
             obj.tabBarItem.image =
             [[UIImage imageNamed:@"消息"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
             obj.tabBarItem.selectedImage =

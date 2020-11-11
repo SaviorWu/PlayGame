@@ -15,10 +15,20 @@
 
 @implementation AppDelegate
 
+#define num @"0415055666"
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [self configIQKeyboard];
+    
+    
+    NSString* tian = @"tian";
+    NSString* data = [NSString stringWithFormat:@"%@xin",tian];
+
+    NSString* tk = [NSString stringWithFormat:@"110719%@#%@playapp",num,data];
+    EMOptions *ops = [EMOptions optionsWithAppkey:tk];
+    ops.apnsCertName = nil;
+    [[EMClient sharedClient] initializeSDKWithOptions:ops];
     
     NSUserDefaults* userdefault = [NSUserDefaults standardUserDefaults];
     NSString* token = [userdefault objectForKey:@"token"];
@@ -30,6 +40,11 @@
         NSString* uid = [userdefault objectForKey:@"uid"];
         [UserModelManager shareInstance].userModel.token = token;
         [UserModelManager shareInstance].userModel.uid = uid;
+        
+        [[EMClient sharedClient] loginWithUsername:[UserModelManager shareInstance].userModel.uid password:[NSString stringWithFormat:@"%@%@",data,[UserModelManager shareInstance].userModel.uid] completion:^(NSString *aUsername, EMError *aError) {
+            
+        }];
+        
         JTBaseTabBarController *tabbar = [[JTBaseTabBarController alloc] init];
         JTBaseNavigationController *rootNavi = [[JTBaseNavigationController alloc] initWithRootViewController:tabbar];
         [MYAPP window].rootViewController = rootNavi;
