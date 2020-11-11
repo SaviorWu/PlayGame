@@ -9,7 +9,7 @@
 #ifndef Macro_h
 #define Macro_h
 
-#define SERVER_URL @"http://app.qun68.com/"
+#define SERVER_URL @"https://app.qun68.com/"
 
 
 // View 圆角和加边框
