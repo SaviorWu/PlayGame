@@ -21,36 +21,39 @@
 }
 - (void)loadUI{
     [self showHudInView:self.view];
+    NSLog(@"token = %@ uid = %@",[UserModelManager shareInstance].userModel.token,[UserModelManager shareInstance].userModel.uid);
     [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/ping/mei/grzx" callback:^(JTBaseReqModel *model) {
+        if (model.zt == 1){
+            [UserModelManager shareInstance].userModel.money = model.sj[@"userdata"][@"money"];
+            [UserModelManager shareInstance].userModel.nickname = model.sj[@"userdata"][@"nickname"];
+            [UserModelManager shareInstance].userModel.header = model.sj[@"userdata"][@"header"];
+            [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
+                                                                 BM_backColor:[UIColor colorWithHex:0x00A0EE],
+                                                                 BM_cellHeight:@(100)}]];
+            [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UIMyHeadNameIDType),
+                                                                 BM_title:[UserModelManager shareInstance].userModel.nickname,
+                                                                 BM_subTitle:[UserModelManager shareInstance].userModel.uid,
+                                                                 BM_mark:[UserModelManager shareInstance].userModel.header,
+                                                                 BM_backColor:[UIColor colorWithHex:0x00A0EE],
+                                                                 BM_cellHeight:@(100)}]];
+            
+            [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
+                                                                 BM_backColor:[UIColor colorWithHex:0xf8f8f8],
+                                                                 BM_cellHeight:@(20)}]];
+            [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_title:@"设置",
+                                                                 BM_subTitle:@"设置",
+                                                                 BM_cellHeight:@(50),
+    //                                                             BM_leading:@(-20),
+                                                                 BM_SubAlignment:@(1),
+                                                                 BM_mark:@"1",
+                                                                 BM_type:@(UIImageLabelSelectType)}]];
+            [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
+                                                                 BM_leading:@(20),
+                                                                 BM_trading:@(20)}]];
+            
+            [self.tableView reloadData];
+        }
         
-        [UserModelManager shareInstance].userModel.money = model.sj[@"userdata"][@"money"];
-        [UserModelManager shareInstance].userModel.nickname = model.sj[@"userdata"][@"nickname"];
-        [UserModelManager shareInstance].userModel.header = model.sj[@"userdata"][@"header"];
-        [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
-                                                             BM_backColor:[UIColor colorWithHex:0x00A0EE],
-                                                             BM_cellHeight:@(100)}]];
-        [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UIMyHeadNameIDType),
-                                                             BM_title:[UserModelManager shareInstance].userModel.nickname,
-                                                             BM_subTitle:[UserModelManager shareInstance].userModel.uid,
-                                                             BM_mark:[UserModelManager shareInstance].userModel.header,
-                                                             BM_backColor:[UIColor colorWithHex:0x00A0EE],
-                                                             BM_cellHeight:@(100)}]];
-        
-        [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
-                                                             BM_backColor:[UIColor colorWithHex:0xf8f8f8],
-                                                             BM_cellHeight:@(20)}]];
-        [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_title:@"设置",
-                                                             BM_subTitle:@"设置",
-                                                             BM_cellHeight:@(50),
-//                                                             BM_leading:@(-20),
-                                                             BM_SubAlignment:@(1),
-                                                             BM_mark:@"1",
-                                                             BM_type:@(UIImageLabelSelectType)}]];
-        [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
-                                                             BM_leading:@(20),
-                                                             BM_trading:@(20)}]];
-        
-        [self.tableView reloadData];
         [self hideAllHud];
     }];
     
