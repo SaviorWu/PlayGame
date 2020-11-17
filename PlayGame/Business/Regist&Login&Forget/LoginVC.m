@@ -148,9 +148,17 @@
                     UserModel* um = [UserModel mj_objectWithKeyValues:model.sj[@"info"]];
                     um.token = model.sj[@"token"];
                     [UserModelManager shareInstance].userModel = um;
-                    JTBaseTabBarController *tabbar = [[JTBaseTabBarController alloc] init];
-                    JTBaseNavigationController *rootNavi = [[JTBaseNavigationController alloc] initWithRootViewController:tabbar];
-                    [MYAPP window].rootViewController = rootNavi;
+                    
+                    NSString* tian = @"tian";
+                    NSString* data = [NSString stringWithFormat:@"%@xin",tian];
+                    
+                    [[EMClient sharedClient] loginWithUsername:[UserModelManager shareInstance].userModel.uid password:[NSString stringWithFormat:@"%@%@",data,[UserModelManager shareInstance].userModel.uid] completion:^(NSString *aUsername, EMError *aError) {
+                        JTBaseTabBarController *tabbar = [[JTBaseTabBarController alloc] init];
+                        JTBaseNavigationController *rootNavi = [[JTBaseNavigationController alloc] initWithRootViewController:tabbar];
+                        [MYAPP window].rootViewController = rootNavi;
+                    }];
+                    
+                    
                 }
                 [self  hideAllHud];
             }];

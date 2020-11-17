@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C935631F17A63664829ED7B /* Pods_PlayGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 550CB93084C72ED72B5D9D7B /* Pods_PlayGame.framework */; };
 		48801757236E5E5F91ADDA6C /* Pods_PlayGame_PlayGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630474CEB889A3D602F68679 /* Pods_PlayGame_PlayGameUITests.framework */; };
 		84117BEF2549465200B68891 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84117BEE2549465200B68891 /* BaseTableViewController.m */; };
 		84117BFB25494D7300B68891 /* UITableView+loadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84117BFA25494D7300B68891 /* UITableView+loadCell.m */; };
@@ -790,6 +791,7 @@
 			files = (
 				F631285D2557CE5F000162B1 /* libopencore-amrwb.a in Frameworks */,
 				F631285E2557CE5F000162B1 /* libopencore-amrnb.a in Frameworks */,
+				1C935631F17A63664829ED7B /* Pods_PlayGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2550,7 +2552,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = WX8P2UD78U;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PlayGame/PrefixHeader.pch";
@@ -2577,7 +2579,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = WX8P2UD78U;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PlayGame/PrefixHeader.pch";

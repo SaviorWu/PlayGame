@@ -33,7 +33,7 @@
     }else if(self.selectSex == -1){
         [self showHint:@"请选择玩家性别"];
     }else{
-        
+        [self showHint:@"玩家匹配中请稍后..."];
         [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
                                          @"xb":@(self.selectSex),
                                          @"yx":@(self.selectGame)
