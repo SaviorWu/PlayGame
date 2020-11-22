@@ -41,6 +41,7 @@
     }
     [self _loadAllConversationsFromDBWithIsShowHud:NO];
     [self.tableView reloadData];
+    
 }
 - (void)dealloc{
     [[EMClient sharedClient].chatManager removeDelegate:self];
@@ -203,26 +204,21 @@
     NSLog(@"chartUid = %@",chartUid);
     [JTNetwork requestGetWithParam:@{@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/ping/mei/ds" callback:^(JTBaseReqModel *baseModel) {
         [self hideAllHudFromSuperView:self.view];
-        if (baseModel.zt == -2) {
-            [self showHint:@"账号在其他设备登录"];
-            [UserModelManager userLogout];
-        }else{
-            NSString* gameID = @"";
-            if ([[baseModel.sj allKeys] containsObject:@"id"]) {
-                gameID = [NSString stringWithFormat:@"%@",baseModel.sj[@"id"]];
-            }
-            if (gameID.length == 0) {
-                return;
-            }
-            
-            EMChatViewController *vc = [[EMChatViewController alloc] initWithCoversationModel:self.arrayList[indexPath.row]];
-            vc.vcTitle = nickname.length == 0?@" ":nickname;
-            vc.direction = (NSInteger)model.emModel.latestMessage.direction;
-            vc.header = header;
-            vc.gameID = gameID;
-            vc.godID = chartUid;
-            [self.navigationController pushViewController:vc animated:YES];
+        NSString* gameID = @"";
+        if ([[baseModel.sj allKeys] containsObject:@"id"]) {
+            gameID = [NSString stringWithFormat:@"%@",baseModel.sj[@"id"]];
         }
+        if (gameID.length == 0) {
+            return;
+        }
+        
+        EMChatViewController *vc = [[EMChatViewController alloc] initWithCoversationModel:self.arrayList[indexPath.row]];
+        vc.vcTitle = nickname.length == 0?@" ":nickname;
+        vc.direction = (NSInteger)model.emModel.latestMessage.direction;
+        vc.header = header;
+        vc.gameID = gameID;
+        vc.godID = chartUid;
+        [self.navigationController pushViewController:vc animated:YES];
     }];
     
 }

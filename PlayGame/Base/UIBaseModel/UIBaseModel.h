@@ -8,11 +8,12 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+#define BM_modelId @"modelId"
 #define BM_title @"title"
 #define BM_titleSize @"titleSize"
 #define BM_titleColor @"titleColor"
 #define BM_subTitle @"subTitle"
+#define BM_time @"time"
 #define BM_subTitleSize @"subTitleSize"
 #define BM_subTitleColor @"subTitleColor"
 #define BM_backColor @"backColor"
@@ -42,12 +43,14 @@ typedef enum _UIType {
     UIForgetRegistType,
     UILabelButtonType,
     UIImageLabelSelectType,
-    UIMyHeadNameIDType
+    UIMyHeadNameIDType,
+    UIOrderListType
 } UIType;
 
 
 @interface UIBaseModel : NSObject
 + (instancetype)initWithDic:(NSDictionary*)dic;
+@property (nonatomic, strong) NSString* modelId;
 @property (nonatomic, strong) NSString* title;
 @property (nonatomic, strong) NSNumber* titleSize;
 //    NSTextAlignmentLeft      = 0,    // Visually left aligned
@@ -73,6 +76,7 @@ typedef enum _UIType {
 
 @property (nonatomic, strong) NSNumber* keyboardType;
 @property (nonatomic, strong) id mark;
+@property (nonatomic, strong) NSString* time;
 @property (nonatomic, strong) NSMutableArray* dataArray;
 @end
 

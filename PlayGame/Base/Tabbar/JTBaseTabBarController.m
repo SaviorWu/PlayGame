@@ -11,6 +11,7 @@
 #import "HomeViewController.h"
 #import "MyViewController.h"
 #import "MessageViewController.h"
+#import "OrderListVC.h"
 @interface JTBaseTabBarController ()
 
 @end
@@ -44,7 +45,8 @@
     HomeViewController *homeVC = [[HomeViewController alloc] init];
     MyViewController *myVC = [[MyViewController alloc] init];
     MessageViewController* vc = [[MessageViewController alloc] init];
-    self.viewControllers = @[ homeVC, vc,myVC];
+    OrderListVC* orderVC = [[OrderListVC alloc] init];
+    self.viewControllers = @[ homeVC, vc,orderVC,myVC];
 }
 
 
@@ -97,6 +99,12 @@
             [[UIImage imageNamed:@"消息"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
             obj.tabBarItem.selectedImage =
             [[UIImage imageNamed:@"消息选择"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        }else if ([obj isKindOfClass:[OrderListVC class]]) {
+            obj.tabBarItem.title = @"订单";
+            obj.tabBarItem.image =
+            [[UIImage imageNamed:@"订单-灰"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            obj.tabBarItem.selectedImage =
+            [[UIImage imageNamed:@"订单-绿"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         }else {
             NSLog(@"Unknown TabBarController");
         }

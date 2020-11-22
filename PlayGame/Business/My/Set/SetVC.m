@@ -33,16 +33,25 @@
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
                                                          BM_leading:@(20),
                                                          BM_trading:@(20)}]];
+    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"修改支付密码",
+                                                         BM_cellHeight:@(50),
+                                                         BM_SubAlignment:@(1),
+                                                         BM_leading:@(-20),
+                                                         BM_mark:@"1",
+                                                         BM_type:@(UIImageLabelSelectType)}]];
+    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
+                                                         BM_leading:@(20),
+                                                         BM_trading:@(20)}]];
     
-//    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"帮助中心",
-//                                                         BM_cellHeight:@(50),
-//                                                         BM_SubAlignment:@(1),
-//                                                         BM_leading:@(-20),
-//                                                         BM_mark:@"1",
-//                                                         BM_type:@(UIImageLabelSelectType)}]];
-//    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
-//                                                         BM_leading:@(20),
-//                                                         BM_trading:@(20)}]];
+    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"帮助中心",
+                                                         BM_cellHeight:@(50),
+                                                         BM_SubAlignment:@(1),
+                                                         BM_leading:@(-20),
+                                                         BM_mark:@"1",
+                                                         BM_type:@(UIImageLabelSelectType)}]];
+    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
+                                                         BM_leading:@(20),
+                                                         BM_trading:@(20)}]];
     
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
                                                          BM_cellHeight:@(64)}]];
@@ -81,8 +90,13 @@
 {
     if (indexPath.row == 1) {
         ChangePswdVC* vc = [[ChangePswdVC alloc] init];
+        vc.type = 1;
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row == 3) {
+        ChangePswdVC* vc = [[ChangePswdVC alloc] init];
+        vc.type = 2;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 5){
         HelpVC* vc = [[HelpVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }

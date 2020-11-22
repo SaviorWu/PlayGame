@@ -292,6 +292,12 @@
 		F63128902557CE5F000162B1 /* EMRemindManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F63127AF2557CE5E000162B1 /* EMRemindManager.m */; };
 		F63128912557CE5F000162B1 /* EMConversationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F63127B12557CE5E000162B1 /* EMConversationsViewController.m */; };
 		F63128922557CE5F000162B1 /* EMConversationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F63127B22557CE5E000162B1 /* EMConversationCell.m */; };
+		F643E8982569F3AD00E95375 /* ResetPaypswdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8972569F3AD00E95375 /* ResetPaypswdVC.m */; };
+		F643E89F256A00DF00E95375 /* OrderListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E89E256A00DF00E95375 /* OrderListVC.m */; };
+		F643E8AB256A031600E95375 /* OrderListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8A9256A031600E95375 /* OrderListCell.m */; };
+		F643E8AC256A031600E95375 /* OrderListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F643E8AA256A031600E95375 /* OrderListCell.xib */; };
+		F643E8B6256A048400E95375 /* OrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8B5256A048400E95375 /* OrderModel.m */; };
+		F643E8C2256A27C600E95375 /* OrderDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8C1256A27C600E95375 /* OrderDetailVC.m */; };
 		F681E204254D0F04009FDDF6 /* UITextFiledCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F681E202254D0F04009FDDF6 /* UITextFiledCell.m */; };
 		F681E205254D0F04009FDDF6 /* UITextFiledCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F681E203254D0F04009FDDF6 /* UITextFiledCell.xib */; };
 		F681E210254D1EE5009FDDF6 /* UIVerificationCodeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F681E20E254D1EE5009FDDF6 /* UIVerificationCodeCell.m */; };
@@ -766,6 +772,17 @@
 		F63127B22557CE5E000162B1 /* EMConversationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMConversationCell.m; sourceTree = "<group>"; };
 		F63127B32557CE5E000162B1 /* EMConversationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMConversationsViewController.h; sourceTree = "<group>"; };
 		F63127B42557CE5E000162B1 /* EMConversationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMConversationCell.h; sourceTree = "<group>"; };
+		F643E8962569F3AD00E95375 /* ResetPaypswdVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResetPaypswdVC.h; sourceTree = "<group>"; };
+		F643E8972569F3AD00E95375 /* ResetPaypswdVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResetPaypswdVC.m; sourceTree = "<group>"; };
+		F643E89D256A00DF00E95375 /* OrderListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderListVC.h; sourceTree = "<group>"; };
+		F643E89E256A00DF00E95375 /* OrderListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderListVC.m; sourceTree = "<group>"; };
+		F643E8A8256A031600E95375 /* OrderListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderListCell.h; sourceTree = "<group>"; };
+		F643E8A9256A031600E95375 /* OrderListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderListCell.m; sourceTree = "<group>"; };
+		F643E8AA256A031600E95375 /* OrderListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderListCell.xib; sourceTree = "<group>"; };
+		F643E8B4256A048400E95375 /* OrderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderModel.h; sourceTree = "<group>"; };
+		F643E8B5256A048400E95375 /* OrderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderModel.m; sourceTree = "<group>"; };
+		F643E8C0256A27C600E95375 /* OrderDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderDetailVC.h; sourceTree = "<group>"; };
+		F643E8C1256A27C600E95375 /* OrderDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderDetailVC.m; sourceTree = "<group>"; };
 		F681E201254D0F04009FDDF6 /* UITextFiledCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextFiledCell.h; sourceTree = "<group>"; };
 		F681E202254D0F04009FDDF6 /* UITextFiledCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextFiledCell.m; sourceTree = "<group>"; };
 		F681E203254D0F04009FDDF6 /* UITextFiledCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UITextFiledCell.xib; sourceTree = "<group>"; };
@@ -933,6 +950,7 @@
 		8436C84D25491BCC00194E27 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				F643E89C256A00C300E95375 /* Order */,
 				F631264F2557CE5D000162B1 /* Message */,
 				843D36D2254A4E8B00FDCD5D /* Regist&Login&Forget */,
 				8436C84F25491BDF00194E27 /* My */,
@@ -1165,6 +1183,8 @@
 			children = (
 				F63126062557C708000162B1 /* ChangePswdVC.h */,
 				F63126072557C708000162B1 /* ChangePswdVC.m */,
+				F643E8962569F3AD00E95375 /* ResetPaypswdVC.h */,
+				F643E8972569F3AD00E95375 /* ResetPaypswdVC.m */,
 			);
 			path = ChangePswd;
 			sourceTree = "<group>";
@@ -1806,6 +1826,70 @@
 			path = Conversation;
 			sourceTree = "<group>";
 		};
+		F643E89C256A00C300E95375 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				F643E8BD256A27A000E95375 /* Business */,
+				F643E8B3256A046E00E95375 /* Model */,
+				F643E8A7256A02FD00E95375 /* Controller */,
+				F643E8A6256A02F700E95375 /* View */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		F643E8A6256A02F700E95375 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F643E8A8256A031600E95375 /* OrderListCell.h */,
+				F643E8A9256A031600E95375 /* OrderListCell.m */,
+				F643E8AA256A031600E95375 /* OrderListCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F643E8A7256A02FD00E95375 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F643E89D256A00DF00E95375 /* OrderListVC.h */,
+				F643E89E256A00DF00E95375 /* OrderListVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F643E8B3256A046E00E95375 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F643E8B4256A048400E95375 /* OrderModel.h */,
+				F643E8B5256A048400E95375 /* OrderModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F643E8BD256A27A000E95375 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				F643E8BE256A27A700E95375 /* OrderDetail */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		F643E8BE256A27A700E95375 /* OrderDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F643E8BF256A27B200E95375 /* Controller */,
+			);
+			path = OrderDetail;
+			sourceTree = "<group>";
+		};
+		F643E8BF256A27B200E95375 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F643E8C0256A27C600E95375 /* OrderDetailVC.h */,
+				F643E8C1256A27C600E95375 /* OrderDetailVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		F681E200254D0EE2009FDDF6 /* UITextFiledCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1923,7 +2007,7 @@
 		84B252132549080600887B01 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					84B2521A2549080600887B01 = {
 						CreatedOnToolsVersion = 12.1;
@@ -1983,6 +2067,7 @@
 				F63128162557CE5F000162B1 /* msg_bg_send@2x.png in Resources */,
 				F63128542557CE5F000162B1 /* user_avatar_gray@2x.png in Resources */,
 				F631282A2557CE5F000162B1 /* msg_img_broken@3x.png in Resources */,
+				F643E8AC256A031600E95375 /* OrderListCell.xib in Resources */,
 				F63127D12557CE5E000162B1 /* icon_020.gif in Resources */,
 				8450EB7A254BEBDB00B54365 /* UISpaceCell.xib in Resources */,
 				F63127C52557CE5E000162B1 /* icon_029.gif in Resources */,
@@ -2253,6 +2338,7 @@
 				F631280D2557CE5F000162B1 /* EMMsgTextBubbleView.m in Sources */,
 				F63128892557CE5F000162B1 /* EMSearchResultController.m in Sources */,
 				F63128072557CE5F000162B1 /* EMMsgRecallBubbleView.m in Sources */,
+				F643E8AB256A031600E95375 /* OrderListCell.m in Sources */,
 				8436C77425490D2000194E27 /* JTBaseTabBarController.m in Sources */,
 				8445CE3B2554036A00FE01A3 /* UserModel.m in Sources */,
 				F631287B2557CE5F000162B1 /* EMTextView.m in Sources */,
@@ -2304,7 +2390,9 @@
 				F63128382557CE5F000162B1 /* EMAudioPlayerHelper.mm in Sources */,
 				F6A10747254ED7FB00A2D1B0 /* UIForgetRegistCell.m in Sources */,
 				F63127BC2557CE5E000162B1 /* EMReadReceiptMsgViewController.m in Sources */,
+				F643E89F256A00DF00E95375 /* OrderListVC.m in Sources */,
 				F631283F2557CE5F000162B1 /* EMEmojiHelper.m in Sources */,
+				F643E8B6256A048400E95375 /* OrderModel.m in Sources */,
 				F631288C2557CE5F000162B1 /* EMTextViewController.m in Sources */,
 				F63128612557CE5F000162B1 /* MWPhotoBrowser.m in Sources */,
 				F63128392557CE5F000162B1 /* EMMsgTranspondViewController.m in Sources */,
@@ -2344,6 +2432,7 @@
 				8436C878254939DC00194E27 /* JTTabBarBtn.m in Sources */,
 				F63128652557CE5F000162B1 /* MWTapDetectingImageView.m in Sources */,
 				8450EB79254BEBDB00B54365 /* UISpaceCell.m in Sources */,
+				F643E8C2256A27C600E95375 /* OrderDetailVC.m in Sources */,
 				F63127E42557CE5F000162B1 /* EMChatBarRecordAudioView.m in Sources */,
 				F631282E2557CE5F000162B1 /* EMLocationViewController.m in Sources */,
 				F63127BD2557CE5E000162B1 /* EMReadReceiptTableViewCell.m in Sources */,
@@ -2372,6 +2461,7 @@
 				8445CE2A2553D51D00FE01A3 /* ForgetVC.m in Sources */,
 				8436C75525490CD600194E27 /* JTUserModel.m in Sources */,
 				F63128662557CE5F000162B1 /* MWPhoto.m in Sources */,
+				F643E8982569F3AD00E95375 /* ResetPaypswdVC.m in Sources */,
 				F631286A2557CE5F000162B1 /* DACircularProgressView.m in Sources */,
 				84C768AD2554F0EB00E08149 /* RegistVC.m in Sources */,
 				F631286C2557CE5F000162B1 /* PSTCollectionViewFlowLayout.m in Sources */,
@@ -2437,6 +2527,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -2484,7 +2575,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2496,6 +2587,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -2537,7 +2629,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -2557,7 +2649,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PlayGame/PrefixHeader.pch";
 				INFOPLIST_FILE = PlayGame/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2584,7 +2676,7 @@
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PlayGame/PrefixHeader.pch";
 				INFOPLIST_FILE = PlayGame/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

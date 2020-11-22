@@ -6,7 +6,7 @@
 //
 
 #import "ChangePswdVC.h"
-
+#import "ResetPaypswdVC.h"
 @interface ChangePswdVC ()
 
 @end
@@ -16,7 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.naviTitle = @"修改登录密码";
+    self.naviTitle = self.type == 1?@"修改登录密码":@"修改支付密码";
     [self addNavigationView];
 }
 - (void)loadUI{
@@ -24,7 +24,7 @@
                                                          BM_cellHeight:@(1)}]];
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
                                                          BM_cellHeight:@(20)}]];
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"请输入手机号",
+    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:self.type == 1?@"请输入手机号":@"请输入注册手机号",
                                                          BM_leading:@(20),
                                                          BM_trading:@(20),
                                                          BM_KeyBoardType:@(UIKeyboardTypePhonePad),
@@ -45,7 +45,7 @@
     
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
                                                          BM_cellHeight:@(10)}]];
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"请输入新密码",
+    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:self.type == 1?@"请输入新密码":@"请输入登录密码",
                                                          BM_leading:@(20),
                                                          BM_trading:@(20),
                                                          BM_mark:@"1",
@@ -58,7 +58,7 @@
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
                                                          BM_cellHeight:@(64)}]];
     
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_title:@"重置密码",
+    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_title:self.type == 1?@"重置密码":@"下一步",
                                                          BM_leading:@(20),
                                                          BM_trading:@(20),
                                                          BM_backColor:[UIColor colorWithHex:0x00AAFE],
@@ -96,7 +96,6 @@
                 [self.tableView reloadData];
                 [JTNetwork requestGetWithParam:@{@"mobile":self.reqParam[@"mobile"],@"type":@"resetverify",@"token":[UserModelManager shareInstance].userModel.token} url:@"/ping/mei/yzm" callback:^(JTBaseReqModel *model) {
                     NSLog(@"%@", model);
-                    [self showHint:model.xx];
                 }];
             }else{
                 [self.reqParam setObject:value[@"data"] forKey:@"verify"];
@@ -106,12 +105,22 @@
         return [tableView reloadCell:@"UIConfirnBtnCell" withModel:model withBlock:^(id  _Nullable value) {
             NSLog(@"点击登录");
             [self.tableView reloadData];
-            [JTNetwork requestGetWithParam:self.reqParam url:@"/ping/mei/zhmm" callback:^(JTBaseReqModel *model) {
+            if (self.type == 2) {
+                [self.reqParam setObject:[UserModelManager shareInstance].userModel.token forKey:@"ys"];
+            }
+            [JTNetwork requestGetWithParam:self.reqParam url:self.type == 1?@"/ping/mei/zhmm":@"/ping/mei/xg1" callback:^(JTBaseReqModel *model) {
                 NSLog(@"model = %@",model);
                 [self showHint:model.xx];
                 if (model.zt == 1) {
-                    [UserModelManager userLogout];
+                    if (self.type == 1) {
+                        [UserModelManager userLogout];
+                    }else{
+                        ResetPaypswdVC* vc = [[ResetPaypswdVC alloc] init];
+                        [self.navigationController pushViewController:vc animated:YES];
+                    }
                 }
+                
+                
             }];
         }];
     }else{

@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)loadData;
 - (void)reloadTableView;
 - (void)addRefreshLoading;
-
+- (void)registCell;
 @property (nonatomic, strong) UITableView* tableView;
 @property (nonatomic, strong) NSMutableArray* dataArray;
 @property (nonatomic, assign) NSInteger pageIndex;

@@ -107,10 +107,7 @@
 }
 - (void)addBuyOrder
 {
-    
     self.buyOrder = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 60, 10, 60, 40)];
-//    self.buyOrder.backgroundColor = [UIColor yellowColor];
-//    self.buyOrder.centerY = self.btnBack.centerY;
     [self.buyOrder addTarget:self action:@selector(clickBuyOrder) forControlEvents:UIControlEventTouchUpInside];
     [self.buyOrder setTitle:@"下单" forState:UIControlStateNormal];
     self.buyOrder.titleLabel.font = [UIFont systemFontOfSize:15];
@@ -127,7 +124,7 @@
     // Do any additional setup after loading the view.
     self.naviTitle = self.vcTitle;
     [self addNavigationView];
-//    [self addBuyOrder];
+    [self addBuyOrder];
     self.msgQueue = dispatch_queue_create("emmessage.com", NULL);
     self.msgTimelTag = -1;
     [self _setupChatSubviews];

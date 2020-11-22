@@ -7,7 +7,7 @@
 //
 
 #import "JTNetwork.h"
-
+#import "UserModelManager.h"
 @implementation JTNetwork
 
 + (JTNetwork *)manager {
@@ -68,8 +68,13 @@
         NSLog(@"客户端报错 %@",error);
         JTBaseReqModel *model = [[JTBaseReqModel alloc] init];
         model.sj = error;
-        if (callback) {
-            callback(model);
+        if (model.zt == -2) {
+            [self showHint:@"账号在其他设备登录"];
+            [UserModelManager userLogout];
+        }else{
+            if (callback) {
+                callback (model);
+            }
         }
     }];
 }
@@ -112,9 +117,15 @@
         NSLog(@"%@",error);
         JTBaseReqModel *model = [[JTBaseReqModel alloc] init];
         model.sj = error;
-        if (callback) {
-            callback (model);
+        if (model.zt == -2) {
+            [self showHint:@"账号在其他设备登录"];
+            [UserModelManager userLogout];
+        }else{
+            if (callback) {
+                callback (model);
+            }
         }
+        
     }];
 }
 

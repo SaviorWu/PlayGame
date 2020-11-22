@@ -19,11 +19,18 @@
     [self hiddenNavigation];
     [self.tableView registCell:@"MyHeadNameIDCell"];
 }
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self loadUI];
+}
+
 - (void)loadUI{
     [self showHudInView:self.view];
     NSLog(@"token = %@ uid = %@",[UserModelManager shareInstance].userModel.token,[UserModelManager shareInstance].userModel.uid);
     [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/ping/mei/grzx" callback:^(JTBaseReqModel *model) {
         if (model.zt == 1){
+            [self.dataArray removeAllObjects];
             [UserModelManager shareInstance].userModel.money = model.sj[@"userdata"][@"money"];
             [UserModelManager shareInstance].userModel.nickname = model.sj[@"userdata"][@"nickname"];
             [UserModelManager shareInstance].userModel.header = model.sj[@"userdata"][@"header"];
