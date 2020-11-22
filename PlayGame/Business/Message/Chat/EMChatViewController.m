@@ -25,7 +25,8 @@
 #import "EMLocationViewController.h"
 #import "EMMsgTranspondViewController.h"
 #import "EMAtGroupMembersViewController.h"
-
+#import "GameInfoModel.h"
+#import "SubmitOrderVC.h"
 @interface EMChatViewController ()<UIScrollViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, EMMultiDevicesDelegate, EMChatManagerDelegate, EMGroupManagerDelegate, EMChatroomManagerDelegate, EMChatBarDelegate, EMMessageCellDelegate, EMChatBarEmoticonViewDelegate, EMChatBarRecordAudioViewDelegate,EMMoreFunctionViewDelegate,EMReadReceiptMsgDelegate,UIDocumentInteractionControllerDelegate>
 
 @property (nonatomic, strong) dispatch_queue_t msgQueue;
@@ -102,7 +103,32 @@
     }else if(self.godID.length == 0){
         [self showHint:@"大神id异常" delay:1.3];
     }else{
-        
+        [self showHudInView:self.view];
+        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
+                                         @"yx":self.gameID,
+                                         @"lx":@"user",
+                                         @"ds":self.godID
+        } url:@"/ping/mei/csh" callback:^(JTBaseReqModel *model) {
+            [self showHint:model.xx];
+            if (model.zt == 1) {
+                UserBaseModel* user = [UserBaseModel mj_objectWithKeyValues:model.sj[@"user"]];
+                GameInfoModel* giModel = [GameInfoModel mj_objectWithKeyValues:model.sj[@"gamemy"]];
+                NSArray* gList = model.sj[@"games"];
+                NSMutableArray* gamesList = [[NSMutableArray alloc] init];
+                for (NSDictionary* dic in gList) {
+                    OrderGameModel* games = [OrderGameModel mj_objectWithKeyValues:dic];
+                    [gamesList addObject:games];
+                }
+                SubmitOrderVC* vc = [[SubmitOrderVC alloc] init];
+                vc.gameID = self.gameID;
+                vc.gameList = gamesList;
+                vc.gameInfo = giModel;
+                vc.ubModel = user;
+                vc.godID = self.godID;
+                [self.navigationController pushViewController:vc animated:YES];
+            }
+            [self hideAllHud];
+        }];
     }
 }
 - (void)addBuyOrder

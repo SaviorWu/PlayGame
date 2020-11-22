@@ -302,6 +302,11 @@
 		F643E8CB256A2BBD00E95375 /* OrderHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F643E8C9256A2BBD00E95375 /* OrderHeaderCell.xib */; };
 		F643E8D3256A60FC00E95375 /* UILabelContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8D1256A60FC00E95375 /* UILabelContentCell.m */; };
 		F643E8D4256A60FC00E95375 /* UILabelContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F643E8D2256A60FC00E95375 /* UILabelContentCell.xib */; };
+		F643E8EB256AACE000E95375 /* OrderCommentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8E9256AACE000E95375 /* OrderCommentVC.m */; };
+		F643E8EC256AACE000E95375 /* OrderCommentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F643E8EA256AACE000E95375 /* OrderCommentVC.xib */; };
+		F643E8F4256AB27500E95375 /* SubmitOrderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8F2256AB27500E95375 /* SubmitOrderVC.m */; };
+		F643E8F5256AB27500E95375 /* SubmitOrderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F643E8F3256AB27500E95375 /* SubmitOrderVC.xib */; };
+		F643E8FD256AB4EF00E95375 /* GameInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8FC256AB4EF00E95375 /* GameInfoModel.m */; };
 		F681E204254D0F04009FDDF6 /* UITextFiledCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F681E202254D0F04009FDDF6 /* UITextFiledCell.m */; };
 		F681E205254D0F04009FDDF6 /* UITextFiledCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F681E203254D0F04009FDDF6 /* UITextFiledCell.xib */; };
 		F681E210254D1EE5009FDDF6 /* UIVerificationCodeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F681E20E254D1EE5009FDDF6 /* UIVerificationCodeCell.m */; };
@@ -793,6 +798,14 @@
 		F643E8D0256A60FC00E95375 /* UILabelContentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILabelContentCell.h; sourceTree = "<group>"; };
 		F643E8D1256A60FC00E95375 /* UILabelContentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILabelContentCell.m; sourceTree = "<group>"; };
 		F643E8D2256A60FC00E95375 /* UILabelContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UILabelContentCell.xib; sourceTree = "<group>"; };
+		F643E8E8256AACE000E95375 /* OrderCommentVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderCommentVC.h; sourceTree = "<group>"; };
+		F643E8E9256AACE000E95375 /* OrderCommentVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderCommentVC.m; sourceTree = "<group>"; };
+		F643E8EA256AACE000E95375 /* OrderCommentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCommentVC.xib; sourceTree = "<group>"; };
+		F643E8F1256AB27500E95375 /* SubmitOrderVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubmitOrderVC.h; sourceTree = "<group>"; };
+		F643E8F2256AB27500E95375 /* SubmitOrderVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubmitOrderVC.m; sourceTree = "<group>"; };
+		F643E8F3256AB27500E95375 /* SubmitOrderVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubmitOrderVC.xib; sourceTree = "<group>"; };
+		F643E8FB256AB4EF00E95375 /* GameInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameInfoModel.h; sourceTree = "<group>"; };
+		F643E8FC256AB4EF00E95375 /* GameInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameInfoModel.m; sourceTree = "<group>"; };
 		F681E201254D0F04009FDDF6 /* UITextFiledCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextFiledCell.h; sourceTree = "<group>"; };
 		F681E202254D0F04009FDDF6 /* UITextFiledCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextFiledCell.m; sourceTree = "<group>"; };
 		F681E203254D0F04009FDDF6 /* UITextFiledCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UITextFiledCell.xib; sourceTree = "<group>"; };
@@ -1879,6 +1892,8 @@
 		F643E8BD256A27A000E95375 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				F643E8F0256AB26100E95375 /* SubmitOrder */,
+				F643E8DB256AAB8900E95375 /* OrderComment */,
 				F643E8BE256A27A700E95375 /* OrderDetail */,
 			);
 			path = Business;
@@ -1920,6 +1935,44 @@
 				F643E8D2256A60FC00E95375 /* UILabelContentCell.xib */,
 			);
 			path = UILabelContentCell;
+			sourceTree = "<group>";
+		};
+		F643E8DB256AAB8900E95375 /* OrderComment */ = {
+			isa = PBXGroup;
+			children = (
+				F643E8E8256AACE000E95375 /* OrderCommentVC.h */,
+				F643E8E9256AACE000E95375 /* OrderCommentVC.m */,
+				F643E8EA256AACE000E95375 /* OrderCommentVC.xib */,
+			);
+			path = OrderComment;
+			sourceTree = "<group>";
+		};
+		F643E8F0256AB26100E95375 /* SubmitOrder */ = {
+			isa = PBXGroup;
+			children = (
+				F643E8FA256AB4D800E95375 /* Controller */,
+				F643E8F9256AB4D200E95375 /* Model */,
+			);
+			path = SubmitOrder;
+			sourceTree = "<group>";
+		};
+		F643E8F9256AB4D200E95375 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F643E8FB256AB4EF00E95375 /* GameInfoModel.h */,
+				F643E8FC256AB4EF00E95375 /* GameInfoModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F643E8FA256AB4D800E95375 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F643E8F1256AB27500E95375 /* SubmitOrderVC.h */,
+				F643E8F2256AB27500E95375 /* SubmitOrderVC.m */,
+				F643E8F3256AB27500E95375 /* SubmitOrderVC.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		F681E200254D0EE2009FDDF6 /* UITextFiledCell */ = {
@@ -2188,6 +2241,7 @@
 				F63127DD2557CE5F000162B1 /* icon_018_cover.png in Resources */,
 				F63127F12557CE5F000162B1 /* chatbar_extend_blue@2x.png in Resources */,
 				F63127E22557CE5F000162B1 /* chat_audio_red@3x.png in Resources */,
+				F643E8F5256AB27500E95375 /* SubmitOrderVC.xib in Resources */,
 				F631283B2557CE5F000162B1 /* MessageViewController.xib in Resources */,
 				F63128302557CE5F000162B1 /* chat_info@3x.png in Resources */,
 				F63128152557CE5F000162B1 /* msg_send_audio02@2x.png in Resources */,
@@ -2195,6 +2249,7 @@
 				F631283C2557CE5F000162B1 /* MessageListCell.xib in Resources */,
 				8445CE332553D92400FE01A3 /* UILineCell.xib in Resources */,
 				84B2522B2549080700887B01 /* Assets.xcassets in Resources */,
+				F643E8EC256AACE000E95375 /* OrderCommentVC.xib in Resources */,
 				F63127FD2557CE5F000162B1 /* chatbar_camera_blue@3x.png in Resources */,
 				F63128872557CE5F000162B1 /* alert_info@2x.png in Resources */,
 				F63128842557CE5F000162B1 /* alert_success@2x.png in Resources */,
@@ -2385,6 +2440,7 @@
 				84117BFB25494D7300B68891 /* UITableView+loadCell.m in Sources */,
 				F631285F2557CE5F000162B1 /* wav.mm in Sources */,
 				F631280B2557CE5F000162B1 /* EMMsgFileBubbleView.m in Sources */,
+				F643E8EB256AACE000E95375 /* OrderCommentVC.m in Sources */,
 				8436C7E625490D6500194E27 /* UIColor+Extension.m in Sources */,
 				F631280C2557CE5F000162B1 /* EMMsgImageBubbleView.m in Sources */,
 				F6A1073B254ED47C00A2D1B0 /* UIConfirnBtnCell.m in Sources */,
@@ -2450,6 +2506,8 @@
 				8436C7E325490D6500194E27 /* UIColor+RCColor.m in Sources */,
 				F631280F2557CE5F000162B1 /* EMMsgLocationBubbleView.m in Sources */,
 				8436C7E925490D6500194E27 /* UINavigationBar+handle.m in Sources */,
+				F643E8FD256AB4EF00E95375 /* GameInfoModel.m in Sources */,
+				F643E8F4256AB27500E95375 /* SubmitOrderVC.m in Sources */,
 				8436C78A25490D3000194E27 /* BaseController.m in Sources */,
 				F63127BB2557CE5E000162B1 /* EMMoreFunctionView.m in Sources */,
 				846F3EC72556726500FC5E71 /* MyHeadNameIDCell.m in Sources */,

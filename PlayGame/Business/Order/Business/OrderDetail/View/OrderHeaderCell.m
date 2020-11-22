@@ -39,6 +39,19 @@
             self.lbAge.backgroundColor = [UIColor colorWithHex:MAIN_BLUE];
             
         }
+        if ([model.mark intValue] == 4) {
+            self.imgFour.hidden = NO;
+            self.constraintFifthStartWidth.constant = 0;
+            self.imgFive.hidden = YES;
+        }else if ([model.mark intValue] == 5){
+            self.imgFour.hidden = NO;
+            self.imgFive.hidden = NO;
+        }else{
+            self.imgFive.hidden = YES;
+            self.imgFour.hidden = YES;
+            self.constraintFifthStartWidth.constant = 0;
+            self.constrantFourStartWidth.constant = 0;
+        }
         self.lbNickName.text = model.title;
         self.lbAge.text = [NSString stringWithFormat:@"    %@",model.subTitle];
     }
