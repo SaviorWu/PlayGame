@@ -107,13 +107,14 @@
 }
 - (void)addBuyOrder
 {
-    self.buyOrder = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 60, 10, 60, 40)];
+    self.buyOrder = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 60, 25, 60, 40)];
+//    self.buyOrder.centerY = self.titleLabel.centerY;
     [self.buyOrder addTarget:self action:@selector(clickBuyOrder) forControlEvents:UIControlEventTouchUpInside];
     [self.buyOrder setTitle:@"下单" forState:UIControlStateNormal];
     self.buyOrder.titleLabel.font = [UIFont systemFontOfSize:15];
     [self.buyOrder setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     
-    UIImageView* imagev = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"otcBillIcon"]];
+    UIImageView* imagev = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"订单"]];
     imagev.top += 8;
     imagev.left -= 6;
     [self.buyOrder addSubview:imagev];

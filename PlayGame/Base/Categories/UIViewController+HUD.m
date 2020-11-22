@@ -138,7 +138,7 @@ static const void *HttpRequestHUDKey = &HttpRequestHUDKey;
 {
     MBProgressHUD *HUD = [MBProgressHUD showHUDAddedTo:view animated:YES];
     HUD.userInteractionEnabled = NO;
-    HUD.bezelView.backgroundColor = [UIColor hexColor:@"#3D3D3D"];
+    HUD.bezelView.backgroundColor = [UIColor hexColor:@"#e0e0e0"];
     HUD.bezelView.userInteractionEnabled = NO;
     HUD.removeFromSuperViewOnHide = YES;
 //    [view addSubview:HUD];

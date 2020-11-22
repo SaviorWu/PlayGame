@@ -21,6 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString* time;
 @property (nonatomic, strong) NSString* play_round;
 @property (nonatomic, strong) NSString* statustxt;
+@property (nonatomic, strong) NSString* order_num;
+@property (nonatomic, strong) NSString* pay_money;
+@property (nonatomic, strong) NSString* status;
 
 //"game":3,
 //"play_uid":133641597,

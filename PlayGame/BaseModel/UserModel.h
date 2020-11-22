@@ -9,14 +9,23 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UserModel : NSObject
+@interface UserBaseModel : NSObject
+@property (nonatomic, strong) NSString* sex;
+@property (nonatomic, strong) NSString* nickname;
+@property (nonatomic, strong) NSString* header;
+@property (nonatomic, strong) NSString* age;
+@end
+
+@interface UserGameModel : UserBaseModel
+@property (nonatomic, strong) NSString* gid;
+@end
+
+@interface UserModel : UserBaseModel
 @property (nonatomic, strong) NSString* token;
 @property (nonatomic, strong) NSString* work;
 @property (nonatomic, strong) NSString* birthday;
 @property (nonatomic, strong) NSString* money;
 @property (nonatomic, strong) NSString* introduce_status;
-@property (nonatomic, strong) NSString* nickname;
-@property (nonatomic, strong) NSString* sex;
 @property (nonatomic, strong) NSString* interest;
 @property (nonatomic, strong) NSString* nick_status;
 @property (nonatomic, strong) NSString* type;
@@ -24,8 +33,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString* mobile;
 @property (nonatomic, strong) NSString* distance;
 @property (nonatomic, strong) NSString* star;
-@property (nonatomic, strong) NSString* header;
-@property (nonatomic, strong) NSString* age;
 @property (nonatomic, strong) NSString* login_status;
 @property (nonatomic, strong) NSString* pay_password;
 @property (nonatomic, strong) NSString* vip;

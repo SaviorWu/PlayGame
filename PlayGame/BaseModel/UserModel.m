@@ -27,3 +27,12 @@
     });
 }
 @end
+
+
+@implementation UserBaseModel
+
+@end
+@implementation UserGameModel
+
+@end
+

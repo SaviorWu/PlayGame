@@ -47,7 +47,7 @@
     if (model.titleSize) {
         self.button.titleLabel.font = [UIFont systemFontOfSize:model.titleSize.floatValue];
     }
-    
+    self.backgroundColor = UIColor.clearColor;
     self.button.layer.masksToBounds = YES;
     self.button.layer.cornerRadius = 25;
 }

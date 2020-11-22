@@ -30,6 +30,8 @@ NS_ASSUME_NONNULL_BEGIN
 #define BM_TextField @"textField"
 #define BM_SubAlignment @"subAlignment"
 #define BM_TitleAlignment @"titleAlignment"
+#define BM_imageName @"imageName"
+
 typedef enum _UIType {
     UITitleType  = 1,
     UILineType,
@@ -44,13 +46,16 @@ typedef enum _UIType {
     UILabelButtonType,
     UIImageLabelSelectType,
     UIMyHeadNameIDType,
-    UIOrderListType
+    UIOrderListType,
+    UIOrderDetailHeaderType,
+    UILabelContentType
 } UIType;
 
 
 @interface UIBaseModel : NSObject
 + (instancetype)initWithDic:(NSDictionary*)dic;
 @property (nonatomic, strong) NSString* modelId;
+@property (nonatomic, strong) NSString* imageName;
 @property (nonatomic, strong) NSString* title;
 @property (nonatomic, strong) NSNumber* titleSize;
 //    NSTextAlignmentLeft      = 0,    // Visually left aligned

@@ -51,7 +51,8 @@
 // 本地化字符串
 #define kLocalizedString(r) NSLocalizedStringFromTable(r,@"Loca", nil)
 
-
+#define MAIN_RED 0xFFA1A0
+#define MAIN_BLUE 0x1bd6ff
 // 系统性参数
 #define IS_IPHONEX (SCREEN_WIDTH >= 375.0f && SCREEN_HEIGHT >= 812.0f)
 #define RCDExtraBottomHeight (IS_IPHONEX ? 34 : 0)

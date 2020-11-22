@@ -298,6 +298,10 @@
 		F643E8AC256A031600E95375 /* OrderListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F643E8AA256A031600E95375 /* OrderListCell.xib */; };
 		F643E8B6256A048400E95375 /* OrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8B5256A048400E95375 /* OrderModel.m */; };
 		F643E8C2256A27C600E95375 /* OrderDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8C1256A27C600E95375 /* OrderDetailVC.m */; };
+		F643E8CA256A2BBD00E95375 /* OrderHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8C8256A2BBD00E95375 /* OrderHeaderCell.m */; };
+		F643E8CB256A2BBD00E95375 /* OrderHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F643E8C9256A2BBD00E95375 /* OrderHeaderCell.xib */; };
+		F643E8D3256A60FC00E95375 /* UILabelContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8D1256A60FC00E95375 /* UILabelContentCell.m */; };
+		F643E8D4256A60FC00E95375 /* UILabelContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F643E8D2256A60FC00E95375 /* UILabelContentCell.xib */; };
 		F681E204254D0F04009FDDF6 /* UITextFiledCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F681E202254D0F04009FDDF6 /* UITextFiledCell.m */; };
 		F681E205254D0F04009FDDF6 /* UITextFiledCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F681E203254D0F04009FDDF6 /* UITextFiledCell.xib */; };
 		F681E210254D1EE5009FDDF6 /* UIVerificationCodeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F681E20E254D1EE5009FDDF6 /* UIVerificationCodeCell.m */; };
@@ -783,6 +787,12 @@
 		F643E8B5256A048400E95375 /* OrderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderModel.m; sourceTree = "<group>"; };
 		F643E8C0256A27C600E95375 /* OrderDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderDetailVC.h; sourceTree = "<group>"; };
 		F643E8C1256A27C600E95375 /* OrderDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderDetailVC.m; sourceTree = "<group>"; };
+		F643E8C7256A2BBD00E95375 /* OrderHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderHeaderCell.h; sourceTree = "<group>"; };
+		F643E8C8256A2BBD00E95375 /* OrderHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderHeaderCell.m; sourceTree = "<group>"; };
+		F643E8C9256A2BBD00E95375 /* OrderHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderHeaderCell.xib; sourceTree = "<group>"; };
+		F643E8D0256A60FC00E95375 /* UILabelContentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILabelContentCell.h; sourceTree = "<group>"; };
+		F643E8D1256A60FC00E95375 /* UILabelContentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILabelContentCell.m; sourceTree = "<group>"; };
+		F643E8D2256A60FC00E95375 /* UILabelContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UILabelContentCell.xib; sourceTree = "<group>"; };
 		F681E201254D0F04009FDDF6 /* UITextFiledCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextFiledCell.h; sourceTree = "<group>"; };
 		F681E202254D0F04009FDDF6 /* UITextFiledCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextFiledCell.m; sourceTree = "<group>"; };
 		F681E203254D0F04009FDDF6 /* UITextFiledCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UITextFiledCell.xib; sourceTree = "<group>"; };
@@ -1027,6 +1037,7 @@
 		8450EB6B254BE81500B54365 /* UIBaseView */ = {
 			isa = PBXGroup;
 			children = (
+				F643E8CF256A60DC00E95375 /* UILabelContentCell */,
 				84C768C925553DF600E08149 /* UIImageLabelSelectCell */,
 				8445CE2E2553D90B00FE01A3 /* UILineCell */,
 				F6A1074C254EDD8600A2D1B0 /* UILabelButtonCell */,
@@ -1876,6 +1887,7 @@
 		F643E8BE256A27A700E95375 /* OrderDetail */ = {
 			isa = PBXGroup;
 			children = (
+				F643E8C6256A2B4800E95375 /* View */,
 				F643E8BF256A27B200E95375 /* Controller */,
 			);
 			path = OrderDetail;
@@ -1888,6 +1900,26 @@
 				F643E8C1256A27C600E95375 /* OrderDetailVC.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		F643E8C6256A2B4800E95375 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F643E8C7256A2BBD00E95375 /* OrderHeaderCell.h */,
+				F643E8C8256A2BBD00E95375 /* OrderHeaderCell.m */,
+				F643E8C9256A2BBD00E95375 /* OrderHeaderCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F643E8CF256A60DC00E95375 /* UILabelContentCell */ = {
+			isa = PBXGroup;
+			children = (
+				F643E8D0256A60FC00E95375 /* UILabelContentCell.h */,
+				F643E8D1256A60FC00E95375 /* UILabelContentCell.m */,
+				F643E8D2256A60FC00E95375 /* UILabelContentCell.xib */,
+			);
+			path = UILabelContentCell;
 			sourceTree = "<group>";
 		};
 		F681E200254D0EE2009FDDF6 /* UITextFiledCell */ = {
@@ -2138,6 +2170,7 @@
 				F63127CB2557CE5E000162B1 /* icon_007.gif in Resources */,
 				F631284A2557CE5F000162B1 /* user_avatar_blue@2x.png in Resources */,
 				F63128142557CE5F000162B1 /* msg_send_audio02@3x.png in Resources */,
+				F643E8D4256A60FC00E95375 /* UILabelContentCell.xib in Resources */,
 				F63127F52557CE5F000162B1 /* chatbar_audio@3x.png in Resources */,
 				F63127E72557CE5F000162B1 /* chatbar_camera@2x.png in Resources */,
 				F63127D42557CE5E000162B1 /* icon_030.gif in Resources */,
@@ -2151,6 +2184,7 @@
 				F63127E92557CE5F000162B1 /* chatbar_map_blue@2x.png in Resources */,
 				F631284C2557CE5F000162B1 /* close_gray@2x.png in Resources */,
 				F63128482557CE5F000162B1 /* back_gary@3x.png in Resources */,
+				F643E8CB256A2BBD00E95375 /* OrderHeaderCell.xib in Resources */,
 				F63127DD2557CE5F000162B1 /* icon_018_cover.png in Resources */,
 				F63127F12557CE5F000162B1 /* chatbar_extend_blue@2x.png in Resources */,
 				F63127E22557CE5F000162B1 /* chat_audio_red@3x.png in Resources */,
@@ -2395,6 +2429,7 @@
 				F643E8B6256A048400E95375 /* OrderModel.m in Sources */,
 				F631288C2557CE5F000162B1 /* EMTextViewController.m in Sources */,
 				F63128612557CE5F000162B1 /* MWPhotoBrowser.m in Sources */,
+				F643E8CA256A2BBD00E95375 /* OrderHeaderCell.m in Sources */,
 				F63128392557CE5F000162B1 /* EMMsgTranspondViewController.m in Sources */,
 				8445CE442554043200FE01A3 /* UserModelManager.m in Sources */,
 				F63128672557CE5F000162B1 /* MWTapDetectingView.m in Sources */,
@@ -2408,6 +2443,7 @@
 				F63128882557CE5F000162B1 /* UIViewController+Search.m in Sources */,
 				F631288A2557CE5F000162B1 /* EMSearchBar.m in Sources */,
 				84B252202549080600887B01 /* AppDelegate.m in Sources */,
+				F643E8D3256A60FC00E95375 /* UILabelContentCell.m in Sources */,
 				F63128782557CE5F000162B1 /* SDWebImageDecoder.m in Sources */,
 				F63128442557CE5F000162B1 /* EMDemoOptions.m in Sources */,
 				F631288B2557CE5F000162B1 /* EMSearchViewController.m in Sources */,

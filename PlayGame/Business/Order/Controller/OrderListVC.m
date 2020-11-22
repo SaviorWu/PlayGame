@@ -20,18 +20,19 @@
     self.naviTitle = @"订单";
     [self addNavigationView];
     [self hiddenBackBtn:YES];
-    
+    [self addRefreshLoading];
+    self.tableView.mj_footer.hidden = YES;
 }
 - (void)registCell{
     [super registCell];
     [self.tableView registCell:@"OrderListCell"];
 }
-- (void)loadUI{
-    
+- (void)loadData{
+    [self.tableView.mj_header beginRefreshing];
     [self showHudInView:self.view];
     [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token} url:@"/ping/mei/dlb" callback:^(JTBaseReqModel *model) {
         if (model.zt == 1){
-            
+            [self.dataArray removeAllObjects];
             for (NSDictionary* dic in model.sj) {
                 OrderModel* vc = [OrderModel mj_objectWithKeyValues:dic];
                 [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UIOrderListType),
@@ -45,9 +46,12 @@
             }
             [self.tableView reloadData];
         }
-        
+        [self.tableView.mj_header endRefreshing];
         [self hideAllHud];
     }];
+}
+- (void)loadUI{
+    [self loadData];
 }
 
 /*

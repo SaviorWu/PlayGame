@@ -46,6 +46,12 @@
     if (model.leading) {
         self.constraintLeading.constant = [model.leading floatValue];
     }
+    if (model.backColor) {
+        self.backgroundColor = model.backColor;
+    }
+    if (model.titleAlignment) {
+        self.lbTips.textAlignment = [model.titleAlignment intValue];
+    }
     
 }
 @end
