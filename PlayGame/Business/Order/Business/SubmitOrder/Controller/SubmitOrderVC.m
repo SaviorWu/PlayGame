@@ -46,7 +46,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title = @"确认订单";
+    self.naviTitle = @"确认订单";
     [self addNavigationView];
     self.choseCount = 1;
     self.lbNumber.text = [NSString stringWithFormat:@"%ld",(long)self.choseCount];
