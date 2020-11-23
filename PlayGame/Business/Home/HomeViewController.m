@@ -74,7 +74,6 @@
     [self addNavigationView];
     [self hiddenBackBtn:YES];
     [self addRightBtn];
-    
 }
 - (void)loadUI{
     [self.dataArray removeAllObjects];

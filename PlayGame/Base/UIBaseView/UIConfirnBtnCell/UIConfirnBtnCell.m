@@ -50,5 +50,9 @@
     self.backgroundColor = UIColor.clearColor;
     self.button.layer.masksToBounds = YES;
     self.button.layer.cornerRadius = 25;
+    if ([model.mark isEqualToString:@"myproket"]) {
+        self.button.layer.cornerRadius = 5;
+        self.backgroundColor = UIColor.whiteColor;
+    }
 }
 @end

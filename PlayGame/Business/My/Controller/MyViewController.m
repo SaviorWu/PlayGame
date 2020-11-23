@@ -7,6 +7,7 @@
 
 #import "MyViewController.h"
 #import "SetVC.h"
+#import "MyPorketVC.h"
 @interface MyViewController ()
 
 @end
@@ -45,6 +46,21 @@
                                                                  BM_cellHeight:@(100)}]];
             
             [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
+                                                                 BM_backColor:[UIColor whiteColor],
+                                                                 BM_cellHeight:@(15)}]];
+            [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_title:@"我的钱包",
+                                                                 BM_mark:@"myproket",
+                                                                 BM_leading:@(20),
+                                                                 BM_trading:@(SCREEN_WIDTH - 120),
+                                                                 BM_backColor:[UIColor colorWithHex:MAIN_RED],
+                                                                 BM_titleColor:UIColor.whiteColor,
+                                                                 BM_cellHeight:@(40),
+                                                                 BM_type:@(UIConfirnBtnType)}]];
+            [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
+                                                                 BM_backColor:[UIColor whiteColor],
+                                                                 BM_cellHeight:@(15)}]];
+            
+            [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
                                                                  BM_backColor:[UIColor colorWithHex:0xf8f8f8],
                                                                  BM_cellHeight:@(20)}]];
             [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_title:@"设置",
@@ -80,13 +96,19 @@
         return [tableView reloadCell:@"MyHeadNameIDCell" withModel:model withBlock:nil];
     }else if([model.type  isEqual: @(UIImageLabelSelectType)]){
         return [tableView reloadCell:@"UIImageLabelSelectCell" withModel:model withBlock:nil];
+    }else if([model.type isEqual:@(UIConfirnBtnType)]){
+        return [tableView reloadCell:@"UIConfirnBtnCell" withModel:model withBlock:^(id  _Nullable value) {
+            MyPorketVC* vc = [[MyPorketVC alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }];
     }else{
         return [super tableView:tableView cellForRowAtIndexPath:indexPath];
     }
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 3) {
+    UIBaseModel* model = self.dataArray[indexPath.row];
+    if([model.type  isEqual: @(UIImageLabelSelectType)]) {
         SetVC* vc = [[SetVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }

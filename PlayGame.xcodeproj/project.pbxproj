@@ -292,6 +292,11 @@
 		F63128902557CE5F000162B1 /* EMRemindManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F63127AF2557CE5E000162B1 /* EMRemindManager.m */; };
 		F63128912557CE5F000162B1 /* EMConversationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F63127B12557CE5E000162B1 /* EMConversationsViewController.m */; };
 		F63128922557CE5F000162B1 /* EMConversationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F63127B22557CE5E000162B1 /* EMConversationCell.m */; };
+		F63C68D3256BECCF000EFFD2 /* SLKPayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F63C68D1256BECCF000EFFD2 /* SLKPayView.m */; };
+		F63C68DA256BFB96000EFFD2 /* MyPorketVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F63C68D9256BFB96000EFFD2 /* MyPorketVC.m */; };
+		F63C68E7256BFBC6000EFFD2 /* MyPorketCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F63C68E5256BFBC6000EFFD2 /* MyPorketCell.m */; };
+		F63C68E8256BFBC6000EFFD2 /* MyPorketCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F63C68E6256BFBC6000EFFD2 /* MyPorketCell.xib */; };
+		F63C68F2256C01C4000EFFD2 /* pickerFBView.m in Sources */ = {isa = PBXBuildFile; fileRef = F63C68F0256C01C4000EFFD2 /* pickerFBView.m */; };
 		F643E8982569F3AD00E95375 /* ResetPaypswdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8972569F3AD00E95375 /* ResetPaypswdVC.m */; };
 		F643E89F256A00DF00E95375 /* OrderListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E89E256A00DF00E95375 /* OrderListVC.m */; };
 		F643E8AB256A031600E95375 /* OrderListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8A9256A031600E95375 /* OrderListCell.m */; };
@@ -781,6 +786,15 @@
 		F63127B22557CE5E000162B1 /* EMConversationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMConversationCell.m; sourceTree = "<group>"; };
 		F63127B32557CE5E000162B1 /* EMConversationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMConversationsViewController.h; sourceTree = "<group>"; };
 		F63127B42557CE5E000162B1 /* EMConversationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMConversationCell.h; sourceTree = "<group>"; };
+		F63C68D1256BECCF000EFFD2 /* SLKPayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLKPayView.m; sourceTree = "<group>"; };
+		F63C68D2256BECCF000EFFD2 /* SLKPayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLKPayView.h; sourceTree = "<group>"; };
+		F63C68D8256BFB96000EFFD2 /* MyPorketVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyPorketVC.h; sourceTree = "<group>"; };
+		F63C68D9256BFB96000EFFD2 /* MyPorketVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyPorketVC.m; sourceTree = "<group>"; };
+		F63C68E4256BFBC6000EFFD2 /* MyPorketCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyPorketCell.h; sourceTree = "<group>"; };
+		F63C68E5256BFBC6000EFFD2 /* MyPorketCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyPorketCell.m; sourceTree = "<group>"; };
+		F63C68E6256BFBC6000EFFD2 /* MyPorketCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPorketCell.xib; sourceTree = "<group>"; };
+		F63C68F0256C01C4000EFFD2 /* pickerFBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pickerFBView.m; sourceTree = "<group>"; };
+		F63C68F1256C01C4000EFFD2 /* pickerFBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pickerFBView.h; sourceTree = "<group>"; };
 		F643E8962569F3AD00E95375 /* ResetPaypswdVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResetPaypswdVC.h; sourceTree = "<group>"; };
 		F643E8972569F3AD00E95375 /* ResetPaypswdVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResetPaypswdVC.m; sourceTree = "<group>"; };
 		F643E89D256A00DF00E95375 /* OrderListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderListVC.h; sourceTree = "<group>"; };
@@ -960,6 +974,7 @@
 		8436C84625491A8D00194E27 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				F63C68CF256BECC7000EFFD2 /* Tools */,
 				8450EB6B254BE81500B54365 /* UIBaseView */,
 				843D36D3254A4EA700FDCD5D /* UIBaseModel */,
 				8436C79025490D6500194E27 /* Categories */,
@@ -1196,6 +1211,7 @@
 		F63126032557C6F0000162B1 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				F63C68D7256BFB76000EFFD2 /* MyPorketVC */,
 				F63126052557C6FB000162B1 /* Help */,
 				F63126042557C6F6000162B1 /* ChangePswd */,
 			);
@@ -1850,6 +1866,60 @@
 			path = Conversation;
 			sourceTree = "<group>";
 		};
+		F63C68CF256BECC7000EFFD2 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				F63C68D0256BECCF000EFFD2 /* SLTKeyBoard */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		F63C68D0256BECCF000EFFD2 /* SLTKeyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				F63C68D1256BECCF000EFFD2 /* SLKPayView.m */,
+				F63C68D2256BECCF000EFFD2 /* SLKPayView.h */,
+			);
+			path = SLTKeyBoard;
+			sourceTree = "<group>";
+		};
+		F63C68D7256BFB76000EFFD2 /* MyPorketVC */ = {
+			isa = PBXGroup;
+			children = (
+				F63C68E3256BFBAB000EFFD2 /* Controller */,
+				F63C68E1256BFBA0000EFFD2 /* View */,
+			);
+			path = MyPorketVC;
+			sourceTree = "<group>";
+		};
+		F63C68E1256BFBA0000EFFD2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F63C68E4256BFBC6000EFFD2 /* MyPorketCell.h */,
+				F63C68E5256BFBC6000EFFD2 /* MyPorketCell.m */,
+				F63C68E6256BFBC6000EFFD2 /* MyPorketCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F63C68E3256BFBAB000EFFD2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F63C68D8256BFB96000EFFD2 /* MyPorketVC.h */,
+				F63C68D9256BFB96000EFFD2 /* MyPorketVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F63C68EF256C01BB000EFFD2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F63C68F1256C01C4000EFFD2 /* pickerFBView.h */,
+				F63C68F0256C01C4000EFFD2 /* pickerFBView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F643E89C256A00C300E95375 /* Order */ = {
 			isa = PBXGroup;
 			children = (
@@ -1950,6 +2020,7 @@
 		F643E8F0256AB26100E95375 /* SubmitOrder */ = {
 			isa = PBXGroup;
 			children = (
+				F63C68EF256C01BB000EFFD2 /* View */,
 				F643E8FA256AB4D800E95375 /* Controller */,
 				F643E8F9256AB4D200E95375 /* Model */,
 			);
@@ -2279,6 +2350,7 @@
 				F631281C2557CE5F000162B1 /* msg_send_audio@3x.png in Resources */,
 				F631282C2557CE5F000162B1 /* msg_file_white@3x.png in Resources */,
 				F6A10748254ED7FB00A2D1B0 /* UIForgetRegistCell.xib in Resources */,
+				F63C68E8256BFBC6000EFFD2 /* MyPorketCell.xib in Resources */,
 				F63127E62557CE5F000162B1 /* chat_audio_blue@3x.png in Resources */,
 				F63127B62557CE5E000162B1 /* pin-red.png in Resources */,
 				F63128012557CE5F000162B1 /* chatbar_face_blue@3x.png in Resources */,
@@ -2488,6 +2560,7 @@
 				F643E8CA256A2BBD00E95375 /* OrderHeaderCell.m in Sources */,
 				F63128392557CE5F000162B1 /* EMMsgTranspondViewController.m in Sources */,
 				8445CE442554043200FE01A3 /* UserModelManager.m in Sources */,
+				F63C68DA256BFB96000EFFD2 /* MyPorketVC.m in Sources */,
 				F63128672557CE5F000162B1 /* MWTapDetectingView.m in Sources */,
 				F63128092557CE5F000162B1 /* EMMsgAudioBubbleView.m in Sources */,
 				F63128422557CE5F000162B1 /* UIViewController+Util.m in Sources */,
@@ -2527,6 +2600,7 @@
 				F63128652557CE5F000162B1 /* MWTapDetectingImageView.m in Sources */,
 				8450EB79254BEBDB00B54365 /* UISpaceCell.m in Sources */,
 				F643E8C2256A27C600E95375 /* OrderDetailVC.m in Sources */,
+				F63C68E7256BFBC6000EFFD2 /* MyPorketCell.m in Sources */,
 				F63127E42557CE5F000162B1 /* EMChatBarRecordAudioView.m in Sources */,
 				F631282E2557CE5F000162B1 /* EMLocationViewController.m in Sources */,
 				F63127BD2557CE5E000162B1 /* EMReadReceiptTableViewCell.m in Sources */,
@@ -2537,6 +2611,7 @@
 				F63127BE2557CE5E000162B1 /* EMReadReceiptMemberModel.m in Sources */,
 				F631288E2557CE5F000162B1 /* EMDateHelper.m in Sources */,
 				8436C7D625490D6500194E27 /* UIView+tool.m in Sources */,
+				F63C68D3256BECCF000EFFD2 /* SLKPayView.m in Sources */,
 				F63128082557CE5F000162B1 /* EMMsgExtGifBubbleView.m in Sources */,
 				F631286E2557CE5F000162B1 /* PSTGridLayoutInfo.m in Sources */,
 				8436C7D925490D6500194E27 /* UITextView+Placeholder.m in Sources */,
@@ -2550,6 +2625,7 @@
 				84C768BC25553D8500E08149 /* MyViewController.m in Sources */,
 				F63128042557CE5F000162B1 /* EMMessageCell.m in Sources */,
 				F63128832557CE5F000162B1 /* EMAlertController.m in Sources */,
+				F63C68F2256C01C4000EFFD2 /* pickerFBView.m in Sources */,
 				84B252312549080700887B01 /* main.m in Sources */,
 				F63128912557CE5F000162B1 /* EMConversationsViewController.m in Sources */,
 				8445CE2A2553D51D00FE01A3 /* ForgetVC.m in Sources */,

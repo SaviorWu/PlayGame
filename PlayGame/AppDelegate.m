@@ -38,8 +38,10 @@
         [MYAPP window].rootViewController = nav;
     }else{
         NSString* uid = [userdefault objectForKey:@"uid"];
+        NSString* pay_password = [userdefault objectForKey:@"pay_password"];
         [UserModelManager shareInstance].userModel.token = token;
         [UserModelManager shareInstance].userModel.uid = uid;
+        [UserModelManager shareInstance].userModel.pay_password = pay_password;
         
         [[EMClient sharedClient] loginWithUsername:[UserModelManager shareInstance].userModel.uid password:[NSString stringWithFormat:@"%@%@",data,[UserModelManager shareInstance].userModel.uid] completion:^(NSString *aUsername, EMError *aError) {
             

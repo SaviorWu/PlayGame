@@ -16,7 +16,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.naviTitle = self.type == 1?@"修改登录密码":@"修改支付密码";
+    if(self.type == 1){
+        self.naviTitle = @"修改登录密码";
+    }else if(self.type == 2){
+        self.naviTitle = @"修改支付密码";
+    }else if(self.type == 3){
+        self.naviTitle = @"设置支付密码";
+    }
     [self addNavigationView];
 }
 - (void)loadUI{

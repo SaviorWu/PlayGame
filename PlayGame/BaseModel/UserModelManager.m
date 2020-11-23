@@ -21,8 +21,11 @@
     NSUserDefaults* userdefault = [NSUserDefaults standardUserDefaults];
     [userdefault removeObjectForKey:@"token"];
     [userdefault removeObjectForKey:@"ID"];
+    [userdefault removeObjectForKey:@"pay_password"];
+    
     [UserModelManager shareInstance].userModel.uid = @"";
     [UserModelManager shareInstance].userModel.token = @"";
+    [UserModelManager shareInstance].userModel.pay_password = @"";
     LoginVC* logVC = [[LoginVC alloc] init];
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:logVC];
     [MYAPP window].rootViewController = nav;

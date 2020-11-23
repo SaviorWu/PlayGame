@@ -48,7 +48,8 @@ typedef enum _UIType {
     UIMyHeadNameIDType,
     UIOrderListType,
     UIOrderDetailHeaderType,
-    UILabelContentType
+    UILabelContentType,
+    UIMyPorketType
 } UIType;
 
 

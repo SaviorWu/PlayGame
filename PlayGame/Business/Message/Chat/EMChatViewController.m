@@ -109,7 +109,7 @@
                                          @"lx":@"user",
                                          @"ds":self.godID
         } url:@"/ping/mei/csh" callback:^(JTBaseReqModel *model) {
-            [self showHint:model.xx];
+            
             if (model.zt == 1) {
                 UserBaseModel* user = [UserBaseModel mj_objectWithKeyValues:model.sj[@"user"]];
                 GameInfoModel* giModel = [GameInfoModel mj_objectWithKeyValues:model.sj[@"gamemy"]];
@@ -126,6 +126,8 @@
                 vc.ubModel = user;
                 vc.godID = self.godID;
                 [self.navigationController pushViewController:vc animated:YES];
+            }else{
+                [self showHint:model.xx];
             }
             [self hideAllHud];
         }];

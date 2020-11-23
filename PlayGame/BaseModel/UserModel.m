@@ -26,6 +26,15 @@
         [userdefault synchronize];
     });
 }
+- (void)setPay_password:(NSString *)pay_password{
+    _pay_password = pay_password;
+    static dispatch_once_t disUid;
+    dispatch_once(&disUid,^ {
+        NSUserDefaults* userdefault = [NSUserDefaults standardUserDefaults];
+        [userdefault setObject:pay_password forKey:@"pay_password"];
+        [userdefault synchronize];
+    });
+}
 @end
 
 
