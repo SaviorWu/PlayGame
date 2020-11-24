@@ -6,7 +6,7 @@
 //
 
 #import "MyPorketVC.h"
-
+#import "RechargeVC.h"
 @interface MyPorketVC ()
 
 @end
@@ -48,6 +48,8 @@
     if ([model.type  isEqual: @(UIMyPorketType)]) {
         return [tableView reloadCell:@"MyPorketCell" withModel:model withBlock:^(id  _Nullable value) {
             NSLog(@"前往充值");
+            RechargeVC* vc = [[RechargeVC alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
         }];
     }else{
         return [super tableView:tableView cellForRowAtIndexPath:indexPath];

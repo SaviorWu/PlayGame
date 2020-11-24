@@ -35,8 +35,13 @@
     }else{
         self.imgSelect.hidden = YES;
     }
-    if (model.subAlignment && [model.subAlignment intValue] == 1) {
-        [self.imgSelect setImage:[UIImage imageNamed:@"右箭头"]];
+    if (model.subAlignment) {
+        if ([model.subAlignment intValue] == 1){
+            [self.imgSelect setImage:[UIImage imageNamed:@"右箭头"]];
+        }else if([model.subAlignment intValue] == 2){
+            self.lbContent.textAlignment = NSTextAlignmentRight;
+        }
+        
     }
     if (model.cellHeight) {
         CGFloat value = model.cellHeight.floatValue - 16.f;
