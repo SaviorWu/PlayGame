@@ -18,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *tvComment;
 @property (weak, nonatomic) IBOutlet UILabel *lbTag;
 @property (weak, nonatomic) IBOutlet UIButton *btnSubmit;
-@property (nonatomic, strong) NSString* star;
+@property (nonatomic, strong) NSString* getUserGiveStar;
 @end
 
 @implementation OrderCommentVC
@@ -28,7 +28,7 @@
     // Do any additional setup after loading the view from its nib.
     self.naviTitle = @"用户评价";
     [self addNavigationView];
-    self.star = @"1";
+    self.getUserGiveStar = @"1";
     self.imgHeader.layer.masksToBounds = YES;
     self.imgHeader.layer.cornerRadius = 8;
     [self.imgHeader LoadImage:self.userGameModel.header withHoderImage:[UIImage imageNamed:@""] successBlock:^(UIImage * _Nonnull retImage) {
@@ -57,7 +57,7 @@
         [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
                                          @"dd":self.orderID,
                                          @"bz":self.tvComment.text,
-                                         @"xx":self.star}
+                                         @"xx":self.getUserGiveStar}
                                    url:@"/ping/mei/pj"
                               callback:^(JTBaseReqModel *model) {
             [self showHint:model.xx];
@@ -97,44 +97,44 @@
 }
 */
 - (IBAction)clickbtn1:(id)sender {
-    self.star = @"1";
-    [self.btn1 setImage:[UIImage imageNamed:@"details_ic_stars_small_h"] forState:UIControlStateNormal];
-    [self.btn2 setImage:[UIImage imageNamed:@"details_ic_stars_big"] forState:UIControlStateNormal];
-    [self.btn3 setImage:[UIImage imageNamed:@"details_ic_stars_big"] forState:UIControlStateNormal];
-    [self.btn4 setImage:[UIImage imageNamed:@"details_ic_stars_big"] forState:UIControlStateNormal];
-    [self.btn5 setImage:[UIImage imageNamed:@"details_ic_stars_big"] forState:UIControlStateNormal];
+    self.getUserGiveStar = @"1";
+    [self.btn1 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_small_h"] forState:UIControlStateNormal];
+    [self.btn2 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_big"] forState:UIControlStateNormal];
+    [self.btn3 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_big"] forState:UIControlStateNormal];
+    [self.btn4 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_big"] forState:UIControlStateNormal];
+    [self.btn5 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_big"] forState:UIControlStateNormal];
 }
 - (IBAction)clickbtn2:(id)sender {
-    self.star = @"2";
-    [self.btn1 setImage:[UIImage imageNamed:@"details_ic_stars_small_h"] forState:UIControlStateNormal];
-    [self.btn2 setImage:[UIImage imageNamed:@"details_ic_stars_small_h"] forState:UIControlStateNormal];
-    [self.btn3 setImage:[UIImage imageNamed:@"details_ic_stars_big"] forState:UIControlStateNormal];
-    [self.btn4 setImage:[UIImage imageNamed:@"details_ic_stars_big"] forState:UIControlStateNormal];
-    [self.btn5 setImage:[UIImage imageNamed:@"details_ic_stars_big"] forState:UIControlStateNormal];
+    self.getUserGiveStar = @"2";
+    [self.btn1 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_small_h"] forState:UIControlStateNormal];
+    [self.btn2 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_small_h"] forState:UIControlStateNormal];
+    [self.btn3 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_big"] forState:UIControlStateNormal];
+    [self.btn4 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_big"] forState:UIControlStateNormal];
+    [self.btn5 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_big"] forState:UIControlStateNormal];
 }
 - (IBAction)clickbtn3:(id)sender {
-    self.star = @"3";
-    [self.btn1 setImage:[UIImage imageNamed:@"details_ic_stars_small_h"] forState:UIControlStateNormal];
-    [self.btn2 setImage:[UIImage imageNamed:@"details_ic_stars_small_h"] forState:UIControlStateNormal];
-    [self.btn3 setImage:[UIImage imageNamed:@"details_ic_stars_small_h"] forState:UIControlStateNormal];
-    [self.btn4 setImage:[UIImage imageNamed:@"details_ic_stars_big"] forState:UIControlStateNormal];
-    [self.btn5 setImage:[UIImage imageNamed:@"details_ic_stars_big"] forState:UIControlStateNormal];
+    self.getUserGiveStar = @"3";
+    [self.btn1 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_small_h"] forState:UIControlStateNormal];
+    [self.btn2 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_small_h"] forState:UIControlStateNormal];
+    [self.btn3 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_small_h"] forState:UIControlStateNormal];
+    [self.btn4 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_big"] forState:UIControlStateNormal];
+    [self.btn5 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_big"] forState:UIControlStateNormal];
 }
 - (IBAction)clickbtn4:(id)sender {
-    self.star = @"4";
-    [self.btn1 setImage:[UIImage imageNamed:@"details_ic_stars_small_h"] forState:UIControlStateNormal];
-    [self.btn2 setImage:[UIImage imageNamed:@"details_ic_stars_small_h"] forState:UIControlStateNormal];
-    [self.btn3 setImage:[UIImage imageNamed:@"details_ic_stars_small_h"] forState:UIControlStateNormal];
-    [self.btn4 setImage:[UIImage imageNamed:@"details_ic_stars_small_h"] forState:UIControlStateNormal];
-    [self.btn5 setImage:[UIImage imageNamed:@"details_ic_stars_big"] forState:UIControlStateNormal];
+    self.getUserGiveStar = @"4";
+    [self.btn1 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_small_h"] forState:UIControlStateNormal];
+    [self.btn2 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_small_h"] forState:UIControlStateNormal];
+    [self.btn3 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_small_h"] forState:UIControlStateNormal];
+    [self.btn4 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_small_h"] forState:UIControlStateNormal];
+    [self.btn5 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_big"] forState:UIControlStateNormal];
 }
 - (IBAction)clickbtn5:(id)sender {
-    self.star = @"5";
-    [self.btn1 setImage:[UIImage imageNamed:@"details_ic_stars_small_h"] forState:UIControlStateNormal];
-    [self.btn2 setImage:[UIImage imageNamed:@"details_ic_stars_small_h"] forState:UIControlStateNormal];
-    [self.btn3 setImage:[UIImage imageNamed:@"details_ic_stars_small_h"] forState:UIControlStateNormal];
-    [self.btn4 setImage:[UIImage imageNamed:@"details_ic_stars_small_h"] forState:UIControlStateNormal];
-    [self.btn5 setImage:[UIImage imageNamed:@"details_ic_stars_small_h"] forState:UIControlStateNormal];
+    self.getUserGiveStar = @"5";
+    [self.btn1 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_small_h"] forState:UIControlStateNormal];
+    [self.btn2 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_small_h"] forState:UIControlStateNormal];
+    [self.btn3 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_small_h"] forState:UIControlStateNormal];
+    [self.btn4 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_small_h"] forState:UIControlStateNormal];
+    [self.btn5 setImage:[UIImage imageNamed:@"details_ic_getUserGiveStars_small_h"] forState:UIControlStateNormal];
 }
 
 @end

@@ -15,17 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString* game_type;
 @property (nonatomic, strong) NSString* gname;
 @property (nonatomic, strong) NSString* game_id;
-//"unit":"币/小时",
-//            "price":"10.00",
-//            "game_type":2,
-//            "gname":"自定义技能",
-//            "game_id":8
 @end
 
 @interface OrderGameModel : NSObject
-//"price":"10.00",
-//                "game_type":2,
-//                "title":"自定义技能"
 @property (nonatomic, strong) NSString* price;
 @property (nonatomic, strong) NSString* game_type;
 @property (nonatomic, strong) NSString* title;

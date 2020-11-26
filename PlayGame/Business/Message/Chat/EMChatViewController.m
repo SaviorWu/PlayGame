@@ -98,16 +98,16 @@
 - (void)clickBuyOrder
 {
     NSLog(@"下单");
-    if (self.gameID.length == 0) {
+    if (self.playthisgameID.length == 0) {
         [self showHint:@"游戏id异常" delay:1.3];
-    }else if(self.godID.length == 0){
+    }else if(self.playthisgameUsercallgodID.length == 0){
         [self showHint:@"大神id异常" delay:1.3];
     }else{
         [self showHudInView:self.view];
         [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
-                                         @"yx":self.gameID,
+                                         @"yx":self.playthisgameID,
                                          @"lx":@"user",
-                                         @"ds":self.godID
+                                         @"ds":self.playthisgameUsercallgodID
         } url:@"/ping/mei/csh" callback:^(JTBaseReqModel *model) {
             
             if (model.zt == 1) {
@@ -120,11 +120,11 @@
                     [gamesList addObject:games];
                 }
                 SubmitOrderVC* vc = [[SubmitOrderVC alloc] init];
-                vc.gameID = self.gameID;
+                vc.gameID = self.playthisgameID;
                 vc.gameList = gamesList;
                 vc.gameInfo = giModel;
                 vc.ubModel = user;
-                vc.godID = self.godID;
+                vc.godID = self.playthisgameUsercallgodID;
                 [self.navigationController pushViewController:vc animated:YES];
             }else{
                 [self showHint:model.xx];
@@ -157,7 +157,7 @@
     self.msgQueue = dispatch_queue_create("emmessage.com", NULL);
     self.msgTimelTag = -1;
     [self _setupChatSubviews];
-    if (self.gameID.length == 0) {
+    if (self.playthisgameID.length == 0) {
         self.buyOrder.hidden = YES;
     }
     [[EMClient sharedClient] addMultiDevicesDelegate:self delegateQueue:nil];

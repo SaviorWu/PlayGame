@@ -26,31 +26,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString* status;
 @property (nonatomic, strong) NSString* commt;
 
-//"game":3,
-//"play_uid":133641597,
-//            "get_time":"2020-09-17 18:54:06",
-//            "serve_start_time":null,
-//            "remark":"我要上星星",
-//            "pay_money":"15.00",
-//            "serve_time":null,
-//            "uid":133646326,
-//            "id":3549,
-//            "order_type":1,
-//            "play_price":"5.00",
-//            "create_time":"2020-09-17 18:36:11",
-//            "statustxt":"已完成",
-//            "reads":null,
-//            "gname":"王者荣耀",
-//            "play_time":"2020-09-17 18:55:02",
-//            "pay_time":"2020-09-17 18:47:30",
-//            "serve_end_time":"2020-09-17 19:04:48",
-//            "play_type":1,
-//            "unit":"局",
-//            "play_unit":3,
-//            "play_round":3,
-//            "order_num":"2009171836114223",
-//            "time":"今天18:55",
-//            "status":6
 @end
 
 NS_ASSUME_NONNULL_END

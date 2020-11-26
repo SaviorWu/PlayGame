@@ -12,7 +12,7 @@
 @property (nonatomic, assign)NSInteger selectIdx;
 @property (nonatomic, strong)NSString* selectAppleGoodsID;
 @property (nonatomic, strong)NSString* money;
-@property (nonatomic, strong)NSString* productId;
+@property (nonatomic, strong)NSString* applepayProducID;
 @property(nonatomic, strong) NSString* receipt;
 @end
 
@@ -191,73 +191,58 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [self hideAllHud];
         });
-        self.productId = model.sj;
-        [self orderToApplePay];
+        if(model.zt == 1){
+            self.applepayProducID = model.sj;
+            [self orderToApplePay];
+        }else{
+            [self showHint:model.xx];
+        }
+        
     }];
 }
 - (void)PaySuccess{
-    [self showHint:@"支付成功" delay:1.3];
+    [self showHint:@"pay success" delay:1.3];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)orderToApplePay{
     //是否允许内购
     if ([SKPaymentQueue canMakePayments]) {
-        NSLog(@"用户允许内购");
-        
-        
         dispatch_async(dispatch_get_main_queue(), ^{
             [self showHudInView:self.view];
         });
         NSArray *product = [[NSArray alloc] initWithObjects:self.selectAppleGoodsID,nil];
         NSSet *nsset = [NSSet setWithArray:product];
-        
-        //初始化请求
         SKProductsRequest *request = [[SKProductsRequest alloc] initWithProductIdentifiers:nsset];
         request.delegate = self;
-        
-        //开始请求
         [request start];
         
     }else{
-        [self showHint:@"您的手机暂时不支持苹果内购哦!" delay:1.3];
+        [self showHint:@"您的手机暂时不支持内购" delay:1.3];
     }
 }
 #pragma mark - SKProductsRequestDelegate
-//接收到产品的返回信息，然后用返回的商品信息进行发起购买请求
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response NS_AVAILABLE_IOS(3_0)
 {
     NSArray *product = response.products;
-    
-    //如果服务器没有产品
-    if([product count] == 0){
+    if([product count] != 0){
+        SKProduct *requestProduct = nil;
+        for (SKProduct *pro in product) {
+            if([pro.productIdentifier isEqualToString:self.selectAppleGoodsID]){
+                requestProduct = pro;
+            }
+        }
+        
+        //发送购买请求
+        SKMutablePayment *payment = [SKMutablePayment paymentWithProduct:requestProduct];
+        payment.applicationUsername = [NSString stringWithFormat:@"%@%@",[UserModelManager shareInstance].userModel.uid,self.applepayProducID];
+        [[SKPaymentQueue defaultQueue] addPayment:payment];
+    }else{
         [self showHint:@"没有该商品"];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self hideAllHudFromSuperView:self.view];
         });
-        
-        return;
     }
-    
-    SKProduct *requestProduct = nil;
-    for (SKProduct *pro in product) {
-        
-        NSLog(@"%@", [pro description]);
-        NSLog(@"%@", [pro localizedTitle]);
-        NSLog(@"%@", [pro localizedDescription]);
-        NSLog(@"%@", [pro price]);
-        NSLog(@"%@", [pro productIdentifier]);
-        
-        //如果后台消费条目的ID与我这里需要请求的一样（用于确保订单的正确性）
-        if([pro.productIdentifier isEqualToString:self.selectAppleGoodsID]){
-            requestProduct = pro;
-        }
-    }
-    
-    //发送购买请求
-    SKMutablePayment *payment = [SKMutablePayment paymentWithProduct:requestProduct];
-    payment.applicationUsername = [NSString stringWithFormat:@"%@%@_1",[UserModelManager shareInstance].userModel.uid,self.productId];
-    [[SKPaymentQueue defaultQueue] addPayment:payment];
 }
 #pragma mark - SKRequestDelegate
 //请求失败
@@ -266,13 +251,11 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         [self hideAllHudFromSuperView:self.view];
     });
-    NSLog(@"error:%@", error);
 }
 
 //请求结束
 - (void)requestDidFinish:(SKRequest *)request
 {
-    NSLog(@"请求结束");
 }
 
 #pragma mark - SKPaymentTransactionObserver
@@ -292,12 +275,6 @@
                 [[SKPaymentQueue defaultQueue] finishTransaction:tran];
                 [self completeTransaction:tran];
             }
-                break;
-            case SKPaymentTransactionStatePurchasing:
-                NSLog(@"商品添加进列表");
-                break;
-            case SKPaymentTransactionStateRestored:
-                NSLog(@"已经购买过商品");
                 break;
             case SKPaymentTransactionStateFailed:
             {
@@ -321,16 +298,13 @@
 - (void)completeTransaction:(SKPaymentTransaction *)transaction
 {
     
-    NSURL *receiptURL = [[NSBundle mainBundle] appStoreReceiptURL];
-    // 从沙盒中获取到购买凭据
-    NSData *receiptData = [NSData dataWithContentsOfURL:receiptURL];
+    NSURL *rurl = [[NSBundle mainBundle] appStoreReceiptURL];
+    NSData *rdata = [NSData dataWithContentsOfURL:rurl];
     
     NSURL *url = [NSURL URLWithString:@"https://sandbox.itunes.apple.com/verifyReceipt"];
     NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:15.0f];
     urlRequest.HTTPMethod = @"POST";
-    NSString *encodeStr = [receiptData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
-//    NSString *receipt1=[encodeStr stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-//    NSString *receipt2=[receipt1 stringByReplacingOccurrencesOfString:@"\r" withString:@""];
+    NSString *encodeStr = [rdata base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
     _receipt = encodeStr;
     NSString *payload = [NSString stringWithFormat:@"{\"receipt-data\":\"%@\"}", _receipt];
     NSData *payloadData = [payload dataUsingEncoding:NSUTF8StringEncoding];
@@ -346,16 +320,6 @@
         return;
     }
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:result options:NSJSONReadingAllowFragments error:nil];
-    NSLog(@"请求成功后的数据:%@",dic);
-    //这里可以通过判断 state == 0 验证凭据成功，然后进入自己服务器二次验证，,也可以直接进行服务器逻辑的判断。
-    //本地服务器验证成功之后别忘了 [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
-    
-    NSString *productId = transaction.payment.productIdentifier;
-    NSString *applicationUsername = transaction.payment.applicationUsername;
-    
-    NSLog(@"applicationUsername = %@",applicationUsername);
-    NSLog(@"productId = %@",productId);
-    NSLog(@"transcationid = %@",transaction.transactionIdentifier);
     if (dic != nil) {
         [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
                                          @"receipt":self.receipt

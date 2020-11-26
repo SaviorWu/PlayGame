@@ -18,8 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 //@property (nonatomic, strong) NSString* from;
 //@property (nonatomic, strong) NSString* to;
 @property (nonatomic, strong) NSString* header;
-@property (nonatomic, strong) NSString* gameID;
-@property (nonatomic, strong) NSString* godID;
+@property (nonatomic, strong) NSString* playthisgameID;
+@property (nonatomic, strong) NSString* playthisgameUsercallgodID;
 
 @property(nonatomic, strong) UIAlertController *alertController;
 

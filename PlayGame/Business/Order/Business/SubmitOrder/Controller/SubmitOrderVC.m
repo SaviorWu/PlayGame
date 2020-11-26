@@ -20,11 +20,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbCost;
 @property (weak, nonatomic) IBOutlet UITextField *tfRemark;
 @property (weak, nonatomic) IBOutlet UILabel *lbTotalBottom;
-@property (nonatomic, assign) NSInteger choseCount;
-@property (nonatomic, strong) NSMutableArray* fbList;
+@property (nonatomic, assign) NSInteger selectTotalCount;
+@property (nonatomic, strong) NSMutableArray* FWFBList;
 @property (strong, nonatomic) UIAlertAction *okAction;
 @property (strong, nonatomic) UIAlertAction *cancelAction;
-@property (nonatomic, strong) pickerFBView* pickerView;
+@property (nonatomic, strong) pickerFBView* selectGameInfoPickerView;
 @end
 
 @implementation SubmitOrderVC
@@ -34,21 +34,21 @@
     [self.btnBuyServiceName setTitle:oneStr forState:UIControlStateNormal];
 }
 - (IBAction)clickJS:(id)sender {
-    if (self.choseCount <= 0) {
+    if (self.selectTotalCount <= 0) {
         return;
     }
-    self.choseCount--;
-    self.lbNumber.text = [NSString stringWithFormat:@"%ld",(long)self.choseCount];
-    self.lbTotal.text = [NSString stringWithFormat:@"%ld",(long)self.choseCount];
-    self.lbCost.text = [NSString stringWithFormat:@"%.2f币",[self.gameInfo.price doubleValue]*self.choseCount];
-    self.lbTotalBottom.text = [NSString stringWithFormat:@"%.2f币",[self.gameInfo.price doubleValue]*self.choseCount];
+    self.selectTotalCount--;
+    self.lbNumber.text = [NSString stringWithFormat:@"%ld",(long)self.selectTotalCount];
+    self.lbTotal.text = [NSString stringWithFormat:@"%ld",(long)self.selectTotalCount];
+    self.lbCost.text = [NSString stringWithFormat:@"%.2f币",[self.gameInfo.price doubleValue]*self.selectTotalCount];
+    self.lbTotalBottom.text = [NSString stringWithFormat:@"%.2f币",[self.gameInfo.price doubleValue]*self.selectTotalCount];
 }
 - (IBAction)clickAdd:(id)sender {
-    self.choseCount++;
-    self.lbNumber.text = [NSString stringWithFormat:@"%ld",(long)self.choseCount];
-    self.lbTotal.text = [NSString stringWithFormat:@"%ld",(long)self.choseCount];
-    self.lbCost.text = [NSString stringWithFormat:@"%.2f币",[self.gameInfo.price doubleValue]*self.choseCount];
-    self.lbTotalBottom.text = [NSString stringWithFormat:@"%.2f币",[self.gameInfo.price doubleValue]*self.choseCount];
+    self.selectTotalCount++;
+    self.lbNumber.text = [NSString stringWithFormat:@"%ld",(long)self.selectTotalCount];
+    self.lbTotal.text = [NSString stringWithFormat:@"%ld",(long)self.selectTotalCount];
+    self.lbCost.text = [NSString stringWithFormat:@"%.2f币",[self.gameInfo.price doubleValue]*self.selectTotalCount];
+    self.lbTotalBottom.text = [NSString stringWithFormat:@"%.2f币",[self.gameInfo.price doubleValue]*self.selectTotalCount];
 }
 
 - (void)viewDidLoad {
@@ -56,8 +56,8 @@
     // Do any additional setup after loading the view from its nib.
     self.naviTitle = @"确认订单";
     [self addNavigationView];
-    self.choseCount = 1;
-    self.lbNumber.text = [NSString stringWithFormat:@"%ld",(long)self.choseCount];
+    self.selectTotalCount = 1;
+    self.lbNumber.text = [NSString stringWithFormat:@"%ld",(long)self.selectTotalCount];
     self.btnSubmitOrder.layer.masksToBounds = YES;
     self.btnSubmitOrder.layer.cornerRadius = 20;
     self.btnSubmitOrder.backgroundColor = [UIColor colorWithHex:MAIN_BLUE];
@@ -70,9 +70,9 @@
     OrderGameModel* model = self.gameList[0];
     [self.btnBuyServiceName setTitle:model.title forState:UIControlStateNormal];
     
-    self.lbTotal.text = [NSString stringWithFormat:@"%ld",(long)self.choseCount];
-    self.lbCost.text = [NSString stringWithFormat:@"%.2f币",[self.gameInfo.price doubleValue]*self.choseCount];
-    self.lbTotalBottom.text = [NSString stringWithFormat:@"%.2f币",[self.gameInfo.price doubleValue]*self.choseCount];
+    self.lbTotal.text = [NSString stringWithFormat:@"%ld",(long)self.selectTotalCount];
+    self.lbCost.text = [NSString stringWithFormat:@"%.2f币",[self.gameInfo.price doubleValue]*self.selectTotalCount];
+    self.lbTotalBottom.text = [NSString stringWithFormat:@"%.2f币",[self.gameInfo.price doubleValue]*self.selectTotalCount];
     
     self.imgheader.layer.masksToBounds = YES;
     self.imgheader.layer.cornerRadius = 5;
@@ -86,15 +86,15 @@
         OrderGameModel* model = self.gameList[i];
         [pickList addObject:model.title];
     }
-    self.pickerView = [[pickerFBView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-    self.pickerView.delegate = self;
-    self.pickerView.onePick = pickList;
-    self.pickerView.oneStr = self.btnBuyServiceName.titleLabel.text;
-    [self.view addSubview:self.pickerView];
+    self.selectGameInfoPickerView = [[pickerFBView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    self.selectGameInfoPickerView.delegate = self;
+    self.selectGameInfoPickerView.onePick = pickList;
+    self.selectGameInfoPickerView.oneStr = self.btnBuyServiceName.titleLabel.text;
+    [self.view addSubview:self.selectGameInfoPickerView];
 }
 
 - (IBAction)clickSubmit:(id)sender {
-    if (self.choseCount <= 0) {
+    if (self.selectTotalCount <= 0) {
         [self showHint:@"请增加游戏数量" delay:1.3];
     }else if (self.godID.length == 0){
         [self showHint:@"信息异常" delay:1.3];
@@ -126,7 +126,7 @@
                     [self showHudInView:self.view];
                     [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
                                                      @"yx":self.btnBuyServiceName.titleLabel.text,
-                                                     @"js":@(self.choseCount),
+                                                     @"js":@(self.selectTotalCount),
                                                      @"ds":self.godID,
                                                      @"bz":self.tfRemark.text,
                                                      @"sj":DateTime}
@@ -160,52 +160,6 @@
             // 弹出对话框
             [self presentViewController:alert animated:true completion:nil];
         }
-        
-//        OrderPayViewController* opVC = [[OrderPayViewController alloc] init];
-//        opVC.block = ^{
-//            SLKPayView *payView = [[SLKPayView alloc]initWithPayInfo:nil target:self.navigationController inputPwdCompleiton:^(NSString * _Nonnull pwdStr) {
-//                // 支付接口
-//                [self showHudInView:self.view];
-//                [NetworkRequest GET:@"/app/order/orderSub"
-//                         parameters:@{@"token":[UserInfo shareInstance].userModel.token,
-//                                      @"gname":self.btnBuyServiceName.titleLabel.text,
-//                                      @"number":@(self.choseCount),
-//                                      @"gid":self.godID,
-//                                      @"remark":self.tfRemark.text,
-//                                      @"play_time":DateTime
-//                         } success:^(NetWorkResponseModel * _Nullable responseModel) {
-//                    dispatch_async(dispatch_get_main_queue(), ^{
-//                        [[NSNotificationCenter defaultCenter] postNotificationName:@"refreshOrderList" object:self];
-//                    });
-//                    [NetworkRequest GET:@"/app/order/orderPay"
-//                             parameters:@{@"token":[UserInfo shareInstance].userModel.token,
-//                                          @"pay_password":[PublicTool base64EncodeString:pwdStr],
-//                                          @"orderid":[NSString stringWithFormat:@"%@",responseModel.data]}
-//                                success:^(NetWorkResponseModel * _Nullable responseModel) {
-//                        [self hideAllHudFromSuperView:self.view];
-//                        [self showHint:responseModel.msg];
-//                    } failure:^(NSError * _Nullable error, NetWorkResponseModel * _Nullable responseModel) {
-//                        [self showHint:responseModel.msg];
-//                        [self hideAllHudFromSuperView:self.view];
-//                        if ([responseModel.code integerValue] == -2) {
-//                            [self showHint:@"账号在其他设备登录"];
-//                            [UserInfo userLogout];
-//                        }
-//                    }];
-//                } failure:^(NSError * _Nullable error, NetWorkResponseModel * _Nullable responseModel) {
-//                    [self hideAllHudFromSuperView:self.view];
-//                    if ([responseModel.code integerValue] == -2) {
-//                        [self showHint:@"账号在其他设备登录"];
-//                        [UserInfo userLogout];
-//                    }
-//                }];
-//            }];
-//            [payView show];
-//        };
-//        opVC.image = self.imgheader.image;
-//        opVC.money = [NSString stringWithFormat:@"账户余额(%@币)",self.lbTotalBottom.text];
-//        [opVC popWithAnimated:self];
-//        [self presentViewController:opVC animated:YES completion:nil];
         
     }
 }

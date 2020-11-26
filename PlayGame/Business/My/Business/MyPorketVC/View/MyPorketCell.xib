@@ -40,12 +40,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(虚拟币｜适用于本APP下单服务)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ouu-xl-cqC">
-                                <rect key="frame" x="20" y="76" width="150.5" height="12"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAs-aV-A4K">
                                 <rect key="frame" x="200" y="58" width="80" height="30"/>
                                 <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -64,14 +58,12 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Ouu-xl-cqC" secondAttribute="bottom" constant="8" id="6RL-uO-zg8"/>
                             <constraint firstItem="lRS-2d-YaR" firstAttribute="leading" secondItem="9cC-nn-EJO" secondAttribute="trailing" constant="4" id="TsE-Zu-GbF"/>
                             <constraint firstAttribute="height" constant="96" id="WwA-2i-zsN"/>
                             <constraint firstAttribute="height" constant="100" id="bG2-vj-5wR"/>
                             <constraint firstItem="cOG-EA-Ljf" firstAttribute="leading" secondItem="aTr-a3-qjY" secondAttribute="leading" constant="20" id="bLj-KS-1hm"/>
                             <constraint firstItem="lRS-2d-YaR" firstAttribute="bottom" secondItem="9cC-nn-EJO" secondAttribute="bottom" id="cb6-eu-dsO"/>
                             <constraint firstItem="9cC-nn-EJO" firstAttribute="leading" secondItem="cOG-EA-Ljf" secondAttribute="trailing" constant="8" id="dhB-U6-nyO"/>
-                            <constraint firstItem="Ouu-xl-cqC" firstAttribute="leading" secondItem="cOG-EA-Ljf" secondAttribute="leading" id="h8d-V0-XJA"/>
                             <constraint firstAttribute="bottom" secondItem="BAs-aV-A4K" secondAttribute="bottom" constant="8" id="kyf-4K-4rr"/>
                             <constraint firstItem="lRS-2d-YaR" firstAttribute="top" secondItem="aTr-a3-qjY" secondAttribute="top" constant="13" id="nLu-fO-TYh"/>
                             <constraint firstAttribute="trailing" secondItem="BAs-aV-A4K" secondAttribute="trailing" constant="10" id="pTC-eU-8hH"/>

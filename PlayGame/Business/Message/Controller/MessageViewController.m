@@ -204,11 +204,11 @@
     NSLog(@"chartUid = %@",chartUid);
     [JTNetwork requestGetWithParam:@{@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/ping/mei/ds" callback:^(JTBaseReqModel *baseModel) {
         [self hideAllHudFromSuperView:self.view];
-        NSString* gameID = @"";
+        NSString* playthisgamegameid = @"";
         if ([[baseModel.sj allKeys] containsObject:@"id"]) {
-            gameID = [NSString stringWithFormat:@"%@",baseModel.sj[@"id"]];
+            playthisgamegameid = [NSString stringWithFormat:@"%@",baseModel.sj[@"id"]];
         }
-        if (gameID.length == 0) {
+        if (playthisgamegameid.length == 0) {
             return;
         }
         
@@ -216,8 +216,8 @@
         vc.vcTitle = nickname.length == 0?@" ":nickname;
         vc.direction = (NSInteger)model.emModel.latestMessage.direction;
         vc.header = header;
-        vc.gameID = gameID;
-        vc.godID = chartUid;
+        vc.playthisgameUsercallgodID = playthisgamegameid;
+        vc.playthisgameUsercallgodID = chartUid;
         [self.navigationController pushViewController:vc animated:YES];
     }];
     
