@@ -202,7 +202,7 @@
 }
 - (void)PaySuccess{
     [self showHint:@"pay success" delay:1.3];
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)orderToApplePay{
@@ -328,8 +328,14 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self hideAllHud];
             });
-            [self PaySuccess];
-            [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
+            if (model.zt == 1) {
+                [self PaySuccess];
+                [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
+            }else{
+                [self showHint:model.xx];
+                [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
+            }
+            
         }];
     }
     else{
