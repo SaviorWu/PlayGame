@@ -216,7 +216,7 @@
         vc.vcTitle = nickname.length == 0?@" ":nickname;
         vc.direction = (NSInteger)model.emModel.latestMessage.direction;
         vc.header = header;
-        vc.playthisgameUsercallgodID = playthisgamegameid;
+        vc.playthisgameID = playthisgamegameid;
         vc.playthisgameUsercallgodID = chartUid;
         [self.navigationController pushViewController:vc animated:YES];
     }];
