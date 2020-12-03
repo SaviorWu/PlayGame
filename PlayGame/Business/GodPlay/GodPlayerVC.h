@@ -1,15 +1,15 @@
 //
-//  OrderListVC.h
+//  GodPlayerVC.h
 //  PlayGame
 //
-//  Created by FriendWu on 2020/11/22.
+//  Created by FriendWu on 2020/12/3.
 //
 
 #import "BaseTableViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OrderListVC : BaseTableViewController
+@interface GodPlayerVC : BaseTableViewController
 
 @end
 

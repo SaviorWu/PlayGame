@@ -296,22 +296,10 @@
 		F63C68DA256BFB96000EFFD2 /* MyPorketVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F63C68D9256BFB96000EFFD2 /* MyPorketVC.m */; };
 		F63C68E7256BFBC6000EFFD2 /* MyPorketCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F63C68E5256BFBC6000EFFD2 /* MyPorketCell.m */; };
 		F63C68E8256BFBC6000EFFD2 /* MyPorketCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F63C68E6256BFBC6000EFFD2 /* MyPorketCell.xib */; };
-		F63C68F2256C01C4000EFFD2 /* pickerFBView.m in Sources */ = {isa = PBXBuildFile; fileRef = F63C68F0256C01C4000EFFD2 /* pickerFBView.m */; };
 		F643E8982569F3AD00E95375 /* ResetPaypswdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8972569F3AD00E95375 /* ResetPaypswdVC.m */; };
-		F643E89F256A00DF00E95375 /* OrderListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E89E256A00DF00E95375 /* OrderListVC.m */; };
-		F643E8AB256A031600E95375 /* OrderListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8A9256A031600E95375 /* OrderListCell.m */; };
-		F643E8AC256A031600E95375 /* OrderListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F643E8AA256A031600E95375 /* OrderListCell.xib */; };
-		F643E8B6256A048400E95375 /* OrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8B5256A048400E95375 /* OrderModel.m */; };
-		F643E8C2256A27C600E95375 /* OrderDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8C1256A27C600E95375 /* OrderDetailVC.m */; };
-		F643E8CA256A2BBD00E95375 /* OrderHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8C8256A2BBD00E95375 /* OrderHeaderCell.m */; };
-		F643E8CB256A2BBD00E95375 /* OrderHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F643E8C9256A2BBD00E95375 /* OrderHeaderCell.xib */; };
 		F643E8D3256A60FC00E95375 /* UILabelContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8D1256A60FC00E95375 /* UILabelContentCell.m */; };
 		F643E8D4256A60FC00E95375 /* UILabelContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F643E8D2256A60FC00E95375 /* UILabelContentCell.xib */; };
-		F643E8EB256AACE000E95375 /* OrderCommentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8E9256AACE000E95375 /* OrderCommentVC.m */; };
-		F643E8EC256AACE000E95375 /* OrderCommentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F643E8EA256AACE000E95375 /* OrderCommentVC.xib */; };
-		F643E8F4256AB27500E95375 /* SubmitOrderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8F2256AB27500E95375 /* SubmitOrderVC.m */; };
-		F643E8F5256AB27500E95375 /* SubmitOrderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F643E8F3256AB27500E95375 /* SubmitOrderVC.xib */; };
-		F643E8FD256AB4EF00E95375 /* GameInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8FC256AB4EF00E95375 /* GameInfoModel.m */; };
+		F645536825792DA500A25592 /* GodPlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F645536725792DA500A25592 /* GodPlayerVC.m */; };
 		F681E204254D0F04009FDDF6 /* UITextFiledCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F681E202254D0F04009FDDF6 /* UITextFiledCell.m */; };
 		F681E205254D0F04009FDDF6 /* UITextFiledCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F681E203254D0F04009FDDF6 /* UITextFiledCell.xib */; };
 		F681E210254D1EE5009FDDF6 /* UIVerificationCodeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F681E20E254D1EE5009FDDF6 /* UIVerificationCodeCell.m */; };
@@ -794,33 +782,13 @@
 		F63C68E4256BFBC6000EFFD2 /* MyPorketCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyPorketCell.h; sourceTree = "<group>"; };
 		F63C68E5256BFBC6000EFFD2 /* MyPorketCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyPorketCell.m; sourceTree = "<group>"; };
 		F63C68E6256BFBC6000EFFD2 /* MyPorketCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPorketCell.xib; sourceTree = "<group>"; };
-		F63C68F0256C01C4000EFFD2 /* pickerFBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pickerFBView.m; sourceTree = "<group>"; };
-		F63C68F1256C01C4000EFFD2 /* pickerFBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pickerFBView.h; sourceTree = "<group>"; };
 		F643E8962569F3AD00E95375 /* ResetPaypswdVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResetPaypswdVC.h; sourceTree = "<group>"; };
 		F643E8972569F3AD00E95375 /* ResetPaypswdVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResetPaypswdVC.m; sourceTree = "<group>"; };
-		F643E89D256A00DF00E95375 /* OrderListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderListVC.h; sourceTree = "<group>"; };
-		F643E89E256A00DF00E95375 /* OrderListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderListVC.m; sourceTree = "<group>"; };
-		F643E8A8256A031600E95375 /* OrderListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderListCell.h; sourceTree = "<group>"; };
-		F643E8A9256A031600E95375 /* OrderListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderListCell.m; sourceTree = "<group>"; };
-		F643E8AA256A031600E95375 /* OrderListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderListCell.xib; sourceTree = "<group>"; };
-		F643E8B4256A048400E95375 /* OrderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderModel.h; sourceTree = "<group>"; };
-		F643E8B5256A048400E95375 /* OrderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderModel.m; sourceTree = "<group>"; };
-		F643E8C0256A27C600E95375 /* OrderDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderDetailVC.h; sourceTree = "<group>"; };
-		F643E8C1256A27C600E95375 /* OrderDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderDetailVC.m; sourceTree = "<group>"; };
-		F643E8C7256A2BBD00E95375 /* OrderHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderHeaderCell.h; sourceTree = "<group>"; };
-		F643E8C8256A2BBD00E95375 /* OrderHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderHeaderCell.m; sourceTree = "<group>"; };
-		F643E8C9256A2BBD00E95375 /* OrderHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderHeaderCell.xib; sourceTree = "<group>"; };
 		F643E8D0256A60FC00E95375 /* UILabelContentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILabelContentCell.h; sourceTree = "<group>"; };
 		F643E8D1256A60FC00E95375 /* UILabelContentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILabelContentCell.m; sourceTree = "<group>"; };
 		F643E8D2256A60FC00E95375 /* UILabelContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UILabelContentCell.xib; sourceTree = "<group>"; };
-		F643E8E8256AACE000E95375 /* OrderCommentVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderCommentVC.h; sourceTree = "<group>"; };
-		F643E8E9256AACE000E95375 /* OrderCommentVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderCommentVC.m; sourceTree = "<group>"; };
-		F643E8EA256AACE000E95375 /* OrderCommentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCommentVC.xib; sourceTree = "<group>"; };
-		F643E8F1256AB27500E95375 /* SubmitOrderVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubmitOrderVC.h; sourceTree = "<group>"; };
-		F643E8F2256AB27500E95375 /* SubmitOrderVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubmitOrderVC.m; sourceTree = "<group>"; };
-		F643E8F3256AB27500E95375 /* SubmitOrderVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubmitOrderVC.xib; sourceTree = "<group>"; };
-		F643E8FB256AB4EF00E95375 /* GameInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameInfoModel.h; sourceTree = "<group>"; };
-		F643E8FC256AB4EF00E95375 /* GameInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameInfoModel.m; sourceTree = "<group>"; };
+		F645536625792DA500A25592 /* GodPlayerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GodPlayerVC.h; sourceTree = "<group>"; };
+		F645536725792DA500A25592 /* GodPlayerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GodPlayerVC.m; sourceTree = "<group>"; };
 		F681E201254D0F04009FDDF6 /* UITextFiledCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextFiledCell.h; sourceTree = "<group>"; };
 		F681E202254D0F04009FDDF6 /* UITextFiledCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextFiledCell.m; sourceTree = "<group>"; };
 		F681E203254D0F04009FDDF6 /* UITextFiledCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UITextFiledCell.xib; sourceTree = "<group>"; };
@@ -991,7 +959,7 @@
 		8436C84D25491BCC00194E27 /* Business */ = {
 			isa = PBXGroup;
 			children = (
-				F643E89C256A00C300E95375 /* Order */,
+				F645536525792D8A00A25592 /* GodPlay */,
 				F631264F2557CE5D000162B1 /* Message */,
 				843D36D2254A4E8B00FDCD5D /* Regist&Login&Forget */,
 				8436C84F25491BDF00194E27 /* My */,
@@ -1915,92 +1883,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		F63C68EF256C01BB000EFFD2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F63C68F1256C01C4000EFFD2 /* pickerFBView.h */,
-				F63C68F0256C01C4000EFFD2 /* pickerFBView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		F643E89C256A00C300E95375 /* Order */ = {
-			isa = PBXGroup;
-			children = (
-				F643E8BD256A27A000E95375 /* Business */,
-				F643E8B3256A046E00E95375 /* Model */,
-				F643E8A7256A02FD00E95375 /* Controller */,
-				F643E8A6256A02F700E95375 /* View */,
-			);
-			path = Order;
-			sourceTree = "<group>";
-		};
-		F643E8A6256A02F700E95375 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F643E8A8256A031600E95375 /* OrderListCell.h */,
-				F643E8A9256A031600E95375 /* OrderListCell.m */,
-				F643E8AA256A031600E95375 /* OrderListCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		F643E8A7256A02FD00E95375 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F643E89D256A00DF00E95375 /* OrderListVC.h */,
-				F643E89E256A00DF00E95375 /* OrderListVC.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		F643E8B3256A046E00E95375 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F643E8B4256A048400E95375 /* OrderModel.h */,
-				F643E8B5256A048400E95375 /* OrderModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		F643E8BD256A27A000E95375 /* Business */ = {
-			isa = PBXGroup;
-			children = (
-				F643E8F0256AB26100E95375 /* SubmitOrder */,
-				F643E8DB256AAB8900E95375 /* OrderComment */,
-				F643E8BE256A27A700E95375 /* OrderDetail */,
-			);
-			path = Business;
-			sourceTree = "<group>";
-		};
-		F643E8BE256A27A700E95375 /* OrderDetail */ = {
-			isa = PBXGroup;
-			children = (
-				F643E8C6256A2B4800E95375 /* View */,
-				F643E8BF256A27B200E95375 /* Controller */,
-			);
-			path = OrderDetail;
-			sourceTree = "<group>";
-		};
-		F643E8BF256A27B200E95375 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F643E8C0256A27C600E95375 /* OrderDetailVC.h */,
-				F643E8C1256A27C600E95375 /* OrderDetailVC.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		F643E8C6256A2B4800E95375 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				F643E8C7256A2BBD00E95375 /* OrderHeaderCell.h */,
-				F643E8C8256A2BBD00E95375 /* OrderHeaderCell.m */,
-				F643E8C9256A2BBD00E95375 /* OrderHeaderCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		F643E8CF256A60DC00E95375 /* UILabelContentCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -2011,43 +1893,13 @@
 			path = UILabelContentCell;
 			sourceTree = "<group>";
 		};
-		F643E8DB256AAB8900E95375 /* OrderComment */ = {
+		F645536525792D8A00A25592 /* GodPlay */ = {
 			isa = PBXGroup;
 			children = (
-				F643E8E8256AACE000E95375 /* OrderCommentVC.h */,
-				F643E8E9256AACE000E95375 /* OrderCommentVC.m */,
-				F643E8EA256AACE000E95375 /* OrderCommentVC.xib */,
+				F645536625792DA500A25592 /* GodPlayerVC.h */,
+				F645536725792DA500A25592 /* GodPlayerVC.m */,
 			);
-			path = OrderComment;
-			sourceTree = "<group>";
-		};
-		F643E8F0256AB26100E95375 /* SubmitOrder */ = {
-			isa = PBXGroup;
-			children = (
-				F63C68EF256C01BB000EFFD2 /* View */,
-				F643E8FA256AB4D800E95375 /* Controller */,
-				F643E8F9256AB4D200E95375 /* Model */,
-			);
-			path = SubmitOrder;
-			sourceTree = "<group>";
-		};
-		F643E8F9256AB4D200E95375 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F643E8FB256AB4EF00E95375 /* GameInfoModel.h */,
-				F643E8FC256AB4EF00E95375 /* GameInfoModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		F643E8FA256AB4D800E95375 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				F643E8F1256AB27500E95375 /* SubmitOrderVC.h */,
-				F643E8F2256AB27500E95375 /* SubmitOrderVC.m */,
-				F643E8F3256AB27500E95375 /* SubmitOrderVC.xib */,
-			);
-			path = Controller;
+			path = GodPlay;
 			sourceTree = "<group>";
 		};
 		F681E200254D0EE2009FDDF6 /* UITextFiledCell */ = {
@@ -2236,7 +2088,6 @@
 				F63128162557CE5F000162B1 /* msg_bg_send@2x.png in Resources */,
 				F63128542557CE5F000162B1 /* user_avatar_gray@2x.png in Resources */,
 				F631282A2557CE5F000162B1 /* msg_img_broken@3x.png in Resources */,
-				F643E8AC256A031600E95375 /* OrderListCell.xib in Resources */,
 				F63127D12557CE5E000162B1 /* icon_020.gif in Resources */,
 				8450EB7A254BEBDB00B54365 /* UISpaceCell.xib in Resources */,
 				F63127C52557CE5E000162B1 /* icon_029.gif in Resources */,
@@ -2321,11 +2172,9 @@
 				F63127E92557CE5F000162B1 /* chatbar_map_blue@2x.png in Resources */,
 				F631284C2557CE5F000162B1 /* close_gray@2x.png in Resources */,
 				F63128482557CE5F000162B1 /* back_gary@3x.png in Resources */,
-				F643E8CB256A2BBD00E95375 /* OrderHeaderCell.xib in Resources */,
 				F63127DD2557CE5F000162B1 /* icon_018_cover.png in Resources */,
 				F63127F12557CE5F000162B1 /* chatbar_extend_blue@2x.png in Resources */,
 				F63127E22557CE5F000162B1 /* chat_audio_red@3x.png in Resources */,
-				F643E8F5256AB27500E95375 /* SubmitOrderVC.xib in Resources */,
 				F631283B2557CE5F000162B1 /* MessageViewController.xib in Resources */,
 				F63128302557CE5F000162B1 /* chat_info@3x.png in Resources */,
 				F63128152557CE5F000162B1 /* msg_send_audio02@2x.png in Resources */,
@@ -2333,7 +2182,6 @@
 				F631283C2557CE5F000162B1 /* MessageListCell.xib in Resources */,
 				8445CE332553D92400FE01A3 /* UILineCell.xib in Resources */,
 				84B2522B2549080700887B01 /* Assets.xcassets in Resources */,
-				F643E8EC256AACE000E95375 /* OrderCommentVC.xib in Resources */,
 				F63127FD2557CE5F000162B1 /* chatbar_camera_blue@3x.png in Resources */,
 				F63128872557CE5F000162B1 /* alert_info@2x.png in Resources */,
 				F63128842557CE5F000162B1 /* alert_success@2x.png in Resources */,
@@ -2512,7 +2360,6 @@
 				F631280D2557CE5F000162B1 /* EMMsgTextBubbleView.m in Sources */,
 				F63128892557CE5F000162B1 /* EMSearchResultController.m in Sources */,
 				F63128072557CE5F000162B1 /* EMMsgRecallBubbleView.m in Sources */,
-				F643E8AB256A031600E95375 /* OrderListCell.m in Sources */,
 				8436C77425490D2000194E27 /* JTBaseTabBarController.m in Sources */,
 				8445CE3B2554036A00FE01A3 /* UserModel.m in Sources */,
 				F631287B2557CE5F000162B1 /* EMTextView.m in Sources */,
@@ -2525,7 +2372,6 @@
 				84117BFB25494D7300B68891 /* UITableView+loadCell.m in Sources */,
 				F631285F2557CE5F000162B1 /* wav.mm in Sources */,
 				F631280B2557CE5F000162B1 /* EMMsgFileBubbleView.m in Sources */,
-				F643E8EB256AACE000E95375 /* OrderCommentVC.m in Sources */,
 				8436C7E625490D6500194E27 /* UIColor+Extension.m in Sources */,
 				F631280C2557CE5F000162B1 /* EMMsgImageBubbleView.m in Sources */,
 				F6A1073B254ED47C00A2D1B0 /* UIConfirnBtnCell.m in Sources */,
@@ -2565,12 +2411,9 @@
 				F63128382557CE5F000162B1 /* EMAudioPlayerHelper.mm in Sources */,
 				F6A10747254ED7FB00A2D1B0 /* UIForgetRegistCell.m in Sources */,
 				F63127BC2557CE5E000162B1 /* EMReadReceiptMsgViewController.m in Sources */,
-				F643E89F256A00DF00E95375 /* OrderListVC.m in Sources */,
 				F631283F2557CE5F000162B1 /* EMEmojiHelper.m in Sources */,
-				F643E8B6256A048400E95375 /* OrderModel.m in Sources */,
 				F631288C2557CE5F000162B1 /* EMTextViewController.m in Sources */,
 				F63128612557CE5F000162B1 /* MWPhotoBrowser.m in Sources */,
-				F643E8CA256A2BBD00E95375 /* OrderHeaderCell.m in Sources */,
 				F63128392557CE5F000162B1 /* EMMsgTranspondViewController.m in Sources */,
 				8445CE442554043200FE01A3 /* UserModelManager.m in Sources */,
 				F63C68DA256BFB96000EFFD2 /* MyPorketVC.m in Sources */,
@@ -2592,8 +2435,6 @@
 				8436C7E325490D6500194E27 /* UIColor+RCColor.m in Sources */,
 				F631280F2557CE5F000162B1 /* EMMsgLocationBubbleView.m in Sources */,
 				8436C7E925490D6500194E27 /* UINavigationBar+handle.m in Sources */,
-				F643E8FD256AB4EF00E95375 /* GameInfoModel.m in Sources */,
-				F643E8F4256AB27500E95375 /* SubmitOrderVC.m in Sources */,
 				8436C78A25490D3000194E27 /* BaseController.m in Sources */,
 				F63127BB2557CE5E000162B1 /* EMMoreFunctionView.m in Sources */,
 				846F3EC72556726500FC5E71 /* MyHeadNameIDCell.m in Sources */,
@@ -2613,7 +2454,6 @@
 				8436C878254939DC00194E27 /* JTTabBarBtn.m in Sources */,
 				F63128652557CE5F000162B1 /* MWTapDetectingImageView.m in Sources */,
 				8450EB79254BEBDB00B54365 /* UISpaceCell.m in Sources */,
-				F643E8C2256A27C600E95375 /* OrderDetailVC.m in Sources */,
 				F63C68E7256BFBC6000EFFD2 /* MyPorketCell.m in Sources */,
 				F63127E42557CE5F000162B1 /* EMChatBarRecordAudioView.m in Sources */,
 				F631282E2557CE5F000162B1 /* EMLocationViewController.m in Sources */,
@@ -2638,8 +2478,8 @@
 				8436C7DC25490D6500194E27 /* NSString+Tool.m in Sources */,
 				84C768BC25553D8500E08149 /* MyViewController.m in Sources */,
 				F63128042557CE5F000162B1 /* EMMessageCell.m in Sources */,
+				F645536825792DA500A25592 /* GodPlayerVC.m in Sources */,
 				F63128832557CE5F000162B1 /* EMAlertController.m in Sources */,
-				F63C68F2256C01C4000EFFD2 /* pickerFBView.m in Sources */,
 				84B252312549080700887B01 /* main.m in Sources */,
 				F63128912557CE5F000162B1 /* EMConversationsViewController.m in Sources */,
 				8445CE2A2553D51D00FE01A3 /* ForgetVC.m in Sources */,

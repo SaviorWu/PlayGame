@@ -11,7 +11,7 @@
 #import "HomeViewController.h"
 #import "MyViewController.h"
 #import "MessageViewController.h"
-#import "OrderListVC.h"
+#import "GodPlayerVC.h"
 @interface JTBaseTabBarController ()
 
 @end
@@ -45,8 +45,8 @@
     HomeViewController *homeVC = [[HomeViewController alloc] init];
     MyViewController *myVC = [[MyViewController alloc] init];
     MessageViewController* vc = [[MessageViewController alloc] init];
-    OrderListVC* orderVC = [[OrderListVC alloc] init];
-    self.viewControllers = @[ homeVC, vc,orderVC,myVC];
+    GodPlayerVC* gpvc = [[GodPlayerVC alloc] init];
+    self.viewControllers = @[ homeVC,gpvc, vc,myVC];
 }
 
 
@@ -99,12 +99,12 @@
             [[UIImage imageNamed:@"消息"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
             obj.tabBarItem.selectedImage =
             [[UIImage imageNamed:@"消息选择"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        }else if ([obj isKindOfClass:[OrderListVC class]]) {
-            obj.tabBarItem.title = @"订单";
+        }else if ([obj isKindOfClass:[GodPlayerVC class]]){
+            obj.tabBarItem.title = @"大神";
             obj.tabBarItem.image =
-            [[UIImage imageNamed:@"订单-灰"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            [[UIImage imageNamed:@"玩家"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
             obj.tabBarItem.selectedImage =
-            [[UIImage imageNamed:@"订单-绿"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            [[UIImage imageNamed:@"玩家选择"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         }else {
             NSLog(@"Unknown TabBarController");
         }

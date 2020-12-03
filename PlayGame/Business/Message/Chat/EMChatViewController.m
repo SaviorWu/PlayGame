@@ -25,8 +25,6 @@
 #import "EMLocationViewController.h"
 #import "EMMsgTranspondViewController.h"
 #import "EMAtGroupMembersViewController.h"
-#import "GameInfoModel.h"
-#import "SubmitOrderVC.h"
 @interface EMChatViewController ()<UIScrollViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, EMMultiDevicesDelegate, EMChatManagerDelegate, EMGroupManagerDelegate, EMChatroomManagerDelegate, EMChatBarDelegate, EMMessageCellDelegate, EMChatBarEmoticonViewDelegate, EMChatBarRecordAudioViewDelegate,EMMoreFunctionViewDelegate,EMReadReceiptMsgDelegate,UIDocumentInteractionControllerDelegate>
 
 @property (nonatomic, strong) dispatch_queue_t msgQueue;
@@ -95,65 +93,13 @@
     
     return self;
 }
-- (void)clickBuyOrder
-{
-    NSLog(@"下单");
-    if (self.playthisgameID.length == 0) {
-        [self showHint:@"游戏id异常" delay:1.3];
-    }else if(self.playthisgameUsercallgodID.length == 0){
-        [self showHint:@"大神id异常" delay:1.3];
-    }else{
-        [self showHudInView:self.view];
-        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
-                                         @"yx":self.playthisgameID,
-                                         @"lx":@"user",
-                                         @"ds":self.playthisgameUsercallgodID
-        } url:@"/ping/mei/csh" callback:^(JTBaseReqModel *model) {
-            
-            if (model.zt == 1) {
-                UserBaseModel* user = [UserBaseModel mj_objectWithKeyValues:model.sj[@"user"]];
-                GameInfoModel* giModel = [GameInfoModel mj_objectWithKeyValues:model.sj[@"gamemy"]];
-                NSArray* gList = model.sj[@"games"];
-                NSMutableArray* gamesList = [[NSMutableArray alloc] init];
-                for (NSDictionary* dic in gList) {
-                    OrderGameModel* games = [OrderGameModel mj_objectWithKeyValues:dic];
-                    [gamesList addObject:games];
-                }
-                SubmitOrderVC* vc = [[SubmitOrderVC alloc] init];
-                vc.gameID = self.playthisgameID;
-                vc.gameList = gamesList;
-                vc.gameInfo = giModel;
-                vc.ubModel = user;
-                vc.godID = self.playthisgameUsercallgodID;
-                [self.navigationController pushViewController:vc animated:YES];
-            }else{
-                [self showHint:model.xx];
-            }
-            [self hideAllHud];
-        }];
-    }
-}
-- (void)addBuyOrder
-{
-    self.buyOrder = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 60, 25, 60, 40)];
-//    self.buyOrder.centerY = self.titleLabel.centerY;
-    [self.buyOrder addTarget:self action:@selector(clickBuyOrder) forControlEvents:UIControlEventTouchUpInside];
-    [self.buyOrder setTitle:@"下单" forState:UIControlStateNormal];
-    self.buyOrder.titleLabel.font = [UIFont systemFontOfSize:15];
-    [self.buyOrder setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    
-    UIImageView* imagev = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"订单"]];
-    imagev.top += 8;
-    imagev.left -= 6;
-    [self.buyOrder addSubview:imagev];
-    [self.vwNavigation addSubview:self.buyOrder];
-}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.naviTitle = self.vcTitle;
     [self addNavigationView];
-    [self addBuyOrder];
+//    [self addBuyOrder];
     self.msgQueue = dispatch_queue_create("emmessage.com", NULL);
     self.msgTimelTag = -1;
     [self _setupChatSubviews];
