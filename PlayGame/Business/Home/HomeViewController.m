@@ -74,6 +74,15 @@
     [self addNavigationView];
     [self hiddenBackBtn:YES];
     [self addRightBtn];
+    
+    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/ping/mei/grzx" callback:^(JTBaseReqModel *model) {
+        if (model.zt == 1){
+            [UserModelManager shareInstance].userModel.money = model.sj[@"userdata"][@"money"];
+            [UserModelManager shareInstance].userModel.nickname = model.sj[@"userdata"][@"nickname"];
+            [UserModelManager shareInstance].userModel.header = model.sj[@"userdata"][@"header"];
+        }
+    }];
+    
 }
 - (void)loadUI{
     [self.dataArray removeAllObjects];

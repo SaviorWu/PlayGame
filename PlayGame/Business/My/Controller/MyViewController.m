@@ -19,6 +19,12 @@
     // Do any additional setup after loading the view.
     [self hiddenNavigation];
     [self.tableView registCell:@"MyHeadNameIDCell"];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        UIEdgeInsets padding = UIEdgeInsetsMake(-20, 0, 0, 0);
+        [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(self.view).with.insets(padding);
+        }];
+    }];
 }
 - (void)viewDidAppear:(BOOL)animated
 {

@@ -296,10 +296,28 @@
 		F63C68DA256BFB96000EFFD2 /* MyPorketVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F63C68D9256BFB96000EFFD2 /* MyPorketVC.m */; };
 		F63C68E7256BFBC6000EFFD2 /* MyPorketCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F63C68E5256BFBC6000EFFD2 /* MyPorketCell.m */; };
 		F63C68E8256BFBC6000EFFD2 /* MyPorketCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F63C68E6256BFBC6000EFFD2 /* MyPorketCell.xib */; };
+		F63CB5EB2585B2040033004A /* GodPlayerListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F63CB5EA2585B2040033004A /* GodPlayerListVC.m */; };
+		F63FB50525845DC6002EB4D7 /* GodDetailInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F63FB50325845DC6002EB4D7 /* GodDetailInfoCell.m */; };
+		F63FB50625845DC6002EB4D7 /* GodDetailInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F63FB50425845DC6002EB4D7 /* GodDetailInfoCell.xib */; };
+		F63FB50D25846BD1002EB4D7 /* GiffModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F63FB50C25846BD1002EB4D7 /* GiffModel.m */; };
+		F63FB51B25846D96002EB4D7 /* UIViewController+PopAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = F63FB51525846D96002EB4D7 /* UIViewController+PopAnimated.m */; };
+		F63FB51C25846D96002EB4D7 /* PopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F63FB51625846D96002EB4D7 /* PopViewController.m */; };
+		F63FB51D25846D96002EB4D7 /* LHCustomModalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F63FB51725846D96002EB4D7 /* LHCustomModalTransition.m */; };
+		F63FB52725846E44002EB4D7 /* GiftPickVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F63FB52525846E44002EB4D7 /* GiftPickVC.m */; };
+		F63FB52825846E44002EB4D7 /* GiftPickVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F63FB52625846E44002EB4D7 /* GiftPickVC.xib */; };
+		F63FB52F25847039002EB4D7 /* GiftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F63FB52D25847039002EB4D7 /* GiftCell.m */; };
+		F63FB53025847039002EB4D7 /* GiftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F63FB52E25847039002EB4D7 /* GiftCell.xib */; };
 		F643E8982569F3AD00E95375 /* ResetPaypswdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8972569F3AD00E95375 /* ResetPaypswdVC.m */; };
 		F643E8D3256A60FC00E95375 /* UILabelContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8D1256A60FC00E95375 /* UILabelContentCell.m */; };
 		F643E8D4256A60FC00E95375 /* UILabelContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F643E8D2256A60FC00E95375 /* UILabelContentCell.xib */; };
-		F645536825792DA500A25592 /* GodPlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F645536725792DA500A25592 /* GodPlayerVC.m */; };
+		F6445832257FAAA4005AF6B9 /* GodPlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F6445830257FAAA4005AF6B9 /* GodPlayerVC.m */; };
+		F6445833257FAAA4005AF6B9 /* GodPlayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6445831257FAAA4005AF6B9 /* GodPlayerVC.xib */; };
+		F644583B257FADAA005AF6B9 /* GodListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6445839257FADAA005AF6B9 /* GodListCell.m */; };
+		F644583C257FADAA005AF6B9 /* GodListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F644583A257FADAA005AF6B9 /* GodListCell.xib */; };
+		F6445846257FB0ED005AF6B9 /* GodListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6445845257FB0ED005AF6B9 /* GodListModel.m */; };
+		F6526EA22582480A002FC2B4 /* GodDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F6526EA12582480A002FC2B4 /* GodDetailVC.m */; };
+		F6526EAD258248EC002FC2B4 /* GodDetailHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6526EAB258248EC002FC2B4 /* GodDetailHeadCell.m */; };
+		F6526EAE258248EC002FC2B4 /* GodDetailHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6526EAC258248EC002FC2B4 /* GodDetailHeadCell.xib */; };
 		F681E204254D0F04009FDDF6 /* UITextFiledCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F681E202254D0F04009FDDF6 /* UITextFiledCell.m */; };
 		F681E205254D0F04009FDDF6 /* UITextFiledCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F681E203254D0F04009FDDF6 /* UITextFiledCell.xib */; };
 		F681E210254D1EE5009FDDF6 /* UIVerificationCodeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F681E20E254D1EE5009FDDF6 /* UIVerificationCodeCell.m */; };
@@ -782,13 +800,43 @@
 		F63C68E4256BFBC6000EFFD2 /* MyPorketCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyPorketCell.h; sourceTree = "<group>"; };
 		F63C68E5256BFBC6000EFFD2 /* MyPorketCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyPorketCell.m; sourceTree = "<group>"; };
 		F63C68E6256BFBC6000EFFD2 /* MyPorketCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPorketCell.xib; sourceTree = "<group>"; };
+		F63CB5E92585B2040033004A /* GodPlayerListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GodPlayerListVC.h; sourceTree = "<group>"; };
+		F63CB5EA2585B2040033004A /* GodPlayerListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GodPlayerListVC.m; sourceTree = "<group>"; };
+		F63FB50225845DC6002EB4D7 /* GodDetailInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GodDetailInfoCell.h; sourceTree = "<group>"; };
+		F63FB50325845DC6002EB4D7 /* GodDetailInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GodDetailInfoCell.m; sourceTree = "<group>"; };
+		F63FB50425845DC6002EB4D7 /* GodDetailInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GodDetailInfoCell.xib; sourceTree = "<group>"; };
+		F63FB50B25846BD1002EB4D7 /* GiffModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GiffModel.h; sourceTree = "<group>"; };
+		F63FB50C25846BD1002EB4D7 /* GiffModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GiffModel.m; sourceTree = "<group>"; };
+		F63FB51525846D96002EB4D7 /* UIViewController+PopAnimated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PopAnimated.m"; sourceTree = "<group>"; };
+		F63FB51625846D96002EB4D7 /* PopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopViewController.m; sourceTree = "<group>"; };
+		F63FB51725846D96002EB4D7 /* LHCustomModalTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHCustomModalTransition.m; sourceTree = "<group>"; };
+		F63FB51825846D96002EB4D7 /* UIViewController+PopAnimated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PopAnimated.h"; sourceTree = "<group>"; };
+		F63FB51925846D96002EB4D7 /* LHCustomModalTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHCustomModalTransition.h; sourceTree = "<group>"; };
+		F63FB51A25846D96002EB4D7 /* PopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopViewController.h; sourceTree = "<group>"; };
+		F63FB52425846E44002EB4D7 /* GiftPickVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GiftPickVC.h; sourceTree = "<group>"; };
+		F63FB52525846E44002EB4D7 /* GiftPickVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GiftPickVC.m; sourceTree = "<group>"; };
+		F63FB52625846E44002EB4D7 /* GiftPickVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiftPickVC.xib; sourceTree = "<group>"; };
+		F63FB52C25847039002EB4D7 /* GiftCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GiftCell.h; sourceTree = "<group>"; };
+		F63FB52D25847039002EB4D7 /* GiftCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GiftCell.m; sourceTree = "<group>"; };
+		F63FB52E25847039002EB4D7 /* GiftCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiftCell.xib; sourceTree = "<group>"; };
 		F643E8962569F3AD00E95375 /* ResetPaypswdVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResetPaypswdVC.h; sourceTree = "<group>"; };
 		F643E8972569F3AD00E95375 /* ResetPaypswdVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResetPaypswdVC.m; sourceTree = "<group>"; };
 		F643E8D0256A60FC00E95375 /* UILabelContentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILabelContentCell.h; sourceTree = "<group>"; };
 		F643E8D1256A60FC00E95375 /* UILabelContentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILabelContentCell.m; sourceTree = "<group>"; };
 		F643E8D2256A60FC00E95375 /* UILabelContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UILabelContentCell.xib; sourceTree = "<group>"; };
-		F645536625792DA500A25592 /* GodPlayerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GodPlayerVC.h; sourceTree = "<group>"; };
-		F645536725792DA500A25592 /* GodPlayerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GodPlayerVC.m; sourceTree = "<group>"; };
+		F644582F257FAAA4005AF6B9 /* GodPlayerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GodPlayerVC.h; sourceTree = "<group>"; };
+		F6445830257FAAA4005AF6B9 /* GodPlayerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GodPlayerVC.m; sourceTree = "<group>"; };
+		F6445831257FAAA4005AF6B9 /* GodPlayerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GodPlayerVC.xib; sourceTree = "<group>"; };
+		F6445838257FADAA005AF6B9 /* GodListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GodListCell.h; sourceTree = "<group>"; };
+		F6445839257FADAA005AF6B9 /* GodListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GodListCell.m; sourceTree = "<group>"; };
+		F644583A257FADAA005AF6B9 /* GodListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GodListCell.xib; sourceTree = "<group>"; };
+		F6445844257FB0ED005AF6B9 /* GodListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GodListModel.h; sourceTree = "<group>"; };
+		F6445845257FB0ED005AF6B9 /* GodListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GodListModel.m; sourceTree = "<group>"; };
+		F6526EA02582480A002FC2B4 /* GodDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GodDetailVC.h; sourceTree = "<group>"; };
+		F6526EA12582480A002FC2B4 /* GodDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GodDetailVC.m; sourceTree = "<group>"; };
+		F6526EAA258248EC002FC2B4 /* GodDetailHeadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GodDetailHeadCell.h; sourceTree = "<group>"; };
+		F6526EAB258248EC002FC2B4 /* GodDetailHeadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GodDetailHeadCell.m; sourceTree = "<group>"; };
+		F6526EAC258248EC002FC2B4 /* GodDetailHeadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GodDetailHeadCell.xib; sourceTree = "<group>"; };
 		F681E201254D0F04009FDDF6 /* UITextFiledCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextFiledCell.h; sourceTree = "<group>"; };
 		F681E202254D0F04009FDDF6 /* UITextFiledCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextFiledCell.m; sourceTree = "<group>"; };
 		F681E203254D0F04009FDDF6 /* UITextFiledCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UITextFiledCell.xib; sourceTree = "<group>"; };
@@ -1840,6 +1888,7 @@
 		F63C68CF256BECC7000EFFD2 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				F63FB51425846D96002EB4D7 /* PopViewController */,
 				F63C68D0256BECCF000EFFD2 /* SLTKeyBoard */,
 			);
 			path = Tools;
@@ -1883,6 +1932,28 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		F63FB50A25846BB0002EB4D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F63FB50B25846BD1002EB4D7 /* GiffModel.h */,
+				F63FB50C25846BD1002EB4D7 /* GiffModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F63FB51425846D96002EB4D7 /* PopViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F63FB51925846D96002EB4D7 /* LHCustomModalTransition.h */,
+				F63FB51725846D96002EB4D7 /* LHCustomModalTransition.m */,
+				F63FB51A25846D96002EB4D7 /* PopViewController.h */,
+				F63FB51625846D96002EB4D7 /* PopViewController.m */,
+				F63FB51825846D96002EB4D7 /* UIViewController+PopAnimated.h */,
+				F63FB51525846D96002EB4D7 /* UIViewController+PopAnimated.m */,
+			);
+			path = PopViewController;
+			sourceTree = "<group>";
+		};
 		F643E8CF256A60DC00E95375 /* UILabelContentCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1893,13 +1964,68 @@
 			path = UILabelContentCell;
 			sourceTree = "<group>";
 		};
+		F6445837257FAD95005AF6B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F6445838257FADAA005AF6B9 /* GodListCell.h */,
+				F6445839257FADAA005AF6B9 /* GodListCell.m */,
+				F644583A257FADAA005AF6B9 /* GodListCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F6445843257FB0DB005AF6B9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F6445844257FB0ED005AF6B9 /* GodListModel.h */,
+				F6445845257FB0ED005AF6B9 /* GodListModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F645536525792D8A00A25592 /* GodPlay */ = {
 			isa = PBXGroup;
 			children = (
-				F645536625792DA500A25592 /* GodPlayerVC.h */,
-				F645536725792DA500A25592 /* GodPlayerVC.m */,
+				F6526E9F258247BB002FC2B4 /* Business */,
+				F6445843257FB0DB005AF6B9 /* Model */,
+				F6445837257FAD95005AF6B9 /* View */,
+				F644582F257FAAA4005AF6B9 /* GodPlayerVC.h */,
+				F6445830257FAAA4005AF6B9 /* GodPlayerVC.m */,
+				F6445831257FAAA4005AF6B9 /* GodPlayerVC.xib */,
+				F63CB5E92585B2040033004A /* GodPlayerListVC.h */,
+				F63CB5EA2585B2040033004A /* GodPlayerListVC.m */,
 			);
 			path = GodPlay;
+			sourceTree = "<group>";
+		};
+		F6526E9F258247BB002FC2B4 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				F63FB50A25846BB0002EB4D7 /* Model */,
+				F6526EA9258248CD002FC2B4 /* View */,
+				F6526EA02582480A002FC2B4 /* GodDetailVC.h */,
+				F6526EA12582480A002FC2B4 /* GodDetailVC.m */,
+				F63FB52425846E44002EB4D7 /* GiftPickVC.h */,
+				F63FB52525846E44002EB4D7 /* GiftPickVC.m */,
+				F63FB52625846E44002EB4D7 /* GiftPickVC.xib */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		F6526EA9258248CD002FC2B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F6526EAA258248EC002FC2B4 /* GodDetailHeadCell.h */,
+				F6526EAB258248EC002FC2B4 /* GodDetailHeadCell.m */,
+				F6526EAC258248EC002FC2B4 /* GodDetailHeadCell.xib */,
+				F63FB50225845DC6002EB4D7 /* GodDetailInfoCell.h */,
+				F63FB50325845DC6002EB4D7 /* GodDetailInfoCell.m */,
+				F63FB50425845DC6002EB4D7 /* GodDetailInfoCell.xib */,
+				F63FB52C25847039002EB4D7 /* GiftCell.h */,
+				F63FB52D25847039002EB4D7 /* GiftCell.m */,
+				F63FB52E25847039002EB4D7 /* GiftCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F681E200254D0EE2009FDDF6 /* UITextFiledCell */ = {
@@ -2096,6 +2222,7 @@
 				F63127C72557CE5E000162B1 /* icon_010.gif in Resources */,
 				F63127E12557CE5F000162B1 /* chat_audio_red@2x.png in Resources */,
 				F63127D92557CE5E000162B1 /* icon_035_cover.png in Resources */,
+				F63FB50625845DC6002EB4D7 /* GodDetailInfoCell.xib in Resources */,
 				F63127C12557CE5E000162B1 /* icon_002_cover.png in Resources */,
 				84B2522E2549080700887B01 /* LaunchScreen.storyboard in Resources */,
 				F63127CF2557CE5E000162B1 /* icon_021.gif in Resources */,
@@ -2111,9 +2238,11 @@
 				F63128582557CE5F000162B1 /* user_avatar_me@3x.png in Resources */,
 				F63128292557CE5F000162B1 /* msg_video_white@3x.png in Resources */,
 				F6A1073C254ED47C00A2D1B0 /* UIConfirnBtnCell.xib in Resources */,
+				F6445833257FAAA4005AF6B9 /* GodPlayerVC.xib in Resources */,
 				F63128502557CE5F000162B1 /* close_white@3x.png in Resources */,
 				F63127C42557CE5E000162B1 /* icon_030_cover.png in Resources */,
 				8450EB70254BE83500B54365 /* UITipsCell.xib in Resources */,
+				F63FB53025847039002EB4D7 /* GiftCell.xib in Resources */,
 				F6A10751254EDDA300A2D1B0 /* UILabelButtonCell.xib in Resources */,
 				F63127FA2557CE5F000162B1 /* chatbar_extend_blue@3x.png in Resources */,
 				F63127C92557CE5E000162B1 /* icon_022_cover.png in Resources */,
@@ -2166,6 +2295,7 @@
 				F631281F2557CE5F000162B1 /* msg_recv_audio01@2x.png in Resources */,
 				F63127D62557CE5E000162B1 /* icon_019.gif in Resources */,
 				F63128192557CE5F000162B1 /* msg_location@3x.png in Resources */,
+				F6526EAE258248EC002FC2B4 /* GodDetailHeadCell.xib in Resources */,
 				F63128312557CE5F000162B1 /* chat_info@2x.png in Resources */,
 				F63127EF2557CE5F000162B1 /* chatbar_face@2x.png in Resources */,
 				F63128112557CE5F000162B1 /* msg_location@2x.png in Resources */,
@@ -2178,6 +2308,7 @@
 				F631283B2557CE5F000162B1 /* MessageViewController.xib in Resources */,
 				F63128302557CE5F000162B1 /* chat_info@3x.png in Resources */,
 				F63128152557CE5F000162B1 /* msg_send_audio02@2x.png in Resources */,
+				F644583C257FADAA005AF6B9 /* GodListCell.xib in Resources */,
 				F63127EE2557CE5F000162B1 /* chatbar_camera@3x.png in Resources */,
 				F631283C2557CE5F000162B1 /* MessageListCell.xib in Resources */,
 				8445CE332553D92400FE01A3 /* UILineCell.xib in Resources */,
@@ -2211,6 +2342,7 @@
 				F631281C2557CE5F000162B1 /* msg_send_audio@3x.png in Resources */,
 				F631282C2557CE5F000162B1 /* msg_file_white@3x.png in Resources */,
 				F6A10748254ED7FB00A2D1B0 /* UIForgetRegistCell.xib in Resources */,
+				F63FB52825846E44002EB4D7 /* GiftPickVC.xib in Resources */,
 				F63C68E8256BFBC6000EFFD2 /* MyPorketCell.xib in Resources */,
 				F63127E62557CE5F000162B1 /* chat_audio_blue@3x.png in Resources */,
 				F63127B62557CE5E000162B1 /* pin-red.png in Resources */,
@@ -2367,6 +2499,7 @@
 				8436C75A25490CD600194E27 /* JTNetwork.m in Sources */,
 				F63128452557CE5F000162B1 /* EMEmoticonGroup.m in Sources */,
 				F63128752557CE5F000162B1 /* PSTGridLayoutRow.m in Sources */,
+				F63FB51C25846D96002EB4D7 /* PopViewController.m in Sources */,
 				846F3ED1255675F300FC5E71 /* UIImageView+loading.m in Sources */,
 				F631286B2557CE5F000162B1 /* PSTCollectionViewController.m in Sources */,
 				84117BFB25494D7300B68891 /* UITableView+loadCell.m in Sources */,
@@ -2400,6 +2533,7 @@
 				F631280A2557CE5F000162B1 /* EMMsgVideoBubbleView.m in Sources */,
 				F63127E02557CE5F000162B1 /* EMChatBarEmoticonView.m in Sources */,
 				F63127B52557CE5E000162B1 /* EMChatBarItem.m in Sources */,
+				F644583B257FADAA005AF6B9 /* GodListCell.m in Sources */,
 				F63128722557CE5F000162B1 /* PSTGridLayoutSection.m in Sources */,
 				8436C75425490CD600194E27 /* JTShareData.m in Sources */,
 				8436C7DB25490D6500194E27 /* NSData+Base65EnCode.m in Sources */,
@@ -2415,6 +2549,7 @@
 				F631288C2557CE5F000162B1 /* EMTextViewController.m in Sources */,
 				F63128612557CE5F000162B1 /* MWPhotoBrowser.m in Sources */,
 				F63128392557CE5F000162B1 /* EMMsgTranspondViewController.m in Sources */,
+				F6526EA22582480A002FC2B4 /* GodDetailVC.m in Sources */,
 				8445CE442554043200FE01A3 /* UserModelManager.m in Sources */,
 				F63C68DA256BFB96000EFFD2 /* MyPorketVC.m in Sources */,
 				F63128672557CE5F000162B1 /* MWTapDetectingView.m in Sources */,
@@ -2423,6 +2558,7 @@
 				F63127E32557CE5F000162B1 /* EMAudioRecordHelper.mm in Sources */,
 				F681E204254D0F04009FDDF6 /* UITextFiledCell.m in Sources */,
 				F63128062557CE5F000162B1 /* EMMessageTimeCell.m in Sources */,
+				F63CB5EB2585B2040033004A /* GodPlayerListVC.m in Sources */,
 				F63128032557CE5F000162B1 /* EMChatBar.m in Sources */,
 				F631283E2557CE5F000162B1 /* EMNotificationHelper.m in Sources */,
 				F63128882557CE5F000162B1 /* UIViewController+Search.m in Sources */,
@@ -2475,10 +2611,14 @@
 				8436C7E825490D6500194E27 /* UIImage+TOO.m in Sources */,
 				F63128602557CE5F000162B1 /* amrFileCodec.mm in Sources */,
 				84117BEF2549465200B68891 /* BaseTableViewController.m in Sources */,
+				F63FB51B25846D96002EB4D7 /* UIViewController+PopAnimated.m in Sources */,
+				F6526EAD258248EC002FC2B4 /* GodDetailHeadCell.m in Sources */,
 				8436C7DC25490D6500194E27 /* NSString+Tool.m in Sources */,
+				F63FB52F25847039002EB4D7 /* GiftCell.m in Sources */,
 				84C768BC25553D8500E08149 /* MyViewController.m in Sources */,
+				F63FB50D25846BD1002EB4D7 /* GiffModel.m in Sources */,
 				F63128042557CE5F000162B1 /* EMMessageCell.m in Sources */,
-				F645536825792DA500A25592 /* GodPlayerVC.m in Sources */,
+				F6445832257FAAA4005AF6B9 /* GodPlayerVC.m in Sources */,
 				F63128832557CE5F000162B1 /* EMAlertController.m in Sources */,
 				84B252312549080700887B01 /* main.m in Sources */,
 				F63128912557CE5F000162B1 /* EMConversationsViewController.m in Sources */,
@@ -2486,6 +2626,8 @@
 				8436C75525490CD600194E27 /* JTUserModel.m in Sources */,
 				F63128662557CE5F000162B1 /* MWPhoto.m in Sources */,
 				F643E8982569F3AD00E95375 /* ResetPaypswdVC.m in Sources */,
+				F63FB50525845DC6002EB4D7 /* GodDetailInfoCell.m in Sources */,
+				F63FB51D25846D96002EB4D7 /* LHCustomModalTransition.m in Sources */,
 				F631286A2557CE5F000162B1 /* DACircularProgressView.m in Sources */,
 				84C768AD2554F0EB00E08149 /* RegistVC.m in Sources */,
 				F631286C2557CE5F000162B1 /* PSTCollectionViewFlowLayout.m in Sources */,
@@ -2493,6 +2635,8 @@
 				F63128702557CE5F000162B1 /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,
 				F63128362557CE5F000162B1 /* EMAtGroupMembersViewController.m in Sources */,
 				8436C7E425490D6500194E27 /* UIView+baseExtra.m in Sources */,
+				F6445846257FB0ED005AF6B9 /* GodListModel.m in Sources */,
+				F63FB52725846E44002EB4D7 /* GiftPickVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

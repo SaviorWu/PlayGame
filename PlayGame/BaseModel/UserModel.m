@@ -44,4 +44,7 @@
 @implementation UserGameModel
 
 @end
+@implementation PersonalPageModel
+
+@end
 

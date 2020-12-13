@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *btnRight;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintLeftLeading;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintRightTrailing;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *cellHeight;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *btnWidth;
 @property (nonatomic, strong) success block;
 @end
 

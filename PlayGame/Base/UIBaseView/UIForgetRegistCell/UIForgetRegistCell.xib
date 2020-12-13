@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,6 +41,12 @@
                         <state key="normal" title="Button">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JIV-Lb-DTK"/>
+                                <exclude reference="vWT-1Y-srH"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <action selector="clickRight:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="lSP-gE-eT1"/>
                         </connections>
@@ -51,6 +57,8 @@
                     <constraint firstAttribute="bottom" secondItem="l1c-M5-4kw" secondAttribute="bottom" id="5HU-QF-PdN"/>
                     <constraint firstItem="l1c-M5-4kw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="KYG-gH-H4w"/>
                     <constraint firstItem="yhK-TY-G0T" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="MW0-rG-1m9"/>
+                    <constraint firstItem="yhK-TY-G0T" firstAttribute="width" secondItem="l1c-M5-4kw" secondAttribute="width" id="NNt-hI-Dwl"/>
+                    <constraint firstItem="yhK-TY-G0T" firstAttribute="height" secondItem="l1c-M5-4kw" secondAttribute="height" id="WjH-Oe-WnO"/>
                     <constraint firstAttribute="trailing" secondItem="yhK-TY-G0T" secondAttribute="trailing" id="aU9-Ev-Mfp"/>
                     <constraint firstItem="l1c-M5-4kw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="twv-vw-LL1"/>
                 </constraints>
@@ -59,6 +67,8 @@
             <connections>
                 <outlet property="btnLeft" destination="l1c-M5-4kw" id="see-lg-oFg"/>
                 <outlet property="btnRight" destination="yhK-TY-G0T" id="bfT-Ev-NIA"/>
+                <outlet property="btnWidth" destination="s3A-qZ-usR" id="7Gm-W7-d71"/>
+                <outlet property="cellHeight" destination="WKZ-iR-kGH" id="Hd3-O9-78L"/>
                 <outlet property="constraintLeftLeading" destination="KYG-gH-H4w" id="ffW-xk-gkn"/>
                 <outlet property="constraintRightTrailing" destination="aU9-Ev-Mfp" id="fVq-9u-ted"/>
             </connections>

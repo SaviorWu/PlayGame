@@ -171,6 +171,9 @@ typedef enum
 //字符串解码
 - (NSString *)stringEncodeBase64:(NSString *)base6;
 
++(BOOL)isNull:(NSString*)obj;
+
++ (NSString*)safeString:(NSString*)str;
 /**
  比较两个版本号的大小
  

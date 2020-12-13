@@ -39,4 +39,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString* is_alert;
 @end
 
+@interface PersonalPageModel : UserModel
+@property (nonatomic, strong) NSString* status;
+@property (nonatomic, strong) NSString* city;
+@property (nonatomic, strong) NSString* jishilv;
+@property (nonatomic, strong) NSString* introduce;
+@property (nonatomic, strong) NSString* login_time;
+@property (nonatomic, strong) NSString* fans;
+@end
 NS_ASSUME_NONNULL_END

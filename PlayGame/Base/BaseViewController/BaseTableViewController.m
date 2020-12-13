@@ -40,7 +40,7 @@
 - (void)hiddenNavigation{
     [super hiddenNavigation];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        UIEdgeInsets padding = UIEdgeInsetsMake(-20, 0, 0, 0);
+        UIEdgeInsets padding = UIEdgeInsetsMake(0, 0, 0, 0);
         [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.view).with.insets(padding);
         }];

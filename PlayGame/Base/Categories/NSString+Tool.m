@@ -515,7 +515,27 @@
     return [data base64EncodedStringWithOptions:0];
     
 }
-
++(BOOL)isNull:(NSString*)obj
+{
+    // 判断是否为空串
+    if ([obj isEqual:[NSNull null]]) {
+        return YES;
+    }
+    else if ([obj isKindOfClass:[NSNull class]])
+    {
+        return YES;
+    }
+    else if (obj==nil){
+        return YES;
+    }
+    return NO;
+}
++ (NSString*)safeString:(NSString*)str{
+    if ([NSString isNull:str] == YES) {
+        str = @"";
+    }
+    return str;
+}
 //字符串解码
 
 - (NSDictionary *)stringEncodeBase64:(NSString *)base64
