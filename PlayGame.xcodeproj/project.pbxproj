@@ -315,6 +315,19 @@
 		F644583B257FADAA005AF6B9 /* GodListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6445839257FADAA005AF6B9 /* GodListCell.m */; };
 		F644583C257FADAA005AF6B9 /* GodListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F644583A257FADAA005AF6B9 /* GodListCell.xib */; };
 		F6445846257FB0ED005AF6B9 /* GodListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6445845257FB0ED005AF6B9 /* GodListModel.m */; };
+		F644EA912588FC00009746F4 /* OrderCommentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F644EA722588FC00009746F4 /* OrderCommentVC.xib */; };
+		F644EA922588FC00009746F4 /* OrderCommentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F644EA732588FC00009746F4 /* OrderCommentVC.m */; };
+		F644EA932588FC00009746F4 /* OrderDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F644EA762588FC00009746F4 /* OrderDetailVC.m */; };
+		F644EA942588FC00009746F4 /* OrderHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F644EA792588FC00009746F4 /* OrderHeaderCell.m */; };
+		F644EA952588FC00009746F4 /* OrderHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F644EA7A2588FC00009746F4 /* OrderHeaderCell.xib */; };
+		F644EA962588FC00009746F4 /* SubmitOrderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F644EA7F2588FC00009746F4 /* SubmitOrderVC.m */; };
+		F644EA972588FC00009746F4 /* SubmitOrderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F644EA802588FC00009746F4 /* SubmitOrderVC.xib */; };
+		F644EA982588FC00009746F4 /* GameInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F644EA822588FC00009746F4 /* GameInfoModel.m */; };
+		F644EA992588FC00009746F4 /* pickerFBView.m in Sources */ = {isa = PBXBuildFile; fileRef = F644EA852588FC00009746F4 /* pickerFBView.m */; };
+		F644EA9A2588FC00009746F4 /* OrderListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F644EA892588FC00009746F4 /* OrderListVC.m */; };
+		F644EA9B2588FC00009746F4 /* OrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F644EA8B2588FC00009746F4 /* OrderModel.m */; };
+		F644EA9C2588FC00009746F4 /* OrderListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F644EA8F2588FC00009746F4 /* OrderListCell.xib */; };
+		F644EA9D2588FC00009746F4 /* OrderListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F644EA902588FC00009746F4 /* OrderListCell.m */; };
 		F6526EA22582480A002FC2B4 /* GodDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F6526EA12582480A002FC2B4 /* GodDetailVC.m */; };
 		F6526EAD258248EC002FC2B4 /* GodDetailHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6526EAB258248EC002FC2B4 /* GodDetailHeadCell.m */; };
 		F6526EAE258248EC002FC2B4 /* GodDetailHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6526EAC258248EC002FC2B4 /* GodDetailHeadCell.xib */; };
@@ -832,6 +845,28 @@
 		F644583A257FADAA005AF6B9 /* GodListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GodListCell.xib; sourceTree = "<group>"; };
 		F6445844257FB0ED005AF6B9 /* GodListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GodListModel.h; sourceTree = "<group>"; };
 		F6445845257FB0ED005AF6B9 /* GodListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GodListModel.m; sourceTree = "<group>"; };
+		F644EA712588FC00009746F4 /* OrderCommentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderCommentVC.h; sourceTree = "<group>"; };
+		F644EA722588FC00009746F4 /* OrderCommentVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderCommentVC.xib; sourceTree = "<group>"; };
+		F644EA732588FC00009746F4 /* OrderCommentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderCommentVC.m; sourceTree = "<group>"; };
+		F644EA762588FC00009746F4 /* OrderDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDetailVC.m; sourceTree = "<group>"; };
+		F644EA772588FC00009746F4 /* OrderDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDetailVC.h; sourceTree = "<group>"; };
+		F644EA792588FC00009746F4 /* OrderHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderHeaderCell.m; sourceTree = "<group>"; };
+		F644EA7A2588FC00009746F4 /* OrderHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderHeaderCell.xib; sourceTree = "<group>"; };
+		F644EA7B2588FC00009746F4 /* OrderHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderHeaderCell.h; sourceTree = "<group>"; };
+		F644EA7E2588FC00009746F4 /* SubmitOrderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitOrderVC.h; sourceTree = "<group>"; };
+		F644EA7F2588FC00009746F4 /* SubmitOrderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitOrderVC.m; sourceTree = "<group>"; };
+		F644EA802588FC00009746F4 /* SubmitOrderVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubmitOrderVC.xib; sourceTree = "<group>"; };
+		F644EA822588FC00009746F4 /* GameInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameInfoModel.m; sourceTree = "<group>"; };
+		F644EA832588FC00009746F4 /* GameInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameInfoModel.h; sourceTree = "<group>"; };
+		F644EA852588FC00009746F4 /* pickerFBView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pickerFBView.m; sourceTree = "<group>"; };
+		F644EA862588FC00009746F4 /* pickerFBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pickerFBView.h; sourceTree = "<group>"; };
+		F644EA882588FC00009746F4 /* OrderListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderListVC.h; sourceTree = "<group>"; };
+		F644EA892588FC00009746F4 /* OrderListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderListVC.m; sourceTree = "<group>"; };
+		F644EA8B2588FC00009746F4 /* OrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderModel.m; sourceTree = "<group>"; };
+		F644EA8C2588FC00009746F4 /* OrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderModel.h; sourceTree = "<group>"; };
+		F644EA8E2588FC00009746F4 /* OrderListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderListCell.h; sourceTree = "<group>"; };
+		F644EA8F2588FC00009746F4 /* OrderListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderListCell.xib; sourceTree = "<group>"; };
+		F644EA902588FC00009746F4 /* OrderListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderListCell.m; sourceTree = "<group>"; };
 		F6526EA02582480A002FC2B4 /* GodDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GodDetailVC.h; sourceTree = "<group>"; };
 		F6526EA12582480A002FC2B4 /* GodDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GodDetailVC.m; sourceTree = "<group>"; };
 		F6526EAA258248EC002FC2B4 /* GodDetailHeadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GodDetailHeadCell.h; sourceTree = "<group>"; };
@@ -1230,6 +1265,7 @@
 		F63126032557C6F0000162B1 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				F644EA6E2588FC00009746F4 /* Order */,
 				F63C68D7256BFB76000EFFD2 /* MyPorketVC */,
 				F63126052557C6FB000162B1 /* Help */,
 				F63126042557C6F6000162B1 /* ChangePswd */,
@@ -1983,6 +2019,131 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F644EA6E2588FC00009746F4 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				F644EA6F2588FC00009746F4 /* Business */,
+				F644EA872588FC00009746F4 /* Controller */,
+				F644EA8A2588FC00009746F4 /* Model */,
+				F644EA8D2588FC00009746F4 /* View */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		F644EA6F2588FC00009746F4 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				F644EA702588FC00009746F4 /* OrderComment */,
+				F644EA742588FC00009746F4 /* OrderDetail */,
+				F644EA7C2588FC00009746F4 /* SubmitOrder */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		F644EA702588FC00009746F4 /* OrderComment */ = {
+			isa = PBXGroup;
+			children = (
+				F644EA712588FC00009746F4 /* OrderCommentVC.h */,
+				F644EA722588FC00009746F4 /* OrderCommentVC.xib */,
+				F644EA732588FC00009746F4 /* OrderCommentVC.m */,
+			);
+			path = OrderComment;
+			sourceTree = "<group>";
+		};
+		F644EA742588FC00009746F4 /* OrderDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F644EA752588FC00009746F4 /* Controller */,
+				F644EA782588FC00009746F4 /* View */,
+			);
+			path = OrderDetail;
+			sourceTree = "<group>";
+		};
+		F644EA752588FC00009746F4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F644EA762588FC00009746F4 /* OrderDetailVC.m */,
+				F644EA772588FC00009746F4 /* OrderDetailVC.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F644EA782588FC00009746F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F644EA792588FC00009746F4 /* OrderHeaderCell.m */,
+				F644EA7A2588FC00009746F4 /* OrderHeaderCell.xib */,
+				F644EA7B2588FC00009746F4 /* OrderHeaderCell.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F644EA7C2588FC00009746F4 /* SubmitOrder */ = {
+			isa = PBXGroup;
+			children = (
+				F644EA7D2588FC00009746F4 /* Controller */,
+				F644EA812588FC00009746F4 /* Model */,
+				F644EA842588FC00009746F4 /* View */,
+			);
+			path = SubmitOrder;
+			sourceTree = "<group>";
+		};
+		F644EA7D2588FC00009746F4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F644EA7E2588FC00009746F4 /* SubmitOrderVC.h */,
+				F644EA7F2588FC00009746F4 /* SubmitOrderVC.m */,
+				F644EA802588FC00009746F4 /* SubmitOrderVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F644EA812588FC00009746F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F644EA822588FC00009746F4 /* GameInfoModel.m */,
+				F644EA832588FC00009746F4 /* GameInfoModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F644EA842588FC00009746F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F644EA852588FC00009746F4 /* pickerFBView.m */,
+				F644EA862588FC00009746F4 /* pickerFBView.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F644EA872588FC00009746F4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F644EA882588FC00009746F4 /* OrderListVC.h */,
+				F644EA892588FC00009746F4 /* OrderListVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F644EA8A2588FC00009746F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F644EA8B2588FC00009746F4 /* OrderModel.m */,
+				F644EA8C2588FC00009746F4 /* OrderModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F644EA8D2588FC00009746F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F644EA8E2588FC00009746F4 /* OrderListCell.h */,
+				F644EA8F2588FC00009746F4 /* OrderListCell.xib */,
+				F644EA902588FC00009746F4 /* OrderListCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F645536525792D8A00A25592 /* GodPlay */ = {
 			isa = PBXGroup;
 			children = (
@@ -2240,6 +2401,7 @@
 				F6A1073C254ED47C00A2D1B0 /* UIConfirnBtnCell.xib in Resources */,
 				F6445833257FAAA4005AF6B9 /* GodPlayerVC.xib in Resources */,
 				F63128502557CE5F000162B1 /* close_white@3x.png in Resources */,
+				F644EA972588FC00009746F4 /* SubmitOrderVC.xib in Resources */,
 				F63127C42557CE5E000162B1 /* icon_030_cover.png in Resources */,
 				8450EB70254BE83500B54365 /* UITipsCell.xib in Resources */,
 				F63FB53025847039002EB4D7 /* GiftCell.xib in Resources */,
@@ -2284,6 +2446,7 @@
 				F63127FE2557CE5F000162B1 /* chatbar_map@3x.png in Resources */,
 				F63128822557CE5F000162B1 /* alert_success@3x.png in Resources */,
 				F631281D2557CE5F000162B1 /* msg_send_audio01@2x.png in Resources */,
+				F644EA9C2588FC00009746F4 /* OrderListCell.xib in Resources */,
 				F63127CB2557CE5E000162B1 /* icon_007.gif in Resources */,
 				F631284A2557CE5F000162B1 /* user_avatar_blue@2x.png in Resources */,
 				F63128142557CE5F000162B1 /* msg_send_audio02@3x.png in Resources */,
@@ -2296,8 +2459,10 @@
 				F63127D62557CE5E000162B1 /* icon_019.gif in Resources */,
 				F63128192557CE5F000162B1 /* msg_location@3x.png in Resources */,
 				F6526EAE258248EC002FC2B4 /* GodDetailHeadCell.xib in Resources */,
+				F644EA952588FC00009746F4 /* OrderHeaderCell.xib in Resources */,
 				F63128312557CE5F000162B1 /* chat_info@2x.png in Resources */,
 				F63127EF2557CE5F000162B1 /* chatbar_face@2x.png in Resources */,
+				F644EA912588FC00009746F4 /* OrderCommentVC.xib in Resources */,
 				F63128112557CE5F000162B1 /* msg_location@2x.png in Resources */,
 				F63127E92557CE5F000162B1 /* chatbar_map_blue@2x.png in Resources */,
 				F631284C2557CE5F000162B1 /* close_gray@2x.png in Resources */,
@@ -2497,12 +2662,15 @@
 				F631287B2557CE5F000162B1 /* EMTextView.m in Sources */,
 				8450EB67254BE42600B54365 /* LoginVC.m in Sources */,
 				8436C75A25490CD600194E27 /* JTNetwork.m in Sources */,
+				F644EA9A2588FC00009746F4 /* OrderListVC.m in Sources */,
 				F63128452557CE5F000162B1 /* EMEmoticonGroup.m in Sources */,
 				F63128752557CE5F000162B1 /* PSTGridLayoutRow.m in Sources */,
 				F63FB51C25846D96002EB4D7 /* PopViewController.m in Sources */,
 				846F3ED1255675F300FC5E71 /* UIImageView+loading.m in Sources */,
 				F631286B2557CE5F000162B1 /* PSTCollectionViewController.m in Sources */,
 				84117BFB25494D7300B68891 /* UITableView+loadCell.m in Sources */,
+				F644EA9D2588FC00009746F4 /* OrderListCell.m in Sources */,
+				F644EA982588FC00009746F4 /* GameInfoModel.m in Sources */,
 				F631285F2557CE5F000162B1 /* wav.mm in Sources */,
 				F631280B2557CE5F000162B1 /* EMMsgFileBubbleView.m in Sources */,
 				8436C7E625490D6500194E27 /* UIColor+Extension.m in Sources */,
@@ -2518,6 +2686,7 @@
 				8436C7D725490D6500194E27 /* UIButton+LargeArea.m in Sources */,
 				F63128902557CE5F000162B1 /* EMRemindManager.m in Sources */,
 				8445CE322553D92400FE01A3 /* UILineCell.m in Sources */,
+				F644EA992588FC00009746F4 /* pickerFBView.m in Sources */,
 				8436C7DE25490D6500194E27 /* UIImage+GIF.m in Sources */,
 				8436C77125490D2000194E27 /* JTBaseNavigationController.m in Sources */,
 				F63127DF2557CE5F000162B1 /* EaseEmotionEscape.m in Sources */,
@@ -2529,6 +2698,7 @@
 				F631283A2557CE5F000162B1 /* MessageViewController.m in Sources */,
 				8436C7E525490D6500194E27 /* UIImage+TOOL.m in Sources */,
 				F63126112557C712000162B1 /* HelpVC.m in Sources */,
+				F644EA922588FC00009746F4 /* OrderCommentVC.m in Sources */,
 				8436C8722549397F00194E27 /* UITabBar+badge.m in Sources */,
 				F631280A2557CE5F000162B1 /* EMMsgVideoBubbleView.m in Sources */,
 				F63127E02557CE5F000162B1 /* EMChatBarEmoticonView.m in Sources */,
@@ -2542,6 +2712,7 @@
 				8436C7DA25490D6500194E27 /* UIView+Frame.m in Sources */,
 				F63128052557CE5F000162B1 /* EMMessageStatusView.m in Sources */,
 				F631285A2557CE5F000162B1 /* EMGlobalVariables.m in Sources */,
+				F644EA9B2588FC00009746F4 /* OrderModel.m in Sources */,
 				F63128382557CE5F000162B1 /* EMAudioPlayerHelper.mm in Sources */,
 				F6A10747254ED7FB00A2D1B0 /* UIForgetRegistCell.m in Sources */,
 				F63127BC2557CE5E000162B1 /* EMReadReceiptMsgViewController.m in Sources */,
@@ -2570,6 +2741,7 @@
 				F631288B2557CE5F000162B1 /* EMSearchViewController.m in Sources */,
 				8436C7E325490D6500194E27 /* UIColor+RCColor.m in Sources */,
 				F631280F2557CE5F000162B1 /* EMMsgLocationBubbleView.m in Sources */,
+				F644EA962588FC00009746F4 /* SubmitOrderVC.m in Sources */,
 				8436C7E925490D6500194E27 /* UINavigationBar+handle.m in Sources */,
 				8436C78A25490D3000194E27 /* BaseController.m in Sources */,
 				F63127BB2557CE5E000162B1 /* EMMoreFunctionView.m in Sources */,
@@ -2586,6 +2758,7 @@
 				F6BF868F256D3F0E00DF3478 /* RechargeVC.m in Sources */,
 				F63128732557CE5F000162B1 /* PSTCollectionViewItemKey.m in Sources */,
 				F63126082557C708000162B1 /* ChangePswdVC.m in Sources */,
+				F644EA942588FC00009746F4 /* OrderHeaderCell.m in Sources */,
 				8436C7E725490D6500194E27 /* UIImage+RCImage.m in Sources */,
 				8436C878254939DC00194E27 /* JTTabBarBtn.m in Sources */,
 				F63128652557CE5F000162B1 /* MWTapDetectingImageView.m in Sources */,
@@ -2608,6 +2781,7 @@
 				8436C7D425490D6500194E27 /* UIButton+countDown.m in Sources */,
 				F631283D2557CE5F000162B1 /* MessageListCell.m in Sources */,
 				843D36D6254A4ED400FDCD5D /* UIBaseModel.m in Sources */,
+				F644EA932588FC00009746F4 /* OrderDetailVC.m in Sources */,
 				8436C7E825490D6500194E27 /* UIImage+TOO.m in Sources */,
 				F63128602557CE5F000162B1 /* amrFileCodec.mm in Sources */,
 				84117BEF2549465200B68891 /* BaseTableViewController.m in Sources */,

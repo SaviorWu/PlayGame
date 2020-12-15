@@ -12,6 +12,7 @@
 @property (nonatomic, strong) NSString* naviTitle;
 @property (nonatomic, strong) UIView* vwNavigation;
 @property (nonatomic, strong) NSMutableDictionary* reqParam;
+@property (nonatomic, strong) UIButton* btnBack;
 //navagationbar是否隐藏 默认为不隐藏navagationbar
 @property (nonatomic,assign)BOOL navagationBarHiden;
 //导航栏字体颜色

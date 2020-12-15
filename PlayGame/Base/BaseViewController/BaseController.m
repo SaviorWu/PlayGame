@@ -16,7 +16,6 @@
 
 @interface BaseController ()<UIGestureRecognizerDelegate>
 @property (nonatomic, assign)BOOL isCanUseSideBack;  // 手势是否启动
-@property (nonatomic, strong) UIButton* btnBack;
 @end
 
 @implementation BaseController
