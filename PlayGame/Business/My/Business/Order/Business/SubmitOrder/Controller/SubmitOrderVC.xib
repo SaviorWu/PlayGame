@@ -95,7 +95,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="7hm-T5-fV4"/>
                             </constraints>
-                            <state key="normal" title="提交订单">
+                            <state key="normal" title="提交邀请">
                                 <color key="titleColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>

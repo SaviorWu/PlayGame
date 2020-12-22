@@ -341,6 +341,7 @@
 		F6A10748254ED7FB00A2D1B0 /* UIForgetRegistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A10746254ED7FB00A2D1B0 /* UIForgetRegistCell.xib */; };
 		F6A10750254EDDA300A2D1B0 /* UILabelButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A1074E254EDDA300A2D1B0 /* UILabelButtonCell.m */; };
 		F6A10751254EDDA300A2D1B0 /* UILabelButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A1074F254EDDA300A2D1B0 /* UILabelButtonCell.xib */; };
+		F6A835B6258B7E03004678A0 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A835B5258B7E03004678A0 /* TestVC.m */; };
 		F6BF868F256D3F0E00DF3478 /* RechargeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F6BF868E256D3F0E00DF3478 /* RechargeVC.m */; };
 /* End PBXBuildFile section */
 
@@ -887,6 +888,8 @@
 		F6A1074D254EDDA300A2D1B0 /* UILabelButtonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILabelButtonCell.h; sourceTree = "<group>"; };
 		F6A1074E254EDDA300A2D1B0 /* UILabelButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILabelButtonCell.m; sourceTree = "<group>"; };
 		F6A1074F254EDDA300A2D1B0 /* UILabelButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UILabelButtonCell.xib; sourceTree = "<group>"; };
+		F6A835B4258B7E03004678A0 /* TestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
+		F6A835B5258B7E03004678A0 /* TestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
 		F6BF868D256D3F0E00DF3478 /* RechargeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RechargeVC.h; sourceTree = "<group>"; };
 		F6BF868E256D3F0E00DF3478 /* RechargeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RechargeVC.m; sourceTree = "<group>"; };
 		F77AC95FAA126A31DE1BB569 /* Pods-PlayGameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayGameTests.release.xcconfig"; path = "Target Support Files/Pods-PlayGameTests/Pods-PlayGameTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -1258,6 +1261,8 @@
 			children = (
 				F63125FA2557C4FD000162B1 /* SetVC.h */,
 				F63125FB2557C4FD000162B1 /* SetVC.m */,
+				F6A835B4258B7E03004678A0 /* TestVC.h */,
+				F6A835B5258B7E03004678A0 /* TestVC.m */,
 			);
 			path = Set;
 			sourceTree = "<group>";
@@ -2720,6 +2725,7 @@
 				F631288C2557CE5F000162B1 /* EMTextViewController.m in Sources */,
 				F63128612557CE5F000162B1 /* MWPhotoBrowser.m in Sources */,
 				F63128392557CE5F000162B1 /* EMMsgTranspondViewController.m in Sources */,
+				F6A835B6258B7E03004678A0 /* TestVC.m in Sources */,
 				F6526EA22582480A002FC2B4 /* GodDetailVC.m in Sources */,
 				8445CE442554043200FE01A3 /* UserModelManager.m in Sources */,
 				F63C68DA256BFB96000EFFD2 /* MyPorketVC.m in Sources */,
@@ -2986,7 +2992,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WX8P2UD78U;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PlayGame/PrefixHeader.pch";
@@ -3000,7 +3006,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/PlayGame/Business/Message/Helper/3rdParty/VoiceConvert",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fw.PlayGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3014,7 +3020,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WX8P2UD78U;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PlayGame/PrefixHeader.pch";
@@ -3028,7 +3034,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/PlayGame/Business/Message/Helper/3rdParty/VoiceConvert",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fw.PlayGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

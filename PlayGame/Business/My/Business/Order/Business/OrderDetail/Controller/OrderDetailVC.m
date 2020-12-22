@@ -74,7 +74,7 @@
                                                                      BM_trading:@(15)}]];
                 
                 [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILabelContentType),
-                                                                     BM_title:@"订单编号",
+                                                                     BM_title:@"邀请编号",
                                                                      BM_subTitle:oModel.order_num}]];
                 [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
                                                                      BM_leading:@(15),
@@ -131,7 +131,7 @@
                                                                          BM_mark:@"2",
                                                                          BM_type:@(UIConfirnBtnType)}]];
                 }else if([oModel.status intValue] == 5){
-                    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_title:@"完成订单",
+                    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_title:@"完成邀请",
                                                                          BM_modelId:oModel.status,
                                                                          BM_leading:@(20),
                                                                          BM_trading:@(20),
