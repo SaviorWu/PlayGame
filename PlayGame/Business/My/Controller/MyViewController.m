@@ -10,6 +10,7 @@
 #import "MyPorketVC.h"
 #import "OrderListVC.h"
 #import "TestVC.h"
+#import "GodPictureListVC.h"
 @interface MyViewController ()
 
 @end
@@ -90,6 +91,19 @@
                                                                  BM_mark:@"1",
                                                                  BM_type:@(UIImageLabelSelectType)}]];
             
+            [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
+                                                                 BM_backColor:[UIColor colorWithHex:0xf8f8f8],
+                                                                 BM_cellHeight:@(1)}]];
+            [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_title:@"照片",
+                                                                 BM_subTitle:@"大神风采",
+                                                                 BM_cellHeight:@(50),
+    //                                                             BM_leading:@(-20),
+                                                                 BM_SubAlignment:@(1),
+                                                                 BM_mark:@"1",
+                                                                 BM_type:@(UIImageLabelSelectType)}]];
+            
+            
+            
             [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
                                                                  BM_leading:@(20),
                                                                  BM_trading:@(20)}]];
@@ -134,6 +148,9 @@
             [self.navigationController pushViewController:vc animated:YES];
         }else if (indexPath.row == 8){
             OrderListVC* vc = [[OrderListVC alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else if (indexPath.row == 10){
+            GodPictureListVC* vc = [[GodPictureListVC alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
         

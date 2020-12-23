@@ -19,7 +19,7 @@ target 'PlayGame' do
   pod 'ReactiveObjC', '~> 3.0.0'
   pod 'AFNetworking', '~> 3.2.1'
   pod "VTMagic"
-  
+  pod 'JXCategoryView'
   target 'PlayGameTests' do
     inherit! :search_paths
     # Pods for testing

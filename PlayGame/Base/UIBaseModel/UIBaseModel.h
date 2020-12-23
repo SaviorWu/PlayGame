@@ -51,7 +51,8 @@ typedef enum _UIType {
     UILabelContentType,
     UIMyPorketType,
     UIGodDetailHeadType,
-    UIGodDetailInfoType
+    UIGodDetailInfoType,
+    UIGodPicType
 } UIType;
 
 

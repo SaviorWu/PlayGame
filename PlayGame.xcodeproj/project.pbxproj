@@ -68,6 +68,10 @@
 		84C768CD25553E2400E08149 /* UIImageLabelSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C768CB25553E2400E08149 /* UIImageLabelSelectCell.m */; };
 		84C768CE25553E2400E08149 /* UIImageLabelSelectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C768CC25553E2400E08149 /* UIImageLabelSelectCell.xib */; };
 		F2C89941ABFB46E8507B0179 /* Pods_PlayGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21A60257652AC206112EB6E /* Pods_PlayGameTests.framework */; };
+		F6030C31259371200095983E /* GodPictureListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F6030C30259371200095983E /* GodPictureListVC.m */; };
+		F6030C39259371B70095983E /* GodPictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6030C37259371B70095983E /* GodPictureCell.m */; };
+		F6030C3A259371B70095983E /* GodPictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6030C38259371B70095983E /* GodPictureCell.xib */; };
+		F6030C44259376E70095983E /* GodPicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6030C43259376E70095983E /* GodPicModel.m */; };
 		F63125FC2557C4FD000162B1 /* SetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F63125FB2557C4FD000162B1 /* SetVC.m */; };
 		F63126082557C708000162B1 /* ChangePswdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F63126072557C708000162B1 /* ChangePswdVC.m */; };
 		F63126112557C712000162B1 /* HelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F63126102557C712000162B1 /* HelpVC.m */; };
@@ -484,6 +488,13 @@
 		E66D4F02D6901F59B310E621 /* Pods-PlayGame-PlayGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayGame-PlayGameUITests.debug.xcconfig"; path = "Target Support Files/Pods-PlayGame-PlayGameUITests/Pods-PlayGame-PlayGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EDCD17FB8A761B3CC77E0582 /* Pods-PlayGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayGame.debug.xcconfig"; path = "Target Support Files/Pods-PlayGame/Pods-PlayGame.debug.xcconfig"; sourceTree = "<group>"; };
 		F21A60257652AC206112EB6E /* Pods_PlayGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6030C2F259371200095983E /* GodPictureListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GodPictureListVC.h; sourceTree = "<group>"; };
+		F6030C30259371200095983E /* GodPictureListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GodPictureListVC.m; sourceTree = "<group>"; };
+		F6030C36259371B70095983E /* GodPictureCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GodPictureCell.h; sourceTree = "<group>"; };
+		F6030C37259371B70095983E /* GodPictureCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GodPictureCell.m; sourceTree = "<group>"; };
+		F6030C38259371B70095983E /* GodPictureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GodPictureCell.xib; sourceTree = "<group>"; };
+		F6030C42259376E70095983E /* GodPicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GodPicModel.h; sourceTree = "<group>"; };
+		F6030C43259376E70095983E /* GodPicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GodPicModel.m; sourceTree = "<group>"; };
 		F63125FA2557C4FD000162B1 /* SetVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetVC.h; sourceTree = "<group>"; };
 		F63125FB2557C4FD000162B1 /* SetVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetVC.m; sourceTree = "<group>"; };
 		F63126062557C708000162B1 /* ChangePswdVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangePswdVC.h; sourceTree = "<group>"; };
@@ -1256,6 +1267,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F6030C2E259370E50095983E /* GodPictures */ = {
+			isa = PBXGroup;
+			children = (
+				F6030C41259376D30095983E /* Model */,
+				F6030C35259371750095983E /* View */,
+				F6030C2F259371200095983E /* GodPictureListVC.h */,
+				F6030C30259371200095983E /* GodPictureListVC.m */,
+			);
+			path = GodPictures;
+			sourceTree = "<group>";
+		};
+		F6030C35259371750095983E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F6030C36259371B70095983E /* GodPictureCell.h */,
+				F6030C37259371B70095983E /* GodPictureCell.m */,
+				F6030C38259371B70095983E /* GodPictureCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F6030C41259376D30095983E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F6030C42259376E70095983E /* GodPicModel.h */,
+				F6030C43259376E70095983E /* GodPicModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F63125F92557C4EF000162B1 /* Set */ = {
 			isa = PBXGroup;
 			children = (
@@ -1270,6 +1311,7 @@
 		F63126032557C6F0000162B1 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				F6030C2E259370E50095983E /* GodPictures */,
 				F644EA6E2588FC00009746F4 /* Order */,
 				F63C68D7256BFB76000EFFD2 /* MyPorketVC */,
 				F63126052557C6FB000162B1 /* Help */,
@@ -2427,6 +2469,7 @@
 				F63127F62557CE5F000162B1 /* chatbar_audio@2x.png in Resources */,
 				F63128792557CE5F000162B1 /* MWPhotoBrowser.bundle in Resources */,
 				F63127B82557CE5E000162B1 /* pin-white.png in Resources */,
+				F6030C3A259371B70095983E /* GodPictureCell.xib in Resources */,
 				F681E205254D0F04009FDDF6 /* UITextFiledCell.xib in Resources */,
 				F63127D52557CE5E000162B1 /* icon_024.gif in Resources */,
 				F63128862557CE5F000162B1 /* alert_info@3x.png in Resources */,
@@ -2648,6 +2691,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6030C39259371B70095983E /* GodPictureCell.m in Sources */,
 				F631287A2557CE5F000162B1 /* EMMulticastDelegate.m in Sources */,
 				F681E210254D1EE5009FDDF6 /* UIVerificationCodeCell.m in Sources */,
 				8450EB6F254BE83500B54365 /* UITipsCell.m in Sources */,
@@ -2656,6 +2700,7 @@
 				F63128632557CE5F000162B1 /* MWZoomingScrollView.m in Sources */,
 				F63128402557CE5F000162B1 /* EMConversationHelper.m in Sources */,
 				8436C7D125490D6500194E27 /* UIViewController+HUD.m in Sources */,
+				F6030C31259371200095983E /* GodPictureListVC.m in Sources */,
 				F63125FC2557C4FD000162B1 /* SetVC.m in Sources */,
 				84C768C525553D9500E08149 /* HomeViewController.m in Sources */,
 				F631286F2557CE5F000162B1 /* PSTCollectionViewData.m in Sources */,
@@ -2757,6 +2802,7 @@
 				F63128352557CE5F000162B1 /* EMMessageModel.m in Sources */,
 				F631287D2557CE5F000162B1 /* EMRefreshViewController.m in Sources */,
 				F63128622557CE5F000162B1 /* MWCaptionView.m in Sources */,
+				F6030C44259376E70095983E /* GodPicModel.m in Sources */,
 				F631285C2557CE5F000162B1 /* EMAvatarNameCell.m in Sources */,
 				8436C7E225490D6500194E27 /* NSDictionary+extension.m in Sources */,
 				8436C76225490CD600194E27 /* JTBaseReqModel.m in Sources */,
