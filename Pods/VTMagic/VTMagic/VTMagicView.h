@@ -454,7 +454,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)switchToPage:(NSUInteger)pageIndex animated:(BOOL)animated;
 
 /**
- *  处理UIPanGestureRecognizer手势，用于解决页面内嵌UIWebView时无法响应手势问题
+ *  处理UIPanGestureRecognizer手势，
  *
  *  @param recognizer 手势
  */
