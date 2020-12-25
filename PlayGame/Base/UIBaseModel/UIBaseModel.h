@@ -52,7 +52,10 @@ typedef enum _UIType {
     UIMyPorketType,
     UIGodDetailHeadType,
     UIGodDetailInfoType,
-    UIGodPicType
+    UIGodPicType,
+    UIGodPicReview,
+    UIRedBagType,
+    UIRedBagCinMoneyType
 } UIType;
 
 

@@ -53,6 +53,22 @@
 		846F3EC72556726500FC5E71 /* MyHeadNameIDCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846F3EC52556726500FC5E71 /* MyHeadNameIDCell.m */; };
 		846F3EC82556726500FC5E71 /* MyHeadNameIDCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846F3EC62556726500FC5E71 /* MyHeadNameIDCell.xib */; };
 		846F3ED1255675F300FC5E71 /* UIImageView+loading.m in Sources */ = {isa = PBXBuildFile; fileRef = 846F3ED0255675F300FC5E71 /* UIImageView+loading.m */; };
+		848D8BB1259576F900F54B04 /* PictureReviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D8BB0259576F900F54B04 /* PictureReviewVC.m */; };
+		848D8BCE2595802700F54B04 /* PicReviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D8BCC2595802700F54B04 /* PicReviewCell.m */; };
+		848D8BCF2595802700F54B04 /* PicReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848D8BCD2595802700F54B04 /* PicReviewCell.xib */; };
+		848D8BFF2595875D00F54B04 /* EBBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D8BFD2595875C00F54B04 /* EBBannerView.m */; };
+		848D8C132595889D00F54B04 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D8C072595889D00F54B04 /* SDCycleScrollView.m */; };
+		848D8C142595889D00F54B04 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D8C082595889D00F54B04 /* UIView+SDExtension.m */; };
+		848D8C152595889D00F54B04 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D8C092595889D00F54B04 /* SDCollectionViewCell.m */; };
+		848D8C162595889D00F54B04 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D8C0C2595889D00F54B04 /* TADotView.m */; };
+		848D8C172595889D00F54B04 /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D8C0D2595889D00F54B04 /* TAPageControl.m */; };
+		848D8C182595889D00F54B04 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D8C0E2595889D00F54B04 /* TAAnimatedDotView.m */; };
+		848D8C192595889D00F54B04 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D8C0F2595889D00F54B04 /* TAAbstractDotView.m */; };
+		848D8C202595AE2A00F54B04 /* SendRedBagVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D8C1F2595AE2A00F54B04 /* SendRedBagVC.m */; };
+		848D8C282595B15F00F54B04 /* RedBagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D8C262595B15F00F54B04 /* RedBagCell.m */; };
+		848D8C292595B15F00F54B04 /* RedBagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848D8C272595B15F00F54B04 /* RedBagCell.xib */; };
+		848D8C302595B59500F54B04 /* RedBagCinMoneyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D8C2E2595B59500F54B04 /* RedBagCinMoneyCell.m */; };
+		848D8C312595B59500F54B04 /* RedBagCinMoneyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848D8C2F2595B59500F54B04 /* RedBagCinMoneyCell.xib */; };
 		84B252202549080600887B01 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B2521F2549080600887B01 /* AppDelegate.m */; };
 		84B252262549080600887B01 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B252252549080600887B01 /* ViewController.m */; };
 		84B252292549080600887B01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B252272549080600887B01 /* Main.storyboard */; };
@@ -456,6 +472,35 @@
 		846F3EC62556726500FC5E71 /* MyHeadNameIDCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyHeadNameIDCell.xib; sourceTree = "<group>"; };
 		846F3ECF255675F300FC5E71 /* UIImageView+loading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+loading.h"; sourceTree = "<group>"; };
 		846F3ED0255675F300FC5E71 /* UIImageView+loading.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+loading.m"; sourceTree = "<group>"; };
+		848D8BAF259576F900F54B04 /* PictureReviewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureReviewVC.h; sourceTree = "<group>"; };
+		848D8BB0259576F900F54B04 /* PictureReviewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureReviewVC.m; sourceTree = "<group>"; };
+		848D8BCB2595802700F54B04 /* PicReviewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PicReviewCell.h; sourceTree = "<group>"; };
+		848D8BCC2595802700F54B04 /* PicReviewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PicReviewCell.m; sourceTree = "<group>"; };
+		848D8BCD2595802700F54B04 /* PicReviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PicReviewCell.xib; sourceTree = "<group>"; };
+		848D8BFD2595875C00F54B04 /* EBBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBBannerView.m; sourceTree = "<group>"; };
+		848D8BFE2595875D00F54B04 /* EBBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBBannerView.h; sourceTree = "<group>"; };
+		848D8C042595889D00F54B04 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		848D8C052595889D00F54B04 /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		848D8C062595889D00F54B04 /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		848D8C072595889D00F54B04 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		848D8C082595889D00F54B04 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		848D8C092595889D00F54B04 /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		848D8C0B2595889D00F54B04 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		848D8C0C2595889D00F54B04 /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		848D8C0D2595889D00F54B04 /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		848D8C0E2595889D00F54B04 /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		848D8C0F2595889D00F54B04 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		848D8C102595889D00F54B04 /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		848D8C112595889D00F54B04 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		848D8C122595889D00F54B04 /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		848D8C1E2595AE2A00F54B04 /* SendRedBagVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendRedBagVC.h; sourceTree = "<group>"; };
+		848D8C1F2595AE2A00F54B04 /* SendRedBagVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendRedBagVC.m; sourceTree = "<group>"; };
+		848D8C252595B15F00F54B04 /* RedBagCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedBagCell.h; sourceTree = "<group>"; };
+		848D8C262595B15F00F54B04 /* RedBagCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedBagCell.m; sourceTree = "<group>"; };
+		848D8C272595B15F00F54B04 /* RedBagCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RedBagCell.xib; sourceTree = "<group>"; };
+		848D8C2D2595B59500F54B04 /* RedBagCinMoneyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedBagCinMoneyCell.h; sourceTree = "<group>"; };
+		848D8C2E2595B59500F54B04 /* RedBagCinMoneyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedBagCinMoneyCell.m; sourceTree = "<group>"; };
+		848D8C2F2595B59500F54B04 /* RedBagCinMoneyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RedBagCinMoneyCell.xib; sourceTree = "<group>"; };
 		84B2521B2549080600887B01 /* PlayGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B2521E2549080600887B01 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84B2521F2549080600887B01 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1068,6 +1113,7 @@
 		8436C84E25491BDB00194E27 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				848D8C1D2595AE0200F54B04 /* Business */,
 				84C768C325553D9500E08149 /* HomeViewController.h */,
 				84C768C425553D9500E08149 /* HomeViewController.m */,
 			);
@@ -1186,6 +1232,72 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		848D8BAE259576C200F54B04 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				848D8BAF259576F900F54B04 /* PictureReviewVC.h */,
+				848D8BB0259576F900F54B04 /* PictureReviewVC.m */,
+				848D8BFE2595875D00F54B04 /* EBBannerView.h */,
+				848D8BFD2595875C00F54B04 /* EBBannerView.m */,
+				848D8BCB2595802700F54B04 /* PicReviewCell.h */,
+				848D8BCC2595802700F54B04 /* PicReviewCell.m */,
+				848D8BCD2595802700F54B04 /* PicReviewCell.xib */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		848D8C032595889D00F54B04 /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				848D8C042595889D00F54B04 /* UIView+SDExtension.h */,
+				848D8C052595889D00F54B04 /* SDCycleScrollView.h */,
+				848D8C062595889D00F54B04 /* SDCollectionViewCell.h */,
+				848D8C072595889D00F54B04 /* SDCycleScrollView.m */,
+				848D8C082595889D00F54B04 /* UIView+SDExtension.m */,
+				848D8C092595889D00F54B04 /* SDCollectionViewCell.m */,
+				848D8C0A2595889D00F54B04 /* PageControl */,
+			);
+			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		848D8C0A2595889D00F54B04 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				848D8C0B2595889D00F54B04 /* TAAbstractDotView.h */,
+				848D8C0C2595889D00F54B04 /* TADotView.m */,
+				848D8C0D2595889D00F54B04 /* TAPageControl.m */,
+				848D8C0E2595889D00F54B04 /* TAAnimatedDotView.m */,
+				848D8C0F2595889D00F54B04 /* TAAbstractDotView.m */,
+				848D8C102595889D00F54B04 /* TADotView.h */,
+				848D8C112595889D00F54B04 /* TAAnimatedDotView.h */,
+				848D8C122595889D00F54B04 /* TAPageControl.h */,
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
+		848D8C1D2595AE0200F54B04 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				848D8C242595B14600F54B04 /* View */,
+				848D8C1E2595AE2A00F54B04 /* SendRedBagVC.h */,
+				848D8C1F2595AE2A00F54B04 /* SendRedBagVC.m */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		848D8C242595B14600F54B04 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				848D8C252595B15F00F54B04 /* RedBagCell.h */,
+				848D8C262595B15F00F54B04 /* RedBagCell.m */,
+				848D8C272595B15F00F54B04 /* RedBagCell.xib */,
+				848D8C2D2595B59500F54B04 /* RedBagCinMoneyCell.h */,
+				848D8C2E2595B59500F54B04 /* RedBagCinMoneyCell.m */,
+				848D8C2F2595B59500F54B04 /* RedBagCinMoneyCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		84B252122549080600887B01 = {
 			isa = PBXGroup;
 			children = (
@@ -1270,6 +1382,7 @@
 		F6030C2E259370E50095983E /* GodPictures */ = {
 			isa = PBXGroup;
 			children = (
+				848D8BAE259576C200F54B04 /* Business */,
 				F6030C41259376D30095983E /* Model */,
 				F6030C35259371750095983E /* View */,
 				F6030C2F259371200095983E /* GodPictureListVC.h */,
@@ -1971,6 +2084,7 @@
 		F63C68CF256BECC7000EFFD2 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				848D8C032595889D00F54B04 /* SDCycleScrollView */,
 				F63FB51425846D96002EB4D7 /* PopViewController */,
 				F63C68D0256BECCF000EFFD2 /* SLTKeyBoard */,
 			);
@@ -2366,6 +2480,7 @@
 				TargetAttributes = {
 					84B2521A2549080600887B01 = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1230;
 					};
 					84B252352549080700887B01 = {
 						CreatedOnToolsVersion = 12.1;
@@ -2550,11 +2665,14 @@
 				F63128532557CE5F000162B1 /* search_gray@3x.png in Resources */,
 				F63127C22557CE5E000162B1 /* icon_029_cover.png in Resources */,
 				F631287F2557CE5F000162B1 /* alert_error@2x.png in Resources */,
+				848D8C292595B15F00F54B04 /* RedBagCell.xib in Resources */,
 				F63128562557CE5F000162B1 /* group_avatar@3x.png in Resources */,
 				84B252292549080600887B01 /* Main.storyboard in Resources */,
 				F631281C2557CE5F000162B1 /* msg_send_audio@3x.png in Resources */,
+				848D8BCF2595802700F54B04 /* PicReviewCell.xib in Resources */,
 				F631282C2557CE5F000162B1 /* msg_file_white@3x.png in Resources */,
 				F6A10748254ED7FB00A2D1B0 /* UIForgetRegistCell.xib in Resources */,
+				848D8C312595B59500F54B04 /* RedBagCinMoneyCell.xib in Resources */,
 				F63FB52825846E44002EB4D7 /* GiftPickVC.xib in Resources */,
 				F63C68E8256BFBC6000EFFD2 /* MyPorketCell.xib in Resources */,
 				F63127E62557CE5F000162B1 /* chat_audio_blue@3x.png in Resources */,
@@ -2698,6 +2816,7 @@
 				F631285B2557CE5F000162B1 /* EMBadgeLabel.m in Sources */,
 				F63128772557CE5F000162B1 /* PSTGridLayoutItem.m in Sources */,
 				F63128632557CE5F000162B1 /* MWZoomingScrollView.m in Sources */,
+				848D8C142595889D00F54B04 /* UIView+SDExtension.m in Sources */,
 				F63128402557CE5F000162B1 /* EMConversationHelper.m in Sources */,
 				8436C7D125490D6500194E27 /* UIViewController+HUD.m in Sources */,
 				F6030C31259371200095983E /* GodPictureListVC.m in Sources */,
@@ -2707,10 +2826,12 @@
 				F631280D2557CE5F000162B1 /* EMMsgTextBubbleView.m in Sources */,
 				F63128892557CE5F000162B1 /* EMSearchResultController.m in Sources */,
 				F63128072557CE5F000162B1 /* EMMsgRecallBubbleView.m in Sources */,
+				848D8C172595889D00F54B04 /* TAPageControl.m in Sources */,
 				8436C77425490D2000194E27 /* JTBaseTabBarController.m in Sources */,
 				8445CE3B2554036A00FE01A3 /* UserModel.m in Sources */,
 				F631287B2557CE5F000162B1 /* EMTextView.m in Sources */,
 				8450EB67254BE42600B54365 /* LoginVC.m in Sources */,
+				848D8BB1259576F900F54B04 /* PictureReviewVC.m in Sources */,
 				8436C75A25490CD600194E27 /* JTNetwork.m in Sources */,
 				F644EA9A2588FC00009746F4 /* OrderListVC.m in Sources */,
 				F63128452557CE5F000162B1 /* EMEmoticonGroup.m in Sources */,
@@ -2724,6 +2845,7 @@
 				F631285F2557CE5F000162B1 /* wav.mm in Sources */,
 				F631280B2557CE5F000162B1 /* EMMsgFileBubbleView.m in Sources */,
 				8436C7E625490D6500194E27 /* UIColor+Extension.m in Sources */,
+				848D8C282595B15F00F54B04 /* RedBagCell.m in Sources */,
 				F631280C2557CE5F000162B1 /* EMMsgImageBubbleView.m in Sources */,
 				F6A1073B254ED47C00A2D1B0 /* UIConfirnBtnCell.m in Sources */,
 				F631288F2557CE5F000162B1 /* EMChineseToPinyin.m in Sources */,
@@ -2739,13 +2861,16 @@
 				F644EA992588FC00009746F4 /* pickerFBView.m in Sources */,
 				8436C7DE25490D6500194E27 /* UIImage+GIF.m in Sources */,
 				8436C77125490D2000194E27 /* JTBaseNavigationController.m in Sources */,
+				848D8C302595B59500F54B04 /* RedBagCinMoneyCell.m in Sources */,
 				F63127DF2557CE5F000162B1 /* EaseEmotionEscape.m in Sources */,
+				848D8BFF2595875D00F54B04 /* EBBannerView.m in Sources */,
 				8450EB92254BF68200B54365 /* NSObject+setProperty.m in Sources */,
 				8436C7D525490D6500194E27 /* UIView+PubicColor.m in Sources */,
 				F63128372557CE5F000162B1 /* EMImageBrowser.m in Sources */,
 				F63128762557CE5F000162B1 /* PSTCollectionViewLayout.m in Sources */,
 				F63128642557CE5F000162B1 /* UIImage+MWPhotoBrowser.m in Sources */,
 				F631283A2557CE5F000162B1 /* MessageViewController.m in Sources */,
+				848D8C192595889D00F54B04 /* TAAbstractDotView.m in Sources */,
 				8436C7E525490D6500194E27 /* UIImage+TOOL.m in Sources */,
 				F63126112557C712000162B1 /* HelpVC.m in Sources */,
 				F644EA922588FC00009746F4 /* OrderCommentVC.m in Sources */,
@@ -2766,6 +2891,7 @@
 				F63128382557CE5F000162B1 /* EMAudioPlayerHelper.mm in Sources */,
 				F6A10747254ED7FB00A2D1B0 /* UIForgetRegistCell.m in Sources */,
 				F63127BC2557CE5E000162B1 /* EMReadReceiptMsgViewController.m in Sources */,
+				848D8BCE2595802700F54B04 /* PicReviewCell.m in Sources */,
 				F631283F2557CE5F000162B1 /* EMEmojiHelper.m in Sources */,
 				F631288C2557CE5F000162B1 /* EMTextViewController.m in Sources */,
 				F63128612557CE5F000162B1 /* MWPhotoBrowser.m in Sources */,
@@ -2783,6 +2909,8 @@
 				F63CB5EB2585B2040033004A /* GodPlayerListVC.m in Sources */,
 				F63128032557CE5F000162B1 /* EMChatBar.m in Sources */,
 				F631283E2557CE5F000162B1 /* EMNotificationHelper.m in Sources */,
+				848D8C132595889D00F54B04 /* SDCycleScrollView.m in Sources */,
+				848D8C152595889D00F54B04 /* SDCollectionViewCell.m in Sources */,
 				F63128882557CE5F000162B1 /* UIViewController+Search.m in Sources */,
 				F631288A2557CE5F000162B1 /* EMSearchBar.m in Sources */,
 				84B252202549080600887B01 /* AppDelegate.m in Sources */,
@@ -2790,10 +2918,12 @@
 				F63128782557CE5F000162B1 /* SDWebImageDecoder.m in Sources */,
 				F63128442557CE5F000162B1 /* EMDemoOptions.m in Sources */,
 				F631288B2557CE5F000162B1 /* EMSearchViewController.m in Sources */,
+				848D8C182595889D00F54B04 /* TAAnimatedDotView.m in Sources */,
 				8436C7E325490D6500194E27 /* UIColor+RCColor.m in Sources */,
 				F631280F2557CE5F000162B1 /* EMMsgLocationBubbleView.m in Sources */,
 				F644EA962588FC00009746F4 /* SubmitOrderVC.m in Sources */,
 				8436C7E925490D6500194E27 /* UINavigationBar+handle.m in Sources */,
+				848D8C202595AE2A00F54B04 /* SendRedBagVC.m in Sources */,
 				8436C78A25490D3000194E27 /* BaseController.m in Sources */,
 				F63127BB2557CE5E000162B1 /* EMMoreFunctionView.m in Sources */,
 				846F3EC72556726500FC5E71 /* MyHeadNameIDCell.m in Sources */,
@@ -2809,6 +2939,7 @@
 				F631288D2557CE5F000162B1 /* EMRealtimeSearch.m in Sources */,
 				F6BF868F256D3F0E00DF3478 /* RechargeVC.m in Sources */,
 				F63128732557CE5F000162B1 /* PSTCollectionViewItemKey.m in Sources */,
+				848D8C162595889D00F54B04 /* TADotView.m in Sources */,
 				F63126082557C708000162B1 /* ChangePswdVC.m in Sources */,
 				F644EA942588FC00009746F4 /* OrderHeaderCell.m in Sources */,
 				8436C7E725490D6500194E27 /* UIImage+RCImage.m in Sources */,
@@ -3037,13 +3168,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WX8P2UD78U;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PlayGame/PrefixHeader.pch";
 				INFOPLIST_FILE = PlayGame/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3055,6 +3187,9 @@
 				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fw.PlayGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PlayGame/PlayGame-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3065,13 +3200,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WX8P2UD78U;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PlayGame/PrefixHeader.pch";
 				INFOPLIST_FILE = PlayGame/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3083,6 +3219,8 @@
 				MARKETING_VERSION = 2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fw.PlayGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PlayGame/PlayGame-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

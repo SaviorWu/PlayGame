@@ -14,6 +14,8 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - CKYPhotoBrowser (1.0.0):
+    - YYWebImage
   - FLAnimatedImage (1.0.12)
   - Hyphenate (3.7.2)
   - IQKeyboardManager (6.5.6)
@@ -32,9 +34,17 @@ PODS:
   - VTMagic (1.2.4):
     - VTMagic/Core (= 1.2.4)
   - VTMagic/Core (1.2.4)
+  - YYCache (1.0.4)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+  - YYWebImage (1.0.5):
+    - YYCache
+    - YYImage
 
 DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
+  - CKYPhotoBrowser
   - FLAnimatedImage
   - Hyphenate
   - IQKeyboardManager
@@ -51,6 +61,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AFNetworking
+    - CKYPhotoBrowser
     - FLAnimatedImage
     - Hyphenate
     - IQKeyboardManager
@@ -62,9 +73,13 @@ SPEC REPOS:
     - ReactiveObjC
     - SDWebImage
     - VTMagic
+    - YYCache
+    - YYImage
+    - YYWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  CKYPhotoBrowser: ed30c642324e9341ce97709aa7afb82c7d1fdf96
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   Hyphenate: a9da397810e08c4b3173a5c8f04868165ec48b9c
   IQKeyboardManager: 2a6e97afdafc7becf0cb17a9a8d795e3a980717f
@@ -76,7 +91,10 @@ SPEC CHECKSUMS:
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   VTMagic: b49e5f456dbcbfd9a3588ba92417233a105bc193
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+  YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 5c87aa7505b527ff8b1402d7498de883ccf46cf9
+PODFILE CHECKSUM: d80e7a61956c86d8d60458693f64f4517f515ccf
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.9.3

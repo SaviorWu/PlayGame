@@ -42,7 +42,7 @@
 #define JTWeakify(object) __weak __typeof__(object) weak##_##object = object;
 
 //屏幕宽高
-#define  SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
+#define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT  [UIScreen mainScreen].bounds.size.height
 #define MYAPP (AppDelegate *)([UIApplication sharedApplication].delegate)
 

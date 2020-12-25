@@ -7,6 +7,7 @@
 
 #import "GodPictureListVC.h"
 #import "GodPicModel.h"
+#import "PictureReviewVC.h"
 @interface GodPictureListVC ()
 @end
 
@@ -61,9 +62,15 @@
                 [self hideAllHud];
                 if (model.zt == 1){
                     // 付过费跳转查看照片页面
+                    UIBaseModel* model = self.dataArray[indexPath.row];
+                    PictureReviewVC* vc = [[PictureReviewVC alloc] init];
+                    vc.godID = model.modelId;
+                    vc.header = model.imageName;
+                    vc.nickName = model.title;
+                    [self.navigationController pushViewController:vc animated:YES];
                 }else{
                     // 未付款
-                    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"提醒" message:@"是否消耗玩币查看大神照片" preferredStyle:UIAlertControllerStyleAlert];
+                    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"付费提醒" message:@"是否消耗52玩币查看大神照片" preferredStyle:UIAlertControllerStyleAlert];
                     UIAlertAction*cancelAction=[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
                     UIAlertAction*okAction=[UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                         [self showHudInView:self.view];
@@ -74,7 +81,13 @@
                                 [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"oid":model.sj,@"jg":@"52"} url:@"/ping/suyan/orderPay" callback:^(JTBaseReqModel *model) {
                                     [self hideAllHud];
                                     if (model.zt == 1){
-                                        NSLog(@"支付成功，跳转查看照片页面")
+                                        NSLog(@"支付成功，跳转查看照片页面");
+                                        UIBaseModel* model = self.dataArray[indexPath.row];
+                                        PictureReviewVC* vc = [[PictureReviewVC alloc] init];
+                                        vc.godID = model.modelId;
+                                        vc.header = model.imageName;
+                                        vc.nickName = model.title;
+                                        [self.navigationController pushViewController:vc animated:YES];
                                     }
                                 }];
                             }
@@ -93,10 +106,7 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    UIBaseModel* model = self.dataArray[indexPath.row];
-//    OrderDetailVC* vc = [[OrderDetailVC alloc] init];
-//    vc.orderID = model.modelId;
-//    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 @end

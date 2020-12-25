@@ -26,7 +26,7 @@
 }
 - (void)setModel:(UIBaseModel*)model
 {
-    [self.imgHeader LoadImage:model.imageName withHoderImage:[UIImage imageNamed:@""] successBlock:^(UIImage * _Nonnull retImage) {
+    [self.imgHeader LoadImage:model.imageName withHoderImage:[UIImage imageNamed:@"头像"] successBlock:^(UIImage * _Nonnull retImage) {
         
     }];
     self.lbNickName.text = model.title;

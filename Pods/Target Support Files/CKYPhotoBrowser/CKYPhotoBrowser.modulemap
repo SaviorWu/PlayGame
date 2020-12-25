@@ -1,0 +1,6 @@
+framework module CKYPhotoBrowser {
+  umbrella header "CKYPhotoBrowser-umbrella.h"
+
+  export *
+  module * { export * }
+}
