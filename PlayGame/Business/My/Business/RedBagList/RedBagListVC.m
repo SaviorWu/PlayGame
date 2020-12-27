@@ -23,6 +23,7 @@
         [self hiddenNavigation];
     }
     [self addRefreshLoading];
+    
 }
 - (UIView *)listView {
     return self.view;
@@ -67,12 +68,20 @@
                 RedBagModel* model = [RedBagModel mj_objectWithKeyValues:dic];
                 if (self.type == 0) {
                     mark = @"1";
-                }else{
+                }else if(self.type == 1){
                     if ([model.rpacket_s_state intValue] == 2) {
                         mark = @"3";
                     }else{
                         mark = @"2";
                     }
+                }else if(self.type == 2 || self.type == 3){
+                    if ([model.rpacket_s_state intValue] == 2) {
+                        mark = @"3";
+                    }else{
+                        mark = @"4";
+                    }
+                }else{
+                    
                 }
                 
                 [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
@@ -105,7 +114,7 @@
                 [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"id":uiModel.modelId} url:@"/ping/hongbao/apply_collection" callback:^(JTBaseReqModel *model) {
                     [self hideAllHud];
                     [self showHint:model.xx];
-                    
+                    [self.tableView.mj_header beginRefreshing];
                 }];
             }else if([uiModel.mark intValue] == 2){
                 [self showHudInView:self.view];
@@ -115,26 +124,34 @@
                                       callback:^(JTBaseReqModel *model) {
                     if (model.zt == 1) {
                         NSString* uids = @"";
-                        for (NSDictionary* dic in model.sj[@"send_list"]) {
+                        NSString* max = @"";
+                        for (NSDictionary* dic in model.sj) {
                             if (uids.length == 0) {
                                 uids = [RedBagModel mj_objectWithKeyValues:dic].uid;
+                                max = uids;
                             }else{
                                 uids = [NSString stringWithFormat:@"%@,%@",uids,[RedBagModel mj_objectWithKeyValues:dic].uid];
                             }
                         }
-                        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
-                                                         @"id":uiModel.modelId,
-//                                                         @"max":uiModel.dataArray[1],
-                                                         @"uids":uids
-                        } url:@"/ping/hongbao/send" callback:^(JTBaseReqModel *model) {
+                        if (uids.length == 0) {
+                            [self showHint:@"暂时没人申请领取哦"];
                             [self hideAllHud];
-                            if (model.zt == 1){
-                                [self showHint:model.xx];
-                            }else{
+                            return;
+                        }else{
+                            [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
+                                                             @"id":uiModel.modelId,
+                                                             @"max":max,
+                                                             @"uids":uids
+                            } url:@"/ping/hongbao/send" callback:^(JTBaseReqModel *model) {
+                                [self hideAllHud];
+                                if (model.zt == 1){
+                                    [self showHint:model.xx];
+                                }else{
+                                    
+                                }
                                 
-                            }
-                            
-                        }];
+                            }];
+                        }
                     }
                     else{
                         [self hideAllHud];

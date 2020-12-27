@@ -40,6 +40,7 @@
         self.lbRegistNum.text = [NSString stringWithFormat:@"%@人申请",model.dataArray[0]];
         self.lbMoney.text = model.dataArray[1];
     }
+    self.backView.backgroundColor = [UIColor redColor];
     if ([model.mark isEqualToString:@"1"]) {
         self.lbDesc.text = @"申请领取";
         self.lbDesc.textColor = UIColor.blackColor;
@@ -52,6 +53,11 @@
         self.lbDesc.text = @"已完成";
         self.lbDesc.textColor = UIColor.whiteColor;
         self.lbDesc.backgroundColor = [UIColor clearColor];
+        self.backView.backgroundColor = [UIColor lightGrayColor];
+    }else if ([model.mark isEqualToString:@"4"]){
+        self.lbDesc.text = @"等待确认";
+        self.lbDesc.textColor = UIColor.blackColor;
+        self.lbDesc.backgroundColor = [UIColor colorWithHex:0xF9B554];
     }
 }
 @end
