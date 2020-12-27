@@ -114,7 +114,23 @@
             UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"发送提醒" message:[NSString stringWithFormat:@"是否将%@元塞进红包",self.money] preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction*cancelAction=[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
             UIAlertAction*okAction=[UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-                
+                [self showHudInView:self.view];
+                [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token}
+                                           url:@"/ping/hongbao/users_info"
+                                      callback:^(JTBaseReqModel *model) {
+                    if (model.zt == 1) {
+                        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
+                                                         @"hb":self.money,
+                                                         @"desc":self.mark}
+                                                   url:@"/ping/hongbao/send_redpacket"
+                                              callback:^(JTBaseReqModel *model) {
+                            [self showHint:model.xx];
+                            [self hideAllHud];
+                        }];
+                    }else{
+                        [self hideAllHud];
+                    }
+                }];
             }];
             [alertController addAction:cancelAction];
             [alertController addAction:okAction];

@@ -351,6 +351,11 @@
 		F6526EA22582480A002FC2B4 /* GodDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F6526EA12582480A002FC2B4 /* GodDetailVC.m */; };
 		F6526EAD258248EC002FC2B4 /* GodDetailHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6526EAB258248EC002FC2B4 /* GodDetailHeadCell.m */; };
 		F6526EAE258248EC002FC2B4 /* GodDetailHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6526EAC258248EC002FC2B4 /* GodDetailHeadCell.xib */; };
+		F65AEAD32597120E002CFAD2 /* RedBagListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F65AEAD22597120E002CFAD2 /* RedBagListVC.m */; };
+		F65AEADA2597125D002CFAD2 /* MyRedBagVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F65AEAD92597125D002CFAD2 /* MyRedBagVC.m */; };
+		F65AEAE225971332002CFAD2 /* RedBagListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F65AEAE025971332002CFAD2 /* RedBagListCell.m */; };
+		F65AEAE325971332002CFAD2 /* RedBagListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F65AEAE125971332002CFAD2 /* RedBagListCell.xib */; };
+		F65AEAED259713C9002CFAD2 /* RedBagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F65AEAEC259713C9002CFAD2 /* RedBagModel.m */; };
 		F681E204254D0F04009FDDF6 /* UITextFiledCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F681E202254D0F04009FDDF6 /* UITextFiledCell.m */; };
 		F681E205254D0F04009FDDF6 /* UITextFiledCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F681E203254D0F04009FDDF6 /* UITextFiledCell.xib */; };
 		F681E210254D1EE5009FDDF6 /* UIVerificationCodeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F681E20E254D1EE5009FDDF6 /* UIVerificationCodeCell.m */; };
@@ -929,6 +934,15 @@
 		F6526EAA258248EC002FC2B4 /* GodDetailHeadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GodDetailHeadCell.h; sourceTree = "<group>"; };
 		F6526EAB258248EC002FC2B4 /* GodDetailHeadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GodDetailHeadCell.m; sourceTree = "<group>"; };
 		F6526EAC258248EC002FC2B4 /* GodDetailHeadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GodDetailHeadCell.xib; sourceTree = "<group>"; };
+		F65AEAD12597120E002CFAD2 /* RedBagListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedBagListVC.h; sourceTree = "<group>"; };
+		F65AEAD22597120E002CFAD2 /* RedBagListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedBagListVC.m; sourceTree = "<group>"; };
+		F65AEAD82597125D002CFAD2 /* MyRedBagVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyRedBagVC.h; sourceTree = "<group>"; };
+		F65AEAD92597125D002CFAD2 /* MyRedBagVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyRedBagVC.m; sourceTree = "<group>"; };
+		F65AEADF25971332002CFAD2 /* RedBagListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedBagListCell.h; sourceTree = "<group>"; };
+		F65AEAE025971332002CFAD2 /* RedBagListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedBagListCell.m; sourceTree = "<group>"; };
+		F65AEAE125971332002CFAD2 /* RedBagListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RedBagListCell.xib; sourceTree = "<group>"; };
+		F65AEAEB259713C9002CFAD2 /* RedBagModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedBagModel.h; sourceTree = "<group>"; };
+		F65AEAEC259713C9002CFAD2 /* RedBagModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedBagModel.m; sourceTree = "<group>"; };
 		F681E201254D0F04009FDDF6 /* UITextFiledCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextFiledCell.h; sourceTree = "<group>"; };
 		F681E202254D0F04009FDDF6 /* UITextFiledCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextFiledCell.m; sourceTree = "<group>"; };
 		F681E203254D0F04009FDDF6 /* UITextFiledCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UITextFiledCell.xib; sourceTree = "<group>"; };
@@ -1424,6 +1438,8 @@
 		F63126032557C6F0000162B1 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				F65AEAD725971214002CFAD2 /* MyRedBag */,
+				F65AEAD0259711F8002CFAD2 /* RedBagList */,
 				F6030C2E259370E50095983E /* GodPictures */,
 				F644EA6E2588FC00009746F4 /* Order */,
 				F63C68D7256BFB76000EFFD2 /* MyPorketVC */,
@@ -2350,6 +2366,45 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F65AEAD0259711F8002CFAD2 /* RedBagList */ = {
+			isa = PBXGroup;
+			children = (
+				F65AEAEA259713B9002CFAD2 /* Model */,
+				F65AEADE25971321002CFAD2 /* View */,
+				F65AEAD12597120E002CFAD2 /* RedBagListVC.h */,
+				F65AEAD22597120E002CFAD2 /* RedBagListVC.m */,
+			);
+			path = RedBagList;
+			sourceTree = "<group>";
+		};
+		F65AEAD725971214002CFAD2 /* MyRedBag */ = {
+			isa = PBXGroup;
+			children = (
+				F65AEAD82597125D002CFAD2 /* MyRedBagVC.h */,
+				F65AEAD92597125D002CFAD2 /* MyRedBagVC.m */,
+			);
+			path = MyRedBag;
+			sourceTree = "<group>";
+		};
+		F65AEADE25971321002CFAD2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F65AEADF25971332002CFAD2 /* RedBagListCell.h */,
+				F65AEAE025971332002CFAD2 /* RedBagListCell.m */,
+				F65AEAE125971332002CFAD2 /* RedBagListCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F65AEAEA259713B9002CFAD2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F65AEAEB259713C9002CFAD2 /* RedBagModel.h */,
+				F65AEAEC259713C9002CFAD2 /* RedBagModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F681E200254D0EE2009FDDF6 /* UITextFiledCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -2582,6 +2637,7 @@
 				F63127CA2557CE5E000162B1 /* icon_013.gif in Resources */,
 				F63128462557CE5F000162B1 /* close_gray@3x.png in Resources */,
 				F63127F62557CE5F000162B1 /* chatbar_audio@2x.png in Resources */,
+				F65AEAE325971332002CFAD2 /* RedBagListCell.xib in Resources */,
 				F63128792557CE5F000162B1 /* MWPhotoBrowser.bundle in Resources */,
 				F63127B82557CE5E000162B1 /* pin-white.png in Resources */,
 				F6030C3A259371B70095983E /* GodPictureCell.xib in Resources */,
@@ -2873,6 +2929,7 @@
 				848D8C192595889D00F54B04 /* TAAbstractDotView.m in Sources */,
 				8436C7E525490D6500194E27 /* UIImage+TOOL.m in Sources */,
 				F63126112557C712000162B1 /* HelpVC.m in Sources */,
+				F65AEAE225971332002CFAD2 /* RedBagListCell.m in Sources */,
 				F644EA922588FC00009746F4 /* OrderCommentVC.m in Sources */,
 				8436C8722549397F00194E27 /* UITabBar+badge.m in Sources */,
 				F631280A2557CE5F000162B1 /* EMMsgVideoBubbleView.m in Sources */,
@@ -2908,6 +2965,8 @@
 				F63128062557CE5F000162B1 /* EMMessageTimeCell.m in Sources */,
 				F63CB5EB2585B2040033004A /* GodPlayerListVC.m in Sources */,
 				F63128032557CE5F000162B1 /* EMChatBar.m in Sources */,
+				F65AEADA2597125D002CFAD2 /* MyRedBagVC.m in Sources */,
+				F65AEAD32597120E002CFAD2 /* RedBagListVC.m in Sources */,
 				F631283E2557CE5F000162B1 /* EMNotificationHelper.m in Sources */,
 				848D8C132595889D00F54B04 /* SDCycleScrollView.m in Sources */,
 				848D8C152595889D00F54B04 /* SDCollectionViewCell.m in Sources */,
@@ -2981,6 +3040,7 @@
 				F63128912557CE5F000162B1 /* EMConversationsViewController.m in Sources */,
 				8445CE2A2553D51D00FE01A3 /* ForgetVC.m in Sources */,
 				8436C75525490CD600194E27 /* JTUserModel.m in Sources */,
+				F65AEAED259713C9002CFAD2 /* RedBagModel.m in Sources */,
 				F63128662557CE5F000162B1 /* MWPhoto.m in Sources */,
 				F643E8982569F3AD00E95375 /* ResetPaypswdVC.m in Sources */,
 				F63FB50525845DC6002EB4D7 /* GodDetailInfoCell.m in Sources */,
