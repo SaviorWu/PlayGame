@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *lbTips;
 //@property (nonatomic, strong) cellBlock block;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintLeading;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *cellHeight;
 - (void)setModel:(UIBaseModel*)model;
 @end
 

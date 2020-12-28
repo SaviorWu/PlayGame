@@ -10,3 +10,7 @@
 @implementation RedBagModel
 
 @end
+@implementation RedBagUserModel
+
+@end
+

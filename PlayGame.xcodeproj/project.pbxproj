@@ -53,6 +53,11 @@
 		846F3EC72556726500FC5E71 /* MyHeadNameIDCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846F3EC52556726500FC5E71 /* MyHeadNameIDCell.m */; };
 		846F3EC82556726500FC5E71 /* MyHeadNameIDCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846F3EC62556726500FC5E71 /* MyHeadNameIDCell.xib */; };
 		846F3ED1255675F300FC5E71 /* UIImageView+loading.m in Sources */ = {isa = PBXBuildFile; fileRef = 846F3ED0255675F300FC5E71 /* UIImageView+loading.m */; };
+		84736DA625996EA2005C8389 /* RedBagDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84736DA525996EA2005C8389 /* RedBagDetailVC.m */; };
+		84736DAE25997011005C8389 /* RedBagHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84736DAC25997011005C8389 /* RedBagHeaderCell.m */; };
+		84736DAF25997011005C8389 /* RedBagHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84736DAD25997011005C8389 /* RedBagHeaderCell.xib */; };
+		84736DB625997060005C8389 /* RedBagUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84736DB425997060005C8389 /* RedBagUserCell.m */; };
+		84736DB725997060005C8389 /* RedBagUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84736DB525997060005C8389 /* RedBagUserCell.xib */; };
 		848D8BB1259576F900F54B04 /* PictureReviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D8BB0259576F900F54B04 /* PictureReviewVC.m */; };
 		848D8BCE2595802700F54B04 /* PicReviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 848D8BCC2595802700F54B04 /* PicReviewCell.m */; };
 		848D8BCF2595802700F54B04 /* PicReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848D8BCD2595802700F54B04 /* PicReviewCell.xib */; };
@@ -366,7 +371,6 @@
 		F6A10748254ED7FB00A2D1B0 /* UIForgetRegistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A10746254ED7FB00A2D1B0 /* UIForgetRegistCell.xib */; };
 		F6A10750254EDDA300A2D1B0 /* UILabelButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A1074E254EDDA300A2D1B0 /* UILabelButtonCell.m */; };
 		F6A10751254EDDA300A2D1B0 /* UILabelButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A1074F254EDDA300A2D1B0 /* UILabelButtonCell.xib */; };
-		F6A835B6258B7E03004678A0 /* TestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A835B5258B7E03004678A0 /* TestVC.m */; };
 		F6BF868F256D3F0E00DF3478 /* RechargeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F6BF868E256D3F0E00DF3478 /* RechargeVC.m */; };
 /* End PBXBuildFile section */
 
@@ -477,6 +481,14 @@
 		846F3EC62556726500FC5E71 /* MyHeadNameIDCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyHeadNameIDCell.xib; sourceTree = "<group>"; };
 		846F3ECF255675F300FC5E71 /* UIImageView+loading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+loading.h"; sourceTree = "<group>"; };
 		846F3ED0255675F300FC5E71 /* UIImageView+loading.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+loading.m"; sourceTree = "<group>"; };
+		84736DA425996EA2005C8389 /* RedBagDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedBagDetailVC.h; sourceTree = "<group>"; };
+		84736DA525996EA2005C8389 /* RedBagDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedBagDetailVC.m; sourceTree = "<group>"; };
+		84736DAB25997011005C8389 /* RedBagHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedBagHeaderCell.h; sourceTree = "<group>"; };
+		84736DAC25997011005C8389 /* RedBagHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedBagHeaderCell.m; sourceTree = "<group>"; };
+		84736DAD25997011005C8389 /* RedBagHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RedBagHeaderCell.xib; sourceTree = "<group>"; };
+		84736DB325997060005C8389 /* RedBagUserCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedBagUserCell.h; sourceTree = "<group>"; };
+		84736DB425997060005C8389 /* RedBagUserCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedBagUserCell.m; sourceTree = "<group>"; };
+		84736DB525997060005C8389 /* RedBagUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RedBagUserCell.xib; sourceTree = "<group>"; };
 		848D8BAF259576F900F54B04 /* PictureReviewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureReviewVC.h; sourceTree = "<group>"; };
 		848D8BB0259576F900F54B04 /* PictureReviewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureReviewVC.m; sourceTree = "<group>"; };
 		848D8BCB2595802700F54B04 /* PicReviewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PicReviewCell.h; sourceTree = "<group>"; };
@@ -958,8 +970,6 @@
 		F6A1074D254EDDA300A2D1B0 /* UILabelButtonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILabelButtonCell.h; sourceTree = "<group>"; };
 		F6A1074E254EDDA300A2D1B0 /* UILabelButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILabelButtonCell.m; sourceTree = "<group>"; };
 		F6A1074F254EDDA300A2D1B0 /* UILabelButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UILabelButtonCell.xib; sourceTree = "<group>"; };
-		F6A835B4258B7E03004678A0 /* TestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestVC.h; sourceTree = "<group>"; };
-		F6A835B5258B7E03004678A0 /* TestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestVC.m; sourceTree = "<group>"; };
 		F6BF868D256D3F0E00DF3478 /* RechargeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RechargeVC.h; sourceTree = "<group>"; };
 		F6BF868E256D3F0E00DF3478 /* RechargeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RechargeVC.m; sourceTree = "<group>"; };
 		F77AC95FAA126A31DE1BB569 /* Pods-PlayGameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayGameTests.release.xcconfig"; path = "Target Support Files/Pods-PlayGameTests/Pods-PlayGameTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -1246,6 +1256,29 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		84736DA325996E80005C8389 /* RedBagDetail */ = {
+			isa = PBXGroup;
+			children = (
+				84736DAA25996FFA005C8389 /* View */,
+				84736DA425996EA2005C8389 /* RedBagDetailVC.h */,
+				84736DA525996EA2005C8389 /* RedBagDetailVC.m */,
+			);
+			path = RedBagDetail;
+			sourceTree = "<group>";
+		};
+		84736DAA25996FFA005C8389 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84736DAB25997011005C8389 /* RedBagHeaderCell.h */,
+				84736DAC25997011005C8389 /* RedBagHeaderCell.m */,
+				84736DAD25997011005C8389 /* RedBagHeaderCell.xib */,
+				84736DB325997060005C8389 /* RedBagUserCell.h */,
+				84736DB425997060005C8389 /* RedBagUserCell.m */,
+				84736DB525997060005C8389 /* RedBagUserCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		848D8BAE259576C200F54B04 /* Business */ = {
 			isa = PBXGroup;
 			children = (
@@ -1429,8 +1462,6 @@
 			children = (
 				F63125FA2557C4FD000162B1 /* SetVC.h */,
 				F63125FB2557C4FD000162B1 /* SetVC.m */,
-				F6A835B4258B7E03004678A0 /* TestVC.h */,
-				F6A835B5258B7E03004678A0 /* TestVC.m */,
 			);
 			path = Set;
 			sourceTree = "<group>";
@@ -2369,6 +2400,7 @@
 		F65AEAD0259711F8002CFAD2 /* RedBagList */ = {
 			isa = PBXGroup;
 			children = (
+				84736DA325996E80005C8389 /* RedBagDetail */,
 				F65AEAEA259713B9002CFAD2 /* Model */,
 				F65AEADE25971321002CFAD2 /* View */,
 				F65AEAD12597120E002CFAD2 /* RedBagListVC.h */,
@@ -2600,6 +2632,7 @@
 				F63127C72557CE5E000162B1 /* icon_010.gif in Resources */,
 				F63127E12557CE5F000162B1 /* chat_audio_red@2x.png in Resources */,
 				F63127D92557CE5E000162B1 /* icon_035_cover.png in Resources */,
+				84736DAF25997011005C8389 /* RedBagHeaderCell.xib in Resources */,
 				F63FB50625845DC6002EB4D7 /* GodDetailInfoCell.xib in Resources */,
 				F63127C12557CE5E000162B1 /* icon_002_cover.png in Resources */,
 				84B2522E2549080700887B01 /* LaunchScreen.storyboard in Resources */,
@@ -2642,6 +2675,7 @@
 				F63127B82557CE5E000162B1 /* pin-white.png in Resources */,
 				F6030C3A259371B70095983E /* GodPictureCell.xib in Resources */,
 				F681E205254D0F04009FDDF6 /* UITextFiledCell.xib in Resources */,
+				84736DB725997060005C8389 /* RedBagUserCell.xib in Resources */,
 				F63127D52557CE5E000162B1 /* icon_024.gif in Resources */,
 				F63128862557CE5F000162B1 /* alert_info@3x.png in Resources */,
 				F63128172557CE5F000162B1 /* msg_location_white@2x.png in Resources */,
@@ -2872,6 +2906,7 @@
 				F631285B2557CE5F000162B1 /* EMBadgeLabel.m in Sources */,
 				F63128772557CE5F000162B1 /* PSTGridLayoutItem.m in Sources */,
 				F63128632557CE5F000162B1 /* MWZoomingScrollView.m in Sources */,
+				84736DAE25997011005C8389 /* RedBagHeaderCell.m in Sources */,
 				848D8C142595889D00F54B04 /* UIView+SDExtension.m in Sources */,
 				F63128402557CE5F000162B1 /* EMConversationHelper.m in Sources */,
 				8436C7D125490D6500194E27 /* UIViewController+HUD.m in Sources */,
@@ -2953,7 +2988,6 @@
 				F631288C2557CE5F000162B1 /* EMTextViewController.m in Sources */,
 				F63128612557CE5F000162B1 /* MWPhotoBrowser.m in Sources */,
 				F63128392557CE5F000162B1 /* EMMsgTranspondViewController.m in Sources */,
-				F6A835B6258B7E03004678A0 /* TestVC.m in Sources */,
 				F6526EA22582480A002FC2B4 /* GodDetailVC.m in Sources */,
 				8445CE442554043200FE01A3 /* UserModelManager.m in Sources */,
 				F63C68DA256BFB96000EFFD2 /* MyPorketVC.m in Sources */,
@@ -2998,6 +3032,7 @@
 				F631288D2557CE5F000162B1 /* EMRealtimeSearch.m in Sources */,
 				F6BF868F256D3F0E00DF3478 /* RechargeVC.m in Sources */,
 				F63128732557CE5F000162B1 /* PSTCollectionViewItemKey.m in Sources */,
+				84736DB625997060005C8389 /* RedBagUserCell.m in Sources */,
 				848D8C162595889D00F54B04 /* TADotView.m in Sources */,
 				F63126082557C708000162B1 /* ChangePswdVC.m in Sources */,
 				F644EA942588FC00009746F4 /* OrderHeaderCell.m in Sources */,
@@ -3047,6 +3082,7 @@
 				F63FB51D25846D96002EB4D7 /* LHCustomModalTransition.m in Sources */,
 				F631286A2557CE5F000162B1 /* DACircularProgressView.m in Sources */,
 				84C768AD2554F0EB00E08149 /* RegistVC.m in Sources */,
+				84736DA625996EA2005C8389 /* RedBagDetailVC.m in Sources */,
 				F631286C2557CE5F000162B1 /* PSTCollectionViewFlowLayout.m in Sources */,
 				F63128692557CE5F000162B1 /* MWGridCell.m in Sources */,
 				F63128702557CE5F000162B1 /* NSIndexPath+PSTCollectionViewAdditions.m in Sources */,

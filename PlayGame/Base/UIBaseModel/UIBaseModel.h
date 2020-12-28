@@ -56,7 +56,9 @@ typedef enum _UIType {
     UIGodPicReview,
     UIRedBagType,
     UIRedBagCinMoneyType,
-    UIRedBagListType
+    UIRedBagListType,
+    UIRedBagDetailHeadType,
+    UIRedBagDetailUserType
 } UIType;
 
 

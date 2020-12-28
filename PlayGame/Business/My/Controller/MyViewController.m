@@ -9,7 +9,6 @@
 #import "SetVC.h"
 #import "MyPorketVC.h"
 #import "OrderListVC.h"
-#import "TestVC.h"
 #import "GodPictureListVC.h"
 #import "SendRedBagVC.h"
 #import "RedBagListVC.h"
@@ -179,7 +178,7 @@
     UIBaseModel* model = self.dataArray[indexPath.row];
     if([model.type  isEqual: @(UIImageLabelSelectType)]) {
         if (indexPath.row == 6){
-            TestVC* vc = [[TestVC alloc] init];
+            SetVC* vc = [[SetVC alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }else if (indexPath.row == 8){
             OrderListVC* vc = [[OrderListVC alloc] init];

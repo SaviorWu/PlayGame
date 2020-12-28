@@ -7,6 +7,7 @@
 
 #import "RedBagListVC.h"
 #import "RedBagModel.h"
+#import "RedBagDetailVC.h"
 @interface RedBagListVC ()
 
 @end
@@ -167,5 +168,11 @@
         return [super tableView:tableView cellForRowAtIndexPath:indexPath];
     }
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIBaseModel* uiModel = self.dataArray[indexPath.row];
+    RedBagDetailVC* vc = [[RedBagDetailVC alloc] init];
+    vc.redBagId = uiModel.modelId;
+    [self.navigationController pushViewController:vc animated:YES];
+}
 @end
