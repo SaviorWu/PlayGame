@@ -27,6 +27,7 @@
 #import "EMLocationViewController.h"
 #import "EMMsgTranspondViewController.h"
 #import "EMAtGroupMembersViewController.h"
+#import "HomeViewController.h"
 @interface EMChatViewController ()<UIScrollViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, EMMultiDevicesDelegate, EMChatManagerDelegate, EMGroupManagerDelegate, EMChatroomManagerDelegate, EMChatBarDelegate, EMMessageCellDelegate, EMChatBarEmoticonViewDelegate, EMChatBarRecordAudioViewDelegate,EMMoreFunctionViewDelegate,EMReadReceiptMsgDelegate,UIDocumentInteractionControllerDelegate>
 
 @property (nonatomic, strong) dispatch_queue_t msgQueue;
@@ -69,6 +70,7 @@
 @property (nonatomic) CGFloat contentSizeHeight;
 
 @property (nonatomic, strong) UIButton* buyOrder;
+@property (nonatomic, strong) UIButton* buyPiPei;
 @end
 
 @implementation EMChatViewController
@@ -153,7 +155,7 @@
     // Do any additional setup after loading the view.
     self.naviTitle = self.vcTitle;
     [self addNavigationView];
-    [self addBuyOrder];
+//    [self addBuyOrder];
     self.msgQueue = dispatch_queue_create("emmessage.com", NULL);
     self.msgTimelTag = -1;
     [self _setupChatSubviews];
@@ -184,8 +186,23 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapTableViewAction:)];
     [self.tableView addGestureRecognizer:tap];
     
+    if ([self.vcTitle isEqualToString:@"大厅"]) {
+        self.btnBack.hidden = YES;
+        
+        self.buyPiPei = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 95, 10, 80, 40)];
+//        self.buyPiPei.backgroundColor = [UIColor greenColor];
+        self.buyPiPei.centerY = self.btnBack.centerY;
+        [self.buyPiPei addTarget:self action:@selector(clickPipei) forControlEvents:UIControlEventTouchUpInside];
+        [self.buyPiPei setTitle:@"匹配大神" forState:UIControlStateNormal];
+        self.buyPiPei.titleLabel.font = [UIFont systemFontOfSize:15];
+        [self.buyPiPei setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [self.vwNavigation addSubview:self.buyPiPei];
+    }
 }
-
+- (void)clickPipei{
+    HomeViewController* vc = [[HomeViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];

@@ -18,5 +18,6 @@
 @property (nonatomic, strong) NSError   *error;
 // 数据
 @property (nonatomic, strong) id        sj;
+@property (nonatomic, strong) id        data;
 
 @end

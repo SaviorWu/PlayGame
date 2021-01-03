@@ -26,6 +26,13 @@
     }else{
         self.lbContent.text = @"";
     }
+    if (model.subTitleColor) {
+        self.lbContent.textColor = model.subTitleColor;
+        self.lbValue.textColor = model.subTitleColor;
+    }
+    if (model.titleColor) {
+        self.lbTitle.textColor = model.titleColor;
+    }
     self.lbValue.text = model.subTitle;
 }
 @end

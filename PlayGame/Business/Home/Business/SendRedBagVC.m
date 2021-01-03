@@ -20,7 +20,7 @@
     self.naviTitle = @"发红包";
     self.money = @"0";
     [self addNavigationView];
-    [self addRefreshLoading];
+//    [self addRefreshLoading];
     self.tableView.backgroundColor = [UIColor colorWithHex:0xf8f8f8];
 }
 - (void)registCell{

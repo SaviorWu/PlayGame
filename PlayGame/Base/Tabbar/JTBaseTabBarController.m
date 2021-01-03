@@ -12,6 +12,7 @@
 #import "MyViewController.h"
 #import "MessageViewController.h"
 #import "GodPlayerVC.h"
+#import "EMChatViewController.h"
 @interface JTBaseTabBarController ()
 
 @end
@@ -40,9 +41,18 @@
 //    [self setTabBarItems];
 //}
 
+//EMChatViewController *vc = [[EMChatViewController alloc] initWithCoversationModel:self.arrayList[indexPath.row]];
+//vc.vcTitle = nickname.length == 0?@" ":nickname;
+//vc.direction = (NSInteger)model.emModel.latestMessage.direction;
+//vc.header = header;
+//vc.playthisgameID = playthisgamegameid;
+//vc.playthisgameUsercallgodID = chartUid;
+//[self.navigationController pushViewController:vc animated:YES];
+
 - (void)setControllers {
     
-    HomeViewController *homeVC = [[HomeViewController alloc] init];
+    EMChatViewController *homeVC = [[EMChatViewController alloc] init];
+    homeVC.vcTitle = @"大厅";
     MyViewController *myVC = [[MyViewController alloc] init];
     MessageViewController* vc = [[MessageViewController alloc] init];
     GodPlayerVC* gpvc = [[GodPlayerVC alloc] init];
@@ -81,7 +91,7 @@
     }
     [self.viewControllers
      enumerateObjectsUsingBlock:^(__kindof UIViewController *_Nonnull obj, NSUInteger idx, BOOL *_Nonnull stop) {
-        if ([obj isKindOfClass:[HomeViewController class]]) {
+        if ([obj isKindOfClass:[EMChatViewController class]]) {
             obj.tabBarItem.title = @"首页";
             obj.tabBarItem.image =
             [[UIImage imageNamed:@"homeDiss"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];

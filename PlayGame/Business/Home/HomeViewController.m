@@ -61,6 +61,7 @@
                     } completion:^(EMMessage *message, EMError *error) {
                     }];
                 }
+                [self.navigationController popViewControllerAnimated:YES];
             }
         }];
     }
@@ -72,7 +73,7 @@
     self.selectGame = -1;
     self.selectSex = -1;
     [self addNavigationView];
-    [self hiddenBackBtn:YES];
+//    [self hiddenBackBtn:YES];
     [self addRightBtn];
     
     [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/ping/mei/grzx" callback:^(JTBaseReqModel *model) {

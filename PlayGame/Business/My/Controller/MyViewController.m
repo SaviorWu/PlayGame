@@ -13,6 +13,7 @@
 #import "SendRedBagVC.h"
 #import "RedBagListVC.h"
 #import "MyRedBagVC.h"
+#import "OrderSongVC.h"
 @interface MyViewController ()
 
 @end
@@ -136,6 +137,16 @@
                                                                  BM_SubAlignment:@(1),
                                                                  BM_mark:@"1",
                                                                  BM_type:@(UIImageLabelSelectType)}]];
+            [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
+                                                                 BM_backColor:[UIColor colorWithHex:0xf8f8f8],
+                                                                 BM_cellHeight:@(1)}]];
+            [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_title:@"麦克风",
+                                                                 BM_subTitle:@"点歌",
+                                                                 BM_cellHeight:@(50),
+    //                                                             BM_leading:@(-20),
+                                                                 BM_SubAlignment:@(1),
+                                                                 BM_mark:@"1",
+                                                                 BM_type:@(UIImageLabelSelectType)}]];
             
             
             [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
@@ -194,6 +205,9 @@
             [self.navigationController pushViewController:vc animated:YES];
         }else if (indexPath.row == 16){
             MyRedBagVC* vc = [[MyRedBagVC alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }else if (indexPath.row == 18){
+            OrderSongVC* vc = [[OrderSongVC alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
         

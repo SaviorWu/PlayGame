@@ -372,6 +372,10 @@
 		F6A10750254EDDA300A2D1B0 /* UILabelButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A1074E254EDDA300A2D1B0 /* UILabelButtonCell.m */; };
 		F6A10751254EDDA300A2D1B0 /* UILabelButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A1074F254EDDA300A2D1B0 /* UILabelButtonCell.xib */; };
 		F6BF868F256D3F0E00DF3478 /* RechargeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F6BF868E256D3F0E00DF3478 /* RechargeVC.m */; };
+		F6D7153A25A167F10012AE3C /* OrderSongVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D7153925A167F10012AE3C /* OrderSongVC.m */; };
+		F6D7154225A17AA40012AE3C /* OrderSongTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D7154025A17AA40012AE3C /* OrderSongTextCell.m */; };
+		F6D7154325A17AA40012AE3C /* OrderSongTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D7154125A17AA40012AE3C /* OrderSongTextCell.xib */; };
+		F6D7154B25A195100012AE3C /* ChoseGiftVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F6D7154A25A195100012AE3C /* ChoseGiftVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -972,6 +976,13 @@
 		F6A1074F254EDDA300A2D1B0 /* UILabelButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UILabelButtonCell.xib; sourceTree = "<group>"; };
 		F6BF868D256D3F0E00DF3478 /* RechargeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RechargeVC.h; sourceTree = "<group>"; };
 		F6BF868E256D3F0E00DF3478 /* RechargeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RechargeVC.m; sourceTree = "<group>"; };
+		F6D7153825A167F10012AE3C /* OrderSongVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderSongVC.h; sourceTree = "<group>"; };
+		F6D7153925A167F10012AE3C /* OrderSongVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderSongVC.m; sourceTree = "<group>"; };
+		F6D7153F25A17AA40012AE3C /* OrderSongTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderSongTextCell.h; sourceTree = "<group>"; };
+		F6D7154025A17AA40012AE3C /* OrderSongTextCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderSongTextCell.m; sourceTree = "<group>"; };
+		F6D7154125A17AA40012AE3C /* OrderSongTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderSongTextCell.xib; sourceTree = "<group>"; };
+		F6D7154925A195100012AE3C /* ChoseGiftVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChoseGiftVC.h; sourceTree = "<group>"; };
+		F6D7154A25A195100012AE3C /* ChoseGiftVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChoseGiftVC.m; sourceTree = "<group>"; };
 		F77AC95FAA126A31DE1BB569 /* Pods-PlayGameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayGameTests.release.xcconfig"; path = "Target Support Files/Pods-PlayGameTests/Pods-PlayGameTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1469,6 +1480,7 @@
 		F63126032557C6F0000162B1 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				F6D7153725A167D70012AE3C /* OrderSong */,
 				F65AEAD725971214002CFAD2 /* MyRedBag */,
 				F65AEAD0259711F8002CFAD2 /* RedBagList */,
 				F6030C2E259370E50095983E /* GodPictures */,
@@ -2496,6 +2508,36 @@
 			path = Business;
 			sourceTree = "<group>";
 		};
+		F6D7153725A167D70012AE3C /* OrderSong */ = {
+			isa = PBXGroup;
+			children = (
+				F6D7154725A194F50012AE3C /* ChoseGift */,
+				F6D7153E25A17A8C0012AE3C /* View */,
+				F6D7153825A167F10012AE3C /* OrderSongVC.h */,
+				F6D7153925A167F10012AE3C /* OrderSongVC.m */,
+			);
+			path = OrderSong;
+			sourceTree = "<group>";
+		};
+		F6D7153E25A17A8C0012AE3C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F6D7153F25A17AA40012AE3C /* OrderSongTextCell.h */,
+				F6D7154025A17AA40012AE3C /* OrderSongTextCell.m */,
+				F6D7154125A17AA40012AE3C /* OrderSongTextCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F6D7154725A194F50012AE3C /* ChoseGift */ = {
+			isa = PBXGroup;
+			children = (
+				F6D7154925A195100012AE3C /* ChoseGiftVC.h */,
+				F6D7154A25A195100012AE3C /* ChoseGiftVC.m */,
+			);
+			path = ChoseGift;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2755,6 +2797,7 @@
 				F63128532557CE5F000162B1 /* search_gray@3x.png in Resources */,
 				F63127C22557CE5E000162B1 /* icon_029_cover.png in Resources */,
 				F631287F2557CE5F000162B1 /* alert_error@2x.png in Resources */,
+				F6D7154325A17AA40012AE3C /* OrderSongTextCell.xib in Resources */,
 				848D8C292595B15F00F54B04 /* RedBagCell.xib in Resources */,
 				F63128562557CE5F000162B1 /* group_avatar@3x.png in Resources */,
 				84B252292549080600887B01 /* Main.storyboard in Resources */,
@@ -2982,7 +3025,9 @@
 				F644EA9B2588FC00009746F4 /* OrderModel.m in Sources */,
 				F63128382557CE5F000162B1 /* EMAudioPlayerHelper.mm in Sources */,
 				F6A10747254ED7FB00A2D1B0 /* UIForgetRegistCell.m in Sources */,
+				F6D7154B25A195100012AE3C /* ChoseGiftVC.m in Sources */,
 				F63127BC2557CE5E000162B1 /* EMReadReceiptMsgViewController.m in Sources */,
+				F6D7153A25A167F10012AE3C /* OrderSongVC.m in Sources */,
 				848D8BCE2595802700F54B04 /* PicReviewCell.m in Sources */,
 				F631283F2557CE5F000162B1 /* EMEmojiHelper.m in Sources */,
 				F631288C2557CE5F000162B1 /* EMTextViewController.m in Sources */,
@@ -3055,6 +3100,7 @@
 				F63128082557CE5F000162B1 /* EMMsgExtGifBubbleView.m in Sources */,
 				F631286E2557CE5F000162B1 /* PSTGridLayoutInfo.m in Sources */,
 				8436C7D925490D6500194E27 /* UITextView+Placeholder.m in Sources */,
+				F6D7154225A17AA40012AE3C /* OrderSongTextCell.m in Sources */,
 				8436C7D425490D6500194E27 /* UIButton+countDown.m in Sources */,
 				F631283D2557CE5F000162B1 /* MessageListCell.m in Sources */,
 				843D36D6254A4ED400FDCD5D /* UIBaseModel.m in Sources */,

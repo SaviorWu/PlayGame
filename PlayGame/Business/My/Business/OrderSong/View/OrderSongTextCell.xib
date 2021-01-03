@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="147" id="KGk-i7-Jjw" customClass="OrderSongTextCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="147"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="147"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8j5-Vv-zfM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="147"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="147" id="tGQ-OM-21c"/>
+                        </constraints>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="输入需要大神演唱的一句歌词，100字以内。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YG-GT-4cs">
+                        <rect key="frame" x="6" y="8" width="301" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="8j5-Vv-zfM" secondAttribute="bottom" id="6hn-Rm-uu8"/>
+                    <constraint firstItem="9YG-GT-4cs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="8xS-1k-3lI"/>
+                    <constraint firstAttribute="trailing" secondItem="8j5-Vv-zfM" secondAttribute="trailing" id="NX9-Oy-1dy"/>
+                    <constraint firstItem="8j5-Vv-zfM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="OKZ-JH-q34"/>
+                    <constraint firstItem="8j5-Vv-zfM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ohf-l6-DH3"/>
+                    <constraint firstItem="9YG-GT-4cs" firstAttribute="leading" secondItem="8j5-Vv-zfM" secondAttribute="leading" constant="6" id="sAe-86-QzB"/>
+                    <constraint firstItem="9YG-GT-4cs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="sdU-dr-p0i"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="sdU-dr-p0i"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="lbTips" destination="9YG-GT-4cs" id="qCl-B0-z9q"/>
+                <outlet property="textView" destination="8j5-Vv-zfM" id="yLp-Ed-Zk4"/>
+                <outlet property="tvLeading" destination="OKZ-JH-q34" id="W9A-cU-huG"/>
+                <outlet property="tvTraling" destination="NX9-Oy-1dy" id="Ipq-JD-1VP"/>
+            </connections>
+            <point key="canvasLocation" x="50.724637681159422" y="108.81696428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

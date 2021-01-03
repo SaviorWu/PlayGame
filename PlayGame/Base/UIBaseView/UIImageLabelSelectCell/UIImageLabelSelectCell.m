@@ -43,6 +43,7 @@
         }
         
     }
+    
     if (model.cellHeight) {
         CGFloat value = model.cellHeight.floatValue - 16.f;
         if (value > 0) {

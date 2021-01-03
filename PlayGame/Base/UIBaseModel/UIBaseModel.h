@@ -58,7 +58,8 @@ typedef enum _UIType {
     UIRedBagCinMoneyType,
     UIRedBagListType,
     UIRedBagDetailHeadType,
-    UIRedBagDetailUserType
+    UIRedBagDetailUserType,
+    UIOrderSongTextType
 } UIType;
 
 
