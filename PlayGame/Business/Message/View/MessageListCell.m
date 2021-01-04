@@ -102,7 +102,7 @@ static int kConversation_AtAll = 2;
     NSString* nickname = @"";
 
     if (model.emModel.latestMessage.direction == EMMessageDirectionReceive) {
-        header = model.emModel.ext[@"fromOriginalHead"];
+        header = model.emModel.ext[@"fromHead"];
         nickname = model.emModel.ext[@"fromName"];
         if (header.length == 0 && nickname.length == 0) {
             header = model.emModel.ext[@"toOrignalHead"];

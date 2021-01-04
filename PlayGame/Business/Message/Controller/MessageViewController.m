@@ -192,7 +192,7 @@
     NSString* header = @"";
     NSString* chartUid = @"";
     if (model.emModel.latestMessage.direction == EMMessageDirectionReceive) {
-        header = model.emModel.ext[@"fromOriginalHead"];
+        header = model.emModel.ext[@"fromHead"];
         nickname = model.emModel.ext[@"fromName"];
         chartUid = model.emModel.latestMessage.from;
     }else{

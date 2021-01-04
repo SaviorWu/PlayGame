@@ -250,14 +250,19 @@
         
         [self.statusView setSenderStatus:model.emModel.status isReadAcked:model.emModel.isReadAcked];
     } else {
-        self.nameLabel.text = model.emModel.from;
+        if (model.emModel.chatType == EMChatTypeGroupChat) {
+            self.nameLabel.text = model.emModel.ext[@"fromName"];
+        }else{
+            self.nameLabel.text = model.emModel.from;
+        }
+        
         NSString* header = @"";
         if ([[model.emModel.ext allKeys] containsObject:@"toOrignalHead"]) {
             header = model.emModel.ext[@"toOrignalHead"];
         }
         if (header.length == 0) {
-            if ([[model.emModel.ext allKeys] containsObject:@"fromOriginalHead"]) {
-                header = model.emModel.ext[@"fromOriginalHead"];
+            if ([[model.emModel.ext allKeys] containsObject:@"fromHead"]) {
+                header = model.emModel.ext[@"fromHead"];
             }
         }
         

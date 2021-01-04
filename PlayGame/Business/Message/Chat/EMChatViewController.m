@@ -183,21 +183,31 @@
         [self tableViewDidTriggerHeaderRefresh];
 //    }
     if ([self.vcTitle isEqualToString:@"大厅"]) {
-        self.btnBack.hidden = YES;
-        self.buyPiPei = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 95, 10, 80, 40)];
-        self.buyPiPei.centerY = self.btnBack.centerY;
-        [self.buyPiPei addTarget:self action:@selector(clickPipei) forControlEvents:UIControlEventTouchUpInside];
-        [self.buyPiPei setTitle:@"匹配大神" forState:UIControlStateNormal];
-        self.buyPiPei.titleLabel.font = [UIFont systemFontOfSize:15];
-        [self.buyPiPei setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [self.vwNavigation addSubview:self.buyPiPei];
-        [[EMClient sharedClient].groupManager joinPublicGroup:self.conversationModel.emModel.conversationId completion:^(EMGroup *aGroup, EMError *aError) {
-            if (!aError) {
-                NSLog(@"加入公开群成功 --- %@", aGroup);
-            } else {
-                NSLog(@"加入公开群失败的原因 --- %@", aError.errorDescription);
+        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/ping/mei/grzx" callback:^(JTBaseReqModel *model) {
+            if (model.zt == 1){
+                [UserModelManager shareInstance].userModel.money = model.sj[@"userdata"][@"money"];
+                [UserModelManager shareInstance].userModel.nickname = model.sj[@"userdata"][@"nickname"];
+                [UserModelManager shareInstance].userModel.header = model.sj[@"userdata"][@"header"];
+                
+                self.btnBack.hidden = YES;
+                self.buyPiPei = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 95, 10, 80, 40)];
+                self.buyPiPei.centerY = self.btnBack.centerY;
+                [self.buyPiPei addTarget:self action:@selector(clickPipei) forControlEvents:UIControlEventTouchUpInside];
+                [self.buyPiPei setTitle:@"匹配大神" forState:UIControlStateNormal];
+                self.buyPiPei.titleLabel.font = [UIFont systemFontOfSize:15];
+                [self.buyPiPei setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+                [self.vwNavigation addSubview:self.buyPiPei];
+                [[EMClient sharedClient].groupManager joinPublicGroup:self.conversationModel.emModel.conversationId completion:^(EMGroup *aGroup, EMError *aError) {
+                    if (!aError) {
+                        NSLog(@"加入公开群成功 --- %@", aGroup);
+                    } else {
+                        NSLog(@"加入公开群失败的原因 --- %@", aError.errorDescription);
+                    }
+                }];
             }
         }];
+        
+        
     }
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapTableViewAction:)];
     [self.tableView addGestureRecognizer:tap];
@@ -416,12 +426,14 @@
     } else {
         EMMessageModel *model = (EMMessageModel *)obj;
         if (self.direction == 0) {
+            // 发送消息
             model.emModel.ext = @{@"toOrignalHead":self.header.length == 0?@"":self.header,@"toName":self.vcTitle,
-                                  @"fromOriginalHead":self.header.length == 0?@"":self.header,@"fromName":self.vcTitle
+                                  @"fromHead":self.header.length == 0?@"":self.header,@"fromName":self.vcTitle
             };
         }else{
+            // 接收消息
             model.emModel.ext = @{@"toOrignalHead":self.header.length == 0?@"":self.header,@"toName":self.vcTitle,
-                                  @"fromOriginalHead":self.header.length == 0?@"":self.header,@"fromName":self.vcTitle};
+                                  @"fromHead":self.header.length == 0?@"":self.header,@"fromName":self.vcTitle};
         }
         NSString *identifier = [EMMessageCell cellIdentifierWithDirection:model.direction type:model.type];
         /*
@@ -551,7 +563,8 @@
 {
     self.isWillInputAt = NO;
     if ([text isEqualToString:@"\n"]) {
-        [self _sendTextAction:aInputView.text ext:nil];
+        [self _sendTextAction:aInputView.text ext:@{@"fromName":[UserModelManager shareInstance].userModel.nickname,
+                                                    @"fromHead":[UserModelManager shareInstance].userModel.header}];
         return NO;
     } else if ([text isEqualToString:@"@"]) {
         self.isWillInputAt = YES;
@@ -2030,8 +2043,12 @@
     if([aExt objectForKey:MSG_EXT_READ_RECEIPT]) {
         message.isNeedGroupAck = YES;
     }
-
-    message.chatType = EMChatTypeChat;
+    if (self.conversationModel.emModel.type == EMChatTypeGroupChat) {
+        message.chatType = EMChatTypeGroupChat;
+    }else{
+        message.chatType = EMChatTypeChat;
+    }
+    
 //    message.status = EMMessageStatusDelivering;
 
     __weak typeof(self) weakself = self;
