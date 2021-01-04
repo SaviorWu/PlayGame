@@ -51,8 +51,9 @@
 
 - (void)setControllers {
     
-    EMChatViewController *homeVC = [[EMChatViewController alloc] init];
+    EMChatViewController *homeVC = [[EMChatViewController alloc] initWithConversationId:@"125465790578689" type:EMConversationTypeGroupChat createIfNotExist:YES];
     homeVC.vcTitle = @"大厅";
+//    HomeViewController* homeVC = [[HomeViewController alloc] init];
     MyViewController *myVC = [[MyViewController alloc] init];
     MessageViewController* vc = [[MessageViewController alloc] init];
     GodPlayerVC* gpvc = [[GodPlayerVC alloc] init];

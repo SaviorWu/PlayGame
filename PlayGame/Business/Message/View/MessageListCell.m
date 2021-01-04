@@ -112,7 +112,7 @@ static int kConversation_AtAll = 2;
         header = model.emModel.ext[@"toOrignalHead"];
         nickname = model.emModel.ext[@"toName"];
     }
-    [self.imgHeader LoadImage:header withHoderImage:[UIImage imageNamed:@"user_avatar_blue"] successBlock:^(UIImage * _Nonnull retImage) {
+    [self.imgHeader LoadImage:header withHoderImage:[UIImage imageNamed:@"头像"] successBlock:^(UIImage * _Nonnull retImage) {
         
     }];
     self.lbNickName.text = nickname.length == 0?model.name:nickname;

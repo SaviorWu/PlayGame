@@ -31,7 +31,7 @@
 @interface EMChatViewController ()<UIScrollViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, EMMultiDevicesDelegate, EMChatManagerDelegate, EMGroupManagerDelegate, EMChatroomManagerDelegate, EMChatBarDelegate, EMMessageCellDelegate, EMChatBarEmoticonViewDelegate, EMChatBarRecordAudioViewDelegate,EMMoreFunctionViewDelegate,EMReadReceiptMsgDelegate,UIDocumentInteractionControllerDelegate>
 
 @property (nonatomic, strong) dispatch_queue_t msgQueue;
-
+@property (nonatomic) BOOL JoinGroup;
 @property (nonatomic) BOOL isFirstLoadMsg;
 @property (nonatomic) BOOL isViewDidAppear;
 
@@ -176,28 +176,31 @@
         self.enableTyping = YES;
     }
     
-    if (self.conversationModel.emModel.type == EMConversationTypeChatRoom) {
-        [self _joinChatroom];
-    } else {
+//    if (self.conversationModel.emModel.type == EMConversationTypeChatRoom) {
+//        [self _joinChatroom];
+//    } else {
         self.isFirstLoadMsg = YES;
         [self tableViewDidTriggerHeaderRefresh];
-    }
-    
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapTableViewAction:)];
-    [self.tableView addGestureRecognizer:tap];
-    
+//    }
     if ([self.vcTitle isEqualToString:@"大厅"]) {
         self.btnBack.hidden = YES;
-        
         self.buyPiPei = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 95, 10, 80, 40)];
-//        self.buyPiPei.backgroundColor = [UIColor greenColor];
         self.buyPiPei.centerY = self.btnBack.centerY;
         [self.buyPiPei addTarget:self action:@selector(clickPipei) forControlEvents:UIControlEventTouchUpInside];
         [self.buyPiPei setTitle:@"匹配大神" forState:UIControlStateNormal];
         self.buyPiPei.titleLabel.font = [UIFont systemFontOfSize:15];
         [self.buyPiPei setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [self.vwNavigation addSubview:self.buyPiPei];
+        [[EMClient sharedClient].groupManager joinPublicGroup:self.conversationModel.emModel.conversationId completion:^(EMGroup *aGroup, EMError *aError) {
+            if (!aError) {
+                NSLog(@"加入公开群成功 --- %@", aGroup);
+            } else {
+                NSLog(@"加入公开群失败的原因 --- %@", aError.errorDescription);
+            }
+        }];
     }
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapTableViewAction:)];
+    [self.tableView addGestureRecognizer:tap];
 }
 - (void)clickPipei{
     HomeViewController* vc = [[HomeViewController alloc] init];
@@ -1458,6 +1461,7 @@
     [[EMClient sharedClient].roomManager joinChatroom:self.conversationModel.emModel.conversationId completion:^(EMChatroom *aChatroom, EMError *aError) {
         [weakself hideAllHud];
         if (aError) {
+            self.JoinGroup = NO;
             [EMAlertController showErrorAlert:@"加入聊天室失败"];
             [weakself.navigationController popViewControllerAnimated:YES];
         } else {

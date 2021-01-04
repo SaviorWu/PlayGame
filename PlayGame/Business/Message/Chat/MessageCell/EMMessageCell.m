@@ -262,7 +262,7 @@
         }
         
 //        [self.avatarView LoadImage:header PlaceholderImageName:@"user_avatar_blue"];
-        [self.avatarView LoadImage:header withHoderImage:[UIImage imageNamed:@"user_avatar_blue"] successBlock:^(UIImage * _Nonnull retImage) {
+        [self.avatarView LoadImage:header withHoderImage:[UIImage imageNamed:@"头像"] successBlock:^(UIImage * _Nonnull retImage) {
             
         }];
         if (model.type == EMMessageBodyTypeVoice) {

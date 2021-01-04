@@ -6,7 +6,7 @@
 //
 
 #import "HomeViewController.h"
-
+#import "EMChatViewController.h"
 #define head @"oOrign"
 #define oNa @"oNa"
 
@@ -27,7 +27,6 @@
     right.centerY = self.vwNavigation.centerY + 10;
 }
 - (void)clickBegin{
-    NSLog(@"开始匹配");
     if (self.selectGame == -1) {
         [self showHint:@"请选择想玩的游戏"];
     }else if(self.selectSex == -1){
