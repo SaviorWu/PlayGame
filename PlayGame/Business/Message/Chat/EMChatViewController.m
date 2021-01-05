@@ -26,6 +26,7 @@
 #import "GiffModel.h"
 #import "GiftPickVC.h"
 #import "GodDetailVC.h"
+#import "RedBagListVC.h"
 
 #import "GameInfoModel.h"
 #import "SubmitOrderVC.h"
@@ -46,6 +47,7 @@
 @property (nonatomic, strong) UIView* viewMLBack;
 @property (nonatomic, strong) UIView* viewHotSongBack;
 @property (nonatomic, strong) UIButton* sendRedBag;
+@property (nonatomic, strong) UIButton* requestRedBag;
 @property (nonatomic, strong) UIButton* orderSong;
 @property (nonatomic, strong) ChatTopView* topMLView;
 @property (nonatomic, strong) ChatTopView* topHotSongView;
@@ -240,7 +242,17 @@
         [self.sendRedBag addTarget:self action:@selector(clickRedBag) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:self.sendRedBag];
         
-        self.orderSong = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 85, SCREEN_HEIGHT/2+20, 80, 30)];
+        self.requestRedBag = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 85, self.sendRedBag.bottom+10, 80, 30)];
+        [self.requestRedBag setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        self.requestRedBag.titleLabel.font = [UIFont systemFontOfSize:12];
+        [self.requestRedBag setTitle:@"抢红包" forState:UIControlStateNormal];
+        self.requestRedBag.layer.masksToBounds = YES;
+        self.requestRedBag.layer.cornerRadius = 15;
+        self.requestRedBag.backgroundColor = [UIColor redColor];
+        [self.requestRedBag addTarget:self action:@selector(clickreqRedBag) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:self.requestRedBag];
+        
+        self.orderSong = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 85, self.requestRedBag.bottom + 10, 80, 30)];
         [self.orderSong setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         self.orderSong.titleLabel.font = [UIFont systemFontOfSize:12];
         [self.orderSong setTitle:@"去点歌" forState:UIControlStateNormal];
@@ -394,6 +406,12 @@
                         };
                         self.topHotSongView.playSongBlock = ^(NSString * _Nonnull str) {
                             NSLog(@"播放音乐");
+                            NSURL * url  = [NSURL URLWithString:str];
+                            AVPlayerItem * songItem = [[AVPlayerItem alloc]initWithURL:url];
+                            AVPlayer * player = [[AVPlayer alloc]initWithPlayerItem:songItem];
+//                            AVPlayer * player = [[AVPlayer alloc] initWithURL:url];
+//                            AVPlayerItem * songItem = player.currentItem;
+                            [player play];
                         };
                         [self.viewHotSongBack addSubview:btnSong];
                         [self.viewHotSongBack addSubview:self.topHotSongView];
@@ -414,6 +432,10 @@
 }
 - (void)clickOrderSong{
     OrderSongVC* vc = [[OrderSongVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (void)clickreqRedBag{
+    RedBagListVC* vc = [[RedBagListVC alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (void)clickPipei{
