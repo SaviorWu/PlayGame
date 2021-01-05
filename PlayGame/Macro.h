@@ -45,7 +45,7 @@
 #define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT  [UIScreen mainScreen].bounds.size.height
 #define MYAPP (AppDelegate *)([UIApplication sharedApplication].delegate)
-
+#define FS(value) value.length == 0?@"":value
 //UserDefaults
 #define kUserDefaults [NSUserDefaults standardUserDefaults]
 // 本地化字符串

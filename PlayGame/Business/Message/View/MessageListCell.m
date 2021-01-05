@@ -111,6 +111,10 @@ static int kConversation_AtAll = 2;
     }else{
         header = model.emModel.ext[@"toOrignalHead"];
         nickname = model.emModel.ext[@"toName"];
+        if (header.length == 0 && nickname.length == 0) {
+            header = model.emModel.ext[@"fromHead"];
+            nickname = model.emModel.ext[@"fromName"];
+        }
     }
     [self.imgHeader LoadImage:header withHoderImage:[UIImage imageNamed:@"头像"] successBlock:^(UIImage * _Nonnull retImage) {
         

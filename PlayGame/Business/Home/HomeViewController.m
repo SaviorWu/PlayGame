@@ -53,7 +53,9 @@
                     //生成Message
                     EMMessage *message = [[EMMessage alloc] initWithConversationID:toID from:from to:toID body:body ext:nil];
                     message.ext = @{[NSString stringWithFormat:@"t%@alHead",head]:value[@"header"],
-                                    [NSString stringWithFormat:@"t%@me",oNa]:value[@"nickname"]
+                                    [NSString stringWithFormat:@"t%@me",oNa]:value[@"nickname"],
+                                    @"fromHead":value[@"header"],
+                                    @"fromName":value[@"nickname"]
                     };
                     message.chatType = EMChatTypeChat;// 设置为单聊消息
                     [[EMClient sharedClient].chatManager sendMessage:message progress:^(int progress) {

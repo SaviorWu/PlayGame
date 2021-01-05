@@ -53,6 +53,12 @@
 		846F3EC72556726500FC5E71 /* MyHeadNameIDCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846F3EC52556726500FC5E71 /* MyHeadNameIDCell.m */; };
 		846F3EC82556726500FC5E71 /* MyHeadNameIDCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846F3EC62556726500FC5E71 /* MyHeadNameIDCell.xib */; };
 		846F3ED1255675F300FC5E71 /* UIImageView+loading.m in Sources */ = {isa = PBXBuildFile; fileRef = 846F3ED0255675F300FC5E71 /* UIImageView+loading.m */; };
+		8471DB3825A432750098816C /* MLHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8471DB3625A432750098816C /* MLHeadCell.m */; };
+		8471DB3925A432750098816C /* MLHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8471DB3725A432750098816C /* MLHeadCell.xib */; };
+		8471DB3F25A436AC0098816C /* MLModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8471DB3E25A436AC0098816C /* MLModel.m */; };
+		8471DB4525A447F30098816C /* ChatTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8471DB4425A447F30098816C /* ChatTopView.m */; };
+		8471DB4D25A455070098816C /* HomePersonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8471DB4B25A455070098816C /* HomePersonVC.m */; };
+		8471DB4E25A455070098816C /* HomePersonVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8471DB4C25A455070098816C /* HomePersonVC.xib */; };
 		84736DA625996EA2005C8389 /* RedBagDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84736DA525996EA2005C8389 /* RedBagDetailVC.m */; };
 		84736DAE25997011005C8389 /* RedBagHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84736DAC25997011005C8389 /* RedBagHeaderCell.m */; };
 		84736DAF25997011005C8389 /* RedBagHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84736DAD25997011005C8389 /* RedBagHeaderCell.xib */; };
@@ -485,6 +491,16 @@
 		846F3EC62556726500FC5E71 /* MyHeadNameIDCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyHeadNameIDCell.xib; sourceTree = "<group>"; };
 		846F3ECF255675F300FC5E71 /* UIImageView+loading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+loading.h"; sourceTree = "<group>"; };
 		846F3ED0255675F300FC5E71 /* UIImageView+loading.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+loading.m"; sourceTree = "<group>"; };
+		8471DB3525A432750098816C /* MLHeadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLHeadCell.h; sourceTree = "<group>"; };
+		8471DB3625A432750098816C /* MLHeadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLHeadCell.m; sourceTree = "<group>"; };
+		8471DB3725A432750098816C /* MLHeadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MLHeadCell.xib; sourceTree = "<group>"; };
+		8471DB3D25A436AC0098816C /* MLModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLModel.h; sourceTree = "<group>"; };
+		8471DB3E25A436AC0098816C /* MLModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLModel.m; sourceTree = "<group>"; };
+		8471DB4325A447F30098816C /* ChatTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatTopView.h; sourceTree = "<group>"; };
+		8471DB4425A447F30098816C /* ChatTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatTopView.m; sourceTree = "<group>"; };
+		8471DB4A25A455070098816C /* HomePersonVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomePersonVC.h; sourceTree = "<group>"; };
+		8471DB4B25A455070098816C /* HomePersonVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomePersonVC.m; sourceTree = "<group>"; };
+		8471DB4C25A455070098816C /* HomePersonVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePersonVC.xib; sourceTree = "<group>"; };
 		84736DA425996EA2005C8389 /* RedBagDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedBagDetailVC.h; sourceTree = "<group>"; };
 		84736DA525996EA2005C8389 /* RedBagDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedBagDetailVC.m; sourceTree = "<group>"; };
 		84736DAB25997011005C8389 /* RedBagHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedBagHeaderCell.h; sourceTree = "<group>"; };
@@ -1267,6 +1283,16 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		8471DB4925A454E50098816C /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				8471DB4A25A455070098816C /* HomePersonVC.h */,
+				8471DB4B25A455070098816C /* HomePersonVC.m */,
+				8471DB4C25A455070098816C /* HomePersonVC.xib */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 		84736DA325996E80005C8389 /* RedBagDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -1716,6 +1742,13 @@
 				F63126CF2557CE5D000162B1 /* EMMessageCell.h */,
 				F63126D02557CE5D000162B1 /* MsgCellImgs */,
 				F63126EF2557CE5E000162B1 /* EMMessageStatusView.h */,
+				8471DB3525A432750098816C /* MLHeadCell.h */,
+				8471DB3625A432750098816C /* MLHeadCell.m */,
+				8471DB3725A432750098816C /* MLHeadCell.xib */,
+				8471DB3D25A436AC0098816C /* MLModel.h */,
+				8471DB3E25A436AC0098816C /* MLModel.m */,
+				8471DB4325A447F30098816C /* ChatTopView.h */,
+				8471DB4425A447F30098816C /* ChatTopView.m */,
 			);
 			path = MessageCell;
 			sourceTree = "<group>";
@@ -1808,6 +1841,7 @@
 		F63127012557CE5E000162B1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8471DB4925A454E50098816C /* VC */,
 				F63127042557CE5E000162B1 /* MessageViewController.h */,
 				F63127022557CE5E000162B1 /* MessageViewController.m */,
 				F63127032557CE5E000162B1 /* MessageViewController.xib */,
@@ -2681,6 +2715,7 @@
 				F63127CF2557CE5E000162B1 /* icon_021.gif in Resources */,
 				F63127F82557CE5F000162B1 /* chatbar_extend@3x.png in Resources */,
 				F63127D72557CE5E000162B1 /* icon_027.gif in Resources */,
+				8471DB3925A432750098816C /* MLHeadCell.xib in Resources */,
 				F63128552557CE5F000162B1 /* search_gray@2x.png in Resources */,
 				F63127F72557CE5F000162B1 /* chatbar_photo_blue@2x.png in Resources */,
 				F63127F42557CE5F000162B1 /* chatbar_photo_blue@3x.png in Resources */,
@@ -2716,6 +2751,7 @@
 				F63128792557CE5F000162B1 /* MWPhotoBrowser.bundle in Resources */,
 				F63127B82557CE5E000162B1 /* pin-white.png in Resources */,
 				F6030C3A259371B70095983E /* GodPictureCell.xib in Resources */,
+				8471DB4E25A455070098816C /* HomePersonVC.xib in Resources */,
 				F681E205254D0F04009FDDF6 /* UITextFiledCell.xib in Resources */,
 				84736DB725997060005C8389 /* RedBagUserCell.xib in Resources */,
 				F63127D52557CE5E000162B1 /* icon_024.gif in Resources */,
@@ -2953,6 +2989,7 @@
 				848D8C142595889D00F54B04 /* UIView+SDExtension.m in Sources */,
 				F63128402557CE5F000162B1 /* EMConversationHelper.m in Sources */,
 				8436C7D125490D6500194E27 /* UIViewController+HUD.m in Sources */,
+				8471DB3825A432750098816C /* MLHeadCell.m in Sources */,
 				F6030C31259371200095983E /* GodPictureListVC.m in Sources */,
 				F63125FC2557C4FD000162B1 /* SetVC.m in Sources */,
 				84C768C525553D9500E08149 /* HomeViewController.m in Sources */,
@@ -2967,6 +3004,7 @@
 				8450EB67254BE42600B54365 /* LoginVC.m in Sources */,
 				848D8BB1259576F900F54B04 /* PictureReviewVC.m in Sources */,
 				8436C75A25490CD600194E27 /* JTNetwork.m in Sources */,
+				8471DB3F25A436AC0098816C /* MLModel.m in Sources */,
 				F644EA9A2588FC00009746F4 /* OrderListVC.m in Sources */,
 				F63128452557CE5F000162B1 /* EMEmoticonGroup.m in Sources */,
 				F63128752557CE5F000162B1 /* PSTGridLayoutRow.m in Sources */,
@@ -3029,6 +3067,7 @@
 				F63127BC2557CE5E000162B1 /* EMReadReceiptMsgViewController.m in Sources */,
 				F6D7153A25A167F10012AE3C /* OrderSongVC.m in Sources */,
 				848D8BCE2595802700F54B04 /* PicReviewCell.m in Sources */,
+				8471DB4525A447F30098816C /* ChatTopView.m in Sources */,
 				F631283F2557CE5F000162B1 /* EMEmojiHelper.m in Sources */,
 				F631288C2557CE5F000162B1 /* EMTextViewController.m in Sources */,
 				F63128612557CE5F000162B1 /* MWPhotoBrowser.m in Sources */,
@@ -3105,6 +3144,7 @@
 				F631283D2557CE5F000162B1 /* MessageListCell.m in Sources */,
 				843D36D6254A4ED400FDCD5D /* UIBaseModel.m in Sources */,
 				F644EA932588FC00009746F4 /* OrderDetailVC.m in Sources */,
+				8471DB4D25A455070098816C /* HomePersonVC.m in Sources */,
 				8436C7E825490D6500194E27 /* UIImage+TOO.m in Sources */,
 				F63128602557CE5F000162B1 /* amrFileCodec.mm in Sources */,
 				84117BEF2549465200B68891 /* BaseTableViewController.m in Sources */,

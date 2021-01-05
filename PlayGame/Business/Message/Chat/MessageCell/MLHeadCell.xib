@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MLHeadCell">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="头像" translatesAutoresizingMaskIntoConstraints="NO" id="ox6-rw-paC">
+                        <rect key="frame" x="7.5" y="0.0" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="eoE-12-u8s"/>
+                            <constraint firstAttribute="width" constant="35" id="vFW-8i-Xd5"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Wv-47-Gk0">
+                        <rect key="frame" x="5" y="30" width="40" height="10"/>
+                        <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="MVC-9d-I5H"/>
+                            <constraint firstAttribute="width" constant="40" id="QLF-RD-c0B"/>
+                        </constraints>
+                        <state key="normal" image="声波">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="clickBtn:" destination="gTV-IL-0wX" eventType="touchUpInside" id="czb-oA-nX3"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ox6-rw-paC" firstAttribute="centerX" secondItem="SEy-5g-ep8" secondAttribute="centerX" id="06b-jE-bJc"/>
+                <constraint firstItem="2Wv-47-Gk0" firstAttribute="width" secondItem="ox6-rw-paC" secondAttribute="width" id="VG2-jH-OB9"/>
+                <constraint firstItem="ox6-rw-paC" firstAttribute="centerX" secondItem="SEy-5g-ep8" secondAttribute="centerX" id="XAe-qV-Oib"/>
+                <constraint firstAttribute="trailing" secondItem="ox6-rw-paC" secondAttribute="trailing" constant="7.5" id="aKN-cA-VzN"/>
+                <constraint firstItem="2Wv-47-Gk0" firstAttribute="centerX" secondItem="ox6-rw-paC" secondAttribute="centerX" id="dLc-Pv-Dig"/>
+                <constraint firstItem="ox6-rw-paC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="lL8-aq-lf3"/>
+                <constraint firstItem="SEy-5g-ep8" firstAttribute="top" secondItem="ox6-rw-paC" secondAttribute="top" constant="44" id="mEW-Sw-ScM"/>
+                <constraint firstItem="ox6-rw-paC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="7.5" id="mMc-IC-Llh"/>
+                <constraint firstItem="2Wv-47-Gk0" firstAttribute="top" secondItem="ox6-rw-paC" secondAttribute="bottom" constant="-5" id="v6p-cb-4Dn"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="XAe-qV-Oib"/>
+                    <exclude reference="aKN-cA-VzN"/>
+                    <exclude reference="mMc-IC-Llh"/>
+                    <exclude reference="VG2-jH-OB9"/>
+                    <exclude reference="mEW-Sw-ScM"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="btnDown" destination="2Wv-47-Gk0" id="oix-En-kIp"/>
+                <outlet property="imgHead" destination="ox6-rw-paC" id="Rfp-Nj-hKy"/>
+            </connections>
+            <point key="canvasLocation" x="-507.24637681159425" y="61.607142857142854"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="声波" width="24" height="24"/>
+        <image name="头像" width="250" height="250"/>
+    </resources>
+</document>

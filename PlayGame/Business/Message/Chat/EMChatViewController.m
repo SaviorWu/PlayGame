@@ -18,6 +18,14 @@
 #import "EMConversationHelper.h"
 #import "EMMessageModel.h"
 #import "EMReadReceiptMemberModel.h"
+#import "SendRedBagVC.h"
+#import "OrderSongVC.h"
+#import "MLHeadCell.h"
+#import "MLModel.h"
+#import "HomePersonVC.h"
+#import "GiffModel.h"
+#import "GiftPickVC.h"
+#import "GodDetailVC.h"
 
 #import "GameInfoModel.h"
 #import "SubmitOrderVC.h"
@@ -28,13 +36,21 @@
 #import "EMMsgTranspondViewController.h"
 #import "EMAtGroupMembersViewController.h"
 #import "HomeViewController.h"
+#import "ChatTopView.h"
 @interface EMChatViewController ()<UIScrollViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, EMMultiDevicesDelegate, EMChatManagerDelegate, EMGroupManagerDelegate, EMChatroomManagerDelegate, EMChatBarDelegate, EMMessageCellDelegate, EMChatBarEmoticonViewDelegate, EMChatBarRecordAudioViewDelegate,EMMoreFunctionViewDelegate,EMReadReceiptMsgDelegate,UIDocumentInteractionControllerDelegate>
 
 @property (nonatomic, strong) dispatch_queue_t msgQueue;
 @property (nonatomic) BOOL JoinGroup;
 @property (nonatomic) BOOL isFirstLoadMsg;
 @property (nonatomic) BOOL isViewDidAppear;
-
+@property (nonatomic, strong) UIView* viewMLBack;
+@property (nonatomic, strong) UIView* viewHotSongBack;
+@property (nonatomic, strong) UIButton* sendRedBag;
+@property (nonatomic, strong) UIButton* orderSong;
+@property (nonatomic, strong) ChatTopView* topMLView;
+@property (nonatomic, strong) ChatTopView* topHotSongView;
+@property (nonatomic, strong) NSMutableArray* arrayML;
+@property (nonatomic, strong) NSMutableArray* arrayHotSong;
 @property (nonatomic, strong) EMConversationModel *conversationModel;
 @property (nonatomic, strong) NSString *moreMsgId;  //第一条消息的消息id
 
@@ -155,7 +171,7 @@
     // Do any additional setup after loading the view.
     self.naviTitle = self.vcTitle;
     [self addNavigationView];
-//    [self addBuyOrder];
+
     self.msgQueue = dispatch_queue_create("emmessage.com", NULL);
     self.msgTimelTag = -1;
     [self _setupChatSubviews];
@@ -182,7 +198,7 @@
         self.isFirstLoadMsg = YES;
         [self tableViewDidTriggerHeaderRefresh];
 //    }
-    if ([self.vcTitle isEqualToString:@"大厅"]) {
+    if ([self.conversationModel.emModel.conversationId isEqualToString:@"125465790578689"]) {
         [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/ping/mei/grzx" callback:^(JTBaseReqModel *model) {
             if (model.zt == 1){
                 [UserModelManager shareInstance].userModel.money = model.sj[@"userdata"][@"money"];
@@ -197,9 +213,16 @@
                 self.buyPiPei.titleLabel.font = [UIFont systemFontOfSize:15];
                 [self.buyPiPei setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
                 [self.vwNavigation addSubview:self.buyPiPei];
-                [[EMClient sharedClient].groupManager joinPublicGroup:self.conversationModel.emModel.conversationId completion:^(EMGroup *aGroup, EMError *aError) {
+                [[EMClient sharedClient].groupManager joinPublicGroup:@"125465790578689" completion:^(EMGroup *aGroup, EMError *aError) {
                     if (!aError) {
-                        NSLog(@"加入公开群成功 --- %@", aGroup);
+                        NSLog(@"加入公开群成功 --- 125465790578689");
+                    } else {
+                        NSLog(@"加入公开群失败的原因 --- %@", aError.errorDescription);
+                    }
+                }];
+                [[EMClient sharedClient].groupManager joinPublicGroup:@"136685448921090" completion:^(EMGroup *aGroup, EMError *aError) {
+                    if (!aError) {
+                        NSLog(@"加入公开群成功 --- 136685448921090");
                     } else {
                         NSLog(@"加入公开群失败的原因 --- %@", aError.errorDescription);
                     }
@@ -207,10 +230,191 @@
             }
         }];
         
+        self.sendRedBag = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 85, SCREEN_HEIGHT/2-20, 80, 30)];
+        [self.sendRedBag setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        self.sendRedBag.titleLabel.font = [UIFont systemFontOfSize:12];
+        [self.sendRedBag setTitle:@"发红包" forState:UIControlStateNormal];
+        self.sendRedBag.layer.masksToBounds = YES;
+        self.sendRedBag.layer.cornerRadius = 15;
+        self.sendRedBag.backgroundColor = [UIColor redColor];
+        [self.sendRedBag addTarget:self action:@selector(clickRedBag) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:self.sendRedBag];
         
+        self.orderSong = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 85, SCREEN_HEIGHT/2+20, 80, 30)];
+        [self.orderSong setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        self.orderSong.titleLabel.font = [UIFont systemFontOfSize:12];
+        [self.orderSong setTitle:@"去点歌" forState:UIControlStateNormal];
+        self.orderSong.layer.masksToBounds = YES;
+        self.orderSong.layer.cornerRadius = 15;
+        self.orderSong.backgroundColor = [UIColor systemBlueColor];
+        [self.orderSong addTarget:self action:@selector(clickOrderSong) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:self.orderSong];
+        
+        
+        [JTNetwork requestGetWithParam:@{} url:@"/ping/qunliao/gettopdata" callback:^(JTBaseReqModel *model) {
+            if (model.zt == 1) {
+                NSLog(@"model.sj = %@",model.sj);
+                UIButton* btnML = [[UIButton alloc] initWithFrame:CGRectMake(8, 5, 60, 30)];
+                btnML.backgroundColor = [UIColor purpleColor];
+                btnML.titleLabel.font = [UIFont systemFontOfSize:14];
+                [btnML setTitle:@"魅力榜" forState:UIControlStateNormal];
+                btnML.layer.masksToBounds = YES;
+                btnML.layer.cornerRadius = 8;
+                
+                self.arrayML = [[NSMutableArray alloc] init];
+                for (NSDictionary* dic in model.sj[@"meili"]) {
+                    [self.arrayML addObject:[MLModel mj_objectWithKeyValues:dic]];
+                }
+                
+                self.viewMLBack = [[UIView alloc] initWithFrame:CGRectMake(0, self.vwNavigation.height, SCREEN_WIDTH, 50)];
+                self.viewMLBack.backgroundColor = [UIColor whiteColor];
+                self.viewMLBack.alpha = 0.8;
+                
+                self.topMLView = [[ChatTopView alloc] initWithFrame:CGRectMake(btnML.right + 4, 5, SCREEN_WIDTH - btnML.right - 4, 50) withArray:self.arrayML];
+                @weakify(self);
+                self.topMLView.selectUserBlock = ^(NSString*  _Nonnull uid) {
+                    @strongify(self);
+                    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":uid} url:@"ping/mei/grzx" callback:^(JTBaseReqModel *Umodel) {
+                        if (Umodel.zt == 1) {
+                            PersonalPageModel* um = [PersonalPageModel mj_objectWithKeyValues:Umodel.sj[@"userdata"]];
+                            HomePersonVC* opVC = [[HomePersonVC alloc] init];
+                            opVC.clickChat = ^(id  _Nullable value) {
+                                EMChatViewController *vc = [[EMChatViewController alloc] initWithConversationId:value[0] type:EMConversationTypeChat createIfNotExist:YES];
+                                vc.vcTitle = value[1];
+                                vc.header = value[2];
+                                [self.navigationController pushViewController:vc animated:YES];
+                            };
+                            opVC.clickGift = ^(id  _Nullable value) {
+                                [self showHudInView:self.view];
+                                [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token}
+                                                           url:@"/ping/gift/getgiftinfo" callback:^(JTBaseReqModel *model) {
+                                    NSLog(@"%@",model.sj);
+                                    NSMutableArray* arrayGif = [[NSMutableArray alloc] init];
+                                    for (NSDictionary* dic in model.sj) {
+                                        GiffModel* gM = [GiffModel mj_objectWithKeyValues:dic];
+                                        [arrayGif addObject:gM];
+                                    }
+                                    GiftPickVC* opVC = [[GiftPickVC alloc] init];
+                                    opVC.arrayGift = arrayGif;
+                                    opVC.godId = value;
+                                    [opVC popWithAnimated:self];
+                                    [self presentViewController:opVC animated:YES completion:nil];
+                                    [self hideAllHud];
+                                }];
+                            };
+                            opVC.clickHeader = ^(id  _Nullable value) {
+                                GodDetailVC* vc = [[GodDetailVC alloc] init];
+                                vc.godId = value;
+                                [self.navigationController pushViewController:vc animated:YES];
+                            };
+                            opVC.uiModel = [UIBaseModel initWithDic:@{BM_imageName:um.header,
+                                                                      BM_title:um.nickname,
+                                                                      BM_subTitle:um.age,
+                                                                      BM_subTitleColor:um.sex.intValue == 2?[UIColor colorWithHex:MAIN_BLUE]:[UIColor colorWithHex:MAIN_RED],
+                                                                      BM_mark:um.is_authen.intValue == 1?@"已认证":@"未认证",
+                                                                      BM_dataArray:@[um.fans,um.uid]
+                            }];
+                            [opVC popWithAnimated:self];
+                            [self presentViewController:opVC animated:YES completion:nil];
+                        }
+                    }];
+                };
+                [self.viewMLBack addSubview:btnML];
+                [self.viewMLBack addSubview:self.topMLView];
+                [self.view addSubview:self.viewMLBack];
+                
+                
+                [JTNetwork requestGetWithParam:@{} url:@"/ping/qunliao/gequtop" callback:^(JTBaseReqModel *model) {
+                    if (model.zt == 1) {
+                        UIButton* btnSong = [[UIButton alloc] initWithFrame:CGRectMake(8, 5, 60, 30)];
+                        btnSong.backgroundColor = [UIColor redColor];
+                        btnSong.titleLabel.font = [UIFont systemFontOfSize:14];
+                        [btnSong setTitle:@"歌榜" forState:UIControlStateNormal];
+                        btnSong.layer.masksToBounds = YES;
+                        btnSong.layer.cornerRadius = 8;
+                        
+                        self.arrayHotSong = [[NSMutableArray alloc] init];
+                        for (NSDictionary* dic in model.sj) {
+                            [self.arrayHotSong addObject:[MLModel mj_objectWithKeyValues:dic]];
+                        }
+                        
+                        // 声波
+                        self.viewHotSongBack = [[UIView alloc] initWithFrame:CGRectMake(0, self.viewMLBack.bottom + 5, SCREEN_WIDTH, 50)];
+                        self.viewHotSongBack.backgroundColor = [UIColor whiteColor];
+                        self.viewHotSongBack.alpha = 0.8;
+                        
+                        self.topHotSongView = [[ChatTopView alloc] initWithFrame:CGRectMake(btnSong.right + 5, 0, SCREEN_WIDTH - btnML.right - 4, 50) withArray:self.arrayHotSong];
+                        @weakify(self);
+                        self.topHotSongView.selectUserBlock = ^(NSString*  _Nonnull uid) {
+                            @strongify(self);
+                            [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":uid} url:@"ping/mei/grzx" callback:^(JTBaseReqModel *Umodel) {
+                                if (Umodel.zt == 1) {
+                                    PersonalPageModel* um = [PersonalPageModel mj_objectWithKeyValues:Umodel.sj[@"userdata"]];
+                                    HomePersonVC* opVC = [[HomePersonVC alloc] init];
+                                    opVC.clickChat = ^(id  _Nullable value) {
+                                        EMChatViewController *vc = [[EMChatViewController alloc] initWithConversationId:value[0] type:EMConversationTypeChat createIfNotExist:YES];
+                                        vc.vcTitle = value[1];
+                                        vc.header = value[2];
+                                        [self.navigationController pushViewController:vc animated:YES];
+                                    };
+                                    opVC.clickGift = ^(id  _Nullable value) {
+                                        [self showHudInView:self.view];
+                                        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token}
+                                                                   url:@"/ping/gift/getgiftinfo" callback:^(JTBaseReqModel *model) {
+                                            NSLog(@"%@",model.sj);
+                                            NSMutableArray* arrayGif = [[NSMutableArray alloc] init];
+                                            for (NSDictionary* dic in model.sj) {
+                                                GiffModel* gM = [GiffModel mj_objectWithKeyValues:dic];
+                                                [arrayGif addObject:gM];
+                                            }
+                                            GiftPickVC* opVC = [[GiftPickVC alloc] init];
+                                            opVC.arrayGift = arrayGif;
+                                            opVC.godId = value;
+                                            [opVC popWithAnimated:self];
+                                            [self presentViewController:opVC animated:YES completion:nil];
+                                            [self hideAllHud];
+                                        }];
+                                    };
+                                    opVC.clickHeader = ^(id  _Nullable value) {
+                                        GodDetailVC* vc = [[GodDetailVC alloc] init];
+                                        vc.godId = value;
+                                        [self.navigationController pushViewController:vc animated:YES];
+                                    };
+                                    opVC.uiModel = [UIBaseModel initWithDic:@{BM_imageName:um.header,
+                                                                              BM_title:um.nickname,
+                                                                              BM_subTitle:um.age,
+                                                                              BM_subTitleColor:um.sex.intValue == 2?[UIColor colorWithHex:MAIN_BLUE]:[UIColor colorWithHex:MAIN_RED],
+                                                                              BM_mark:um.is_authen.intValue == 1?@"已认证":@"未认证",
+                                                                              BM_dataArray:@[um.fans,um.uid]
+                                    }];
+                                    [opVC popWithAnimated:self];
+                                    [self presentViewController:opVC animated:YES completion:nil];
+                                }
+                            }];
+                        };
+                        self.topHotSongView.playSongBlock = ^(NSString * _Nonnull str) {
+                            NSLog(@"播放音乐");
+                        };
+                        [self.viewHotSongBack addSubview:btnSong];
+                        [self.viewHotSongBack addSubview:self.topHotSongView];
+                        [self.view addSubview:self.viewHotSongBack];
+                    }
+                }];
+            }
+        }];
     }
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapTableViewAction:)];
     [self.tableView addGestureRecognizer:tap];
+}
+
+
+- (void)clickRedBag{
+    SendRedBagVC* vc = [[SendRedBagVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (void)clickOrderSong{
+    OrderSongVC* vc = [[OrderSongVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 - (void)clickPipei{
     HomeViewController* vc = [[HomeViewController alloc] init];
@@ -425,15 +629,18 @@
         return cell;
     } else {
         EMMessageModel *model = (EMMessageModel *)obj;
-        if (self.direction == 0) {
+        
+        if (model.direction == 0) {
             // 发送消息
-            model.emModel.ext = @{@"toOrignalHead":self.header.length == 0?@"":self.header,@"toName":self.vcTitle,
-                                  @"fromHead":self.header.length == 0?@"":self.header,@"fromName":self.vcTitle
-            };
+            NSLog(@"发送 ext = %@",model.emModel.ext);
+            model.emModel.ext = @{@"toOrignalHead":FS(self.header),@"toName":FS(self.vcTitle),
+                @"fromHead":FS([UserModelManager shareInstance].userModel.header),@"fromName":FS([UserModelManager shareInstance].userModel.nickname)};
         }else{
             // 接收消息
-            model.emModel.ext = @{@"toOrignalHead":self.header.length == 0?@"":self.header,@"toName":self.vcTitle,
-                                  @"fromHead":self.header.length == 0?@"":self.header,@"fromName":self.vcTitle};
+            NSLog(@"接收 ext = %@",model.emModel.ext);
+            NSString* name = [NSString stringWithFormat:@"%@",model.emModel.ext[@"fromName"]];
+            NSString* header = [NSString stringWithFormat:@"%@",model.emModel.ext[@"fromHead"]];
+            model.emModel.ext = @{@"fromHead":FS(header),@"fromName":FS(name)};
         }
         NSString *identifier = [EMMessageCell cellIdentifierWithDirection:model.direction type:model.type];
         /*
@@ -1299,7 +1506,6 @@
                 [weakself.tableView endUpdates];
             });
         }
-        
     });
 }
 
@@ -1950,11 +2156,11 @@
         if (!aError && [aMessages count]) {
             EMMessage *msg = aMessages[0];
             weakself.moreMsgId = msg.messageId;
-            
+
             dispatch_async(self.msgQueue, ^{
                 NSArray *formated = [weakself _formatMessages:aMessages];
                 [weakself.dataArray insertObjects:formated atIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [formated count])]];
-                
+
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [weakself.tableView reloadData];
                     [weakself.tableView setNeedsLayout];
@@ -1966,7 +2172,7 @@
                 });
             });
         }
-        
+
         [weakself tableViewDidFinishTriggerHeader:YES reload:NO];
     };
     
@@ -2037,7 +2243,6 @@
     NSString *from = [[EMClient sharedClient] currentUsername];
     NSString *to = self.conversationModel.emModel.conversationId;
     EMMessage *message = [[EMMessage alloc] initWithConversationID:to from:from to:to body:aBody ext:aExt];
-//    message.ext = @{@"toOrignalHead":self.header.length == 0?@"":self.header,@"toName":self.vcTitle};
 
     //是否需要发送阅读回执
     if([aExt objectForKey:MSG_EXT_READ_RECEIPT]) {

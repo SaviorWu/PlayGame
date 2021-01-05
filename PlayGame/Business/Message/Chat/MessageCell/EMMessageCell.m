@@ -250,23 +250,13 @@
         
         [self.statusView setSenderStatus:model.emModel.status isReadAcked:model.emModel.isReadAcked];
     } else {
+        NSString* header = @"";
         if (model.emModel.chatType == EMChatTypeGroupChat) {
             self.nameLabel.text = model.emModel.ext[@"fromName"];
         }else{
-            self.nameLabel.text = model.emModel.from;
+            self.nameLabel.text = model.emModel.ext[@"fromName"];
+            header = model.emModel.ext[@"fromHead"];
         }
-        
-        NSString* header = @"";
-        if ([[model.emModel.ext allKeys] containsObject:@"toOrignalHead"]) {
-            header = model.emModel.ext[@"toOrignalHead"];
-        }
-        if (header.length == 0) {
-            if ([[model.emModel.ext allKeys] containsObject:@"fromHead"]) {
-                header = model.emModel.ext[@"fromHead"];
-            }
-        }
-        
-//        [self.avatarView LoadImage:header PlaceholderImageName:@"user_avatar_blue"];
         [self.avatarView LoadImage:header withHoderImage:[UIImage imageNamed:@"头像"] successBlock:^(UIImage * _Nonnull retImage) {
             
         }];

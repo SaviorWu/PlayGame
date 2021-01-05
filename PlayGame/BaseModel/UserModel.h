@@ -37,6 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString* pay_password;
 @property (nonatomic, strong) NSString* vip;
 @property (nonatomic, strong) NSString* is_alert;
+@property (nonatomic, strong) NSString* is_authen;
+
 @end
 
 @interface PersonalPageModel : UserModel
