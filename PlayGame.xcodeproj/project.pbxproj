@@ -3366,7 +3366,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/PlayGame/Business/Message/Helper/3rdParty/VoiceConvert",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fw.PlayGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PlayGame/PlayGame-Bridging-Header.h";
@@ -3398,7 +3398,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/PlayGame/Business/Message/Helper/3rdParty/VoiceConvert",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fw.PlayGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PlayGame/PlayGame-Bridging-Header.h";

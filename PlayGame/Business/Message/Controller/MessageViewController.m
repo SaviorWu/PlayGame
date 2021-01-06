@@ -123,10 +123,17 @@
         }
         
         [weakself.arrayList removeAllObjects];
-
+        
         NSArray *models = [EMConversationHelper modelsFromEMConversations:sorted];
         
-        [weakself.arrayList addObjectsFromArray:models];
+        for (EMConversationModel* msg in models) {
+            if (![msg.emModel.conversationId isEqualToString:GROUP_1_ID] &&
+                ![msg.emModel.conversationId isEqualToString:GROUP_2_ID] &&
+                ![msg.emModel.conversationId isEqualToString:@"128719727427585"]) {
+                [weakself.arrayList addObject:msg];
+            }
+        }
+//        [weakself.arrayList addObjectsFromArray:models];
 
         dispatch_async(dispatch_get_main_queue(), ^{
             if (aIsShowHUD) {

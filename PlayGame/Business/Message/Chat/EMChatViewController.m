@@ -204,7 +204,8 @@
         self.isFirstLoadMsg = YES;
         [self tableViewDidTriggerHeaderRefresh];
 //    }
-    if ([self.conversationModel.emModel.conversationId isEqualToString:@"125465790578689"]) {
+
+    if ([self.conversationModel.emModel.conversationId isEqualToString:GROUP_1_ID]) {
         [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/ping/mei/grzx" callback:^(JTBaseReqModel *model) {
             if (model.zt == 1){
                 [UserModelManager shareInstance].userModel.money = model.sj[@"userdata"][@"money"];
@@ -219,14 +220,14 @@
                 self.buyPiPei.titleLabel.font = [UIFont systemFontOfSize:15];
                 [self.buyPiPei setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
                 [self.vwNavigation addSubview:self.buyPiPei];
-                [[EMClient sharedClient].groupManager joinPublicGroup:@"125465790578689" completion:^(EMGroup *aGroup, EMError *aError) {
+                [[EMClient sharedClient].groupManager joinPublicGroup:GROUP_1_ID completion:^(EMGroup *aGroup, EMError *aError) {
                     if (!aError) {
                         NSLog(@"加入公开群成功 --- 125465790578689");
                     } else {
                         NSLog(@"加入公开群失败的原因 --- %@", aError.errorDescription);
                     }
                 }];
-                [[EMClient sharedClient].groupManager joinPublicGroup:@"136685448921090" completion:^(EMGroup *aGroup, EMError *aError) {
+                [[EMClient sharedClient].groupManager joinPublicGroup:GROUP_2_ID completion:^(EMGroup *aGroup, EMError *aError) {
                     if (!aError) {
                         NSLog(@"加入公开群成功 --- 136685448921090");
                     } else {
