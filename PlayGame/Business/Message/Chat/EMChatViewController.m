@@ -86,7 +86,7 @@
 @property (nonatomic) BOOL enableTyping;
 
 @property (nonatomic) CGFloat contentSizeHeight;
-
+@property (nonatomic, strong) AVPlayer* avplayer;
 @property (nonatomic, strong) UIButton* buyOrder;
 @property (nonatomic, strong) UIButton* buyPiPei;
 @end
@@ -168,6 +168,9 @@
     [self.buyOrder addSubview:imagev];
     [self.vwNavigation addSubview:self.buyOrder];
 }
+- (void)playbackFinished{
+    self.avplayer = nil;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -184,6 +187,7 @@
     [[EMClient sharedClient].chatManager addDelegate:self delegateQueue:nil];
     [[EMClient sharedClient].groupManager addDelegate:self delegateQueue:nil];
     [[EMClient sharedClient].roomManager addDelegate:self delegateQueue:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playbackFinished) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleWillPushCallController:) name:CALL_PUSH_VIEWCONTROLLER object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleCleanMessages:) name:CHAT_CLEANMESSAGES object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleGroupSubjectUpdated:) name:GROUP_SUBJECT_UPDATED object:nil];
@@ -405,13 +409,13 @@
                             }];
                         };
                         self.topHotSongView.playSongBlock = ^(NSString * _Nonnull str) {
+                            @strongify(self);
                             NSLog(@"播放音乐");
-                            NSURL * url  = [NSURL URLWithString:str];
-                            AVPlayerItem * songItem = [[AVPlayerItem alloc]initWithURL:url];
-                            AVPlayer * player = [[AVPlayer alloc]initWithPlayerItem:songItem];
-//                            AVPlayer * player = [[AVPlayer alloc] initWithURL:url];
-//                            AVPlayerItem * songItem = player.currentItem;
-                            [player play];
+                            
+                            NSURL * url  = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",SERVER_URL,str]];
+                            AVPlayerItem* songItem =[[AVPlayerItem alloc]initWithURL:url];
+                            self.avplayer = [[AVPlayer alloc]initWithPlayerItem:songItem];
+                            [self.avplayer play];
                         };
                         [self.viewHotSongBack addSubview:btnSong];
                         [self.viewHotSongBack addSubview:self.topHotSongView];
@@ -424,7 +428,6 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapTableViewAction:)];
     [self.tableView addGestureRecognizer:tap];
 }
-
 
 - (void)clickRedBag{
     SendRedBagVC* vc = [[SendRedBagVC alloc] init];
@@ -454,6 +457,9 @@
     
     self.isViewDidAppear = YES;
     [EMConversationHelper markAllAsRead:self.conversationModel];
+    if (self.avplayer) {
+        [self.avplayer play];
+    }
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillHide:) name:UIKeyboardWillHideNotification object:nil];
@@ -471,6 +477,9 @@
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+    if (self.avplayer) {
+        [self.avplayer pause];
+    }
 }
 
 - (void)dealloc
@@ -481,6 +490,11 @@
     [[EMClient sharedClient].groupManager removeDelegate:self];
     [[EMClient sharedClient].roomManager removeDelegate:self];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:CALL_PUSH_VIEWCONTROLLER object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:CHAT_CLEANMESSAGES object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:GROUP_SUBJECT_UPDATED object:nil];
+    
 }
 
 - (BOOL)canBecomeFirstResponder
@@ -646,7 +660,7 @@
         if (cell == nil) {
             cell = [[EMMessageTimeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"EMMessageTimeCell"];
         }
-        
+        cell.timeLabel.textColor = UIColor.darkGrayColor;
         cell.timeLabel.text = cellString;
         return cell;
     } else {
@@ -655,13 +669,34 @@
         if (model.direction == 0) {
             // 发送消息
             NSLog(@"发送 ext = %@",model.emModel.ext);
-            model.emModel.ext = @{@"toOrignalHead":FS(self.header),@"toName":FS(self.vcTitle),
-                @"fromHead":FS([UserModelManager shareInstance].userModel.header),@"fromName":FS([UserModelManager shareInstance].userModel.nickname)};
+            NSString* name = [NSString stringWithFormat:@"%@",model.emModel.ext[@"toName"]];
+            NSString* header = [NSString stringWithFormat:@"%@",model.emModel.ext[@"toOrignalHead"]];
+            
+            model.emModel.ext = @{@"toOrignalHead":FS(header),@"toName":FS(name)};
+//                @"fromHead":FS([UserModelManager shareInstance].userModel.header),@"fromName":FS([UserModelManager shareInstance].userModel.nickname)};
         }else{
             // 接收消息
             NSLog(@"接收 ext = %@",model.emModel.ext);
             NSString* name = [NSString stringWithFormat:@"%@",model.emModel.ext[@"fromName"]];
             NSString* header = [NSString stringWithFormat:@"%@",model.emModel.ext[@"fromHead"]];
+            
+            if ([[model.emModel.ext allKeys] containsObject:@"type"]) {
+                NSString* cellType = [model.emModel.ext objectForKey:@"type"];
+                if ([cellType isEqualToString:@"ordertext"]) {
+                    EMMessageTimeCell *cell = (EMMessageTimeCell *)[tableView dequeueReusableCellWithIdentifier:@"EMMessageTimeCell"];
+                    // Configure the cell...
+                    if (cell == nil) {
+                        cell = [[EMMessageTimeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"EMMessageTimeCell"];
+                    }
+                    cell.timeLabel.textColor = UIColor.redColor;
+                    
+                    EMMessageBody *msgBody = model.emModel.body;
+                    // 收到的文字消息
+                    EMTextMessageBody *textBody = (EMTextMessageBody *)msgBody;
+                    cell.timeLabel.text = textBody.text;
+                    return cell;
+                }
+            }
             model.emModel.ext = @{@"fromHead":FS(header),@"fromName":FS(name)};
         }
         NSString *identifier = [EMMessageCell cellIdentifierWithDirection:model.direction type:model.type];

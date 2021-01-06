@@ -196,8 +196,8 @@
         nickname = model.emModel.ext[@"fromName"];
         chartUid = model.emModel.latestMessage.from;
     }else{
-        header = model.emModel.ext[@"fromHead"];
-        nickname = model.emModel.ext[@"fromName"];
+        header = model.emModel.ext[@"toOrignalHead"];
+        nickname = model.emModel.ext[@"toName"];
         chartUid = model.emModel.latestMessage.to;
     }
     [self showHudInView:self.view];
@@ -212,6 +212,7 @@
             return;
         }
         NSLog(@"单聊 ext = %@",model.emModel.ext);
+        
         EMChatViewController *vc = [[EMChatViewController alloc] initWithCoversationModel:model];
         vc.vcTitle = nickname.length == 0?@" ":nickname;
         vc.direction = (NSInteger)model.emModel.latestMessage.direction;
