@@ -61,7 +61,7 @@
             return NO;
         }
     }
-    if (textField.text.length > 5) {
+    if (textField.text.length > 6) {
         return NO;
     }
     return YES;

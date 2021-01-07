@@ -42,23 +42,23 @@
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"请输入验证码",
                                                          BM_leading:@(20),
                                                          BM_trading:@(20),
-                                                         BM_KeyBoardType:@(UIKeyboardTypeNumberPad),
-                                                         BM_type:@(UIVerificationType)}]];
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
-                                                         BM_leading:@(20),
-                                                         BM_trading:@(20)}]];
-    
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
-                                                         BM_cellHeight:@(10)}]];
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:self.type == 1?@"请输入新密码":@"请输入登录密码",
-                                                         BM_leading:@(20),
-                                                         BM_trading:@(20),
-                                                         BM_mark:@"1",
                                                          BM_KeyBoardType:@(UIKeyboardTypeASCIICapable),
-                                                         BM_type:@(UIFiledType)}]];
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
-                                                         BM_leading:@(20),
-                                                         BM_trading:@(20)}]];
+                                                         BM_type:@(UIVerificationType)}]];
+//    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
+//                                                         BM_leading:@(20),
+//                                                         BM_trading:@(20)}]];
+//    
+//    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
+//                                                         BM_cellHeight:@(10)}]];
+//    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:self.type == 1?@"请输入新密码":@"请输入登录密码",
+//                                                         BM_leading:@(20),
+//                                                         BM_trading:@(20),
+//                                                         BM_mark:@"1",
+//                                                         BM_KeyBoardType:@(UIKeyboardTypeASCIICapable),
+//                                                         BM_type:@(UIFiledType)}]];
+//    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
+//                                                         BM_leading:@(20),
+//                                                         BM_trading:@(20)}]];
     
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
                                                          BM_cellHeight:@(64)}]];

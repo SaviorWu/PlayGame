@@ -33,7 +33,7 @@
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILabelContentType),
                                                          BM_title:@"玩币",
                                                          BM_cellHeight:@(50),
-                                                         BM_subTitle:[NSString stringWithFormat:@"%@个",[UserModelManager shareInstance].userModel.money],
+                                                         BM_subTitle:[NSString stringWithFormat:@"%@个",[UserModelManager shareInstance].userModel.money.length == 0?@"0":[UserModelManager shareInstance].userModel.money],
                                                          BM_mark:@"余额："}]];
     
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
