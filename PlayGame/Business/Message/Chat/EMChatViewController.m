@@ -128,12 +128,12 @@
                                          @"yx":self.playthisgameID,
                                          @"lx":@"user",
                                          @"ds":self.playthisgameUsercallgodID
-        } url:@"/ping/mei/csh" callback:^(JTBaseReqModel *model) {
+        } url:@"/app/order/orderInit" callback:^(JTBaseReqModel *model) {
             
-            if (model.zt == 1) {
-                UserBaseModel* user = [UserBaseModel mj_objectWithKeyValues:model.sj[@"user"]];
-                GameInfoModel* giModel = [GameInfoModel mj_objectWithKeyValues:model.sj[@"gamemy"]];
-                NSArray* gList = model.sj[@"games"];
+            if (model.code == 1) {
+                UserBaseModel* user = [UserBaseModel mj_objectWithKeyValues:model.data[@"user"]];
+                GameInfoModel* giModel = [GameInfoModel mj_objectWithKeyValues:model.data[@"gamemy"]];
+                NSArray* gList = model.data[@"games"];
                 NSMutableArray* gamesList = [[NSMutableArray alloc] init];
                 for (NSDictionary* dic in gList) {
                     OrderGameModel* games = [OrderGameModel mj_objectWithKeyValues:dic];
@@ -147,7 +147,7 @@
                 vc.godID = self.playthisgameUsercallgodID;
                 [self.navigationController pushViewController:vc animated:YES];
             }else{
-                [self showHint:model.xx];
+                [self showHint:model.msg];
             }
             [self hideAllHud];
         }];
@@ -206,11 +206,11 @@
 //    }
 
     if ([self.conversationModel.emModel.conversationId isEqualToString:GROUP_1_ID]) {
-        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/ping/mei/grzx" callback:^(JTBaseReqModel *model) {
-            if (model.zt == 1){
-                [UserModelManager shareInstance].userModel.money = model.sj[@"userdata"][@"money"];
-                [UserModelManager shareInstance].userModel.nickname = model.sj[@"userdata"][@"nickname"];
-                [UserModelManager shareInstance].userModel.header = model.sj[@"userdata"][@"header"];
+        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/app/users/personal" callback:^(JTBaseReqModel *model) {
+            if (model.code == 1){
+                [UserModelManager shareInstance].userModel.money = model.data[@"userdata"][@"money"];
+                [UserModelManager shareInstance].userModel.nickname = model.data[@"userdata"][@"nickname"];
+                [UserModelManager shareInstance].userModel.header = model.data[@"userdata"][@"header"];
                 
                 self.btnBack.hidden = YES;
                 self.buyPiPei = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 95, 10, 80, 40)];
@@ -268,9 +268,8 @@
         [self.view addSubview:self.orderSong];
         
         
-        [JTNetwork requestGetWithParam:@{} url:@"/ping/qunliao/gettopdata" callback:^(JTBaseReqModel *model) {
-            if (model.zt == 1) {
-                NSLog(@"model.sj = %@",model.sj);
+        [JTNetwork requestGetWithParam:@{} url:@"/app/qunliao/gettopdata" callback:^(JTBaseReqModel *model) {
+            if (model.code == 1) {
                 UIButton* btnML = [[UIButton alloc] initWithFrame:CGRectMake(8, 5, 60, 30)];
                 btnML.backgroundColor = [UIColor purpleColor];
                 btnML.titleLabel.font = [UIFont systemFontOfSize:14];
@@ -279,7 +278,7 @@
                 btnML.layer.cornerRadius = 8;
                 
                 self.arrayML = [[NSMutableArray alloc] init];
-                for (NSDictionary* dic in model.sj[@"meili"]) {
+                for (NSDictionary* dic in model.data[@"meili"]) {
                     [self.arrayML addObject:[MLModel mj_objectWithKeyValues:dic]];
                 }
                 
@@ -292,8 +291,8 @@
                 self.topMLView.selectUserBlock = ^(NSString*  _Nonnull uid) {
                     @strongify(self);
                     [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":uid} url:@"ping/mei/grzx" callback:^(JTBaseReqModel *Umodel) {
-                        if (Umodel.zt == 1) {
-                            PersonalPageModel* um = [PersonalPageModel mj_objectWithKeyValues:Umodel.sj[@"userdata"]];
+                        if (Umodel.code == 1) {
+                            PersonalPageModel* um = [PersonalPageModel mj_objectWithKeyValues:Umodel.data[@"userdata"]];
                             HomePersonVC* opVC = [[HomePersonVC alloc] init];
                             opVC.clickChat = ^(id  _Nullable value) {
                                 EMChatViewController *vc = [[EMChatViewController alloc] initWithConversationId:value[0] type:EMConversationTypeChat createIfNotExist:YES];
@@ -304,10 +303,9 @@
                             opVC.clickGift = ^(id  _Nullable value) {
                                 [self showHudInView:self.view];
                                 [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token}
-                                                           url:@"/ping/gift/getgiftinfo" callback:^(JTBaseReqModel *model) {
-                                    NSLog(@"%@",model.sj);
+                                                           url:@"/app/users/getgiftinfo" callback:^(JTBaseReqModel *model) {
                                     NSMutableArray* arrayGif = [[NSMutableArray alloc] init];
-                                    for (NSDictionary* dic in model.sj) {
+                                    for (NSDictionary* dic in model.data) {
                                         GiffModel* gM = [GiffModel mj_objectWithKeyValues:dic];
                                         [arrayGif addObject:gM];
                                     }
@@ -341,8 +339,8 @@
                 [self.view addSubview:self.viewMLBack];
                 
                 
-                [JTNetwork requestGetWithParam:@{} url:@"/ping/qunliao/gequtop" callback:^(JTBaseReqModel *model) {
-                    if (model.zt == 1) {
+                [JTNetwork requestGetWithParam:@{} url:@"/app/qunliao/gequtop" callback:^(JTBaseReqModel *model) {
+                    if (model.code == 1) {
                         UIButton* btnSong = [[UIButton alloc] initWithFrame:CGRectMake(8, 5, 60, 30)];
                         btnSong.backgroundColor = [UIColor redColor];
                         btnSong.titleLabel.font = [UIFont systemFontOfSize:14];
@@ -351,7 +349,7 @@
                         btnSong.layer.cornerRadius = 8;
                         
                         self.arrayHotSong = [[NSMutableArray alloc] init];
-                        for (NSDictionary* dic in model.sj) {
+                        for (NSDictionary* dic in model.data) {
                             [self.arrayHotSong addObject:[MLModel mj_objectWithKeyValues:dic]];
                         }
                         
@@ -365,8 +363,8 @@
                         self.topHotSongView.selectUserBlock = ^(NSString*  _Nonnull uid) {
                             @strongify(self);
                             [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":uid} url:@"ping/mei/grzx" callback:^(JTBaseReqModel *Umodel) {
-                                if (Umodel.zt == 1) {
-                                    PersonalPageModel* um = [PersonalPageModel mj_objectWithKeyValues:Umodel.sj[@"userdata"]];
+                                if (Umodel.code == 1) {
+                                    PersonalPageModel* um = [PersonalPageModel mj_objectWithKeyValues:Umodel.data[@"userdata"]];
                                     HomePersonVC* opVC = [[HomePersonVC alloc] init];
                                     opVC.clickChat = ^(id  _Nullable value) {
                                         EMChatViewController *vc = [[EMChatViewController alloc] initWithConversationId:value[0] type:EMConversationTypeChat createIfNotExist:YES];
@@ -377,10 +375,9 @@
                                     opVC.clickGift = ^(id  _Nullable value) {
                                         [self showHudInView:self.view];
                                         [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token}
-                                                                   url:@"/ping/gift/getgiftinfo" callback:^(JTBaseReqModel *model) {
-                                            NSLog(@"%@",model.sj);
+                                                                   url:@"/app/users/getgiftinfo" callback:^(JTBaseReqModel *model) {
                                             NSMutableArray* arrayGif = [[NSMutableArray alloc] init];
-                                            for (NSDictionary* dic in model.sj) {
+                                            for (NSDictionary* dic in model.data) {
                                                 GiffModel* gM = [GiffModel mj_objectWithKeyValues:dic];
                                                 [arrayGif addObject:gM];
                                             }

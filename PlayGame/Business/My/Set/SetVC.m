@@ -90,15 +90,13 @@
 {
     if (indexPath.row == 1) {
         ChangePswdVC* vc = [[ChangePswdVC alloc] init];
-        vc.type = 1;
-        [self.navigationController pushViewController:vc animated:YES];
-    }else if (indexPath.row == 3) {
-        ChangePswdVC* vc = [[ChangePswdVC alloc] init];
         vc.type = 2;
         [self.navigationController pushViewController:vc animated:YES];
-    }else if (indexPath.row == 5){
+    }else if (indexPath.row == 3) {
         HelpVC* vc = [[HelpVC alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row == 5){
+        
     }
 }
 @end

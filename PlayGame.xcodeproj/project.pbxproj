@@ -49,6 +49,7 @@
 		8450EB79254BEBDB00B54365 /* UISpaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450EB77254BEBDB00B54365 /* UISpaceCell.m */; };
 		8450EB7A254BEBDB00B54365 /* UISpaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8450EB78254BEBDB00B54365 /* UISpaceCell.xib */; };
 		8450EB92254BF68200B54365 /* NSObject+setProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 8450EB91254BF68200B54365 /* NSObject+setProperty.m */; };
+		8457EAF725A712F600086059 /* ChangePswdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8457EAF625A712F600086059 /* ChangePswdVC.m */; };
 		846F3EC72556726500FC5E71 /* MyHeadNameIDCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846F3EC52556726500FC5E71 /* MyHeadNameIDCell.m */; };
 		846F3EC82556726500FC5E71 /* MyHeadNameIDCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846F3EC62556726500FC5E71 /* MyHeadNameIDCell.xib */; };
 		846F3ED1255675F300FC5E71 /* UIImageView+loading.m in Sources */ = {isa = PBXBuildFile; fileRef = 846F3ED0255675F300FC5E71 /* UIImageView+loading.m */; };
@@ -481,6 +482,8 @@
 		8450EB78254BEBDB00B54365 /* UISpaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UISpaceCell.xib; sourceTree = "<group>"; };
 		8450EB90254BF68200B54365 /* NSObject+setProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+setProperty.h"; sourceTree = "<group>"; };
 		8450EB91254BF68200B54365 /* NSObject+setProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+setProperty.m"; sourceTree = "<group>"; };
+		8457EAF525A712F600086059 /* ChangePswdVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangePswdVC.h; sourceTree = "<group>"; };
+		8457EAF625A712F600086059 /* ChangePswdVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangePswdVC.m; sourceTree = "<group>"; };
 		846F3EC42556726500FC5E71 /* MyHeadNameIDCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyHeadNameIDCell.h; sourceTree = "<group>"; };
 		846F3EC52556726500FC5E71 /* MyHeadNameIDCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyHeadNameIDCell.m; sourceTree = "<group>"; };
 		846F3EC62556726500FC5E71 /* MyHeadNameIDCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyHeadNameIDCell.xib; sourceTree = "<group>"; };
@@ -1182,6 +1185,8 @@
 				84C768AC2554F0EB00E08149 /* RegistVC.m */,
 				84C768B1255514C000E08149 /* ProtocolVC.h */,
 				84C768B2255514C000E08149 /* ProtocolVC.m */,
+				8457EAF525A712F600086059 /* ChangePswdVC.h */,
+				8457EAF625A712F600086059 /* ChangePswdVC.m */,
 			);
 			path = "Regist&Login&Forget";
 			sourceTree = "<group>";
@@ -3021,6 +3026,7 @@
 				848D8C302595B59500F54B04 /* RedBagCinMoneyCell.m in Sources */,
 				F63127DF2557CE5F000162B1 /* EaseEmotionEscape.m in Sources */,
 				848D8BFF2595875D00F54B04 /* EBBannerView.m in Sources */,
+				8457EAF725A712F600086059 /* ChangePswdVC.m in Sources */,
 				8450EB92254BF68200B54365 /* NSObject+setProperty.m in Sources */,
 				8436C7D525490D6500194E27 /* UIView+PubicColor.m in Sources */,
 				F63128372557CE5F000162B1 /* EMImageBrowser.m in Sources */,
