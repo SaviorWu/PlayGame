@@ -27,13 +27,13 @@
 - (void)loadData{
     [self.tableView.mj_header beginRefreshing];
     [self showHudInView:self.view];
-    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"page":@(self.pageIndex)} url:@"/ping/suyan/appointlist" callback:^(JTBaseReqModel *model) {
-        if (model.zt == 1){
+    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"page":@(self.pageIndex)} url:@"/app/Album/appointlist" callback:^(JTBaseReqModel *model) {
+        if (model.code == 1){
             if (self.pageIndex == 1) {
                 [self.dataArray removeAllObjects];
             }
             
-            for (NSDictionary* dic in model.sj) {
+            for (NSDictionary* dic in model.data) {
                 GodPicModel* model = [GodPicModel mj_objectWithKeyValues:dic];
                 [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UIGodPicType),
                                                                      BM_title:model.nickname,
@@ -58,9 +58,9 @@
         return [tableView reloadCell:@"GodPictureCell" withModel:self.dataArray[indexPath.row] withBlock:^(id  _Nullable value) {
             NSLog(@"付费");
             [self showHudInView:self.view];
-            [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gid":uiModel.modelId} url:@"/ping/suyan/fufeitips" callback:^(JTBaseReqModel *model) {
+            [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gid":uiModel.modelId} url:@"/app/Album/fufeitips" callback:^(JTBaseReqModel *model) {
                 [self hideAllHud];
-                if (model.zt == 1){
+                if (model.code == 1){
                     // 付过费跳转查看照片页面
                     UIBaseModel* model = self.dataArray[indexPath.row];
                     PictureReviewVC* vc = [[PictureReviewVC alloc] init];
@@ -74,13 +74,13 @@
                     UIAlertAction*cancelAction=[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
                     UIAlertAction*okAction=[UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                         [self showHudInView:self.view];
-                        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gid":uiModel.modelId} url:@"/ping/suyan/orderAlbum" callback:^(JTBaseReqModel *model) {
+                        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gid":uiModel.modelId} url:@"/app/Album/orderAlbum" callback:^(JTBaseReqModel *model) {
                             [self hideAllHud];
-                            if (model.zt == 1){
-                                NSLog(@"%@",model.sj);
-                                [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"oid":model.sj,@"jg":@"52"} url:@"/ping/suyan/orderPay" callback:^(JTBaseReqModel *model) {
+                            if (model.code == 1){
+                                NSLog(@"%@",model.data);
+                                [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"oid":model.data,@"jg":@"52"} url:@"/app/ios/appleorderPay" callback:^(JTBaseReqModel *model) {
                                     [self hideAllHud];
-                                    if (model.zt == 1){
+                                    if (model.code == 1){
                                         NSLog(@"支付成功，跳转查看照片页面");
                                         UIBaseModel* model = self.dataArray[indexPath.row];
                                         PictureReviewVC* vc = [[PictureReviewVC alloc] init];

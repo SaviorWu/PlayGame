@@ -36,13 +36,13 @@
         [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
                                          @"xb":@(self.selectSex),
                                          @"yx":@(self.selectGame)
-        } url:@"/ping/mei/pp" callback:^(JTBaseReqModel *model) {
-            if (model.zt == -2) {
+        } url:@"/app/Yindao/kepipei" callback:^(JTBaseReqModel *model) {
+            if (model.code == -2) {
                 [self showHint:@"账号在其他设备登录"];
                 [UserModelManager userLogout];
             }else{
                 [self showHint:@"匹配成功请切换到消息页面"];
-                NSArray* array = model.sj;
+                NSArray* array = model.data;
                 for (NSDictionary* value in array) {
                     NSString* toID = [NSString stringWithFormat:@"%@",value[@"uid"]];
                     // 调用:
@@ -77,11 +77,11 @@
 //    [self hiddenBackBtn:YES];
     [self addRightBtn];
     
-    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/ping/mei/grzx" callback:^(JTBaseReqModel *model) {
-        if (model.zt == 1){
-            [UserModelManager shareInstance].userModel.money = model.sj[@"userdata"][@"money"];
-            [UserModelManager shareInstance].userModel.nickname = model.sj[@"userdata"][@"nickname"];
-            [UserModelManager shareInstance].userModel.header = model.sj[@"userdata"][@"header"];
+    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/app/users/personal" callback:^(JTBaseReqModel *model) {
+        if (model.code == 1){
+            [UserModelManager shareInstance].userModel.money = model.data[@"userdata"][@"money"];
+            [UserModelManager shareInstance].userModel.nickname = model.data[@"userdata"][@"nickname"];
+            [UserModelManager shareInstance].userModel.header = model.data[@"userdata"][@"header"];
         }
     }];
     

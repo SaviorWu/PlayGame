@@ -10,14 +10,10 @@
 
 @interface JTBaseReqModel : NSObject
 
-// 状态
-@property (nonatomic, assign) NSInteger zt;
 // 提示消息
-@property (nonatomic, strong) NSString  *xx;
-@property (nonatomic, strong) NSString  *code;
+@property (nonatomic, strong) NSString  *msg;
+@property (nonatomic, assign) NSInteger code;
 @property (nonatomic, strong) NSError   *error;
-// 数据
-@property (nonatomic, strong) id        sj;
 @property (nonatomic, strong) id        data;
 
 @end

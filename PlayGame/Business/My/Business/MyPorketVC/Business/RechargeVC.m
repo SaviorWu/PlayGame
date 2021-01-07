@@ -186,16 +186,16 @@
                                       @"sb":@"ios",
                                       @"sp":self.selectAppleGoodsID,
                                       @"rmb":self.money
-    } url:@"/ping/mei/czd" callback:^(JTBaseReqModel *model) {
+    } url:@"/app/order/create_order" callback:^(JTBaseReqModel *model) {
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self hideAllHud];
         });
-        if(model.zt == 1){
-            self.applepayProducID = model.sj;
+        if(model.code == 1){
+            self.applepayProducID = model.data;
             [self orderToApplePay];
         }else{
-            [self showHint:model.xx];
+            [self showHint:model.msg];
         }
         
     }];
@@ -323,16 +323,16 @@
     if (dic != nil) {
         [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
                                          @"receipt":self.receipt
-        } url:@"/ping/mei/cz" callback:^(JTBaseReqModel *model) {
+        } url:@"/app/order/applepay_recharge" callback:^(JTBaseReqModel *model) {
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self hideAllHud];
             });
-            if (model.zt == 1) {
+            if (model.code == 1) {
                 [self PaySuccess];
                 [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
             }else{
-                [self showHint:model.xx];
+                [self showHint:model.msg];
                 [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
             }
             

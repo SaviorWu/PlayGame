@@ -9,7 +9,7 @@
 #ifndef Macro_h
 #define Macro_h
 
-#define SERVER_URL @"https://app.qun68.com/"
+#define SERVER_URL @"https://app.wx918.com/"
 
 #define GROUP_1_ID @"125465790578689"
 #define GROUP_2_ID @"136685448921090"

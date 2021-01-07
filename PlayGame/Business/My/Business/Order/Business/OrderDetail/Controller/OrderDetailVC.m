@@ -30,16 +30,16 @@
 - (void)loadUI{
     [self showHudInView:self.view];
     
-    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"dd":self.orderID} url:@"/ping/mei/dxq" callback:^(JTBaseReqModel *model) {
-        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"dd":self.orderID} url:@"/ping/mei/wcs" callback:^(JTBaseReqModel *m){
+    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"dd":self.orderID} url:@"/app/order/orderBuy" callback:^(JTBaseReqModel *model) {
+        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"dd":self.orderID} url:@"/app/order/orderGodEnd" callback:^(JTBaseReqModel *m){
             NSString* commt = @"3";
-            if (m.zt == 1) {
-                commt = m.sj[@"commt"];
+            if (m.code == 1) {
+                commt = m.data[@"commt"];
             }
             
-            if (model.zt == 1){
-                UserGameModel* ugModel = [UserGameModel mj_objectWithKeyValues:model.sj[@"user"]];
-                OrderModel* oModel = [OrderModel mj_objectWithKeyValues:model.sj[@"order"]];
+            if (model.code == 1){
+                UserGameModel* ugModel = [UserGameModel mj_objectWithKeyValues:model.data[@"user"]];
+                OrderModel* oModel = [OrderModel mj_objectWithKeyValues:model.data[@"order"]];
                 oModel.commt = commt;
                 self.userGameModel = ugModel;
                 self.orderModel = oModel;
@@ -169,9 +169,9 @@
             [self.tableView reloadData];
             if ([model.modelId intValue] == 1) {//申请退款
                 [self showHudInView:self.view];
-                [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"dd":self.orderID} url:@"/ping/mei/sqt" callback:^(JTBaseReqModel *model) {
-                    [self showHint:model.xx];
-                    if (model.zt == 1) {
+                [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"dd":self.orderID} url:@"/app/order/orderRefund" callback:^(JTBaseReqModel *model) {
+                    [self showHint:model.msg];
+                    if (model.code == 1) {
                         [self.navigationController popViewControllerAnimated:YES];
                     }
                     [self hideAllHud];
@@ -179,18 +179,18 @@
             }else if([model.modelId intValue] == 4){// markid=1 服务完成 markid=2申请退款
                 if ([model.mark intValue] == 1) {
                     [self showHudInView:self.view];
-                    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"dd":self.orderID} url:@"/ping/mei/wc" callback:^(JTBaseReqModel *model) {
-                        [self showHint:model.xx];
-                        if (model.zt == 1) {
+                    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"dd":self.orderID} url:@"/app/order/orderServEnd" callback:^(JTBaseReqModel *model) {
+                        [self showHint:model.msg];
+                        if (model.code == 1) {
                             [self.navigationController popViewControllerAnimated:YES];
                         }
                         [self hideAllHud];
                     }];
                 }else if ([model.mark intValue] == 2){
                     [self showHudInView:self.view];
-                    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"dd":self.orderID} url:@"/ping/mei/sqt" callback:^(JTBaseReqModel *model) {
-                        [self showHint:model.xx];
-                        if (model.zt == 1) {
+                    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"dd":self.orderID} url:@"/app/order/orderRefund" callback:^(JTBaseReqModel *model) {
+                        [self showHint:model.msg];
+                        if (model.code == 1) {
                             [self.navigationController popViewControllerAnimated:YES];
                         }
                         [self hideAllHud];

@@ -116,15 +116,15 @@
             UIAlertAction*okAction=[UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 [self showHudInView:self.view];
                 [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token}
-                                           url:@"/ping/hongbao/users_info"
+                                           url:@"/app/redpacket/users_info"
                                       callback:^(JTBaseReqModel *model) {
-                    if (model.zt == 1) {
+                    if (model.code == 1) {
                         [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
                                                          @"hb":self.money,
                                                          @"desc":self.mark}
-                                                   url:@"/ping/hongbao/send_redpacket"
+                                                   url:@"/app/redpacket/send_redpacket"
                                               callback:^(JTBaseReqModel *model) {
-                            [self showHint:model.xx];
+                            [self showHint:model.msg];
                             [self hideAllHud];
                         }];
                     }else{

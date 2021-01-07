@@ -131,9 +131,9 @@
             NSLog(@"UIVerificationCodeCell = %@ row = %ld", value,(long)indexPath.row);
             if ([value[@"code"] intValue] == 1) {
                 [self.tableView reloadData];
-                [JTNetwork requestGetWithParam:@{@"mobile":self.reqParam[@"mobile"],@"type":@"register"} url:@"/ping/mei/yzm" callback:^(JTBaseReqModel *model) {
-                    if (model.zt != 1) {
-                        [self showHint:model.xx];
+                [JTNetwork requestGetWithParam:@{@"mobile":self.reqParam[@"mobile"],@"type":@"register"} url:@"/app/userverify/sendVirefy" callback:^(JTBaseReqModel *model) {
+                    if (model.code != 1) {
+                        [self showHint:model.msg];
                     }
                 }];
             }else{
@@ -143,10 +143,10 @@
     }else if([model.type isEqual:@(UIConfirnBtnType)]){
         return [tableView reloadCell:@"UIConfirnBtnCell" withModel:model withBlock:^(id  _Nullable value) {
             [self.tableView reloadData];
-            [JTNetwork requestGetWithParam:self.reqParam url:@"/ping/mei/zc" callback:^(JTBaseReqModel *model) {
+            [JTNetwork requestGetWithParam:self.reqParam url:@"/app/users/login833" callback:^(JTBaseReqModel *model) {
                 NSLog(@"model = %@",model);
-                [self showHint:model.xx];
-                if (model.zt == 1) {
+                [self showHint:model.msg];
+                if (model.code == 1) {
                     [self.navigationController popViewControllerAnimated:YES];
                 }
             }];

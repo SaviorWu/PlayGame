@@ -30,10 +30,10 @@
 - (void)loadData{
     [self.tableView.mj_header beginRefreshing];
     [self showHudInView:self.view];
-    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token} url:@"/ping/mei/dlb" callback:^(JTBaseReqModel *model) {
-        if (model.zt == 1){
+    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token} url:@"/app/order/orderRelease" callback:^(JTBaseReqModel *model) {
+        if (model.code == 1){
             [self.dataArray removeAllObjects];
-            for (NSDictionary* dic in model.sj) {
+            for (NSDictionary* dic in model.data) {
                 OrderModel* vc = [OrderModel mj_objectWithKeyValues:dic];
                 [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UIOrderListType),
                                                                      BM_modelId:vc.id,

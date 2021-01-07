@@ -60,8 +60,8 @@
                                      @"sum":self.lbBuyCount.text,
                                      @"allmoney":[NSString stringWithFormat:@"%ld",([self.lbBuyCount.text intValue]*giftPrice)],
                                      @"gift_id":self.selectGiftId
-    } url:@"/ping/gift/gift" callback:^(JTBaseReqModel *model) {
-        if (model.zt == 1) {
+    } url:@"/app/users/gift" callback:^(JTBaseReqModel *model) {
+        if (model.code == 1) {
             [self showHint:@"赠送成功"];
         }else{
             [self showHint:@"赠送失败"];

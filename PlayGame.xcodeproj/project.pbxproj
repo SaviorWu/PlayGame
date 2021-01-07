@@ -39,7 +39,6 @@
 		8436C8722549397F00194E27 /* UITabBar+badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C8702549397F00194E27 /* UITabBar+badge.m */; };
 		8436C878254939DC00194E27 /* JTTabBarBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 8436C877254939DC00194E27 /* JTTabBarBtn.m */; };
 		843D36D6254A4ED400FDCD5D /* UIBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 843D36D5254A4ED400FDCD5D /* UIBaseModel.m */; };
-		8445CE2A2553D51D00FE01A3 /* ForgetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445CE292553D51D00FE01A3 /* ForgetVC.m */; };
 		8445CE322553D92400FE01A3 /* UILineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445CE302553D92400FE01A3 /* UILineCell.m */; };
 		8445CE332553D92400FE01A3 /* UILineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8445CE312553D92400FE01A3 /* UILineCell.xib */; };
 		8445CE3B2554036A00FE01A3 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8445CE3A2554036A00FE01A3 /* UserModel.m */; };
@@ -100,7 +99,6 @@
 		F6030C3A259371B70095983E /* GodPictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6030C38259371B70095983E /* GodPictureCell.xib */; };
 		F6030C44259376E70095983E /* GodPicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6030C43259376E70095983E /* GodPicModel.m */; };
 		F63125FC2557C4FD000162B1 /* SetVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F63125FB2557C4FD000162B1 /* SetVC.m */; };
-		F63126082557C708000162B1 /* ChangePswdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F63126072557C708000162B1 /* ChangePswdVC.m */; };
 		F63126112557C712000162B1 /* HelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F63126102557C712000162B1 /* HelpVC.m */; };
 		F63127B52557CE5E000162B1 /* EMChatBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F63126582557CE5D000162B1 /* EMChatBarItem.m */; };
 		F63127B62557CE5E000162B1 /* pin-red.png in Resources */ = {isa = PBXBuildFile; fileRef = F631265C2557CE5D000162B1 /* pin-red.png */; };
@@ -338,7 +336,6 @@
 		F63FB52825846E44002EB4D7 /* GiftPickVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F63FB52625846E44002EB4D7 /* GiftPickVC.xib */; };
 		F63FB52F25847039002EB4D7 /* GiftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F63FB52D25847039002EB4D7 /* GiftCell.m */; };
 		F63FB53025847039002EB4D7 /* GiftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F63FB52E25847039002EB4D7 /* GiftCell.xib */; };
-		F643E8982569F3AD00E95375 /* ResetPaypswdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8972569F3AD00E95375 /* ResetPaypswdVC.m */; };
 		F643E8D3256A60FC00E95375 /* UILabelContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F643E8D1256A60FC00E95375 /* UILabelContentCell.m */; };
 		F643E8D4256A60FC00E95375 /* UILabelContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F643E8D2256A60FC00E95375 /* UILabelContentCell.xib */; };
 		F6445832257FAAA4005AF6B9 /* GodPlayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F6445830257FAAA4005AF6B9 /* GodPlayerVC.m */; };
@@ -467,8 +464,6 @@
 		8436C877254939DC00194E27 /* JTTabBarBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTTabBarBtn.m; sourceTree = "<group>"; };
 		843D36D4254A4ED400FDCD5D /* UIBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIBaseModel.h; sourceTree = "<group>"; };
 		843D36D5254A4ED400FDCD5D /* UIBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIBaseModel.m; sourceTree = "<group>"; };
-		8445CE282553D51D00FE01A3 /* ForgetVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetVC.h; sourceTree = "<group>"; };
-		8445CE292553D51D00FE01A3 /* ForgetVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetVC.m; sourceTree = "<group>"; };
 		8445CE2F2553D92400FE01A3 /* UILineCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILineCell.h; sourceTree = "<group>"; };
 		8445CE302553D92400FE01A3 /* UILineCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILineCell.m; sourceTree = "<group>"; };
 		8445CE312553D92400FE01A3 /* UILineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UILineCell.xib; sourceTree = "<group>"; };
@@ -579,8 +574,6 @@
 		F6030C43259376E70095983E /* GodPicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GodPicModel.m; sourceTree = "<group>"; };
 		F63125FA2557C4FD000162B1 /* SetVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetVC.h; sourceTree = "<group>"; };
 		F63125FB2557C4FD000162B1 /* SetVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetVC.m; sourceTree = "<group>"; };
-		F63126062557C708000162B1 /* ChangePswdVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangePswdVC.h; sourceTree = "<group>"; };
-		F63126072557C708000162B1 /* ChangePswdVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangePswdVC.m; sourceTree = "<group>"; };
 		F631260F2557C712000162B1 /* HelpVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelpVC.h; sourceTree = "<group>"; };
 		F63126102557C712000162B1 /* HelpVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelpVC.m; sourceTree = "<group>"; };
 		F63126512557CE5D000162B1 /* EMMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMMessageModel.h; sourceTree = "<group>"; };
@@ -926,8 +919,6 @@
 		F63FB52C25847039002EB4D7 /* GiftCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GiftCell.h; sourceTree = "<group>"; };
 		F63FB52D25847039002EB4D7 /* GiftCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GiftCell.m; sourceTree = "<group>"; };
 		F63FB52E25847039002EB4D7 /* GiftCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiftCell.xib; sourceTree = "<group>"; };
-		F643E8962569F3AD00E95375 /* ResetPaypswdVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResetPaypswdVC.h; sourceTree = "<group>"; };
-		F643E8972569F3AD00E95375 /* ResetPaypswdVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResetPaypswdVC.m; sourceTree = "<group>"; };
 		F643E8D0256A60FC00E95375 /* UILabelContentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UILabelContentCell.h; sourceTree = "<group>"; };
 		F643E8D1256A60FC00E95375 /* UILabelContentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UILabelContentCell.m; sourceTree = "<group>"; };
 		F643E8D2256A60FC00E95375 /* UILabelContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UILabelContentCell.xib; sourceTree = "<group>"; };
@@ -1187,8 +1178,6 @@
 			children = (
 				8450EB65254BE42600B54365 /* LoginVC.h */,
 				8450EB66254BE42600B54365 /* LoginVC.m */,
-				8445CE282553D51D00FE01A3 /* ForgetVC.h */,
-				8445CE292553D51D00FE01A3 /* ForgetVC.m */,
 				84C768AB2554F0EB00E08149 /* RegistVC.h */,
 				84C768AC2554F0EB00E08149 /* RegistVC.m */,
 				84C768B1255514C000E08149 /* ProtocolVC.h */,
@@ -1521,10 +1510,6 @@
 		F63126042557C6F6000162B1 /* ChangePswd */ = {
 			isa = PBXGroup;
 			children = (
-				F63126062557C708000162B1 /* ChangePswdVC.h */,
-				F63126072557C708000162B1 /* ChangePswdVC.m */,
-				F643E8962569F3AD00E95375 /* ResetPaypswdVC.h */,
-				F643E8972569F3AD00E95375 /* ResetPaypswdVC.m */,
 			);
 			path = ChangePswd;
 			sourceTree = "<group>";
@@ -3118,7 +3103,6 @@
 				F63128732557CE5F000162B1 /* PSTCollectionViewItemKey.m in Sources */,
 				84736DB625997060005C8389 /* RedBagUserCell.m in Sources */,
 				848D8C162595889D00F54B04 /* TADotView.m in Sources */,
-				F63126082557C708000162B1 /* ChangePswdVC.m in Sources */,
 				F644EA942588FC00009746F4 /* OrderHeaderCell.m in Sources */,
 				8436C7E725490D6500194E27 /* UIImage+RCImage.m in Sources */,
 				8436C878254939DC00194E27 /* JTTabBarBtn.m in Sources */,
@@ -3159,11 +3143,9 @@
 				F63128832557CE5F000162B1 /* EMAlertController.m in Sources */,
 				84B252312549080700887B01 /* main.m in Sources */,
 				F63128912557CE5F000162B1 /* EMConversationsViewController.m in Sources */,
-				8445CE2A2553D51D00FE01A3 /* ForgetVC.m in Sources */,
 				8436C75525490CD600194E27 /* JTUserModel.m in Sources */,
 				F65AEAED259713C9002CFAD2 /* RedBagModel.m in Sources */,
 				F63128662557CE5F000162B1 /* MWPhoto.m in Sources */,
-				F643E8982569F3AD00E95375 /* ResetPaypswdVC.m in Sources */,
 				F63FB50525845DC6002EB4D7 /* GodDetailInfoCell.m in Sources */,
 				F63FB51D25846D96002EB4D7 /* LHCustomModalTransition.m in Sources */,
 				F631286A2557CE5F000162B1 /* DACircularProgressView.m in Sources */,

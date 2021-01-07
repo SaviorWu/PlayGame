@@ -27,13 +27,13 @@
 - (void)loadUI{
     [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
                                      @"id":self.redBagId}
-                               url:@"/ping/hongbao/redpacket_info" callback:^(JTBaseReqModel *model) {
-        if (model.zt == 1){
+                               url:@"/app/redpacket/redpacket_info" callback:^(JTBaseReqModel *model) {
+        if (model.code == 1){
 //            UIRedBagDetailHeadType,
 //            UIRedBagDetailUserType
-            RedBagModel* dataModel = [RedBagModel mj_objectWithKeyValues:model.sj];
+            RedBagModel* dataModel = [RedBagModel mj_objectWithKeyValues:model.data];
             dataModel.send_list = [[NSMutableArray alloc] init];
-            for (NSDictionary* dic in model.sj[@"send_list"]) {
+            for (NSDictionary* dic in model.data[@"send_list"]) {
                 [dataModel.send_list addObject:[RedBagUserModel mj_objectWithKeyValues:dic]];
             }
             [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UIRedBagDetailHeadType),

@@ -58,10 +58,10 @@
                                          @"dd":self.orderID,
                                          @"bz":self.tvComment.text,
                                          @"xx":self.getUserGiveStar}
-                                   url:@"/ping/mei/pj"
+                                   url:@"/app/order/orderComtDo"
                               callback:^(JTBaseReqModel *model) {
-            [self showHint:model.xx];
-            if (model.zt == 1) {
+            [self showHint:model.msg];
+            if (model.code == 1) {
                 [self.navigationController popViewControllerAnimated:YES];
             }
         }];

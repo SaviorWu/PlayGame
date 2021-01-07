@@ -67,8 +67,8 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"客户端报错 %@",error);
         JTBaseReqModel *model = [[JTBaseReqModel alloc] init];
-        model.sj = error;
-        if (model.zt == -2) {
+        model.data = error;
+        if (model.code == -2) {
             [self showHint:@"账号在其他设备登录"];
             [UserModelManager userLogout];
         }else{
@@ -116,8 +116,8 @@
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);
         JTBaseReqModel *model = [[JTBaseReqModel alloc] init];
-        model.sj = error;
-        if (model.zt == -2) {
+        model.data = error;
+        if (model.code == -2) {
             [self showHint:@"账号在其他设备登录"];
             [UserModelManager userLogout];
         }else{

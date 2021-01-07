@@ -29,13 +29,13 @@
 - (void)loadData{
     [self.tableView.mj_header beginRefreshing];
     [self showHudInView:self.view];
-    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gid":self.godID} url:@"/ping/suyan/showlist" callback:^(JTBaseReqModel *model) {
-        if (model.zt == 1){
+    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gid":self.godID} url:@"/app/Album/showlist" callback:^(JTBaseReqModel *model) {
+        if (model.code == 1){
             if (self.pageIndex == 1) {
                 [self.dataArray removeAllObjects];
             }
             NSMutableArray* picArray = [[NSMutableArray alloc] init];
-            for (NSDictionary* dic in model.sj) {
+            for (NSDictionary* dic in model.data) {
                 [picArray addObject:dic[@"img_path"]];
             }
             [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UIGodPicReview),

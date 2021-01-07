@@ -130,21 +130,21 @@
                                                      @"ds":self.godID,
                                                      @"bz":self.tfRemark.text,
                                                      @"sj":DateTime}
-                                               url:@"/ping/mei/tj" callback:^(JTBaseReqModel *model) {
-                        if (model.zt == 1) {
+                                               url:@"/app/order/orderSub" callback:^(JTBaseReqModel *model) {
+                        if (model.code == 1) {
                             [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
                                                              @"mm":[NSString base64EncodeString:pwdStr],
-                                                             @"dd":model.sj}
-                                                       url:@"/ping/mei/zf" callback:^(JTBaseReqModel *model) {
+                                                             @"dd":model.data}
+                                                       url:@"/app/order/appleOrderPay" callback:^(JTBaseReqModel *model) {
                                 [self hideAllHud];
-                                [self showHint:model.xx];
-                                if (model.zt == 1) {
+                                [self showHint:model.msg];
+                                if (model.code == 1) {
                                     [self.navigationController popViewControllerAnimated:YES];
                                 }
                                 
                             }];
                         }else{
-                            [self showHint:model.xx];
+                            [self showHint:model.msg];
                             [self hideAllHud];
                         }
                         

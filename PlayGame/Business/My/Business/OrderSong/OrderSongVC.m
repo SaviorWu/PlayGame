@@ -190,9 +190,9 @@
             [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
                                              @"content":self.content.length == 0?@"":self.content,
                                              @"gift_id":self.choseGiftID.length == 0?@"":self.choseGiftID
-            } url:@"/ping/qunliao/gequfabu" callback:^(JTBaseReqModel *model) {
-                [self showHint:model.xx];
-                if (model.zt == 1) {
+            } url:@"/app/qunliao/gequfabu" callback:^(JTBaseReqModel *model) {
+                [self showHint:model.msg];
+                if (model.code == 1) {
                     [self.navigationController popViewControllerAnimated:YES];
                 }
             }];

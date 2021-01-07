@@ -209,11 +209,11 @@
     }
     [self showHudInView:self.view];
     NSLog(@"chartUid = %@",chartUid);
-    [JTNetwork requestGetWithParam:@{@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/ping/mei/ds" callback:^(JTBaseReqModel *baseModel) {
+    [JTNetwork requestGetWithParam:@{@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/app/msg/jiazaizl" callback:^(JTBaseReqModel *baseModel) {
         [self hideAllHudFromSuperView:self.view];
         NSString* playthisgamegameid = @"";
-        if ([[baseModel.sj allKeys] containsObject:@"id"]) {
-            playthisgamegameid = [NSString stringWithFormat:@"%@",baseModel.sj[@"id"]];
+        if ([[baseModel.data allKeys] containsObject:@"id"]) {
+            playthisgamegameid = [NSString stringWithFormat:@"%@",baseModel.data[@"id"]];
         }
         if (playthisgamegameid.length == 0) {
             return;

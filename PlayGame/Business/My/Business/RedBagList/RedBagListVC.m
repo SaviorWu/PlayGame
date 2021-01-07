@@ -42,30 +42,30 @@
     if (self.type == 0) {
         [param setObject:[UserModelManager shareInstance].userModel.token forKey:@"ys"];
         [param setObject:@(self.pageIndex) forKey:@"page"];
-        reqURL = @"/ping/hongbao/redpacket_list";
+        reqURL = @"/app/redpacket/redpacket_list";
     }else if (self.type == 1){
         [param setObject:[UserModelManager shareInstance].userModel.token forKey:@"ys"];
         [param setObject:@(self.pageIndex) forKey:@"page"];
-        reqURL = @"/ping/hongbao/my_send_redpacket";
+        reqURL = @"/app/redpacket/send_redpacket";
     }else if (self.type == 2){
         [param setObject:[UserModelManager shareInstance].userModel.token forKey:@"ys"];
         [param setObject:@(1) forKey:@"lei"];
         [param setObject:@(self.pageIndex) forKey:@"page"];
-        reqURL = @"/ping/hongbao/my_hongbao";
+        reqURL = @"/app/redpacket/my_hongbao";
     }
     else if (self.type == 3){
         [param setObject:[UserModelManager shareInstance].userModel.token forKey:@"ys"];
         [param setObject:@(2) forKey:@"lei"];
         [param setObject:@(self.pageIndex) forKey:@"page"];
-        reqURL = @"/ping/hongbao/my_hongbao";
+        reqURL = @"/app/redpacket/my_hongbao";
     }
     [JTNetwork requestGetWithParam:param url:reqURL callback:^(JTBaseReqModel *model) {
-        if (model.zt == 1){
+        if (model.code == 1){
             if (self.pageIndex == 1) {
                 [self.dataArray removeAllObjects];
             }
             NSString* mark = @"";
-            for (NSDictionary* dic in model.sj) {
+            for (NSDictionary* dic in model.data) {
                 RedBagModel* model = [RedBagModel mj_objectWithKeyValues:dic];
                 if (self.type == 0) {
                     mark = @"1";
@@ -112,21 +112,21 @@
             NSLog(@"申请领取红包");
             if ([uiModel.mark intValue] == 1) {
                 [self showHudInView:self.view];
-                [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"id":uiModel.modelId} url:@"/ping/hongbao/apply_collection" callback:^(JTBaseReqModel *model) {
+                [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"id":uiModel.modelId} url:@"/app/redpacket/apply_collection" callback:^(JTBaseReqModel *model) {
                     [self hideAllHud];
-                    [self showHint:model.xx];
+                    [self showHint:model.msg];
                     [self.tableView.mj_header beginRefreshing];
                 }];
             }else if([uiModel.mark intValue] == 2){
                 [self showHudInView:self.view];
                 
                 [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
-                                                 @"id":uiModel.modelId} url:@"/ping/hongbao/apply_list"
+                                                 @"id":uiModel.modelId} url:@"/app/redpacket/apply_list"
                                       callback:^(JTBaseReqModel *model) {
-                    if (model.zt == 1) {
+                    if (model.code == 1) {
                         NSString* uids = @"";
                         NSString* max = @"";
-                        for (NSDictionary* dic in model.sj) {
+                        for (NSDictionary* dic in model.data) {
                             if (uids.length == 0) {
                                 uids = [RedBagModel mj_objectWithKeyValues:dic].uid;
                                 max = uids;
@@ -143,10 +143,10 @@
                                                              @"id":uiModel.modelId,
                                                              @"max":max,
                                                              @"uids":uids
-                            } url:@"/ping/hongbao/send" callback:^(JTBaseReqModel *model) {
+                            } url:@"/app/redpacket/redpacket_info" callback:^(JTBaseReqModel *model) {
                                 [self hideAllHud];
-                                if (model.zt == 1){
-                                    [self showHint:model.xx];
+                                if (model.code == 1){
+                                    [self showHint:model.msg];
                                 }else{
                                     
                                 }

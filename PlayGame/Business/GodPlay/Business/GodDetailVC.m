@@ -23,8 +23,8 @@
 }
 - (void)loadUI{
     [self showHudInView:self.view];
-    [JTNetwork requestGetWithParam:@{@"gr":self.godId,@"ys":[UserModelManager shareInstance].userModel.token} url:@"/ping/mei/grzx" callback:^(JTBaseReqModel *model) {
-        self.userModel = [PersonalPageModel mj_objectWithKeyValues:model.sj[@"userdata"]];
+    [JTNetwork requestGetWithParam:@{@"gr":self.godId,@"ys":[UserModelManager shareInstance].userModel.token} url:@"/app/users/personal" callback:^(JTBaseReqModel *model) {
+        self.userModel = [PersonalPageModel mj_objectWithKeyValues:model.data[@"userdata"]];
         [self.dataArray removeAllObjects];
         [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_imageName:[NSString safeString:self.userModel.header],
                                                              BM_title:[NSString safeString:self.userModel.nickname],
@@ -131,20 +131,20 @@
                 if (self.arrayGif.count == 0) {
                     [self showHudInView:self.view];
                     [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token}
-                                               url:@"/ping/gift/getgiftinfo" callback:^(JTBaseReqModel *model) {
-                        NSLog(@"%@",model.sj);
+                                               url:@"/app/users/getgiftinfo" callback:^(JTBaseReqModel *model) {
+                        NSLog(@"%@",model.data);
                         self.arrayGif = [[NSMutableArray alloc] init];
-                        for (NSDictionary* dic in model.sj) {
+                        for (NSDictionary* dic in model.data) {
                             GiffModel* gM = [GiffModel mj_objectWithKeyValues:dic];
                             [self.arrayGif addObject:gM];
                         }
                         NSLog(@"%@",self.arrayGif);
                         
-                        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/ping/mei/grzx" callback:^(JTBaseReqModel *model) {
-                            if (model.zt == 1){
-                                [UserModelManager shareInstance].userModel.money = model.sj[@"userdata"][@"money"];
-                                [UserModelManager shareInstance].userModel.nickname = model.sj[@"userdata"][@"nickname"];
-                                [UserModelManager shareInstance].userModel.header = model.sj[@"userdata"][@"header"];
+                        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/app/users/personal" callback:^(JTBaseReqModel *model) {
+                            if (model.code == 1){
+                                [UserModelManager shareInstance].userModel.money = model.data[@"userdata"][@"money"];
+                                [UserModelManager shareInstance].userModel.nickname = model.data[@"userdata"][@"nickname"];
+                                [UserModelManager shareInstance].userModel.header = model.data[@"userdata"][@"header"];
                             }
                             GiftPickVC* opVC = [[GiftPickVC alloc] init];
                             opVC.arrayGift = self.arrayGif;
@@ -156,11 +156,11 @@
                     }];
                 }else{
                     [self showHudInView:self.view];
-                    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/ping/mei/grzx" callback:^(JTBaseReqModel *model) {
-                        if (model.zt == 1){
-                            [UserModelManager shareInstance].userModel.money = model.sj[@"userdata"][@"money"];
-                            [UserModelManager shareInstance].userModel.nickname = model.sj[@"userdata"][@"nickname"];
-                            [UserModelManager shareInstance].userModel.header = model.sj[@"userdata"][@"header"];
+                    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/app/users/personal" callback:^(JTBaseReqModel *model) {
+                        if (model.code == 1){
+                            [UserModelManager shareInstance].userModel.money = model.data[@"userdata"][@"money"];
+                            [UserModelManager shareInstance].userModel.nickname = model.data[@"userdata"][@"nickname"];
+                            [UserModelManager shareInstance].userModel.header = model.data[@"userdata"][@"header"];
                         }
                         GiftPickVC* opVC = [[GiftPickVC alloc] init];
                         opVC.arrayGift = self.arrayGif;

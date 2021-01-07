@@ -126,9 +126,9 @@
             NSLog(@"UIVerificationCodeCell = %@ row = %ld", value,(long)indexPath.row);
             if ([value[@"code"] intValue] == 1) {
                 [self.tableView reloadData];
-                [JTNetwork requestGetWithParam:@{@"mobile":self.reqParam[@"mobile"],@"type":@"login"} url:@"/ping/mei/yzm" callback:^(JTBaseReqModel *model) {
-                    if (model.zt != 1) {
-                        [self showHint:model.xx];
+                [JTNetwork requestGetWithParam:@{@"mobile":self.reqParam[@"mobile"],@"type":@"login"} url:@"/app/userverify/sendVirefy" callback:^(JTBaseReqModel *model) {
+                    if (model.code != 1) {
+                        [self showHint:model.msg];
                     }
                 }];
             }else{
@@ -140,13 +140,13 @@
             NSLog(@"点击登录");
             [self.tableView reloadData];
             [self showHudInView:self.view];
-            [JTNetwork requestGetWithParam:self.reqParam url:@"/ping/mei/dl" callback:^(JTBaseReqModel *model) {
+            [JTNetwork requestGetWithParam:self.reqParam url:@"/app/users/login833" callback:^(JTBaseReqModel *model) {
                 NSLog(@"model = %@",model);
-                if (model.zt != 1) {
-                    [self showHint:model.xx];
+                if (model.code != 1) {
+                    [self showHint:model.msg];
                 }else{
-                    UserModel* um = [UserModel mj_objectWithKeyValues:model.sj[@"info"]];
-                    um.token = model.sj[@"token"];
+                    UserModel* um = [UserModel mj_objectWithKeyValues:model.data[@"info"]];
+                    um.token = model.data[@"token"];
                     [UserModelManager shareInstance].userModel = um;
                     
                     NSString* tian = @"tian";
