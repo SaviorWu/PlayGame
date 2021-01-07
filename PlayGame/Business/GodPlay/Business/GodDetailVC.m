@@ -142,7 +142,7 @@
                         
                         [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"uid":[UserModelManager shareInstance].userModel.uid} url:@"/app/users/personal" callback:^(JTBaseReqModel *model) {
                             if (model.code == 1){
-                                [UserModelManager shareInstance].userModel.money = model.data[@"userdata"][@"money"];
+                                [UserModelManager shareInstance].userModel.allmoney = model.data[@"userdata"][@"allmoney"];
                                 [UserModelManager shareInstance].userModel.nickname = model.data[@"userdata"][@"nickname"];
                                 [UserModelManager shareInstance].userModel.header = model.data[@"userdata"][@"header"];
                             }
@@ -158,7 +158,7 @@
                     [self showHudInView:self.view];
                     [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"uid":[UserModelManager shareInstance].userModel.uid} url:@"/app/users/personal" callback:^(JTBaseReqModel *model) {
                         if (model.code == 1){
-                            [UserModelManager shareInstance].userModel.money = model.data[@"userdata"][@"money"];
+                            [UserModelManager shareInstance].userModel.allmoney = model.data[@"userdata"][@"allmoney"];
                             [UserModelManager shareInstance].userModel.nickname = model.data[@"userdata"][@"nickname"];
                             [UserModelManager shareInstance].userModel.header = model.data[@"userdata"][@"header"];
                         }

@@ -32,7 +32,7 @@
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self.collectionView reloadData];
-    self.lbMoney.text = [UserModelManager shareInstance].userModel.money;
+    self.lbMoney.text = [UserModelManager shareInstance].userModel.allmoney;
     
 }
 - (IBAction)clickBtnAdd:(id)sender {

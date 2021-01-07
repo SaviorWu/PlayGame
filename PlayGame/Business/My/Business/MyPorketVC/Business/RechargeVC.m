@@ -33,7 +33,7 @@
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILabelContentType),
                                                          BM_title:@"玩币",
                                                          BM_cellHeight:@(50),
-                                                         BM_subTitle:[NSString stringWithFormat:@"%@个",[UserModelManager shareInstance].userModel.money.length == 0?@"0":[UserModelManager shareInstance].userModel.money],
+                                                         BM_subTitle:[NSString stringWithFormat:@"%@个",[UserModelManager shareInstance].userModel.allmoney.length == 0?@"0":[UserModelManager shareInstance].userModel.allmoney],
                                                          BM_mark:@"余额："}]];
     
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
@@ -186,7 +186,7 @@
                                       @"device_type":@"ios",
                                       @"iosGoodsId":self.selectAppleGoodsID,
                                       @"money":self.money
-    } url:@"/app/order/create_order" callback:^(JTBaseReqModel *model) {
+    } url:@"/app/order/create_order1" callback:^(JTBaseReqModel *model) {
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self hideAllHud];
@@ -323,7 +323,7 @@
     if (dic != nil) {
         [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,
                                          @"receipt":self.receipt
-        } url:@"/app/order/applepay_recharge" callback:^(JTBaseReqModel *model) {
+        } url:@"/app/order/applepay_recharge1" callback:^(JTBaseReqModel *model) {
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self hideAllHud];

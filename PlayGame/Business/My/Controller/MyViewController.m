@@ -44,7 +44,7 @@
     [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"uid":[UserModelManager shareInstance].userModel.uid} url:@"/app/users/personal" callback:^(JTBaseReqModel *model) {
         if (model.code == 1){
             [self.dataArray removeAllObjects];
-            [UserModelManager shareInstance].userModel.money = model.data[@"userdata"][@"money"];
+            [UserModelManager shareInstance].userModel.allmoney = [NSString stringWithFormat:@"%d",[model.data[@"userdata"][@"allmoney"] intValue]];
             [UserModelManager shareInstance].userModel.nickname = model.data[@"userdata"][@"nickname"];
             [UserModelManager shareInstance].userModel.header = model.data[@"userdata"][@"header"];
             [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
