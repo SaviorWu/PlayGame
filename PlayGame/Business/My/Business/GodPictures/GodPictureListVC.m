@@ -27,7 +27,7 @@
 - (void)loadData{
     [self.tableView.mj_header beginRefreshing];
     [self showHudInView:self.view];
-    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"page":@(self.pageIndex)} url:@"/app/Album/appointlist" callback:^(JTBaseReqModel *model) {
+    [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"page":@(self.pageIndex)} url:@"/app/Album/appointlist" callback:^(JTBaseReqModel *model) {
         if (model.code == 1){
             if (self.pageIndex == 1) {
                 [self.dataArray removeAllObjects];
@@ -58,7 +58,7 @@
         return [tableView reloadCell:@"GodPictureCell" withModel:self.dataArray[indexPath.row] withBlock:^(id  _Nullable value) {
             NSLog(@"付费");
             [self showHudInView:self.view];
-            [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gid":uiModel.modelId} url:@"/app/Album/fufeitips" callback:^(JTBaseReqModel *model) {
+            [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"gid":uiModel.modelId} url:@"/app/Album/fufeitips" callback:^(JTBaseReqModel *model) {
                 [self hideAllHud];
                 if (model.code == 1){
                     // 付过费跳转查看照片页面
@@ -74,11 +74,11 @@
                     UIAlertAction*cancelAction=[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
                     UIAlertAction*okAction=[UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                         [self showHudInView:self.view];
-                        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gid":uiModel.modelId} url:@"/app/Album/orderAlbum" callback:^(JTBaseReqModel *model) {
+                        [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"gid":uiModel.modelId} url:@"/app/Album/orderAlbum" callback:^(JTBaseReqModel *model) {
                             [self hideAllHud];
                             if (model.code == 1){
                                 NSLog(@"%@",model.data);
-                                [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"oid":model.data,@"jg":@"52"} url:@"/app/ios/appleorderPay" callback:^(JTBaseReqModel *model) {
+                                [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"oid":model.data,@"price":@"52"} url:@"/app/ios/appleorderPay" callback:^(JTBaseReqModel *model) {
                                     [self hideAllHud];
                                     if (model.code == 1){
                                         NSLog(@"支付成功，跳转查看照片页面");

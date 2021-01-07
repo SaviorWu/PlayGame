@@ -54,10 +54,10 @@
         [self showHint:@"评价太长了，长话短说吧～"];
     }
     else{
-        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
-                                         @"dd":self.orderID,
-                                         @"bz":self.tvComment.text,
-                                         @"xx":self.getUserGiveStar}
+        [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,
+                                         @"id":self.orderID,
+                                         @"content":self.tvComment.text,
+                                         @"star":self.getUserGiveStar}
                                    url:@"/app/order/orderComtDo"
                               callback:^(JTBaseReqModel *model) {
             [self showHint:model.msg];

@@ -115,12 +115,12 @@
             UIAlertAction*cancelAction=[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
             UIAlertAction*okAction=[UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 [self showHudInView:self.view];
-                [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token}
+                [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token}
                                            url:@"/app/redpacket/users_info"
                                       callback:^(JTBaseReqModel *model) {
                     if (model.code == 1) {
-                        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
-                                                         @"hb":self.money,
+                        [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,
+                                                         @"price":self.money,
                                                          @"desc":self.mark}
                                                    url:@"/app/redpacket/send_redpacket"
                                               callback:^(JTBaseReqModel *model) {

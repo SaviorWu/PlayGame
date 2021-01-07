@@ -6,7 +6,6 @@
 //
 
 #import "LoginVC.h"
-#import "ForgetVC.h"
 #import "UserModel.h"
 #import "RegistVC.h"
 #import "ProtocolVC.h"
@@ -45,13 +44,15 @@
     
     
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
-                                                         BM_cellHeight:@(10)}]];
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"请输入密码",
-                                                         BM_leading:@(20),
-                                                         BM_trading:@(20),
-                                                         BM_mark:@"1",
-                                                         BM_KeyBoardType:@(UIKeyboardTypeASCIICapable),
-                                                         BM_type:@(UIFiledType)}]];
+                                                         BM_cellHeight:@(1)}]];
+    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
+                                                         BM_cellHeight:@(1)}]];
+//    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"请输入密码",
+//                                                         BM_leading:@(20),
+//                                                         BM_trading:@(20),
+//                                                         BM_mark:@"1",
+//                                                         BM_KeyBoardType:@(UIKeyboardTypeASCIICapable),
+//                                                         BM_type:@(UIFiledType)}]];
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
                                                          BM_leading:@(20),
                                                          BM_trading:@(20)}]];
@@ -80,7 +81,7 @@
                                                          BM_cellHeight:@(8)}]];
     
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_title:@"点击注册",
-                                                         BM_subTitle:@"忘记密码",
+                                                         BM_subTitle:@" ",
                                                          BM_cellHeight:@(50),
                                                          BM_type:@(UIForgetRegistType)}]];
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
@@ -118,7 +119,7 @@
             if (indexPath.row == 3) {
                 [self.reqParam setObject:value forKey:@"mobile"];
             }else if(indexPath.row == 6){
-                [self.reqParam setObject:[NSString base64EncodeString:value] forKey:@"password"];
+//                [self.reqParam setObject:[NSString base64EncodeString:value] forKey:@"password"];
             }
         }];
     }else if([model.type  isEqual: @(UIVerificationType)]){
@@ -170,8 +171,8 @@
                 RegistVC* vc = [[RegistVC alloc] init];
                 [self.navigationController pushViewController:vc animated:YES];
             }else if([value intValue] == 2){
-                ForgetVC* vc = [[ForgetVC alloc] init];
-                [self.navigationController pushViewController:vc animated:YES];
+//                ForgetVC* vc = [[ForgetVC alloc] init];
+//                [self.navigationController pushViewController:vc animated:YES];
             }
         }];
     }else if([model.type isEqual:@(UILabelButtonType)]){

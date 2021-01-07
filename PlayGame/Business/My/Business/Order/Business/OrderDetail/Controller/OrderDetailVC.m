@@ -30,8 +30,8 @@
 - (void)loadUI{
     [self showHudInView:self.view];
     
-    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"dd":self.orderID} url:@"/app/order/orderBuy" callback:^(JTBaseReqModel *model) {
-        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"dd":self.orderID} url:@"/app/order/orderGodEnd" callback:^(JTBaseReqModel *m){
+    [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"id":self.orderID} url:@"/app/order/orderBuy" callback:^(JTBaseReqModel *model) {
+        [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"id":self.orderID} url:@"/app/order/orderGodEnd" callback:^(JTBaseReqModel *m){
             NSString* commt = @"3";
             if (m.code == 1) {
                 commt = m.data[@"commt"];
@@ -169,7 +169,7 @@
             [self.tableView reloadData];
             if ([model.modelId intValue] == 1) {//申请退款
                 [self showHudInView:self.view];
-                [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"dd":self.orderID} url:@"/app/order/orderRefund" callback:^(JTBaseReqModel *model) {
+                [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"id":self.orderID} url:@"/app/order/orderRefund" callback:^(JTBaseReqModel *model) {
                     [self showHint:model.msg];
                     if (model.code == 1) {
                         [self.navigationController popViewControllerAnimated:YES];
@@ -179,7 +179,7 @@
             }else if([model.modelId intValue] == 4){// markid=1 服务完成 markid=2申请退款
                 if ([model.mark intValue] == 1) {
                     [self showHudInView:self.view];
-                    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"dd":self.orderID} url:@"/app/order/orderServEnd" callback:^(JTBaseReqModel *model) {
+                    [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"id":self.orderID} url:@"/app/order/orderServEnd" callback:^(JTBaseReqModel *model) {
                         [self showHint:model.msg];
                         if (model.code == 1) {
                             [self.navigationController popViewControllerAnimated:YES];
@@ -188,7 +188,7 @@
                     }];
                 }else if ([model.mark intValue] == 2){
                     [self showHudInView:self.view];
-                    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"dd":self.orderID} url:@"/app/order/orderRefund" callback:^(JTBaseReqModel *model) {
+                    [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"id":self.orderID} url:@"/app/order/orderRefund" callback:^(JTBaseReqModel *model) {
                         [self showHint:model.msg];
                         if (model.code == 1) {
                             [self.navigationController popViewControllerAnimated:YES];

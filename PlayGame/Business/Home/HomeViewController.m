@@ -33,9 +33,9 @@
         [self showHint:@"请选择玩家性别"];
     }else{
         [self showHint:@"玩家匹配中请稍后..."];
-        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
-                                         @"xb":@(self.selectSex),
-                                         @"yx":@(self.selectGame)
+        [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,
+                                         @"sex":@(self.selectSex),
+                                         @"game":@(self.selectGame)
         } url:@"/app/Yindao/kepipei" callback:^(JTBaseReqModel *model) {
             if (model.code == -2) {
                 [self showHint:@"账号在其他设备登录"];
@@ -77,7 +77,7 @@
 //    [self hiddenBackBtn:YES];
     [self addRightBtn];
     
-    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/app/users/personal" callback:^(JTBaseReqModel *model) {
+    [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"uid":[UserModelManager shareInstance].userModel.uid} url:@"/app/users/personal" callback:^(JTBaseReqModel *model) {
         if (model.code == 1){
             [UserModelManager shareInstance].userModel.money = model.data[@"userdata"][@"money"];
             [UserModelManager shareInstance].userModel.nickname = model.data[@"userdata"][@"nickname"];

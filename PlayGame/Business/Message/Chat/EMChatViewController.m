@@ -124,10 +124,10 @@
         [self showHint:@"大神id异常" delay:1.3];
     }else{
         [self showHudInView:self.view];
-        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
-                                         @"yx":self.playthisgameID,
-                                         @"lx":@"user",
-                                         @"ds":self.playthisgameUsercallgodID
+        [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,
+                                         @"id":self.playthisgameID,
+                                         @"type":@"user",
+                                         @"gid":self.playthisgameUsercallgodID
         } url:@"/app/order/orderInit" callback:^(JTBaseReqModel *model) {
             
             if (model.code == 1) {
@@ -206,7 +206,7 @@
 //    }
 
     if ([self.conversationModel.emModel.conversationId isEqualToString:GROUP_1_ID]) {
-        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/app/users/personal" callback:^(JTBaseReqModel *model) {
+        [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"uid":[UserModelManager shareInstance].userModel.uid} url:@"/app/users/personal" callback:^(JTBaseReqModel *model) {
             if (model.code == 1){
                 [UserModelManager shareInstance].userModel.money = model.data[@"userdata"][@"money"];
                 [UserModelManager shareInstance].userModel.nickname = model.data[@"userdata"][@"nickname"];
@@ -290,7 +290,7 @@
                 @weakify(self);
                 self.topMLView.selectUserBlock = ^(NSString*  _Nonnull uid) {
                     @strongify(self);
-                    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":uid} url:@"ping/mei/grzx" callback:^(JTBaseReqModel *Umodel) {
+                    [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"uid":uid} url:@"ping/mei/grzx" callback:^(JTBaseReqModel *Umodel) {
                         if (Umodel.code == 1) {
                             PersonalPageModel* um = [PersonalPageModel mj_objectWithKeyValues:Umodel.data[@"userdata"]];
                             HomePersonVC* opVC = [[HomePersonVC alloc] init];
@@ -302,7 +302,7 @@
                             };
                             opVC.clickGift = ^(id  _Nullable value) {
                                 [self showHudInView:self.view];
-                                [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token}
+                                [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token}
                                                            url:@"/app/users/getgiftinfo" callback:^(JTBaseReqModel *model) {
                                     NSMutableArray* arrayGif = [[NSMutableArray alloc] init];
                                     for (NSDictionary* dic in model.data) {
@@ -362,7 +362,7 @@
                         @weakify(self);
                         self.topHotSongView.selectUserBlock = ^(NSString*  _Nonnull uid) {
                             @strongify(self);
-                            [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":uid} url:@"ping/mei/grzx" callback:^(JTBaseReqModel *Umodel) {
+                            [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"uid":uid} url:@"ping/mei/grzx" callback:^(JTBaseReqModel *Umodel) {
                                 if (Umodel.code == 1) {
                                     PersonalPageModel* um = [PersonalPageModel mj_objectWithKeyValues:Umodel.data[@"userdata"]];
                                     HomePersonVC* opVC = [[HomePersonVC alloc] init];
@@ -374,7 +374,7 @@
                                     };
                                     opVC.clickGift = ^(id  _Nullable value) {
                                         [self showHudInView:self.view];
-                                        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token}
+                                        [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token}
                                                                    url:@"/app/users/getgiftinfo" callback:^(JTBaseReqModel *model) {
                                             NSMutableArray* arrayGif = [[NSMutableArray alloc] init];
                                             for (NSDictionary* dic in model.data) {

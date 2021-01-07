@@ -187,7 +187,7 @@
                     return;
                 }
             }
-            [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
+            [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,
                                              @"content":self.content.length == 0?@"":self.content,
                                              @"gift_id":self.choseGiftID.length == 0?@"":self.choseGiftID
             } url:@"/app/qunliao/gequfabu" callback:^(JTBaseReqModel *model) {

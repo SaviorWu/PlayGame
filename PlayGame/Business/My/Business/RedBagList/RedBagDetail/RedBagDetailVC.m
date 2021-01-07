@@ -25,8 +25,8 @@
     [self.tableView registCell:@"RedBagHeaderCell"];
 }
 - (void)loadUI{
-    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
-                                     @"id":self.redBagId}
+    [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,
+                                     @"rpacket_s_id":self.redBagId}
                                url:@"/app/redpacket/redpacket_info" callback:^(JTBaseReqModel *model) {
         if (model.code == 1){
 //            UIRedBagDetailHeadType,

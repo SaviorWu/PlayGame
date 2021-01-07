@@ -108,25 +108,23 @@
         }];
     }else if([model.type isEqual:@(UIConfirnBtnType)]){
         return [tableView reloadCell:@"UIConfirnBtnCell" withModel:model withBlock:^(id  _Nullable value) {
-            NSLog(@"点击登录");
-            [self.tableView reloadData];
-            if (self.type == 2) {
-                [self.reqParam setObject:[UserModelManager shareInstance].userModel.token forKey:@"ys"];
-            }
-            [JTNetwork requestGetWithParam:self.reqParam url:self.type == 1?@"/ping/mei/zhmm":@"/ping/mei/xg1" callback:^(JTBaseReqModel *model) {
-                NSLog(@"model = %@",model);
-                [self showHint:model.xx];
-                if (model.zt == 1) {
-                    if (self.type == 1) {
-                        [UserModelManager userLogout];
-                    }else{
-                        ResetPaypswdVC* vc = [[ResetPaypswdVC alloc] init];
-                        [self.navigationController pushViewController:vc animated:YES];
-                    }
-                }
-                
-                
-            }];
+//            NSLog(@"点击登录");
+//            [self.tableView reloadData];
+//            if (self.type == 2) {
+//                [self.reqParam setObject:[UserModelManager shareInstance].userModel.token forKey:@"token"];
+//            }
+//            [JTNetwork requestGetWithParam:self.reqParam url:self.type == 1?@"/ping/mei/zhmm":@"/ping/mei/xg1" callback:^(JTBaseReqModel *model) {
+//                NSLog(@"model = %@",model);
+//                [self showHint:model.msg];
+//                if (model.code == 1) {
+//                    if (self.type == 1) {
+//                        [UserModelManager userLogout];
+//                    }else{
+//                        ResetPaypswdVC* vc = [[ResetPaypswdVC alloc] init];
+//                        [self.navigationController pushViewController:vc animated:YES];
+//                    }
+//                }
+//            }];
         }];
     }else{
         return [super tableView:tableView cellForRowAtIndexPath:indexPath];

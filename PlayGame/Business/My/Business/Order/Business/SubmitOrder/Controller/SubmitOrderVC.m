@@ -124,17 +124,17 @@
             _okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *_Nonnull action) {
                 SLKPayView *payView = [[SLKPayView alloc]initWithPayInfo:nil target:self.navigationController inputPwdCompleiton:^(NSString * _Nonnull pwdStr) {
                     [self showHudInView:self.view];
-                    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
-                                                     @"yx":self.btnBuyServiceName.titleLabel.text,
-                                                     @"js":@(self.selectTotalCount),
-                                                     @"ds":self.godID,
-                                                     @"bz":self.tfRemark.text,
-                                                     @"sj":DateTime}
+                    [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,
+                                                     @"gname":self.btnBuyServiceName.titleLabel.text,
+                                                     @"number":@(self.selectTotalCount),
+                                                     @"gid":self.godID,
+                                                     @"remark":self.tfRemark.text,
+                                                     @"play_time":DateTime}
                                                url:@"/app/order/orderSub" callback:^(JTBaseReqModel *model) {
                         if (model.code == 1) {
-                            [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
+                            [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,
                                                              @"mm":[NSString base64EncodeString:pwdStr],
-                                                             @"dd":model.data}
+                                                             @"orderid":model.data}
                                                        url:@"/app/order/appleOrderPay" callback:^(JTBaseReqModel *model) {
                                 [self hideAllHud];
                                 [self showHint:model.msg];

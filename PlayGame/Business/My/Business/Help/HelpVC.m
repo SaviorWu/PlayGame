@@ -20,7 +20,7 @@
     [self addNavigationView];
 }
 - (void)loadUI{
-    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token} url:@"/app/users/help_list" callback:^(JTBaseReqModel *model) {
+    [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token} url:@"/app/users/help_list" callback:^(JTBaseReqModel *model) {
         for (NSDictionary* dic in model.data) {
             [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:dic[@"title"],
                                                                  BM_cellHeight:@(50),

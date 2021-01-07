@@ -55,7 +55,7 @@
             giftPrice = [model.price intValue];
         }
     }
-    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
+    [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,
                                      @"uid":self.godId,
                                      @"sum":self.lbBuyCount.text,
                                      @"allmoney":[NSString stringWithFormat:@"%ld",([self.lbBuyCount.text intValue]*giftPrice)],

@@ -209,7 +209,7 @@
     }
     [self showHudInView:self.view];
     NSLog(@"chartUid = %@",chartUid);
-    [JTNetwork requestGetWithParam:@{@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/app/msg/jiazaizl" callback:^(JTBaseReqModel *baseModel) {
+    [JTNetwork requestGetWithParam:@{@"uid":[UserModelManager shareInstance].userModel.uid} url:@"/app/msg/jiazaizl" callback:^(JTBaseReqModel *baseModel) {
         [self hideAllHudFromSuperView:self.view];
         NSString* playthisgamegameid = @"";
         if ([[baseModel.data allKeys] containsObject:@"id"]) {

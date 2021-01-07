@@ -40,21 +40,21 @@
     NSString* reqURL = @"";
     
     if (self.type == 0) {
-        [param setObject:[UserModelManager shareInstance].userModel.token forKey:@"ys"];
+        [param setObject:[UserModelManager shareInstance].userModel.token forKey:@"token"];
         [param setObject:@(self.pageIndex) forKey:@"page"];
         reqURL = @"/app/redpacket/redpacket_list";
     }else if (self.type == 1){
-        [param setObject:[UserModelManager shareInstance].userModel.token forKey:@"ys"];
+        [param setObject:[UserModelManager shareInstance].userModel.token forKey:@"token"];
         [param setObject:@(self.pageIndex) forKey:@"page"];
-        reqURL = @"/app/redpacket/send_redpacket";
+        reqURL = @"/app/redpacket/my_send_redpacket";
     }else if (self.type == 2){
-        [param setObject:[UserModelManager shareInstance].userModel.token forKey:@"ys"];
+        [param setObject:[UserModelManager shareInstance].userModel.token forKey:@"token"];
         [param setObject:@(1) forKey:@"lei"];
         [param setObject:@(self.pageIndex) forKey:@"page"];
         reqURL = @"/app/redpacket/my_hongbao";
     }
     else if (self.type == 3){
-        [param setObject:[UserModelManager shareInstance].userModel.token forKey:@"ys"];
+        [param setObject:[UserModelManager shareInstance].userModel.token forKey:@"token"];
         [param setObject:@(2) forKey:@"lei"];
         [param setObject:@(self.pageIndex) forKey:@"page"];
         reqURL = @"/app/redpacket/my_hongbao";
@@ -112,7 +112,7 @@
             NSLog(@"申请领取红包");
             if ([uiModel.mark intValue] == 1) {
                 [self showHudInView:self.view];
-                [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"id":uiModel.modelId} url:@"/app/redpacket/apply_collection" callback:^(JTBaseReqModel *model) {
+                [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"rpacket_s_id":uiModel.modelId} url:@"/app/redpacket/apply_collection" callback:^(JTBaseReqModel *model) {
                     [self hideAllHud];
                     [self showHint:model.msg];
                     [self.tableView.mj_header beginRefreshing];
@@ -120,8 +120,8 @@
             }else if([uiModel.mark intValue] == 2){
                 [self showHudInView:self.view];
                 
-                [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
-                                                 @"id":uiModel.modelId} url:@"/app/redpacket/apply_list"
+                [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,
+                                                 @"rpacket_s_id":uiModel.modelId} url:@"/app/redpacket/apply_list"
                                       callback:^(JTBaseReqModel *model) {
                     if (model.code == 1) {
                         NSString* uids = @"";
@@ -139,11 +139,11 @@
                             [self hideAllHud];
                             return;
                         }else{
-                            [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
-                                                             @"id":uiModel.modelId,
+                            [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,
+                                                             @"rpacket_s_id":uiModel.modelId,
                                                              @"max":max,
                                                              @"uids":uids
-                            } url:@"/app/redpacket/redpacket_info" callback:^(JTBaseReqModel *model) {
+                            } url:@"/app/redpacket/send" callback:^(JTBaseReqModel *model) {
                                 [self hideAllHud];
                                 if (model.code == 1){
                                     [self showHint:model.msg];

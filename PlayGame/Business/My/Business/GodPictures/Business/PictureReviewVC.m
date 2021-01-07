@@ -29,7 +29,7 @@
 - (void)loadData{
     [self.tableView.mj_header beginRefreshing];
     [self showHudInView:self.view];
-    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gid":self.godID} url:@"/app/Album/showlist" callback:^(JTBaseReqModel *model) {
+    [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"gid":self.godID} url:@"/app/Album/showlist" callback:^(JTBaseReqModel *model) {
         if (model.code == 1){
             if (self.pageIndex == 1) {
                 [self.dataArray removeAllObjects];

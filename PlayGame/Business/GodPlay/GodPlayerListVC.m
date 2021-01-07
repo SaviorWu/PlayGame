@@ -36,7 +36,7 @@
 - (void)loadData
 {
     [self.dataArray removeAllObjects];
-    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"sid":self.selectIdx} url:@"/app/list/gameGods" callback:^(JTBaseReqModel *model) {
+    [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"sid":self.selectIdx} url:@"/app/list/gameGods" callback:^(JTBaseReqModel *model) {
         NSLog(@"model = %@",model);
 
         for (NSDictionary* dic in model.data) {

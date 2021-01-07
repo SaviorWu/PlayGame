@@ -182,10 +182,10 @@
         [self showHudInView:self.view];
     });
     
-    [JTNetwork requestPostWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
-                                      @"sb":@"ios",
-                                      @"sp":self.selectAppleGoodsID,
-                                      @"rmb":self.money
+    [JTNetwork requestPostWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,
+                                      @"device_type":@"ios",
+                                      @"iosGoodsId":self.selectAppleGoodsID,
+                                      @"money":self.money
     } url:@"/app/order/create_order" callback:^(JTBaseReqModel *model) {
         
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -321,7 +321,7 @@
     }
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:result options:NSJSONReadingAllowFragments error:nil];
     if (dic != nil) {
-        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,
+        [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,
                                          @"receipt":self.receipt
         } url:@"/app/order/applepay_recharge" callback:^(JTBaseReqModel *model) {
             

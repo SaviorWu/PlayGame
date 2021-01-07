@@ -30,7 +30,7 @@
 - (void)loadData{
     [self.tableView.mj_header beginRefreshing];
     [self showHudInView:self.view];
-    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token} url:@"/app/order/orderRelease" callback:^(JTBaseReqModel *model) {
+    [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token} url:@"/app/order/orderRelease" callback:^(JTBaseReqModel *model) {
         if (model.code == 1){
             [self.dataArray removeAllObjects];
             for (NSDictionary* dic in model.data) {

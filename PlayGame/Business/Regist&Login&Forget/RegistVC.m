@@ -44,33 +44,32 @@
                                                          BM_trading:@(20)}]];
     
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
-                                                         BM_cellHeight:@(10)}]];
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"请设置密码",
-                                                         BM_leading:@(20),
-                                                         BM_trading:@(20),
-                                                         BM_mark:@"1",
-                                                         BM_KeyBoardType:@(UIKeyboardTypeASCIICapable),
-                                                         BM_type:@(UIFiledType)}]];
+                                                         BM_cellHeight:@(1)}]];
+    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
+                                                         BM_cellHeight:@(1)}]];
+    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
+                                                         BM_cellHeight:@(1)}]];
+    
+    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
+                                                         BM_cellHeight:@(1)}]];
+    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
+                                                         BM_cellHeight:@(1)}]];
+//    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"请再次确认密码",
+//                                                         BM_leading:@(20),
+//                                                         BM_trading:@(20),
+//                                                         BM_mark:@"1",
+//                                                         BM_KeyBoardType:@(UIKeyboardTypeASCIICapable),
+//                                                         BM_type:@(UIFiledType)}]];
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
                                                          BM_leading:@(20),
                                                          BM_trading:@(20)}]];
     
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
-                                                         BM_cellHeight:@(10)}]];
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_subTitle:@"请再次确认密码",
-                                                         BM_leading:@(20),
-                                                         BM_trading:@(20),
-                                                         BM_mark:@"1",
-                                                         BM_KeyBoardType:@(UIKeyboardTypeASCIICapable),
-                                                         BM_type:@(UIFiledType)}]];
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UILineType),
-                                                         BM_leading:@(20),
-                                                         BM_trading:@(20)}]];
-    
-    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_title:@"(请使用字母+数字的组合密码)",
-                                                         BM_titleSize:@(12),
-                                                         BM_leading:@(20),
-                                                         BM_type:@(UITipsType)}]];
+                                                         BM_cellHeight:@(1)}]];
+//    [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_title:@"(请使用字母+数字的组合密码)",
+//                                                         BM_titleSize:@(12),
+//                                                         BM_leading:@(20),
+//                                                         BM_type:@(UITipsType)}]];
     
     [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
                                                          BM_cellHeight:@(64)}]];
@@ -121,9 +120,9 @@
             if (indexPath.row == 1) {
                 [self.reqParam setObject:value forKey:@"mobile"];
             }else if(indexPath.row == 7){
-                [self.reqParam setObject:[NSString base64EncodeString:value] forKey:@"password"];
+//                [self.reqParam setObject:[NSString base64EncodeString:value] forKey:@"password"];
             }else if(indexPath.row == 10){
-                [self.reqParam setObject:[NSString base64EncodeString:value] forKey:@"passwordAg"];
+//                [self.reqParam setObject:[NSString base64EncodeString:value] forKey:@"passwordAg"];
             }
         }];
     }else if([model.type  isEqual: @(UIVerificationType)]){

@@ -23,7 +23,7 @@
 }
 - (void)loadUI{
     [self showHudInView:self.view];
-    [JTNetwork requestGetWithParam:@{@"gr":self.godId,@"ys":[UserModelManager shareInstance].userModel.token} url:@"/app/users/personal" callback:^(JTBaseReqModel *model) {
+    [JTNetwork requestGetWithParam:@{@"uid":self.godId,@"token":[UserModelManager shareInstance].userModel.token} url:@"/app/users/personal" callback:^(JTBaseReqModel *model) {
         self.userModel = [PersonalPageModel mj_objectWithKeyValues:model.data[@"userdata"]];
         [self.dataArray removeAllObjects];
         [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_imageName:[NSString safeString:self.userModel.header],
@@ -130,7 +130,7 @@
             }else if([value intValue] == 2){
                 if (self.arrayGif.count == 0) {
                     [self showHudInView:self.view];
-                    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token}
+                    [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token}
                                                url:@"/app/users/getgiftinfo" callback:^(JTBaseReqModel *model) {
                         NSLog(@"%@",model.data);
                         self.arrayGif = [[NSMutableArray alloc] init];
@@ -140,7 +140,7 @@
                         }
                         NSLog(@"%@",self.arrayGif);
                         
-                        [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/app/users/personal" callback:^(JTBaseReqModel *model) {
+                        [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"uid":[UserModelManager shareInstance].userModel.uid} url:@"/app/users/personal" callback:^(JTBaseReqModel *model) {
                             if (model.code == 1){
                                 [UserModelManager shareInstance].userModel.money = model.data[@"userdata"][@"money"];
                                 [UserModelManager shareInstance].userModel.nickname = model.data[@"userdata"][@"nickname"];
@@ -156,7 +156,7 @@
                     }];
                 }else{
                     [self showHudInView:self.view];
-                    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/app/users/personal" callback:^(JTBaseReqModel *model) {
+                    [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"uid":[UserModelManager shareInstance].userModel.uid} url:@"/app/users/personal" callback:^(JTBaseReqModel *model) {
                         if (model.code == 1){
                             [UserModelManager shareInstance].userModel.money = model.data[@"userdata"][@"money"];
                             [UserModelManager shareInstance].userModel.nickname = model.data[@"userdata"][@"nickname"];

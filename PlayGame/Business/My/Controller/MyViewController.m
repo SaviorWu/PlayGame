@@ -41,7 +41,7 @@
 - (void)loadUI{
     [self showHudInView:self.view];
     NSLog(@"token = %@ uid = %@",[UserModelManager shareInstance].userModel.token,[UserModelManager shareInstance].userModel.uid);
-    [JTNetwork requestGetWithParam:@{@"ys":[UserModelManager shareInstance].userModel.token,@"gr":[UserModelManager shareInstance].userModel.uid} url:@"/app/users/personal" callback:^(JTBaseReqModel *model) {
+    [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"uid":[UserModelManager shareInstance].userModel.uid} url:@"/app/users/personal" callback:^(JTBaseReqModel *model) {
         if (model.code == 1){
             [self.dataArray removeAllObjects];
             [UserModelManager shareInstance].userModel.money = model.data[@"userdata"][@"money"];
