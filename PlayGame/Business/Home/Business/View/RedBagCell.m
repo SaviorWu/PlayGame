@@ -23,6 +23,6 @@
 }
 
 - (void)setModel:(UIBaseModel*)model{
-    self.lbMoney.text = [NSString stringWithFormat:@"¥%.2f",[UserModelManager shareInstance].userModel.allmoney.floatValue];
+    self.lbMoney.text = [NSString stringWithFormat:@"¥%.2f",[UserModelManager shareInstance].userModel.money.floatValue];
 }
 @end

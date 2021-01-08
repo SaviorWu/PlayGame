@@ -31,6 +31,6 @@
     // Configure the view for the selected state
 }
 - (void)setModel:(UIBaseModel*)model{
-    self.lbCoin.text = [UserModelManager shareInstance].userModel.allmoney.length == 0?@"0.00":[UserModelManager shareInstance].userModel.allmoney;
+    self.lbCoin.text = [UserModelManager shareInstance].userModel.money.length == 0?@"0.00":[UserModelManager shareInstance].userModel.money;
 }
 @end

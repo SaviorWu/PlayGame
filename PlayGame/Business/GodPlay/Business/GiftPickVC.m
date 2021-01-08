@@ -32,7 +32,7 @@
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self.collectionView reloadData];
-    self.lbMoney.text = [UserModelManager shareInstance].userModel.allmoney;
+    self.lbMoney.text = [UserModelManager shareInstance].userModel.money;
     
 }
 - (IBAction)clickBtnAdd:(id)sender {
@@ -58,7 +58,7 @@
     [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,
                                      @"uid":self.godId,
                                      @"sum":self.lbBuyCount.text,
-                                     @"allmoney":[NSString stringWithFormat:@"%ld",([self.lbBuyCount.text intValue]*giftPrice)],
+                                     @"money":[NSString stringWithFormat:@"%ld",([self.lbBuyCount.text intValue]*giftPrice)],
                                      @"gift_id":self.selectGiftId
     } url:@"/app/users/gift" callback:^(JTBaseReqModel *model) {
         if (model.code == 1) {

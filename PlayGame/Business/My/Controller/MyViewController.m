@@ -41,12 +41,12 @@
 - (void)loadUI{
     [self showHudInView:self.view];
     NSLog(@"token = %@ uid = %@",[UserModelManager shareInstance].userModel.token,[UserModelManager shareInstance].userModel.uid);
-    [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"uid":[UserModelManager shareInstance].userModel.uid} url:@"/app/users/personal" callback:^(JTBaseReqModel *model) {
+    [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"uid":[UserModelManager shareInstance].userModel.uid} url:@"/app/users/getOnlineUserInfo" callback:^(JTBaseReqModel *model) {
         if (model.code == 1){
             [self.dataArray removeAllObjects];
-            [UserModelManager shareInstance].userModel.allmoney = [NSString stringWithFormat:@"%d",[model.data[@"userdata"][@"allmoney"] intValue]];
-            [UserModelManager shareInstance].userModel.nickname = model.data[@"userdata"][@"nickname"];
-            [UserModelManager shareInstance].userModel.header = model.data[@"userdata"][@"header"];
+            [UserModelManager shareInstance].userModel.money = [NSString stringWithFormat:@"%d",[model.data[@"info"][@"money"] intValue]];
+            [UserModelManager shareInstance].userModel.nickname = model.data[@"info"][@"nickname"];
+            [UserModelManager shareInstance].userModel.header = model.data[@"info"][@"header"];
             [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UISpaceType),
                                                                  BM_backColor:[UIColor colorWithHex:0x00A0EE],
                                                                  BM_cellHeight:@(100)}]];

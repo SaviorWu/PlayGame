@@ -31,7 +31,7 @@
     }else{
         self.imgHead.layer.borderColor = UIColor.lightGrayColor.CGColor;
         [self.btnDown setImage:nil forState:UIControlStateNormal];
-        [self.btnDown setTitle:model.allmoney forState:UIControlStateNormal];
+        [self.btnDown setTitle:model.money forState:UIControlStateNormal];
         self.btnDown.backgroundColor = UIColor.systemGrayColor;
     }
     self.btnDown.titleLabel.font = [UIFont systemFontOfSize:10];

@@ -37,6 +37,7 @@
                 GodPicModel* model = [GodPicModel mj_objectWithKeyValues:dic];
                 [self.dataArray addObject:[UIBaseModel initWithDic:@{BM_type:@(UIGodPicType),
                                                                      BM_title:model.nickname,
+                                                                     BM_imageName:model.header,
                                                                      BM_modelId:model.uid,
                                                                      BM_subTitle:model.read_count,
                                                                      BM_mark:model.imgcount}]];

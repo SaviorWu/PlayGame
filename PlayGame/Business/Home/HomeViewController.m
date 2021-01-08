@@ -77,11 +77,11 @@
 //    [self hiddenBackBtn:YES];
     [self addRightBtn];
     
-    [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"uid":[UserModelManager shareInstance].userModel.uid} url:@"/app/users/personal" callback:^(JTBaseReqModel *model) {
+    [JTNetwork requestGetWithParam:@{@"token":[UserModelManager shareInstance].userModel.token,@"uid":[UserModelManager shareInstance].userModel.uid} url:@"/app/users/getOnlineUserInfo" callback:^(JTBaseReqModel *model) {
         if (model.code == 1){
-            [UserModelManager shareInstance].userModel.allmoney = model.data[@"userdata"][@"allmoney"];
-            [UserModelManager shareInstance].userModel.nickname = model.data[@"userdata"][@"nickname"];
-            [UserModelManager shareInstance].userModel.header = model.data[@"userdata"][@"header"];
+            [UserModelManager shareInstance].userModel.money = [NSString stringWithFormat:@"%d",[model.data[@"info"][@"money"] intValue]];
+            [UserModelManager shareInstance].userModel.nickname = model.data[@"info"][@"nickname"];
+            [UserModelManager shareInstance].userModel.header = model.data[@"info"][@"header"];
         }
     }];
     
